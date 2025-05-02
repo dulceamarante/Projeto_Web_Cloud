@@ -1,0 +1,60 @@
+/* Estilo base do slider */
+.item-slick1 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    position: relative;
+  }
+  
+  .item-slick1 .slider-content {
+    max-width: 600px;
+  }
+  
+  .slider-content span {
+    font-size: 1.2rem;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  .slider-content h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #111;
+  }
+  
+  .slider-content a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #717fe0;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .slider-content a:hover {
+    background-color: #555cd9;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .item-slick1 {
+      padding-left: 10%;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+  
+    .slider-content h2 {
+      font-size: 2rem;
+    }
+  
+    .slider-content span {
+      font-size: 1rem;
+    }
+  }
+  
