@@ -1,32 +1,43 @@
+// src/App.js
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
-import Favorites from './pages/Favorites';
-import Cart from './pages/Cart';
-import { GlobalProvider } from './context/GlobalContext';
-import './assets/css/util.css';
-import './assets/css/main.css';
-
-
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import CartPage from './pages/CartPage';
+import FavoritesPage from './pages/FavoritesPage';
+import NotFoundPage from './pages/NotFoundPage';
+import { CartProvider } from './contexts/CartContext';
+import { FavoritesProvider } from './contexts/FavoritesContext';
+import { ProductProvider } from './contexts/ProductContext';
+import './styles/global.css';
 
 function App() {
   return (
-    <GlobalProvider>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/produtos" element={<Products />} />
-          <Route path="/produto/:id" element={<ProductDetail />} />
-          <Route path="/favoritos" element={<Favorites />} />
-          <Route path="/carrinho" element={<Cart />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </GlobalProvider>
+    <ProductProvider>
+      <CartProvider>
+        <FavoritesProvider>
+          <Router>
+            <div className="app">
+              <Header />
+              <main className="main-content">
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/products" element={<ProductsPage />} />
+                  <Route path="/product/:productId" element={<ProductDetailPage />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/favorites" element={<FavoritesPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </main>
+              <Footer />
+            </div>
+          </Router>
+        </FavoritesProvider>
+      </CartProvider>
+    </ProductProvider>
   );
 }
 

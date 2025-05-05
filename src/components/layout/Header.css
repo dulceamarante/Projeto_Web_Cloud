@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  /* Header layout */
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+    position: relative;
+  }
+  
+  /* Hambúrguer menu */
+  .hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+  
+  .hamburger-icon, 
+  .hamburger-icon:before, 
+  .hamburger-icon:after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+  
+  /* Seção esquerda - texto maior */
+  .header-left {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-left a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+  
+  /* Logo central - maior e mais negrito */
+  .header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .header-center a {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Seção direita - texto maior */
+  .header-right {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-right a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Hover effects */
+  .header-left a:hover,
+  .header-right a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Menu lateral */
+  .side-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+  }
+  
+  .side-menu {
+    width: 280px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1001;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .side-menu-header {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .side-menu-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu-list li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .side-menu-list li a {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .side-menu-list li a:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .side-menu-overlay {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px 20px;
+      justify-content: center;
+    }
+    
+    .hamburger-button {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .header-left, .header-right {
+      position: fixed;
+      top: 70px; /* Altura do header */
+      left: 0;
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 15px;
+      z-index: 99;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .header-left.hide, .header-right.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .header-left.show, .header-right.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .header-right {
+      top: 200px; /* Posiciona abaixo do header-left */
+    }
+    
+    .header-center {
+      position: static;
+      transform: none;
+    }
+    
+    .header-center a {
+      font-size: 24px;
+    }
+    
+    .side-menu {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header {
+      padding: 10px 15px;
+    }
+    
+    .header-center a {
+      font-size: 20px;
+    }
+    
+    .hamburger-button {
+      left: 15px;
+    }
+    
+    .side-menu {
+      width: 100%;
+    }
+  }
