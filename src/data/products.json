@@ -112,5 +112,396 @@
       { "color": "Bege", "size": "L", "stock": 5 },
       { "color": "Bege", "size": "XL", "stock": 5 }
     ]
+  },
+  {
+    "id": 6,
+    "name": "Camisa 100% linho Branco",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH1 - 1.jpg",
+      "/assets/images/products/CamisaH1 - 2.jpg",
+      "/assets/images/products/CamisaH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 7 },
+      { "color": "White", "size": "M", "stock": 7 },
+      { "color": "White", "size": "L", "stock": 7 },
+      { "color": "White", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Camisa 100% linho branco",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH1 - 1.jpg",
+      "/assets/images/products/CamisaH1 - 2.jpg",
+      "/assets/images/products/CamisaH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 7 },
+      { "color": "White", "size": "M", "stock": 7 },
+      { "color": "White", "size": "L", "stock": 7 },
+      { "color": "White", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Camisa 100% linho verde",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH2 - 1.jpg",
+      "/assets/images/products/CamisaH2 - 2.jpg",
+      "/assets/images/products/CamisaH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Camisa 100% linho bege",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH3 - 1.jpg",
+      "/assets/images/products/CamisaH3 - 2.jpg",
+      "/assets/images/products/CamisaH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 4 },
+      { "color": "Bege", "size": "M", "stock": 4 },
+      { "color": "Bege", "size": "L", "stock": 4 },
+      { "color": "Bege", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Camisa Com Estrutura Às Riscas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH4 - 1.jpg",
+      "/assets/images/products/CamisaH4 - 2.jpg",
+      "/assets/images/products/CamisaH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Grey", "size": "S", "stock": 4 },
+      { "color": "White/Grey", "size": "M", "stock": 4 },
+      { "color": "White/Grey", "size": "L", "stock": 4 },
+      { "color": "White/Grey", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Camisa Com Estampado Abstrato",
+    "description": "Camisa relaxed fit confecionada em tecido fluído. Gola de lapela e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH5 - 1.jpg",
+      "/assets/images/products/CamisaH5 - 2.jpg",
+      "/assets/images/products/CamisaH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Grey", "size": "S", "stock": 5 },
+      { "color": "White/Grey", "size": "M", "stock": 5 },
+      { "color": "White/Grey", "size": "L", "stock": 5 },
+      { "color": "White/Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Camisa Com Estrutura Às Riscas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 95,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH6 - 1.jpg",
+      "/assets/images/products/CamisaH6 - 2.jpg",
+      "/assets/images/products/CamisaH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Black", "size": "S", "stock": 5 },
+      { "color": "White/Black", "size": "M", "stock": 5 },
+      { "color": "White/Black", "size": "L", "stock": 5 },
+      { "color": "White/Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Camisa 100% Linho Castanho",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH7 - 1.jpg",
+      "/assets/images/products/CamisaH7 - 2.jpg",
+      "/assets/images/products/CamisaH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Black", "size": "S", "stock": 5 },
+      { "color": "White/Black", "size": "M", "stock": 5 },
+      { "color": "White/Black", "size": "L", "stock": 5 },
+      { "color": "White/Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Camisa 100% Linho Preto",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/CamisaH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH8 - 1.jpg",
+      "/assets/images/products/CamisaH8 - 2.jpg",
+      "/assets/images/products/CamisaH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Camisa De Jacquard Geométrico",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de viscose e linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho com botões à frente.",
+    "price": 15.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH9 - 1.jpg",
+      "/assets/images/products/CamisaH9- 2.jpg",
+      "/assets/images/products/CamisaH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Camisa Lyocell - Algodão",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de liocel e algodão. Colarinho de pontas e manga curta. Bolso de chapa no peito. Fecho com botões à frente.",
+    "price": 15.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH10 - 1.jpg",
+      "/assets/images/products/CamisaH10 - 2.jpg",
+      "/assets/images/products/CamisaH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Camisa Relaxed Fit Aos Quadrados",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de liocel e algodão. Colarinho de pontas e manga curta. Bolso de chapa no peito. Fecho com botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH11 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH11 - 1.jpg",
+      "/assets/images/products/CamisaH11 - 2.jpg",
+      "/assets/images/products/CamisaH11 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Camisa Com Bordados a Contrastar",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 24,
+    "image": "/assets/images/products/CamisaH12 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH12 - 1.jpg",
+      "/assets/images/products/CamisaH12 - 2.jpg",
+      "/assets/images/products/CamisaH12 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 6 },
+      { "color": "Blue", "size": "M", "stock": 6 },
+      { "color": "Blue", "size": "L", "stock": 6 },
+      { "color": "Blue", "size": "XL", "stock": 6 }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Camisa Com Bordados a Contrastar",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 24,
+    "image": "/assets/images/products/CamisaH12 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH12 - 1.jpg",
+      "/assets/images/products/CamisaH12 - 2.jpg",
+      "/assets/images/products/CamisaH12 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 6 },
+      { "color": "Black", "size": "M", "stock": 6 },
+      { "color": "Black", "size": "L", "stock": 6 },
+      { "color": "Black", "size": "XL", "stock": 6 }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Camisa Relaxed Fit Conchas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH13 - 1.jpg",
+      "/assets/images/products/CamisaH13 - 2.jpg",
+      "/assets/images/products/CamisaH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 7 },
+      { "color": "Blue", "size": "M", "stock": 7 },
+      { "color": "Blue", "size": "L", "stock": 7 },
+      { "color": "Blue", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Camisa Jacquard Com Textura",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH13 - 1.jpg",
+      "/assets/images/products/CamisaH13 - 2.jpg",
+      "/assets/images/products/CamisaH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 7 },
+      { "color": "Blue", "size": "M", "stock": 7 },
+      { "color": "Blue", "size": "L", "stock": 7 },
+      { "color": "Blue", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Camisa Jacquard Com Textura",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH13 - 1.jpg",
+      "/assets/images/products/CamisaH13 - 2.jpg",
+      "/assets/images/products/CamisaH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 7 },
+      { "color": "Blue", "size": "M", "stock": 7 },
+      { "color": "Blue", "size": "L", "stock": 7 },
+      { "color": "Blue", "size": "XL", "stock": 7 }
+    ]
   }
 ]
