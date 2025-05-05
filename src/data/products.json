@@ -10,7 +10,7 @@
     "rating": 4.8,
     "popularity": 95,
     "stock": 12,
-    "image": "/assets/images/products/vestido-1.jpg",
+    "image": "assets/images/products/vestido-1.jpg",
     "images": [
       "/assets/images/products/vestido-1.jpg",
       "/assets/images/products/vestido-1-2.jpg",
