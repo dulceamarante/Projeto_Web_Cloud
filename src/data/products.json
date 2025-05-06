@@ -413,30 +413,7 @@
     ]
   },
   {
-    "id": 18,
-    "name": "Camisa Com Bordados a Contrastar",
-    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho de botões à frente.",
-    "price": 16.99,
-    "category": "camisa",
-    "subcategory": "",
-    "rating": 4.1,
-    "popularity": 100,
-    "stock": 24,
-    "image": "/assets/images/products/CamisaH12 - 1.jpg",
-    "images": [
-      "/assets/images/products/CamisaH12 - 1.jpg",
-      "/assets/images/products/CamisaH12 - 2.jpg",
-      "/assets/images/products/CamisaH12 - 3.jpg"
-    ],
-    "variants": [
-      { "color": "Black", "size": "S", "stock": 6 },
-      { "color": "Black", "size": "M", "stock": 6 },
-      { "color": "Black", "size": "L", "stock": 6 },
-      { "color": "Black", "size": "XL", "stock": 6 }
-    ]
-  },
-  {
-    "id": 18,
+    "id": 19,
     "name": "Camisa Relaxed Fit Conchas",
     "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
     "price": 14.99,
@@ -452,56 +429,171 @@
       "/assets/images/products/CamisaH13 - 3.jpg"
     ],
     "variants": [
-      { "color": "Blue", "size": "S", "stock": 7 },
-      { "color": "Blue", "size": "M", "stock": 7 },
-      { "color": "Blue", "size": "L", "stock": 7 },
-      { "color": "Blue", "size": "XL", "stock": 7 }
-    ]
-  },
-  {
-    "id": 19,
-    "name": "Camisa Jacquard Com Textura",
-    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
-    "price": 14.99,
-    "category": "camisa",
-    "subcategory": "",
-    "rating": 4.4,
-    "popularity": 100,
-    "stock": 28,
-    "image": "/assets/images/products/CamisaH13 - 1.jpg",
-    "images": [
-      "/assets/images/products/CamisaH13 - 1.jpg",
-      "/assets/images/products/CamisaH13 - 2.jpg",
-      "/assets/images/products/CamisaH13 - 3.jpg"
-    ],
-    "variants": [
-      { "color": "Blue", "size": "S", "stock": 7 },
-      { "color": "Blue", "size": "M", "stock": 7 },
-      { "color": "Blue", "size": "L", "stock": 7 },
-      { "color": "Blue", "size": "XL", "stock": 7 }
+      { "color": "Black", "size": "S", "stock": 7 },
+      { "color": "Black", "size": "M", "stock": 7 },
+      { "color": "Black", "size": "L", "stock": 7 },
+      { "color": "Black", "size": "XL", "stock": 7 }
     ]
   },
   {
     "id": 20,
     "name": "Camisa Jacquard Com Textura",
-    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
-    "price": 14.99,
+    "description": "Camisa relaxed fit confecionada em tecido de viscose. Colarinho bowling e manga curta. Fecho de botões à frente.",
+    "price": 16.99,
     "category": "camisa",
     "subcategory": "",
-    "rating": 4.4,
-    "popularity": 100,
-    "stock": 28,
-    "image": "/assets/images/products/CamisaH13 - 1.jpg",
+    "rating": 3.8,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH14 - 1.jpg",
     "images": [
-      "/assets/images/products/CamisaH13 - 1.jpg",
-      "/assets/images/products/CamisaH13 - 2.jpg",
-      "/assets/images/products/CamisaH13 - 3.jpg"
+      "/assets/images/products/CamisaH14 - 1.jpg",
+      "/assets/images/products/CamisaH14 - 2.jpg",
+      "/assets/images/products/CamisaH14 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 4 },
+      { "color": "Brown", "size": "M", "stock": 4 },
+      { "color": "Brown", "size": "L", "stock": 4 },
+      { "color": "Brown", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Camisa Jacquard Com Textura",
+    "description": "Camisa relaxed fit confecionada em tecido de viscose. Colarinho bowling e manga curta. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH15 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH15 - 1.jpg",
+      "/assets/images/products/CamisaH15 - 2.jpg",
+      "/assets/images/products/CamisaH15 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Camisa Com Bolsos e Bordado",
+    "description": "Camisa boxy fit confecionada em tecido de algodão com estrutura. Gola de lapela e manga curta. Aplicação de bolsos multifunções de chapa com lapela. Texto bordado combinado a contraste no peito. Efeito lavado. Fecho frontal de botões.",
+    "price": 18.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH16 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH16 - 1.jpg",
+      "/assets/images/products/CamisaH16 - 2.jpg",
+      "/assets/images/products/CamisaH16 - 3.jpg"
     ],
     "variants": [
       { "color": "Blue", "size": "S", "stock": 7 },
       { "color": "Blue", "size": "M", "stock": 7 },
       { "color": "Blue", "size": "L", "stock": 7 },
       { "color": "Blue", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 3.8,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH17 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH17 - 1.jpg",
+      "/assets/images/products/CamisaH17 - 2.jpg",
+      "/assets/images/products/CamisaH17 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH18 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH18 - 1.jpg",
+      "/assets/images/products/CamisaH18 - 2.jpg",
+      "/assets/images/products/CamisaH18 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 90,
+    "stock": 12,
+    "image": "/assets/images/products/CamisaH19 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH19 - 1.jpg",
+      "/assets/images/products/CamisaH19 - 2.jpg",
+      "/assets/images/products/CamisaH19 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 3 },
+      { "color": "Blue", "size": "M", "stock": 3 },
+      { "color": "Blue", "size": "L", "stock": 3 },
+      { "color": "Blue", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Camisa Relaxed Fit Aos Quadrados",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 18.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH20 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH20 - 1.jpg",
+      "/assets/images/products/CamisaH20 - 2.jpg",
+      "/assets/images/products/CamisaH20 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Red", "size": "S", "stock": 3 },
+      { "color": "Red", "size": "M", "stock": 3 },
+      { "color": "Red", "size": "L", "stock": 3 },
+      { "color": "Red", "size": "XL", "stock": 3 }
     ]
   }
 ]
