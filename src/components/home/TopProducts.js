@@ -66,6 +66,7 @@ const TopProducts = () => {
           onClick={() => scroll('left')}
           aria-label="Anterior"
         >
+          <img src="/assets/images/Setas/SetaEsquerda.png" alt="Seta para a esquerda" />
           <i className="fas fa-chevron-left"></i>
         </button>
         
@@ -137,6 +138,7 @@ const TopProducts = () => {
           onClick={() => scroll('right')}
           aria-label="Próximo"
         >
+          <img src="/assets/images/Setas/SetaDireita.png" alt="Seta para a direita" />
           <i className="fas fa-chevron-right"></i>
         </button>
       </div>
