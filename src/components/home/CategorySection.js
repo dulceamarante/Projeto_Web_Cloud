@@ -6,47 +6,41 @@ const CategorySection = () => {
   const categories = [
     {
       id: 1,
-      name: 'DRESSES',
-      image: '/assets/images/categories/vestido.jpg',
+      name: 'VESTIDOS',
+      image: "/assets/images/categories/vestido.png",
       link: '/products?category=vestidos'
     },
     {
       id: 2,
-      name: 'SHOES',
-      image: '/assets/images/categories/sapatos.jpg',
+      name: 'SAPATOS',
+      image: "/assets/images/categories/sapatos.png",
       link: '/products?category=sapatos'
     },
     {
       id: 3,
       name: 'T-SHIRTS',
-      image: '/assets/images/categories/tshirt.jpg',
+      image: "/assets/images/categories/tshirt.png",
       link: '/products?category=tshirts'
     },
     {
       id: 4,
-      name: 'COATS',
-      image: '/assets/images/categories/coat.jpg',
+      name: 'CASACOS',
+      image: "/assets/images/categories/casaco.png",
       link: '/products?category=coats'
     },
     {
       id: 5,
       name: 'JEANS',
-      image: '/assets/images/categories/jeans.jpg',
+      image: "/assets/images/categories/jeans.png",
       link: '/products?category=jeans'
     }
   ];
 
   return (
     <section className="categories-section">
-      <div className="responsibility-section">
-        <div className="responsibility-content">
-          <h2>OUR SENSE OF RESPONSIBILITY</h2>
-          <button className="outline-button">DISCOVER MORE</button>
-        </div>
-      </div>
-      
-      <div className="pack-bags-section">
-        <h2 className="bags-title">PACK YOUR BAGS</h2>
+
+<div className="pack-bags-section">
+        <h2 className="bags-title">FAÇA AS SUAS MALAS</h2>
       </div>
       
       <div className="categories-grid">
@@ -63,6 +57,7 @@ const CategorySection = () => {
           </Link>
         ))}
       </div>
+      
     </section>
   );
 };

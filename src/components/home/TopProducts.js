@@ -142,6 +142,14 @@ const TopProducts = () => {
           <i className="fas fa-chevron-right"></i>
         </button>
       </div>
+
+      <div className="responsibility-section">
+        <div className="responsibility-content">
+          <h2>O NOSSO SENTIDO DE RESPONSABILIDADE</h2>
+          <button className="outline-button">DESCUBRA MAIS</button>
+        </div>
+      </div>
+      
     </section>
   );
 };

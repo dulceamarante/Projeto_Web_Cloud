@@ -2,46 +2,6 @@
     margin-bottom: 40px;
   }
   
-  /* Secção de responsability */
-  .responsibility-section {
-    height: 400px;
-    background-image: url('../../assets/images/responsability-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*margin: 40px 0;*/
-  }
-  
-  .responsibility-content {
-    text-align: center;
-    color: white;
-  }
-  
-  .responsibility-content h2 {
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-  }
-  
-  .outline-button {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 10px 20px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .outline-button:hover {
-    background-color: white;
-    color: #333;
-  }
-  
   /* Secção Pack Your Bags */
   .pack-bags-section {
     text-align: center;
