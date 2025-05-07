@@ -1,52 +1,46 @@
-// src/contexts/FavoritesContext.jsx
 import React, { createContext, useState, useEffect } from 'react';
 
-export const FavoritesContext = createContext();
+export const FavoritesContext = createContext({
+  favorites: [],
+  toggleFavorite: () => {},
+  isFavorite: () => false,
+});
 
 export const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    // Carregar favoritos do localStorage
-    const savedFavorites = localStorage.getItem('favorites');
-    if (savedFavorites) {
-      setFavorites(JSON.parse(savedFavorites));
-    }
+    const saved = JSON.parse(localStorage.getItem('favorites') || '[]');
+    setFavorites(saved);
   }, []);
 
   useEffect(() => {
-    // Salvar favoritos no localStorage sempre que mudar
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  const addToFavorites = (product) => {
-    // Verificar se o produto já está nos favoritos
-    if (!favorites.some(item => item.id === product.id)) {
-      setFavorites([...favorites, product]);
-    }
+  const addToFavorites = product => {
+    setFavorites(favs => [...favs, product]);
   };
 
-  const removeFromFavorites = (productId) => {
-    setFavorites(favorites.filter(item => item.id !== productId));
+  const removeFromFavorites = productId => {
+    setFavorites(favs => favs.filter(p => p.id !== productId));
   };
 
-  const toggleFavorite = (product) => {
-    if (favorites.some(item => item.id === product.id)) {
-      removeFromFavorites(product.id);
-    } else {
-      addToFavorites(product);
-    }
+  const toggleFavorite = product => {
+    setFavorites(favs =>
+      favs.some(p => p.id === product.id)
+        ? favs.filter(p => p.id !== product.id)
+        : [...favs, product]
+    );
   };
 
-  const isFavorite = (productId) => {
-    return favorites.some(item => item.id === productId);
+  const isFavorite = productId => {
+    return favorites.some(p => p.id === productId);
   };
 
   return (
     <FavoritesContext.Provider value={{
       favorites,
-      addToFavorites,
-      removeFromFavorites,
       toggleFavorite,
       isFavorite
     }}>

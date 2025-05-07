@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-
-// Estilos Cozastore
-import './assets/css/util.css';
-import './assets/css/main.css';
+import { FavoritesProvider } from './contexts/FavoritesContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <FavoritesProvider>
+    <App />
+  </FavoritesProvider>
+);
