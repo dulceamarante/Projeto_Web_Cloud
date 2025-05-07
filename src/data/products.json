@@ -595,5 +595,236 @@
       { "color": "Red", "size": "L", "stock": 3 },
       { "color": "Red", "size": "XL", "stock": 3 }
     ]
+  },
+  {
+    "id": 48,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH1 - 1.jpg",
+      "/assets/images/products/TshirtH1 - 2.jpg",
+      "/assets/images/products/TshirtH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH2 - 1.jpg",
+      "/assets/images/products/TshirtH2 - 2.jpg",
+      "/assets/images/products/TshirtH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 8 },
+      { "color": "Brown", "size": "M", "stock": 8 },
+      { "color": "Brown", "size": "L", "stock": 8 },
+      { "color": "Brown", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 100,
+    "stock": 40,
+    "image": "/assets/images/products/TshirtH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH3 - 1.jpg",
+      "/assets/images/products/TshirtH3 - 2.jpg",
+      "/assets/images/products/TshirtH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 10 },
+      { "color": "White", "size": "M", "stock": 10 },
+      { "color": "White", "size": "L", "stock": 10 },
+      { "color": "White", "size": "XL", "stock": 10 }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH4 - 1.jpg",
+      "/assets/images/products/TshirtH4 - 2.jpg",
+      "/assets/images/products/TshirtH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 40,
+    "image": "/assets/images/products/TshirtH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH5 - 1.jpg",
+      "/assets/images/products/TshirtH5 - 2.jpg",
+      "/assets/images/products/TshirtH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "T-shirt Básica Com Decote Em V",
+    "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
+    "price": 12.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 3.6,
+    "popularity": 70,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH6 - 1.jpg",
+      "/assets/images/products/TshirtH6 - 2.jpg",
+      "/assets/images/products/TshirtH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "T-shirt Básica Com Decote Em V",
+    "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
+    "price": 12.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 3.8,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH7 - 1.jpg",
+      "/assets/images/products/TshirtH7 - 2.jpg",
+      "/assets/images/products/TshirtH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH8 - 1.jpg",
+      "/assets/images/products/TshirtH8 - 2.jpg",
+      "/assets/images/products/TshirtH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH9 - 1.jpg",
+      "/assets/images/products/TshirtH9 - 2.jpg",
+      "/assets/images/products/TshirtH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH10 - 1.jpg",
+      "/assets/images/products/TshirtH10 - 2.jpg",
+      "/assets/images/products/TshirtH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
   }
+  
 ]
