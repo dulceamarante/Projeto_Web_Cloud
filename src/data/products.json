@@ -207,17 +207,109 @@
     "id": 31,
     "name": "Vestido Midi Cut Out",
     "description": "Vestido midi confecionado em fiação com mistura de poliamida. Decote reto e alças finas ajustáveis com laços. Detalhe de aplicação metálica na frente e cut out. Drapeado lateral.",
-    "price":39.95,
+    "price":29.95,
     "category": "vestidos",
     "subcategory": "",
-    "rating": 5.5,
-    "popularity": 79,
+    "rating": 8,
+    "popularity": 87,
     "stock": 20,
-    "image": "/assets/images/products/vestido-5-1.jpg",
+    "image": "/assets/images/products/vestido-6-1.jpg",
     "images": [
-      "/assets/images/products/vestido-5-1.jpg",
-      "/assets/images/products/vestido-5-2.jpg",
-      "/assets/images/products/vestido-5-3.jpg"
+      "/assets/images/products/vestido-6-1.jpg",
+      "/assets/images/products/vestido-6-2.jpg",
+      "/assets/images/products/vestido-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Vestido Combinado de Malha",
+    "description": "Vestido de decote redondo e sem mangas. Detalhe de tecido com relevo e parte inferior com tecido combinado.",
+    "price":20.99,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7.8,
+    "popularity": 66,
+    "stock": 11,
+    "image": "/assets/images/products/vestido-7-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-7-1.jpg",
+      "/assets/images/products/vestido-7-2.jpg",
+      "/assets/images/products/vestido-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Vestido Midi Lavado",
+    "description": "Vestido midi confecionado em fio de algodão. Gola redonda e manga curta. Parte inferior com abertura na frente.",
+    "price":20.00,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 50,
+    "stock": 5,
+    "image": "/assets/images/products/vestido-8-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-8-1.jpg",
+      "/assets/images/products/vestido-8-2.jpg",
+      "/assets/images/products/vestido-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 1 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 1 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Vestido Curto Combinado Com Volume",
+    "description": "Vestido curto com decote direito e alças finas. Detalhe de combinação de tecidos a tom. Parte inferior com acabamento em folho.",
+    "price":23.15,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 59,
+    "stock": 10,
+    "image": "/assets/images/products/vestido-9-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-9-1.jpg",
+      "/assets/images/products/vestido-9-2.jpg",
+      "/assets/images/products/vestido-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 2 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Vestido Midi Corseteiro Com Linho",
+    "description": "Vestido confecionado com linho. Decote reto e justo com franzidos e renda. Alças finas. Detalhe de entremeios frontais a condizer. Parte inferior com abertura nas costas. Fecho lateral com zip oculto na costura.",
+    "price":30.00,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 78,
+    "stock": 20,
+    "image": "/assets/images/products/vestido-10-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-10-1.jpg",
+      "/assets/images/products/vestido-10-2.jpg",
+      "/assets/images/products/vestido-10-3.jpg"
     ],
     "variants": [
       { "color": "White", "size": "S", "stock": 5 },
@@ -225,7 +317,77 @@
       { "color": "White", "size": "L", "stock": 5 },
       { "color": "White", "size": "XL", "stock": 5 }
     ]
+  },
+  {
+    "id": 36,
+    "name": "Vestido Curto Acetinado Com Laços",
+    "description": "Vestido curto confecionado em tecido acetinado. Decote reto e alças finas. Detalhe de laços combinados contrastantes. Forro interior. Fecho nas costas com fecho de correr oculto na costura.",
+    "price":32.10,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 80,
+    "stock": 10,
+    "image": "/assets/images/products/vestido-11-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-11-1.jpg",
+      "/assets/images/products/vestido-11-2.jpg",
+      "/assets/images/products/vestido-11-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 2 },
+      { "color": "White", "size": "L", "stock": 3 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Vestido Assimétrico Drapeado",
+    "description": "Vestido curto confecionado em tecido acetinado. Decote reto e alças finas. Detalhe de laços combinados contrastantes. Forro interior. Fecho nas costas com fecho de correr oculto na costura.",
+    "price":27.10,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 10,
+    "popularity": 90,
+    "stock": 10,
+    "image": "/assets/images/products/vestido-12-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-12-1.jpg",
+      "/assets/images/products/vestido-12-2.jpg",
+      "/assets/images/products/vestido-12-3.jpg"
+    ],
+    "variants": [
+      { "color": "Red", "size": "S", "stock": 5 },
+      { "color": "Red", "size": "M", "stock": 2 },
+      { "color": "Red", "size": "L", "stock": 3 },
+      { "color": "Red", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Vestido Midi Flores de Malha",
+    "description": "Vestido de decote direito com tecido em estrutura em forma de flor e ombros descobertos. Fecho lateral com fecho de correr oculto na costura.",
+    "price":40.25,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 70,
+    "stock": 10,
+    "image": "/assets/images/products/vestido-13-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-13-1.jpg",
+      "/assets/images/products/vestido-13-2.jpg",
+      "/assets/images/products/vestido-13-3.jpg"
+    ],
+    "variants": [
+      { "color": "Red", "size": "S", "stock": 5 },
+      { "color": "Red", "size": "M", "stock": 2 },
+      { "color": "Red", "size": "L", "stock": 3 },
+      { "color": "Red", "size": "XL", "stock": 1 }
+    ]
   }
+  
   
   
 ]
