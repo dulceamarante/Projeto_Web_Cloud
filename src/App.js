@@ -7,7 +7,6 @@ import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
-import SearchPage from './pages/SearchPage'; // Adicionado
 import NotFoundPage from './pages/NotFoundPage';
 import { CartProvider } from './contexts/CartContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
@@ -29,7 +28,6 @@ function App() {
                   <Route path="/product/:productId" element={<ProductDetailPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/favorites" element={<FavoritesPage />} />
-                  <Route path="/search" element={<SearchPage />} /> {/* Adicionado */}
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </main>

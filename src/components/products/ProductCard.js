@@ -1,62 +1,84 @@
-// src/components/products/ProductCard.jsx
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { CartContext } from '../../contexts/CartContext';
-import { FavoritesContext } from '../../contexts/FavoritesContext';
+import React, { useState } from 'react';
+import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart } from 'react-icons/fa';
 import './ProductCard.css';
 
-const ProductCard = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
-  const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
-  
-  const favorited = isFavorite(product.id);
+export default function ProductCard({ product, addToCart, toggleFavorite }) {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [hover, setHover] = useState(false);
+  const isFav = product.isFavorite;
+
+  const prev = e => {
+    e.stopPropagation();
+    setCurrentImage(i => (i === 0 ? product.images.length - 1 : i - 1));
+  };
+  const next = e => {
+    e.stopPropagation();
+    setCurrentImage(i => (i === product.images.length - 1 ? 0 : i + 1));
+  };
 
   return (
-    <div className="product-card">
-      <Link to={`/product/${product.id}`} className="product-image">
-        <img src={product.image} alt={product.name} />
-        
-        <div className="product-actions">
-          <button
-            className={`favorite-btn ${favorited ? 'active' : ''}`}
-            onClick={(e) => {
-              e.preventDefault();
-              toggleFavorite(product);
-            }}
-            aria-label={favorited ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-          >
-            <i className={favorited ? 'fas fa-heart' : 'far fa-heart'}></i>
-          </button>
-          
-          <button
-            className="add-to-cart-btn"
-            onClick={(e) => {
-              e.preventDefault();
-              addToCart(product);
-            }}
-            aria-label="Adicionar ao carrinho"
-          >
-            <i className="fas fa-shopping-bag"></i>
-          </button>
-        </div>
-      </Link>
-      
+    <div
+      className="product-card"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <div className="product-image-container">
+        <img
+          src={product.images[currentImage]}
+          alt={product.name}
+          className="product-image"
+        />
+        <button className="nav-arrow left" onClick={prev}>
+          <FaChevronLeft />
+        </button>
+        <button className="nav-arrow right" onClick={next}>
+          <FaChevronRight />
+        </button>
+        {hover && (
+          <div className="size-overlay">
+            {product.variants.map(v => (
+              <button
+                key={v.size}
+                className="size-btn"
+                disabled={v.stock === 0}
+                onClick={() => addToCart(product.id, v)}
+              >
+                {v.size}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
       <div className="product-info">
-        <div className="product-category">
-          {product.category} {product.subcategory && `• ${product.subcategory}`}
+        <div className="title-heart">
+          <h3 className="product-name">{product.name}</h3>
+          <button
+            className="fav-btn"
+            onClick={() => toggleFavorite(product.id)}
+          >
+            {isFav ? <FaHeart /> : <FaRegHeart />}
+          </button>
         </div>
-        <Link to={`/product/${product.id}`} className="product-name">
-          {product.name}
-        </Link>
-        <div className="product-price">
+
+        <div className="product-price-container">
           {product.oldPrice && (
-            <span className="old-price">{product.oldPrice.toFixed(2)} €</span>
+            <span className="original-price">
+              {product.oldPrice.toFixed(2)} €
+            </span>
           )}
-          <span className="current-price">{product.price.toFixed(2)} €</span>
+          {product.oldPrice && (
+            <span className="discount-badge">
+              –
+              {Math.round(
+                ((product.oldPrice - product.price) / product.oldPrice) * 100
+              )}
+              %
+            </span>
+          )}
+          <span className="final-price">{product.price.toFixed(2)} €</span>
         </div>
       </div>
     </div>
   );
-};
-
-export default ProductCard;
+}

@@ -1,108 +1,153 @@
-/* src/components/products/ProductCard.css */
 .product-card {
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .product-image {
-    display: block;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4/5;
-    overflow: hidden;
-  }
-  
-  .product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-  
-  .product-card:hover .product-image img {
-    transform: scale(1.05);
-  }
-  
-  .product-actions {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    transition: bottom 0.3s;
-  }
-  
-  .product-card:hover .product-actions {
-    bottom: 0;
-  }
-  
-  .favorite-btn, .add-to-cart-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background-color: white;
-    border: 1px solid #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.2s;
-  }
-  
-  .favorite-btn:hover, .add-to-cart-btn:hover {
-    background-color: #333;
-    color: white;
-  }
-  
-  .favorite-btn.active {
-    color: #e94560;
-    border-color: #e94560;
-  }
-  
-  .favorite-btn.active:hover {
-    background-color: #e94560;
-    color: white;
-  }
-  
-  .product-info {
-    padding: 10px 5px;
-  }
-  
-  .product-category {
-    font-size: 11px;
-    color: #888;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-  }
-  
-  .product-name {
-    display: block;
-    font-size: 13px;
-    font-weight: normal;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-  }
-  
-  .product-price {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .old-price {
-    font-size: 12px;
-    color: #888;
-    text-decoration: line-through;
-  }
-  
-  .current-price {
-    font-size: 14px;
-    font-weight: 500;
-  }
+  width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Imagem + setas */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Setas maiores, sem fundo branco sólido */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.nav-arrow:hover {
+  background: rgba(255,255,255,0.9);
+}
+.nav-arrow.left { left: 12px; }
+.nav-arrow.right { right: 12px; }
+
+/* Painel de tamanhos – slide-up suave */
+.size-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  transition: bottom 0.3s ease;
+}
+.product-card:hover .size-overlay {
+  bottom: 0;
+}
+
+.size-btn {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.size-btn:hover:not(:disabled) {
+  background: #333;
+  color: #fff;
+}
+.size-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Informação de baixo */
+.product-info {
+  padding: 14px 12px 20px;
+}
+
+.title-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #222;
+  margin: 0;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.fav-btn:hover {
+  color: #e41e63;
+}
+
+/* Preço */
+.product-price-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  font-size: 13px;
+  color: #999;
+}
+
+.discount-badge {
+  background: #e41e63;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.final-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
