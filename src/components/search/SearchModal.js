@@ -1,14 +1,10 @@
-// src/components/search/SearchModal.js
 import React, { useState, useEffect, useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
-import { FavoritesContext } from '../../contexts/FavoritesContext';
 import ProductCard from '../products/ProductCard';
 import './SearchModal.css';
 
 export default function SearchModal({ onClose }) {
-  const { products, addToCart } = useContext(ProductContext);
-  const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
-
+  const { products, addToCart, toggleFavorite } = useContext(ProductContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCategory, setFilterCategory] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
@@ -23,7 +19,6 @@ export default function SearchModal({ onClose }) {
     const base = filterCategory
       ? products.filter(p => p.category.toLowerCase() === filterCategory)
       : products;
-
     setSearchResults(
       base.filter(p =>
         [p.name, p.description, p.category]
@@ -76,9 +71,8 @@ export default function SearchModal({ onClose }) {
                 <ProductCard
                   key={p.id}
                   product={p}
-                  addToCart={(id, variant) => addToCart(id, variant)}
-                  toggleFavorite={() => toggleFavorite(p)}
-                  isFavorite={isFavorite(p.id)}
+                  addToCart={addToCart}
+                  toggleFavorite={toggleFavorite}
                 />
               ))}
             </div>
@@ -99,9 +93,8 @@ export default function SearchModal({ onClose }) {
               <ProductCard
                 key={p.id}
                 product={p}
-                addToCart={(id, variant) => addToCart(id, variant)}
-                toggleFavorite={() => toggleFavorite(p)}
-                isFavorite={isFavorite(p.id)}
+                addToCart={addToCart}
+                toggleFavorite={toggleFavorite}
               />
             ))}
           </div>
