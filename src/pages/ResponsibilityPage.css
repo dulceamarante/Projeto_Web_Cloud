@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  flex: 1;
+  max-width: 40%;
+}
+
+.title h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.content {
+  flex: 2;
+  max-width: 60%;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
