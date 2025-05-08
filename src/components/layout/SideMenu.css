@@ -82,14 +82,14 @@
 
 /* Conteúdo do menu */
 .side-menu-content {
-  padding: 30px 0px; /* Removido o padding horizontal para alinhar com as categorias */
+  padding: 25px 0px; 
 }
 
 /* Subcategorias */
 .subcategories-container {
   position: relative;
   min-height: 200px;
-  padding-left: 46px; 
+  padding-left: 34px; 
 }
 
 .subcategories-container.slide-in {

@@ -17,18 +17,24 @@ const Header = () => {
   useEffect(() => {
     const handleKey = e => {
       if (e.key === 'Escape') {
-        setSearchOpen(false);
-        setFavOpen(false);
-        setMenuOpen(false);
+        // Fechamos na ordem inversa de prioridade
+        if (favOpen) {
+          setFavOpen(false);
+        } else if (searchOpen) {
+          setSearchOpen(false);
+        } else if (menuOpen) {
+          closeMenuWithAnimation();
+        }
       }
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, []);
+  }, [menuOpen, searchOpen, favOpen]);
   
   const categories = ['mulher', 'homem', 'beauty'];
   
   const handleCategoryHover = cat => {
+    // Permitir hover mesmo com o modal de pesquisa aberto
     setActiveCategory(cat);
     setMenuOpen(true);
   };
@@ -37,6 +43,44 @@ const Header = () => {
     e.preventDefault();
     setActiveCategory(cat);
     setMenuOpen(true);
+  };
+  
+  // Função para permitir que o SearchModal abra o SideMenu
+  const handleSearchCategoryClick = (category) => {
+    setActiveCategory(category);
+    setMenuOpen(true);
+  };
+  
+  // Função para fechar o menu com animação
+  const closeMenuWithAnimation = () => {
+    // Referência ao SideMenu para fechar com animação
+    const sidemenusRef = document.querySelectorAll('.side-menu');
+    const subcategoriesRef = document.querySelectorAll('.subcategories-container');
+    const overlayRef = document.querySelectorAll('.side-menu-overlay');
+    
+    // Aplicar classes de animação de saída
+    sidemenusRef.forEach(menu => {
+      if (menu.classList.contains('slide-in')) {
+        menu.classList.replace('slide-in', 'slide-out');
+      }
+    });
+    
+    subcategoriesRef.forEach(sub => {
+      if (sub.classList.contains('slide-in')) {
+        sub.classList.replace('slide-in', 'slide-out');
+      }
+    });
+    
+    overlayRef.forEach(overlay => {
+      if (overlay.classList.contains('fade-in')) {
+        overlay.classList.replace('fade-in', 'fade-out');
+      }
+    });
+    
+    // Aguardar o fim da animação antes de fechar
+    setTimeout(() => {
+      setMenuOpen(false);
+    }, 800);
   };
   
   return (
@@ -59,22 +103,7 @@ const Header = () => {
             <li className="header-item close-button-container">
               <button 
                 className="close-menu-button"
-                onClick={() => {
-                  // Referência ao SideMenu para fechar com animação
-                  const sidemenusRef = document.querySelectorAll('.side-menu');
-                  const subcategoriesRef = document.querySelectorAll('.subcategories-container');
-                  const overlayRef = document.querySelectorAll('.side-menu-overlay');
-                  
-                  // Aplicar classes de animação de saída
-                  sidemenusRef.forEach(menu => menu.classList.replace('slide-in', 'slide-out'));
-                  subcategoriesRef.forEach(sub => sub.classList.replace('slide-in', 'slide-out'));
-                  overlayRef.forEach(overlay => overlay.classList.replace('fade-in', 'fade-out'));
-                  
-                  // Aguardar o fim da animação antes de fechar
-                  setTimeout(() => {
-                    setMenuOpen(false);
-                  }, 800);
-                }}
+                onClick={closeMenuWithAnimation}
                 aria-label="Fechar menu"
               >
                 ×
@@ -99,14 +128,22 @@ const Header = () => {
         </div>
       </header>
       
+      {/* O SideMenu é renderizado independentemente do SearchModal */}
       <SideMenu
         isOpen={menuOpen}
-        onClose={() => setMenuOpen(false)}
+        onClose={closeMenuWithAnimation}
         initialCategory={activeCategory}
         onCategoryChange={setActiveCategory}
       />
       
-      {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} />}
+      {/* SearchModal agora pode interagir com o SideMenu */}
+      {searchOpen && (
+        <SearchModal 
+          onClose={() => setSearchOpen(false)} 
+          onCategoryClick={handleSearchCategoryClick}
+        />
+      )}
+      
       {favOpen && <FavoritesPopOver onClose={() => setFavOpen(false)} />}
     </>
   );

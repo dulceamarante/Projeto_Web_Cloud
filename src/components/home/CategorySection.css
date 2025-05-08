@@ -20,7 +20,7 @@
   }
 
   .bags-title {
-    font-size: 26px;     
+    font-size: 36px;     
     font-weight: 700;   
     font-style: italic;  
     letter-spacing: 1px;
@@ -67,7 +67,7 @@
   /* Legenda abaixo, centralizada */
   .category-item h3 {
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
