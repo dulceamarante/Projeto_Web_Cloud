@@ -64,20 +64,22 @@
   }
   
   .search-form {
+    width: 100%; 
     text-align: center;    /* centra o inline-block interno */
   }
   
   .search-input {
-    display: inline-block; /* permite centrar com text-align do pai */
-    width: 80vw;           /* 80% da largura da viewport */
-    max-width: 800px;      /* limite máximo */
-    padding: 12px 0;       /* altura do input */
-    font-size: 17px;       /* texto um pouco menor */
+    display: block;          /* Change from inline-block to block */
+    width: 80%;              /* Use percentage of parent instead of viewport width */
+    max-width: 800px;        /* Reasonable max-width */
+    margin: 0 auto;          /* Center the input */
+    padding: 16px 0;
+    font-size: 20px;
     text-align: center;
     color: #666;
     background: transparent;
     border: none;
-    border-bottom: 1px solid #aaa; /* linha mais grossa */
+    border-bottom: 2px solid #aaa;
     transition: border-color 0.2s;
   }
   
@@ -96,12 +98,13 @@
      TÍTULO DE SECÇÃO
      ---------------------------------------- */
   .section-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     margin: 0 0 30px;
     text-transform: uppercase;
-    color: #666;
+    color: #3c3b3b;
+    font-style: normal;
   }
   
   /* ----------------------------------------
@@ -203,6 +206,11 @@
      ---------------------------------------- */
   .interest-section .products-grid {
     margin-top: 20px;
+  }
+
+  .interest-section .section-title {
+    font-style: normal; 
+    color:#6a6969;
   }
   
   /* ----------------------------------------

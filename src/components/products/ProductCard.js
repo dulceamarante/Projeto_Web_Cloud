@@ -52,31 +52,32 @@ export default function ProductCard({ product, addToCart, toggleFavorite }) {
 
       <div className="product-info">
         <div className="title-heart">
-          <h3 className="product-name">{product.name}</h3>
+          <div className="product-info-left">
+            <h3 className="product-name">{product.name}</h3>
+            <div className="product-price-container">
+              {product.oldPrice && (
+                <span className="original-price">
+                  {product.oldPrice.toFixed(2)} €
+                </span>
+              )}
+              {product.oldPrice && (
+                <span className="discount-badge">
+                  –
+                  {Math.round(
+                    ((product.oldPrice - product.price) / product.oldPrice) * 100
+                  )}
+                  %
+                </span>
+              )}
+              <span className="final-price">{product.price.toFixed(2)} €</span>
+            </div>
+          </div>
           <button
             className="fav-btn"
             onClick={() => toggleFavorite(product.id)}
           >
             {isFav ? <FaHeart /> : <FaRegHeart />}
           </button>
-        </div>
-
-        <div className="product-price-container">
-          {product.oldPrice && (
-            <span className="original-price">
-              {product.oldPrice.toFixed(2)} €
-            </span>
-          )}
-          {product.oldPrice && (
-            <span className="discount-badge">
-              –
-              {Math.round(
-                ((product.oldPrice - product.price) / product.oldPrice) * 100
-              )}
-              %
-            </span>
-          )}
-          <span className="final-price">{product.price.toFixed(2)} €</span>
         </div>
       </div>
     </div>

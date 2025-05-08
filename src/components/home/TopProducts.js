@@ -1,3 +1,4 @@
+// src/components/layout/TopProducts.js
 import React, { useContext, useState } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
 import ProductCard from '../products/ProductCard';
@@ -6,10 +7,10 @@ import './TopProducts.css';
 export default function TopProducts() {
   const { getTopSellingProducts, loading } = useContext(ProductContext);
   const [favorites, setFavorites] = useState([]);
-  
+
   const topProducts = getTopSellingProducts(5);
 
-  const toggleFavorite = (productId) => {
+  const toggleFavorite = productId => {
     setFavorites(favs =>
       favs.includes(productId)
         ? favs.filter(id => id !== productId)
@@ -26,27 +27,29 @@ export default function TopProducts() {
 
   return (
     <section className="top-products-section">
-      <div className="top-products-inner">
-        <h2 className="section-title">TOP SELLERS</h2>
-        <div className="products-grid">
-          {topProducts.map(prod => (
-            <ProductCard
-              key={prod.id}
-              product={{
-                ...prod,
-                isFavorite: favorites.includes(prod.id)
-              }}
-              toggleFavorite={toggleFavorite}
-              addToCart={addToCart}
-            />
-          ))}
-        </div>
+      {/* Título da secção */}
+      <h2 className="section-title">TOP SELLERS</h2>
 
-        <div className="responsibility-section">
-          <div className="responsibility-content">
-            <h2>VESTIR COM CONSCIÊNCIA</h2>
-            <button className="outline-button">DESCUBRA MAIS</button>
-          </div>
+      {/* Grid de produtos */}
+      <div className="products-grid">
+        {topProducts.map(prod => (
+          <ProductCard
+            key={prod.id}
+            product={{
+              ...prod,
+              isFavorite: favorites.includes(prod.id)
+            }}
+            toggleFavorite={toggleFavorite}
+            addToCart={addToCart}
+          />
+        ))}
+      </div>
+
+      {/* Seção de responsabilidade */}
+      <div className="responsibility-section">
+        <div className="responsibility-content">
+          <h2>VESTIR COM CONSCIÊNCIA</h2>
+          <button className="outline-button">DESCUBRA MAIS</button>
         </div>
       </div>
     </section>

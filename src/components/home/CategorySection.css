@@ -23,8 +23,8 @@
 
   .bags-title {
     font-size: 26px;     
-    font-weight: 700;    /* negrito */
-    font-style: italic;  /* itálico */
+    font-weight: 700;   
+    font-style: italic;  
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #666;
