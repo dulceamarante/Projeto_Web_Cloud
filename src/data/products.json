@@ -386,7 +386,7 @@
       { "color": "Red", "size": "L", "stock": 3 },
       { "color": "Red", "size": "XL", "stock": 1 }
     ]
-  }
+  },
   {
     "id": 39,
     "name": "Vestido Mini Halter Acetinado",
@@ -547,7 +547,496 @@
       { "color": "Blue", "size": "L", "stock": 2 },
       { "color": "Blue", "size": "XL", "stock": 2 }
     ]
-  }
+  },
+  {
+    "id": 46,
+    "name": "Vestido Midi Acetinado Aplique Dourado",
+    "description": "Vestido de decote redondo com aplique dourado e manga cava. Pregas laterais na cintura. Detalhe de tecido acetinado com efeito enrugado. Bainha com abertura nas costas. Fecho lateral com fecho éclair oculto na costura e botão traseiro.",
+    "price":30.99,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 66,
+    "stock": 13,
+    "image": "/assets/images/products/vestido-19-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-19-1.jpg",
+      "/assets/images/products/vestido-19-2.jpg",
+      "/assets/images/products/vestido-19-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 3 },
+      { "color": "Blue", "size": "M", "stock": 4 },
+      { "color": "Blue", "size": "L", "stock": 2 },
+      { "color": "Blue", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "T-shirt com gola assimétrica e rufados",
+    "description": "Tecido fluido. Design reto. Decote assimétrico. Pormenores de rufos. Sem mangas. Visual total.",
+    "price":14.99,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 73,
+    "stock": 6,
+    "image": "/assets/images/products/tshirtM-1-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-1-1.jpg",
+      "/assets/images/products/tshirtM-1-2.jpg",
+      "/assets/images/products/tshirtM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 2 },
+      { "color": "Bege", "size": "M", "stock": 1 },
+      { "color": "Bege", "size": "L", "stock": 2 },
+      { "color": "Bege", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "T-shirt Com Folhos",
+    "description": "T-shirt confecionada em fio de algodão. Gola redonda e manga curta. Detalhe de folhos no mesmo tecido.",
+    "price":14.99,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 40,
+    "stock": 12,
+    "image": "/assets/images/products/tshirtM-2-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-2-1.jpg",
+      "/assets/images/products/tshirtM-2-2.jpg",
+      "/assets/images/products/tshirtM-2-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 3 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "T-shirt de Poliamida com Alças Amplas",
+    "description": "T-shirt justa em mistura de poliamida com alça larga e reforço no peito.",
+    "price":7.99,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 82,
+    "stock": 6,
+    "image": "/assets/images/products/tshirtM-3-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-3-1.jpg",
+      "/assets/images/products/tshirtM-3-2.jpg",
+      "/assets/images/products/tshirtM-3-3.jpg"
+    ],
+    "variants": [
+      { "color": "Pink", "size": "S", "stock": 3 },
+      { "color": "Pink", "size": "M", "stock": 2 },
+      { "color": "Pink", "size": "L", "stock": 1 },
+      { "color": "Pink", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "T-shirt de Algodão Desbotada",
+    "description": "T-shirt confecionada em fio de algodão. Decote redondo e manga curta. Efeito lavado.",
+    "price":8.99,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 76,
+    "stock": 5,
+    "image": "/assets/images/products/tshirtM-4-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-4-1.jpg",
+      "/assets/images/products/tshirtM-4-2.jpg",
+      "/assets/images/products/tshirtM-4-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 1 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "T-shirt Rústica Manga Descaída",
+    "description": "T-shirt confecionada em fio de algodão. Gola redonda e manga curta descaída com acabamento com dobra.",
+    "price":10.99,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 82,
+    "stock": 7,
+    "image": "/assets/images/products/tshirtM-5-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-5-1.jpg",
+      "/assets/images/products/tshirtM-5-2.jpg",
+      "/assets/images/products/tshirtM-5-3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 2 },
+      { "color": "Bege", "size": "M", "stock": 1 },
+      { "color": "Bege", "size": "L", "stock": 2 },
+      { "color": "Bege", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "T-shirt Interlock Manga Curta",
+    "description": "T-shirt confecionada em tecido de malha elástica e flexível com trama compacta, suavizada e opaca. Decote redondo e manga curta.",
+    "price":10.00,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 55,
+    "stock": 10,
+    "image": "/assets/images/products/tshirtM-6-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-6-1.jpg",
+      "/assets/images/products/tshirtM-6-2.jpg",
+      "/assets/images/products/tshirtM-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "Pink", "size": "S", "stock": 1 },
+      { "color": "Pink", "size": "M", "stock": 5 },
+      { "color": "Pink", "size": "L", "stock": 1 },
+      { "color": "Pink", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "T-shirt Vivo Contrastante",
+    "description": "T-shirt confecionada em mistura de algodão e liocel. Decote redondo e alças finas. Detalhe de acabamentos em vivo contrastante.",
+    "price":12.00,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 75,
+    "stock": 12,
+    "image": "/assets/images/products/tshirtM-7-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-7-1.jpg",
+      "/assets/images/products/tshirtM-7-2.jpg",
+      "/assets/images/products/tshirtM-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 3 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "T-shirt Assimétrica Lavada",
+    "description": "T-shirt de decote redondo com cava descaída e manga curta. Detalhe de franzidos laterais.",
+    "price":13.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 85,
+    "stock": 10,
+    "image": "/assets/images/products/tshirtM-8-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-8-1.jpg",
+      "/assets/images/products/tshirtM-8-2.jpg",
+      "/assets/images/products/tshirtM-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 2 },
+      { "color": "Bege", "size": "M", "stock": 5 },
+      { "color": "Bege", "size": "L", "stock": 1 },
+      { "color": "Bege", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "T-shirt Poliamida Alça Fina",
+    "description": "T-shirt ajustada confecionada em tecido com mistura de poliamida com decote redondo e alças.",
+    "price":6.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 10,
+    "popularity": 97,
+    "stock": 15,
+    "image": "/assets/images/products/tshirtM-9-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-9-1.jpg",
+      "/assets/images/products/tshirtM-9-2.jpg",
+      "/assets/images/products/tshirtM-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 3 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "T-shirt Slim com Algodão Supima®",
+    "description": "T-shirt confecionada em fio com 51% de algodão. Gola redonda e manga curta. ",
+    "price":10.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 78,
+    "stock": 14,
+    "image": "/assets/images/products/tshirtM-10-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-10-1.jpg",
+      "/assets/images/products/tshirtM-10-2.jpg",
+      "/assets/images/products/tshirtM-10-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 3 },
+      { "color": "White", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "T-shirt Vivo Contrastante",
+    "description": "T-shirt confecionada em mistura de algodão e liocel. Decote redondo e alças finas. Detalhe de acabamentos em vivo contrastante.",
+    "price":11.00,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 57,
+    "stock": 8,
+    "image": "/assets/images/products/tshirtM-11-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-11-1.jpg",
+      "/assets/images/products/tshirtM-11-2.jpg",
+      "/assets/images/products/tshirtM-11-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 2 },
+      { "color": "Blue", "size": "M", "stock": 1 },
+      { "color": "Blue", "size": "L", "stock": 3 },
+      { "color": "Blue", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "T-shirt Decote Quadrado",
+    "description": "T-shirt confecionada em tecido com mistura de algodão. Decote quadrado e manga curta.",
+    "price":12.30,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 87,
+    "stock": 8,
+    "image": "/assets/images/products/tshirtM-12-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-12-1.jpg",
+      "/assets/images/products/tshirtM-12-2.jpg",
+      "/assets/images/products/tshirtM-12-3.jpg"
+    ],
+    "variants": [
+      { "color": "Pink", "size": "S", "stock": 2 },
+      { "color": "Pink", "size": "M", "stock": 1 },
+      { "color": "Pink", "size": "L", "stock": 3 },
+      { "color": "Pink", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "T-shirt de Manga Comprida às Riscas",
+    "description": " T-shirt confecionada com 30% de linho. Decote redondo e manga comprida. Parte inferior com aberturas laterais.",
+    "price":20.00,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 77,
+    "stock": 10,
+    "image": "/assets/images/products/tshirtM-13-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-13-1.jpg",
+      "/assets/images/products/tshirtM-13-2.jpg",
+      "/assets/images/products/tshirtM-13-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 2 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 3 },
+      { "color": "White", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Top com Nervuras",
+    "description": "Top justo de decote redondo e sem mangas.",
+    "price":9.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 62,
+    "stock": 11,
+    "image": "/assets/images/products/tshirtM-14-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-14-1.jpg",
+      "/assets/images/products/tshirtM-14-2.jpg",
+      "/assets/images/products/tshirtM-14-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 2 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "T-Shirt Rib Manga Cava",
+    "description": "T-shirt confecionada em mistura de algodão. Gola redonda e manga cava.",
+    "price":13.00,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 53,
+    "stock": 4,
+    "image": "/assets/images/products/tshirtM-15-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-15-1.jpg",
+      "/assets/images/products/tshirtM-15-2.jpg",
+      "/assets/images/products/tshirtM-15-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 1 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "T-Shirt Algodão Nervuras Manga Cava ",
+    "description": "T-shirt confecionada em fiação de algodão. Decote redondo e manga cava.",
+    "price":7.30,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 83,
+    "stock": 7,
+    "image": "/assets/images/products/tshirtM-16-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-16-1.jpg",
+      "/assets/images/products/tshirtM-16-2.jpg",
+      "/assets/images/products/tshirtM-16-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 3 },
+      { "color": "Black", "size": "M", "stock": 1 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "T-Shirt Alfinete",
+    "description": "T-shirt confecionada em fio de algodão. Gola redonda e manga curta. Pormenor de broche metálico na parte da frente.",
+    "price":16.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 4,
+    "popularity": 32,
+    "stock": 4,
+    "image": "/assets/images/products/tshirtM-17-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-17-1.jpg",
+      "/assets/images/products/tshirtM-17-2.jpg",
+      "/assets/images/products/tshirtM-17-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 1 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Crop Top de Algodão",
+    "description": "Top confecionado em fiação com mistura de algodão. Decote redondo e manga cava.",
+    "price":6.50,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 74,
+    "stock": 8,
+    "image": "/assets/images/products/tshirtM-18-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-18-1.jpg",
+      "/assets/images/products/tshirtM-18-2.jpg",
+      "/assets/images/products/tshirtM-18-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 2 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "T-Shirt Texto Contraste",
+    "description": "T-shirt confecionada em fio de algodão. Decote redondo e manga curta. Detalhe de mensagem na parte da frente e nas costas a contraste.",
+    "price":18.95,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 10,
+    "popularity": 98,
+    "stock": 17,
+    "image": "/assets/images/products/tshirtM-19-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-19-1.jpg",
+      "/assets/images/products/tshirtM-19-2.jpg",
+      "/assets/images/products/tshirtM-19-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 7 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Top Canelado com Decote Coração",
+    "description": "Top justo em tecido canelado. Decote coração e manga curta.",
+    "price":10.55,
+    "category": "tshirtM",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 87,
+    "stock": 6,
+    "image": "/assets/images/products/tshirtM-20-1.jpg",
+    "images": [
+      "/assets/images/products/tshirtM-20-1.jpg",
+      "/assets/images/products/tshirtM-20-2.jpg",
+      "/assets/images/products/tshirtM-20-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 7 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+  
+  
+  
+  
+  
+  
   
   
   
