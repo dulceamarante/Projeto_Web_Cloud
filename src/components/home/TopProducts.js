@@ -48,7 +48,7 @@ export default function TopProducts() {
       {/* Seção de responsabilidade */}
       <div className="responsibility-section">
         <div className="responsibility-content">
-          <h2>VESTIR COM CONSCIÊNCIA</h2>
+        <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>
           <button className="outline-button">DESCUBRA MAIS</button>
         </div>
       </div>
