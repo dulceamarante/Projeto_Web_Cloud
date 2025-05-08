@@ -387,6 +387,169 @@
       { "color": "Red", "size": "XL", "stock": 1 }
     ]
   }
+  {
+    "id": 39,
+    "name": "Vestido Mini Halter Acetinado",
+    "description": "Vestido com gola halter e costas descobertas. Fecho no pescoço com botões ocultos.",
+    "price":25.15,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 70,
+    "stock": 13,
+    "image": "/assets/images/products/vestido-14-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-14-1.jpg",
+      "/assets/images/products/vestido-14-2.jpg",
+      "/assets/images/products/vestido-14-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 4 },
+      { "color": "Black", "size": "L", "stock": 3 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Vestido Halter Combinado",
+    "description": "Vestido midi de gola halter. Costas descobertas. Detalhe de combinação de tecidos no mesmo tom.",
+    "price":23.50,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 75,
+    "stock": 11,
+    "image": "/assets/images/products/vestido-15-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-15-1.jpg",
+      "/assets/images/products/vestido-15-2.jpg",
+      "/assets/images/products/vestido-15-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Vestido Cut Out Combinado",
+    "description": "Vestido midi com decote redondo e alças finas. Detalhe de combinação de tecidos a combinar e cut out na parte da frente. Bainha arredondada.",
+    "price":20.25,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 83,
+    "stock": 10,
+    "image": "/assets/images/products/vestido-16-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-16-1.jpg",
+      "/assets/images/products/vestido-16-2.jpg",
+      "/assets/images/products/vestido-16-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 3 },
+      { "color": "White", "size": "L", "stock": 1 },
+      { "color": "White", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Vestido Midi Com Volume e Bordados ",
+    "description": "Vestido de decote direito e alças finas. Detalhe de entremeios e bordados perfurados a combinar.",
+    "price":34.99,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 4,
+    "popularity": 43,
+    "stock": 5,
+    "image": "/assets/images/products/vestido-17-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-17-1.jpg",
+      "/assets/images/products/vestido-17-2.jpg",
+      "/assets/images/products/vestido-17-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 1 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Vestido Folhos ZW Collection",
+    "description": "Vestido confecionado em fiação com viscose e com algodão. Decote em bico e alças finas. Detalhe de folhos no mesmo tecido. Acabamentos desfiados.",
+    "price":59.99,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 76,
+    "stock": 20,
+    "image": "/assets/images/products/vestido-18-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-18-1.jpg",
+      "/assets/images/products/vestido-18-2.jpg",
+      "/assets/images/products/vestido-18-3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Vestido Midi Acetinado Aplique Dourado",
+    "description": "Vestido de decote redondo com aplique dourado e manga cava. Pregas laterais na cintura. Detalhe de tecido acetinado com efeito enrugado. Bainha com abertura nas costas. Fecho lateral com fecho éclair oculto na costura e botão traseiro.",
+    "price":30.99,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 66,
+    "stock": 13,
+    "image": "/assets/images/products/vestido-19-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-19-1.jpg",
+      "/assets/images/products/vestido-19-2.jpg",
+      "/assets/images/products/vestido-19-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 3 },
+      { "color": "Blue", "size": "M", "stock": 4 },
+      { "color": "Blue", "size": "L", "stock": 2 },
+      { "color": "Blue", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Vestido Fluido Com Cinto",
+    "description": "Vestido midi fluido de decote em bico e manga curta descaída. Cinto no mesmo tecido ajustável com laços. Fecho frontal com botões.",
+    "price":20.95,
+    "category": "vestidos",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 46,
+    "stock": 11,
+    "image": "/assets/images/products/vestido-20-1.jpg",
+    "images": [
+      "/assets/images/products/vestido-20-1.jpg",
+      "/assets/images/products/vestido-20-2.jpg",
+      "/assets/images/products/vestido-20-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 3 },
+      { "color": "Blue", "size": "M", "stock": 4 },
+      { "color": "Blue", "size": "L", "stock": 2 },
+      { "color": "Blue", "size": "XL", "stock": 2 }
+    ]
+  },
+  
+  
   
   
   
