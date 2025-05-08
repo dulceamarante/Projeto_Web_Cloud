@@ -42,3 +42,9 @@ body {
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
+.title2 {
+  flex: 1;
+  max-width: 40%;
+  padding-left: 180px;
+}

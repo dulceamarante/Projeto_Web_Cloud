@@ -16,23 +16,25 @@ const ResponsibilityPage = () => {
             </div>
             <div class="content">
                 <p>
-                    Desde o momento em que é concebida até ao momento em que é vestida, cada uma das nossas peças segue este percurso. Poderíamos fazê-lo a um ritmo acelerado, porém, na Mango, escolhemos acompanhar e cuidar de todos aqueles que percorrem este caminho connosco.
+                    Desde o momento da sua criação até ao momento em que é vestida, cada uma das nossas peças segue um processo único. Poderíamos fazê-lo mais rapidamente, mas na BDRP optamos por um caminho mais cuidadoso, onde acompanhamos de perto cada etapa, garantindo a qualidade e atenção a todos os detalhes.
                 </p>
                 <p>
-                    Levar o tempo necessário, prestando atenção a cada passo, a cada ponto, a cada prega, a cada acabamento...
+                    Dedicamo-nos a cada ponto, cada prega, cada acabamento, com tempo e precisão.
                 </p>
                 <p>
-                    A explorar a paisagem e a reunir, cada vez mais, fibras com um reduzido impacto ambiental.
+                    Apostamos na exploração de materiais que, além de exclusivos, têm um impacto ambiental reduzido, porque acreditamos que moda e sustentabilidade podem andar de mãos dadas.
                 </p>
                 <p>
-                    A respirar o estilo inconfundível, perfeito e intemporal com que a natureza desenha cada pormenor e a reduzir as pegadas que a nossa viagem possa deixar no planeta.
+                    O nosso estilo é inspirado na natureza, com uma elegância intemporal que nunca sai de moda, enquanto trabalhamos para deixar a menor pegada possível no nosso planeta.
                 </p>
                 <p>
-                    Este é o nosso caminho, que vai ganhando forma à medida que o percorremos. E nós acreditamos nele.
+                    Este é o nosso compromisso, o caminho que seguimos com paixão e convicção. E temos a certeza de que é o melhor caminho.
                 </p>
             </div>
         </div>
-        <Footer />
+            <div class="title2">
+                    <h1>OS NOSSOS MATERIAIS</h1>
+            </div>
       </div>
     );
   };
