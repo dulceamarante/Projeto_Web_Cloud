@@ -8,6 +8,7 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -29,12 +30,11 @@
   display: block;
 }
 
-/* Setas maiores, sem fundo branco sólido */
 .nav-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -42,17 +42,24 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #333;
+  color: #080808;
   border: none;
   cursor: pointer;
   transition: background 0.2s;
   z-index: 2;
 }
+
 .nav-arrow:hover {
   background: rgba(255,255,255,0.9);
 }
-.nav-arrow.left { left: 12px; }
-.nav-arrow.right { right: 12px; }
+
+.nav-arrow.left {
+  left: 4px;
+}
+
+.nav-arrow.right {
+  right: 4px;
+}
 
 /* Painel de tamanhos – slide-up suave */
 .size-overlay {
@@ -68,6 +75,7 @@
   gap: 8px;
   transition: bottom 0.3s ease;
 }
+
 .product-card:hover .size-overlay {
   bottom: 0;
 }
@@ -82,10 +90,12 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .size-btn:hover:not(:disabled) {
   background: #333;
   color: #fff;
 }
+
 .size-btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
@@ -96,10 +106,19 @@
   padding: 14px 12px 20px;
 }
 
+/* Novo layout para título e coração em uma linha */
 .title-heart {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Alinhado ao topo para que o título possa ter várias linhas */
+  width: 100%;
+}
+
+.product-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .product-name {
@@ -107,7 +126,8 @@
   font-weight: 500;
   text-transform: uppercase;
   color: #222;
-  margin: 0;
+  margin: 0 0 8px 0; /* Adicionado margem inferior para espaçar do preço */
+  text-align: left;
 }
 
 .fav-btn {
@@ -117,18 +137,20 @@
   color: #666;
   transition: color 0.2s;
   cursor: pointer;
+  margin-right: 5px;
+  margin-right: 13px;
 }
+
 .fav-btn:hover {
   color: #e41e63;
 }
 
-/* Preço */
+/* Preço agora dentro do info-left para ficar abaixo do título */
 .product-price-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: baseline;
   gap: 8px;
-  margin-top: 8px;
 }
 
 .original-price {
