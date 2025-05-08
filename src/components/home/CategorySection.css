@@ -18,15 +18,20 @@
   /* Título */
   .pack-bags-section {
     text-align: center;
-    margin: 40px 0;
+    margin: 35px 0 0;
   }
+
   .bags-title {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 26px;     
+    font-weight: 700;    /* negrito */
+    font-style: italic;  /* itálico */
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #666;
+    margin-bottom: 4px;
+    color: #121212;
   }
+  
   
   /* Grid de 5 colunas iguais */
   .categories-grid {

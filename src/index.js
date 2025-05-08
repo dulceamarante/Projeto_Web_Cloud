@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';   // CSS global com a Oswald
 import App from './App';
 
-// Estilos Cozastore
-import './assets/css/util.css';
-import './assets/css/main.css';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

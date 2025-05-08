@@ -27,7 +27,7 @@ export default function TopProducts() {
   return (
     <section className="top-products-section">
       <div className="top-products-inner">
-        <h2 className="section-title">MAIS VENDIDOS</h2>
+        <h2 className="section-title">TOP SELLERS</h2>
         <div className="products-grid">
           {topProducts.map(prod => (
             <ProductCard

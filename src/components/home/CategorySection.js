@@ -40,7 +40,7 @@ const CategorySection = () => {
     <section className="categories-section">
 
 <div className="pack-bags-section">
-        <h2 className="bags-title">FAÇA AS SUAS MALAS</h2>
+        <h2 className="bags-title">PACK YOR BAGS</h2>
       </div>
       
       <div className="categories-grid">

@@ -1,20 +1,22 @@
-/* 1) Wrapper geral da secção de mais vendidos
-      - largura total, mas com padding lateral igual à das categorias */
+/* 1) Wrapper geral da secção de mais vendidos*/
       .top-products-section {
         width: 100vw;
         margin-left: calc(-50vw + 50%);
-        margin: 40px 0  ;
-        padding: 0;         /* sem gutters agora */
+        margin: 40px 0 4px;
+        padding: 0;         
       }
       
       
       /* 2) Título centralizado */
       .section-title {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 28px;
+        font-weight: 700;
+        font-style:italic;
+        letter-spacing: 1px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 4px;
+        color: #121212;
       }
       
       /* 3) Grid de produtos — 5 colunas iguais no desktop,
@@ -26,24 +28,22 @@
       }
       
      /* 4) Cartões – arredonda o card inteiro igual ao das categorias */
-.product-card {
-  background: #fff;
-  overflow: hidden;            /* esconde o excesso da imagem arredondada */
-  border-radius: 8px;          /* mesmo raio que as categories */
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-}
+      .product-card {
+      background: #fff;
+      overflow: hidden;            /* esconde o excesso da imagem arredondada */
+      border-radius: 8px;          /* mesmo raio que as categories */
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      }
 
-/* 5) Imagem – mantém o rounding dentro do container */
-.product-image-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/5;
-  background: #f5f5f5;
-  overflow: hidden;
-  /* não precisa repetir border-radius aqui,
-     pois o .product-card já o faz e esconde os cantos da imagem */
+      /* 5) Imagem – mantém o rounding dentro do container */
+      .product-image-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: #f5f5f5;
+      overflow: hidden;
 }
       .product-image-container img {
         width: 100%;
@@ -163,6 +163,7 @@
         align-items: center;
         justify-content: center;
         padding: 0;
+        margin-bottom: 0;
       }
       
       /* Conteúdo alinhado ao gutter de 20px */

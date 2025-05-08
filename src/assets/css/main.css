@@ -3299,6 +3299,15 @@ input.num-product::-webkit-inner-spin-button {
     padding-left: 60px;
   }
 
+  /* Aplica Oswald a todo o projecto */
+html, body {
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Opcional: garante que todos os elementos herdam */
+* {
+  font-family: inherit;
+}
   
 }
 
