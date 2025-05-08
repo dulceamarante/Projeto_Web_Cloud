@@ -597,7 +597,7 @@
     ]
   },
   {
-    "id": 48,
+    "id": 46,
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
@@ -620,7 +620,7 @@
     ]
   },
   {
-    "id": 49,
+    "id": 47,
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
@@ -643,7 +643,7 @@
     ]
   },
   {
-    "id": 50,
+    "id": 48,
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
@@ -666,7 +666,7 @@
     ]
   },
   {
-    "id": 51,
+    "id": 49,
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
@@ -689,7 +689,7 @@
     ]
   },
   {
-    "id": 52,
+    "id": 50,
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
@@ -712,7 +712,7 @@
     ]
   },
   {
-    "id": 53,
+    "id": 51,
     "name": "T-shirt Básica Com Decote Em V",
     "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
     "price": 12.99,
@@ -735,7 +735,7 @@
     ]
   },
   {
-    "id": 54,
+    "id": 52,
     "name": "T-shirt Básica Com Decote Em V",
     "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
     "price": 12.99,
@@ -758,7 +758,7 @@
     ]
   },
   {
-    "id": 55,
+    "id": 53,
     "name": "T-shirt Básica Malha",
     "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
     "price": 10.99,
@@ -781,7 +781,7 @@
     ]
   },
   {
-    "id": 56,
+    "id": 54,
     "name": "T-shirt Básica Malha",
     "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
     "price": 10.99,
@@ -804,7 +804,7 @@
     ]
   },
   {
-    "id": 57,
+    "id": 55,
     "name": "T-shirt Básica Malha",
     "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
     "price": 10.99,
@@ -825,6 +825,467 @@
       { "color": "Black", "size": "L", "stock": 5 },
       { "color": "Black", "size": "XL", "stock": 5 }
     ]
+  },
+  {
+    "id": 56,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 32,
+    "image": "/assets/images/products/CalçasH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH1 - 1.jpg",
+      "/assets/images/products/CalçasH1 - 2.jpg",
+      "/assets/images/products/CalçasH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH2 - 1.jpg",
+      "/assets/images/products/CalçasH2 - 2.jpg",
+      "/assets/images/products/CalçasH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 7 },
+      { "color": "Grey", "size": "M", "stock": 7 },
+      { "color": "Grey", "size": "L", "stock": 7 },
+      { "color": "Grey", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/CalçasH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH3 - 1.jpg",
+      "/assets/images/products/CalçasH3 - 2.jpg",
+      "/assets/images/products/CalçasH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 8 },
+      { "color": "White", "size": "M", "stock": 8 },
+      { "color": "White", "size": "L", "stock": 8 },
+      { "color": "White", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH4 - 1.jpg",
+      "/assets/images/products/CalçasH4 - 2.jpg",
+      "/assets/images/products/CalçasH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 7 },
+      { "color": "Bege", "size": "M", "stock": 7 },
+      { "color": "Bege", "size": "L", "stock": 7 },
+      { "color": "Bege", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH5 - 1.jpg",
+      "/assets/images/products/CalçasH5 - 2.jpg",
+      "/assets/images/products/CalçasH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 7 },
+      { "color": "Grey", "size": "M", "stock": 7 },
+      { "color": "Grey", "size": "L", "stock": 7 },
+      { "color": "Grey", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH6 - 1.jpg",
+      "/assets/images/products/CalçasH6 - 2.jpg",
+      "/assets/images/products/CalçasH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH7 - 1.jpg",
+      "/assets/images/products/CalçasH7 - 2.jpg",
+      "/assets/images/products/CalçasH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH8 - 1.jpg",
+      "/assets/images/products/CalçasH8 - 2.jpg",
+      "/assets/images/products/CalçasH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 4 },
+      { "color": "Bege", "size": "M", "stock": 4 },
+      { "color": "Bege", "size": "L", "stock": 4 },
+      { "color": "Bege", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 75,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH9 - 1.jpg",
+      "/assets/images/products/CalçasH9 - 2.jpg",
+      "/assets/images/products/CalçasH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 4 },
+      { "color": "Blue", "size": "M", "stock": 4 },
+      { "color": "Blue", "size": "L", "stock": 4 },
+      { "color": "Blue", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH10 - 1.jpg",
+      "/assets/images/products/CalçasH10 - 2.jpg",
+      "/assets/images/products/CalçasH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 4 },
+      { "color": "Green", "size": "M", "stock": 4 },
+      { "color": "Green", "size": "L", "stock": 4 },
+      { "color": "Green", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.7,
+    "popularity": 60,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH11 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH11 - 1.jpg",
+      "/assets/images/products/CalçasH11 - 2.jpg",
+      "/assets/images/products/CalçasH11 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 65,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH12 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH12 - 1.jpg",
+      "/assets/images/products/CalçasH12 - 2.jpg",
+      "/assets/images/products/CalçasH12 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.5,
+    "popularity": 55,
+    "stock": 12,
+    "image": "/assets/images/products/CalçasH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH13 - 1.jpg",
+      "/assets/images/products/CalçasH13 - 2.jpg",
+      "/assets/images/products/CalçasH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 3 },
+      { "color": "Brown", "size": "M", "stock": 3 },
+      { "color": "Brown", "size": "L", "stock": 3 },
+      { "color": "Brown", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH14 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH14 - 1.jpg",
+      "/assets/images/products/CalçasH14 - 2.jpg",
+      "/assets/images/products/CalçasH14 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 4 },
+      { "color": "Black", "size": "L", "stock": 4 },
+      { "color": "Black", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Calças Pregas Cinto",
+    "description": "Calças relaxed fit. Cintura com detalhe de cinto do mesmo tecido e pregas frontais. Bolsos na frente e detalhe de bolsos traseiros de linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 25.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH15 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH15 - 1.jpg",
+      "/assets/images/products/CalçasH15 - 2.jpg",
+      "/assets/images/products/CalçasH15 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH16 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH16 - 1.jpg",
+      "/assets/images/products/CalçasH16 - 2.jpg",
+      "/assets/images/products/CalçasH16 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH17 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH17 - 1.jpg",
+      "/assets/images/products/CalçasH17 - 2.jpg",
+      "/assets/images/products/CalçasH17 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH18 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH18 - 1.jpg",
+      "/assets/images/products/CalçasH18 - 2.jpg",
+      "/assets/images/products/CalçasH18 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH19 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH19 - 1.jpg",
+      "/assets/images/products/CalçasH19 - 2.jpg",
+      "/assets/images/products/CalçasH19 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Calças Largas De Ganga",
+    "description": "Jeans oversize relax fit confecionados em denim de algodão. Bolsos frontais e detalhe de bolsos traseiros de bolso de chapa com aba. Efeito lavado. Bainha com acabamento irregular. Fecho frontal com fecho de correr e botão.",
+    "price": 25.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH20 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH20 - 1.jpg",
+      "/assets/images/products/CalçasH20 - 2.jpg",
+      "/assets/images/products/CalçasH20 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
   }
+  
   
 ]
