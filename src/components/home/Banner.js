@@ -8,7 +8,7 @@ const Banner = () => {
     <section className="main-banner">
       <div className="banner-container">
         <div className="banner-content">
-          <button className="banner-button">Novidades</button>
+          <button className="banner-button">NOVA COLEÇÃO</button>
         </div>
       </div>
     </section>
