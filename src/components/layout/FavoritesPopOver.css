@@ -1,0 +1,150 @@
+.favorites-popover-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10001;
+}
+
+.favorites-popover {
+  position: relative;
+  width: 600px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.favorites-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.favorites-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.favorites-items {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.no-favorites {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.favorite-item {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.favorite-image {
+  width: 120px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+.favorite-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.favorite-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.favorite-price {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.favorite-color, .favorite-size {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.favorite-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 140px;
+}
+
+.favorite-add-to-cart, .favorite-remove {
+  padding: 8px 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #000;
+}
+
+.favorite-add-to-cart:hover, .favorite-remove:hover {
+  opacity: 0.7;
+}
+
+.favorites-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.favorites-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-favorites-button {
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-favorites-button:hover {
+  background-color: #333;
+}

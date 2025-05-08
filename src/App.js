@@ -13,31 +13,27 @@ import { FavoritesProvider } from './contexts/FavoritesContext';
 import { ProductProvider } from './contexts/ProductContext';
 import './styles/global.css';
 
-function App() {
+export default function App() {
   return (
     <ProductProvider>
       <CartProvider>
         <FavoritesProvider>
           <Router>
-            <div className="app">
-              <Header />
-              <main className="main-content">
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/products" element={<ProductsPage />} />
-                  <Route path="/product/:productId" element={<ProductDetailPage />} />
-                  <Route path="/cart" element={<CartPage />} />
-                  <Route path="/favorites" element={<FavoritesPage />} />
-                  <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-              </main>
-              <Footer />
-            </div>
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/products" element={<ProductsPage />} />
+                <Route path="/product/:productId" element={<ProductDetailPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/favorites" element={<FavoritesPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </main>
+            <Footer />
           </Router>
         </FavoritesProvider>
       </CartProvider>
     </ProductProvider>
   );
 }
-
-export default App;
