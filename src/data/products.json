@@ -1030,18 +1030,470 @@
       { "color": "Black", "size": "L", "stock": 2 },
       { "color": "Black", "size": "XL", "stock": 3 }
     ]
+  },
+  
+  {
+    "id": 96,
+    "name": "Jeans Curved Cintura Subida 50th Anniversary",
+    "description": "Jeans de cintura subida com presilhas e cinco bolsos. Fecho de correr e botão metálico à frente.",
+    "price": 39.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 75,
+    "stock": 12,
+    "image": "/assets/images/products/jeansM-1-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-1-1.jpg",
+      "/assets/images/products/jeansM-1-2.jpg",
+      "/assets/images/products/jeansM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 3 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Jeans Zw Collection Palazzo Cintura Subida",
+    "description": "Jeans de cintura subida e cós com passadores. Cinco bolsos. Perna larga. Fecho frontal com zip e botão.",
+    "price": 39.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 60,
+    "stock": 15,
+    "image": "/assets/images/products/jeansM-2-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-2-1.jpg",
+      "/assets/images/products/jeansM-2-2.jpg",
+      "/assets/images/products/jeansM-2-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 4 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Jeans Z1975 Wide Leg Cintura Média Com Pinças",
+    "description": "Jeans de cintura média com pinças frontais. Bolsos frontais e bolsos de chapa atrás. Perna larga. Fecho frontal com fecho de correr e botão.",
+    "price": 29.95,
+    "category": "jeans",
+    "subcategory": "wide leg",
+    "rating": 6,
+    "popularity": 80,
+    "stock": 10,
+    "image": "/assets/images/products/jeansM-3-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-3-1.jpg",
+      "/assets/images/products/jeansM-3-2.jpg",
+      "/assets/images/products/jeansM-3-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Jeans Z1975 Wide Leg Cintura Média Costuras Laterais",
+    "description": "Jeans de cintura média com cinco bolsos. Detalhe de costuras marcadas laterais. Perna larga e parte inferior com acabamento sem costura. Fecho frontal com fecho de correr e botão.",
+    "price": 35.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 90,
+    "stock": 14,
+    "image": "/assets/images/products/jeansM-4-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-4-1.jpg",
+      "/assets/images/products/jeansM-4-2.jpg",
+      "/assets/images/products/jeansM-4-2.jpg"
+      
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Jeans Zw Collection Wide Leg Cintura Baixa",
+    "description": "Jeans de cintura baixa com presilhas. Cinco bolsos. Perna larga. Fecho de correr e botão metálico à frente.",
+    "price": 35.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 55,
+    "stock": 11,
+    "image": "/assets/images/products/jeansM-5-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-5-1.jpg",
+      "/assets/images/products/jeansM-5-2.jpg",
+      "/assets/images/products/jeansM-5-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 4 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Jeans Trf Direitos de cintura Baixa",
+    "description": "Jeans de cintura baixa com presilhas e cinco bolsos. Fecho frontal com fecho de correr e botão metálico.",
+    "price": 29.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 65,
+    "stock": 16,
+    "image": "/assets/images/products/jeansM-6-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-6-1.jpg",
+      "/assets/images/products/jeansM-6-2.jpg",
+      "/assets/images/products/jeansM-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Jeans Trf Wide Leg Cintura Baixa",
+    "description": "Jeans de cintura baixa e cinco bolsos. Perna larga extra comprida. Fecho de correr e botão metálico à frente.",
+    "price": 29.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 50,
+    "stock": 9,
+    "image": "/assets/images/products/jeansM-7-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-7-1.jpg",
+      "/assets/images/products/jeansM-7-2.jpg",
+      "/assets/images/products/jeansM-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Jeans Z1975 Slim Flare Cintura Baixa Comprimento Longo Rasgados",
+    "description": "Jeans de cintura baixa com cinco bolsos. Detalhe de rasgo na frente. Fecho frontal com fecho de correr e botão.",
+    "price": 29.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 60,
+    "stock": 8,
+    "image": "/assets/images/products/jeansM-8-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-8-1.jpg",
+      "/assets/images/products/jeansM-8-2.jpg",
+      "/assets/images/products/jeansM-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 1 },
+      { "color": "Blue", "size": "M", "stock": 3 },
+      { "color": "Blue", "size": "L", "stock": 2 },
+      { "color": "Blue", "size": "XL", "stock": 2 }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Calças de Ganga Trf Wide Leg Cintura Média",
+    "description": "Jeans de cintura média e cinco bolsos. Perna ampla extra larga. Fecho de correr e botão metálico.",
+    "price": 29.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 40,
+    "stock": 12,
+    "image": "/assets/images/products/jeansM-9-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-9-1.jpg",
+      "/assets/images/products/jeansM-9-2.jpg",
+      "/assets/images/products/jeansM-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 2 },
+      { "color": "Blue", "size": "M", "stock": 3 },
+      { "color": "Blue", "size": "L", "stock": 4 },
+      { "color": "Blue", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 95,
+    "name": "Jeans Trf Baggy Com Ragões Cintura Média",
+    "description": "Jeans de cintura média com presilhas e cinco bolsos. Detalhe de rasgões. Fecho frontal assimétrico com fecho de correr e botões metálicos.",
+    "price": 39.95,
+    "category": "jeans",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 40,
+    "stock": 13,
+    "image": "/assets/images/products/jeansM-10-1.jpg",
+    "images": [
+      "/assets/images/products/jeansM-10-1.jpg",
+      "/assets/images/products/jeansM-10-2.jpg",
+      "/assets/images/products/jeansM-10-3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 4 },
+      { "color": "Blue", "size": "M", "stock": 2 },
+      { "color": "Blue", "size": "L", "stock": 4 },
+      { "color": "Blue", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Calças com Lã Pinças 50th Anniversary",
+    "description": "Calças confecionadas em fiação com lã. Cintura média e cós com presilhas. Bolsos laterais e com aba atrás. Pormenor de pinças e risca engomada à frente. Fecho frontal com fecho de correr, botão e ganchos metálicos.",
+    "price": 29.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 50,
+    "stock": 9,
+    "image": "/assets/images/products/calcasM-1-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-1-1.jpg",
+      "/assets/images/products/calcasM-1-2.jpg",
+      "/assets/images/products/calcasM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 97,
+    "name": " Calças Acetinadas de Fato 50th Anniversary",
+    "description": "Calças confecionadas em tecido acetinado. Cintura subida com presilhas. Bolsos laterais e com abertura debruada com botão atrás. Fecho à frente com fecho de correr e botão.",
+    "price": 60.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 72,
+    "stock": 11,
+    "image": "/assets/images/products/calcasM-2-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-2-1.jpg",
+      "/assets/images/products/calcasM-2-2.jpg",
+      "/assets/images/products/calcasM-2-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 98,
+    "name": "Calças de Pele com Pinças e Cinto 50th Anniversary",
+    "description": "Calças confecionadas em 100% pele. De cintura média com passadores. Bolsos laterais e debruados nas costas. Cinto ajustável com fivela metálica. Detalhe de pinças na frente. Perna larga. Fecho frontal com fecho de correr e botão.",
+    "price": 230.00,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 76,
+    "stock": 9,
+    "image": "/assets/images/products/calcasM-3-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-3-1.jpg",
+      "/assets/images/products/calcasM-3-2.jpg",
+      "/assets/images/products/calcasM-3-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 99,
+    "name": "Calças com Linho 50th Anniversary ",
+    "description": "Calças confecionadas em fiação com linho. Cintura subida com presilhas. Bolsos à frente. Pormenor de risca engomada. Fecho frontal com fecho de correr, botão e ganchos metálicos.",
+    "price": 49.35,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 83,
+    "stock": 12,
+    "image": "/assets/images/products/calcasM-4-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-4-1.jpg",
+      "/assets/images/products/calcasM-4-2.jpg",
+      "/assets/images/products/calcasM-4-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 4 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 100,
+    "name": "Calças Cinto Mistura Lã 50th Anniversary",
+    "description": "Calças confecionadas em fiação com mistura de lã. De cintura subida e cintura com presilhas. Bolsos laterais e falsos bolsos de vivo nas costas. Detalhe de cós interior contrastante com pespontos. Cinto de laçada no mesmo tecido. Fecho frontal com fecho de correr, botão interior e ganchos metálicos.",
+    "price": 50.00,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 82,
+    "stock": 9,
+    "image": "/assets/images/products/calcasM-5-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-5-1.jpg",
+      "/assets/images/products/calcasM-5-2.jpg",
+      "/assets/images/products/calcasM-5-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 101,
+    "name": "Calças Lã Cinto 50th Anniversary",
+    "description": "Calças confecionadas com fiação em mistura de lã. Cintura subida com presilhas. Bolsos laterais e falsos bolsos com abertura debruada atrás. Pormenor de cós interior a contrastar com pespontos. Cinto de laçada no mesmo tecido. Fecho à frente com fecho de correr, botão interior e ganchos metálicos.",
+    "price": 40.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 62,
+    "stock": 6,
+    "image": "/assets/images/products/calcasM-6-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-6-1.jpg",
+      "/assets/images/products/calcasM-6-2.jpg",
+      "/assets/images/products/calcasM-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 1 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+    {
+    "id": 102,
+    "name": "Calças Abertura 50th Anniversary",
+    "description": "Calças de cintura média confecionadas em fio com mistura de viscose. Cintura com elástico interior. Parte inferior com acabamento em aberturas laterais.",
+    "price": 49.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 4,
+    "popularity": 45,
+    "stock": 11,
+    "image": "/assets/images/products/calcasM-7-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-7-1.jpg",
+      "/assets/images/products/calcasM-7-2.jpg",
+      "/assets/images/products/calcasM-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 103,
+    "name": "Calças Volume Lã 50th Anniversary",
+    "description": "Calças de cintura média confecionadas em fiação 100% lã. Bolsos laterais ocultos na costura. Pormenor de pinças à frente. Perna muito larga. Fecho frontal com fecho de correr, botão e ganchos metálicos.",
+    "price": 60.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 82,
+    "stock": 12,
+    "image": "/assets/images/products/calcasM-8-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-8-1.jpg",
+      "/assets/images/products/calcasM-8-2.jpg",
+      "/assets/images/products/calcasM-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 3 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 104,
+    "name": "Calças com Fivela 50th Anniversary",
+    "description": "Calças confecionadas em fiação com 21% lã. Cintura média e cós com presilhas. Bolsos laterais e com abertura debruada atrás. Risca engomada à frente. Pormenor de fivela atrás. Fecho frontal com fecho de correr, botão e ganchos metálicos.",
+    "price": 45.25,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 85,
+    "stock": 5,
+    "image": "/assets/images/products/calcasM-9-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-9-1.jpg",
+      "/assets/images/products/calcasM-9-2.jpg",
+      "/assets/images/products/calcasM-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 1 },
+      { "color": "Black", "size": "L", "stock": 1 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+    {
+    "id": 105,
+    "name": "Calças Palazzo ZW Collection",
+    "description": "Calças confecionadas em fiação com lã. Cintura média e cós com presilhas. Bolsos laterais e com aba atrás. Pormenor de pinças e risca engomada à frente. Fecho frontal com fecho de correr, botão e ganchos metálicos.",
+    "price": 29.95,
+    "category": "calcas",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 50,
+    "stock": 9,
+    "image": "/assets/images/products/calcasM-1-1.jpg",
+    "images": [
+      "/assets/images/products/calcasM-1-1.jpg",
+      "/assets/images/products/calcasM-1-2.jpg",
+      "/assets/images/products/calcasM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
   }
 
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
 ]
+
