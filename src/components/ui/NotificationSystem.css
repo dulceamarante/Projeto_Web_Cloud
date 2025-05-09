@@ -1,0 +1,61 @@
+/* src/components/ui/NotificationSystem.css */
+.notification-overlay {
+  position: fixed;
+  top: 70px; /* Logo abaixo da navbar */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10010;
+}
+
+.notification-toast {
+  min-width: 400px;
+  max-width: 600px;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.notification-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.notification-message {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.notification-action {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  text-decoration: underline;
+}
+
+.notification-action:hover {
+  color: #ccc;
+}

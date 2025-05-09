@@ -1,15 +1,21 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
+import { FavoritesContext } from '../../contexts/FavoritesContext';
 import ProductCard from '../products/ProductCard';
 import './SearchModal.css';
 
 export default function SearchModal({ onClose, onCategoryClick }) {
-  const { products, addToCart, toggleFavorite } = useContext(ProductContext);
+  const { products } = useContext(ProductContext);
+  const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterCategory, setFilterCategory] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
   const [showNoResults, setShowNoResults] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const addToCart = (productId, variant) => {
+    alert(`Item ${productId} (tamanho ${variant.size}) adicionado!`);
+  };
 
   useEffect(() => {
     if (!searchQuery.trim()) {
@@ -88,9 +94,12 @@ export default function SearchModal({ onClose, onCategoryClick }) {
               {searchResults.map(p => (
                 <ProductCard
                   key={p.id}
-                  product={p}
+                  product={{
+                    ...p,
+                    isFavorite: isFavorite(p.id)
+                  }}
+                  toggleFavorite={() => toggleFavorite(p)}
                   addToCart={addToCart}
-                  toggleFavorite={toggleFavorite}
                 />
               ))}
             </div>
@@ -110,9 +119,12 @@ export default function SearchModal({ onClose, onCategoryClick }) {
             {suggested.map(p => (
               <ProductCard
                 key={p.id}
-                product={p}
+                product={{
+                  ...p,
+                  isFavorite: isFavorite(p.id)
+                }}
+                toggleFavorite={() => toggleFavorite(p)}
                 addToCart={addToCart}
-                toggleFavorite={toggleFavorite}
               />
             ))}
           </div>
