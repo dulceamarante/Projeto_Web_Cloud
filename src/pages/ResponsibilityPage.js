@@ -48,7 +48,7 @@ const ResponsibilityPage = () => {
                     </div>
                     <div class="material">
                         <img src="/assets/images/materiais/algodao_regenerativo.png" alt="Algodão Regerativo"/>
-                        <p>Algodão regenerativo</p>
+                        <p>Algodão Regenerativo</p>
                     </div>
                     <div class="material">
                         <img src="/assets/images/materiais/algodao_bci.png" alt="Algodão BCI"/>
@@ -56,7 +56,7 @@ const ResponsibilityPage = () => {
                     </div>
                     <div class="material">
                         <img src="/assets/images/materiais/algodao_organico.png" alt="Algodão Orgânico" />
-                        <p>Algodão orgânico</p>
+                        <p>Algodão Orgânico</p>
                     </div>
                 </div>
             </div>
