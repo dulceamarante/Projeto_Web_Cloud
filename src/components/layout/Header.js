@@ -2,8 +2,10 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import SearchModal from '../search/SearchModal'; 
 import FavoritesPopOver from './FavoritesPopOver'; 
+import CartPopOver from './CartPopOver'; // Importando o CartPopOver
 import SideMenu from './SideMenu'; 
 import { FavoritesContext } from '../../contexts/FavoritesContext'; 
+import { CartContext } from '../../contexts/CartContext'; // Importando o CartContext
 import './Header.css';
 
 const Header = () => {
@@ -11,14 +13,22 @@ const Header = () => {
   const [activeCategory, setActiveCategory] = useState('mulher');
   const [searchOpen, setSearchOpen] = useState(false);
   const [favOpen, setFavOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false); // Estado para controlar a visibilidade do CartPopOver
+  
   const { favorites } = useContext(FavoritesContext);
+  const { cart, getCartItemCount } = useContext(CartContext); // Usando o CartContext
+  
+  // Calcular a quantidade total de itens no carrinho
+  const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
   
   // Fecha modais/popovers com Esc
   useEffect(() => {
     const handleKey = e => {
       if (e.key === 'Escape') {
         // Fechamos na ordem inversa de prioridade
-        if (favOpen) {
+        if (cartOpen) {
+          setCartOpen(false);
+        } else if (favOpen) {
           setFavOpen(false);
         } else if (searchOpen) {
           setSearchOpen(false);
@@ -29,7 +39,7 @@ const Header = () => {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [menuOpen, searchOpen, favOpen]);
+  }, [menuOpen, searchOpen, favOpen, cartOpen]);
   
   const categories = ['mulher', 'homem', 'beauty'];
   
@@ -121,10 +131,20 @@ const Header = () => {
             PESQUISAR
           </a>
           <Link to="/login">INICIAR SESSÃO</Link>
-          <a href="#" onClick={e => { e.preventDefault(); setFavOpen(o => !o); }}>
+          <a href="#" onClick={e => { 
+            e.preventDefault(); 
+            setFavOpen(o => !o); 
+            if (cartOpen) setCartOpen(false); // Fecha o carrinho se estiver aberto
+          }}>
             FAVORITOS ({favorites.length})
           </a>
-          <Link to="/cart">CESTA (0)</Link>
+          <a href="#" onClick={e => { 
+            e.preventDefault(); 
+            setCartOpen(o => !o);
+            if (favOpen) setFavOpen(false); // Fecha os favoritos se estiverem abertos
+          }}>
+            CESTA ({cartItemCount})
+          </a>
         </div>
       </header>
       
@@ -145,6 +165,9 @@ const Header = () => {
       )}
       
       {favOpen && <FavoritesPopOver onClose={() => setFavOpen(false)} />}
+      
+      {/* Renderiza o CartPopOver quando cartOpen for true */}
+      {cartOpen && <CartPopOver onClose={() => setCartOpen(false)} />}
     </>
   );
 };

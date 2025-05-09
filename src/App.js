@@ -1,44 +1,36 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
-import ProductsPage from './pages/ProductsPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
-import NotFoundPage from './pages/NotFoundPage';
-import { CartProvider } from './contexts/CartContext';
-import { FavoritesProvider } from './contexts/FavoritesContext';
 import { ProductProvider } from './contexts/ProductContext';
-import './styles/global.css';
-import NotificationSystem from './components/ui/NotificationSystem';
+import { FavoritesProvider } from './contexts/FavoritesContext';
+import { CartProvider } from './contexts/CartContext';
+import './App.css';
 
 function App() {
   return (
-    <ProductProvider>
-      <CartProvider>
+    <Router>
+      <ProductProvider>
         <FavoritesProvider>
-          <Router>
+          <CartProvider>
             <div className="app">
               <Header />
-              <main className="main-content">
+              <main className="content">
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-                  <Route path="/products" element={<ProductsPage />} />
-                  <Route path="/product/:productId" element={<ProductDetailPage />} />
-                  <Route path="/cart" element={<CartPage />} />
                   <Route path="/favorites" element={<FavoritesPage />} />
-                  <Route path="*" element={<NotFoundPage />} />
+                  {/* As rotas para ProductPage e CartPage serão adicionadas mais tarde */}
                 </Routes>
               </main>
-              <NotificationSystem />
               <Footer />
             </div>
-          </Router>
+          </CartProvider>
         </FavoritesProvider>
-      </CartProvider>
-    </ProductProvider>
+      </ProductProvider>
+    </Router>
   );
 }
 
