@@ -1,23 +1,16 @@
 // src/components/layout/TopProducts.js
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
+import { FavoritesContext } from '../../contexts/FavoritesContext';
 import ProductCard from '../products/ProductCard';
 import './TopProducts.css';
 
 export default function TopProducts() {
   const { getTopSellingProducts, loading } = useContext(ProductContext);
-  const [favorites, setFavorites] = useState([]);
+  const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
 
   const topProducts = getTopSellingProducts(5);
-
-  const toggleFavorite = productId => {
-    setFavorites(favs =>
-      favs.includes(productId)
-        ? favs.filter(id => id !== productId)
-        : [...favs, productId]
-    );
-  };
-
+  
   const addToCart = (productId, variant) => {
     alert(`Item ${productId} (tamanho ${variant.size}) adicionado!`);
   };
@@ -37,9 +30,9 @@ export default function TopProducts() {
             key={prod.id}
             product={{
               ...prod,
-              isFavorite: favorites.includes(prod.id)
+              isFavorite: isFavorite(prod.id)
             }}
-            toggleFavorite={toggleFavorite}
+            toggleFavorite={() => toggleFavorite(prod)}
             addToCart={addToCart}
           />
         ))}
@@ -48,7 +41,7 @@ export default function TopProducts() {
       {/* Seção de responsabilidade */}
       <div className="responsibility-section">
         <div className="responsibility-content">
-        <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>
+          <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>
           <button className="outline-button">DESCUBRA MAIS</button>
         </div>
       </div>

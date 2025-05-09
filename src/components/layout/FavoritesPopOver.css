@@ -1,0 +1,79 @@
+/* src/components/layout/FavoritesPopOver.css */
+
+/* Overlay */
+.favorites-popover-overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex; justify-content: flex-end;
+  z-index: 1000;
+}
+
+/* Popover */
+.favorites-popover {
+  width: 380px; background: #fff;
+  display: flex; flex-direction: column;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.slide-in { animation: slideIn .3s forwards; }
+.slide-out { animation: slideOut .3s forwards; }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes slideOut { from { transform: translateX(0); } to { transform: translateX(100%); } }
+
+/* Header */
+.favorites-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px; border-bottom: 1px solid #eee;
+}
+.close-favorites {
+  background: none; border: none; font-size: 24px; cursor: pointer;
+}
+
+/* Content */
+.favorites-content { overflow-y: auto; flex: 1; padding: 16px; }
+
+/* Item */
+.favorites-item { margin-bottom: 16px; }
+.item-info-container { display: flex; gap: 12px; }
+.item-image img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; }
+.item-details { flex: 1; }
+.item-name { font-size: 16px; margin: 0 0 8px; }
+.item-meta p { font-size: 14px; margin: 0 0 8px; }
+.item-price { font-size: 16px; font-weight: bold; margin-bottom: 8px; }
+
+/* Actions */
+.item-actions { display: flex; gap: 8px; }
+.action-button { display: flex; align-items: center; background: #f5f5f5; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+.action-button.cart { background: #e0e0e0; }
+.remove-icon { width: 16px; height: 16px; }
+
+/* Summary */
+.favorites-summary { border-top: 1px solid #eee; padding: 16px; }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.summary-row.total { font-size: 18px; font-weight: bold; }
+.summary-info { font-size: 12px; color: #777; }
+
+/* Actions finais */
+.favorites-actions { display: flex; gap: 12px; padding: 16px; }
+.btn-secondary, .btn-primary { flex: 1; padding: 12px; text-align: center; border-radius: 4px; font-weight: 600; text-decoration: none; }
+.btn-secondary { background: none; border: 1px solid #333; color: #333; }
+.btn-primary { background: #333; color: #fff; }
+
+/* Empty */
+.empty-favorites { text-align: center; padding: 40px; }
+.empty-favorites p { margin-bottom: 20px; font-size: 16px; }
+.continue-shopping { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; border-radius: 4px; }
+
+/* Adicionar ao FavoritesPopOver.css */
+
+.shopping-bag-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.action-button.cart {
+  display: flex;
+  align-items: center;
+}

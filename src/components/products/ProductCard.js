@@ -1,19 +1,39 @@
-import React, { useState } from 'react';
-import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart } from 'react-icons/fa';
+// src/components/products/ProductCard.js
+import React, { useState, useContext, useEffect } from 'react';
+import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
+import { FavoritesContext } from '../../contexts/FavoritesContext';
 import './ProductCard.css';
 
-export default function ProductCard({ product, addToCart, toggleFavorite }) {
+export default function ProductCard({
+  product,
+  addToCart,
+  showTrash = false,
+  removeFromFavorites,
+}) {
   const [currentImage, setCurrentImage] = useState(0);
   const [hover, setHover] = useState(false);
-  const isFav = product.isFavorite;
+  const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
+
+  const isProductFavorite = isFavorite(product.id);
 
   const prev = e => {
     e.stopPropagation();
-    setCurrentImage(i => (i === 0 ? product.images.length - 1 : i - 1));
+    setCurrentImage(i =>
+      i === 0 ? (product.images?.length || 1) - 1 : i - 1
+    );
   };
+
   const next = e => {
     e.stopPropagation();
-    setCurrentImage(i => (i === product.images.length - 1 ? 0 : i + 1));
+    setCurrentImage(i =>
+      i === (product.images?.length || 1) - 1 ? 0 : i + 1
+    );
+  };
+
+  const handleToggleFavorite = e => {
+    e.stopPropagation();
+    e.preventDefault();
+    toggleFavorite(product);
   };
 
   return (
@@ -24,29 +44,52 @@ export default function ProductCard({ product, addToCart, toggleFavorite }) {
     >
       <div className="product-image-container">
         <img
-          src={product.images[currentImage]}
+          src={product.images?.[currentImage] || product.image}
           alt={product.name}
           className="product-image"
         />
-        <button className="nav-arrow left" onClick={prev}>
-          <FaChevronLeft />
-        </button>
-        <button className="nav-arrow right" onClick={next}>
-          <FaChevronRight />
-        </button>
-        {hover && (
+
+        {product.images?.length > 1 && (
+          <>
+            <button className="nav-arrow left" onClick={prev}>
+              <FaChevronLeft />
+            </button>
+            <button className="nav-arrow right" onClick={next}>
+              <FaChevronRight />
+            </button>
+          </>
+        )}
+
+        {hover && product.variants?.length > 0 && (
           <div className="size-overlay">
             {product.variants.map(v => (
               <button
-                key={v.size}
+                key={v.size || 'default'}
                 className="size-btn"
                 disabled={v.stock === 0}
-                onClick={() => addToCart(product.id, v)}
+                onClick={e => {
+                  e.stopPropagation();
+                  addToCart(product.id, v);
+                }}
               >
-                {v.size}
+                {v.size || 'Único'}
               </button>
             ))}
           </div>
+        )}
+        
+        {/* Ícone de lixeira */}
+        {showTrash && removeFromFavorites && (
+          <button
+            className="trash-button"
+            onClick={e => {
+              e.stopPropagation();
+              removeFromFavorites(product);
+            }}
+            aria-label="Remover dos favoritos"
+          >
+            <FaTrash />
+          </button>
         )}
       </div>
 
@@ -62,8 +105,7 @@ export default function ProductCard({ product, addToCart, toggleFavorite }) {
               )}
               {product.oldPrice && (
                 <span className="discount-badge">
-                  –
-                  {Math.round(
+                  –{Math.round(
                     ((product.oldPrice - product.price) / product.oldPrice) * 100
                   )}
                   %
@@ -74,9 +116,18 @@ export default function ProductCard({ product, addToCart, toggleFavorite }) {
           </div>
           <button
             className="fav-btn"
-            onClick={() => toggleFavorite(product.id)}
+            onClick={handleToggleFavorite}
+            aria-label={
+              isProductFavorite
+                ? 'Remover dos favoritos'
+                : 'Adicionar aos favoritos'
+            }
           >
-            {isFav ? <FaHeart /> : <FaRegHeart />}
+            {isProductFavorite ? (
+              <FaHeart style={{ color: '#e41e63', fill: '#e41e63' }} />
+            ) : (
+              <FaRegHeart />
+            )}
           </button>
         </div>
       </div>

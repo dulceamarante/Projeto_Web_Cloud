@@ -1,0 +1,221 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica','Arial',sans-serif;
+  overflow-x: hidden;
+}
+
+/* Container */
+.favorites-page {
+  padding: 20px 40px 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 70px; 
+}
+
+/* Header */
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.favorites-header .titles {
+  flex: 1;
+}
+
+/* Tamanho de título */
+.favorites-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  color: #000;
+}
+
+/* Tamanho de subtítulo */
+.favorites-header p {
+  font-size: 18px;
+  color: #535252;
+  margin-bottom: 8px;
+}
+
+/* linha única */
+.favorites-header hr.single-line {
+  border: none;
+  height: 0px;
+  background: #ddd;
+  margin: -8px;
+  padding: 0;
+}
+
+/* Actions */
+.favorites-header .actions {
+  display: flex;
+  align-items: center;
+}
+
+.select-btn {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  transition: opacity 0.2s;
+}
+
+.select-btn:hover {
+  opacity: 0.7;
+}
+
+/* Controles de seleção */
+.selection-controls {
+  display: flex;
+  gap: 15px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.icon-btn.trash-all:hover {
+  color: #e41e63;
+}
+
+/* Favorites grid */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.favorites-item {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Animações de fade */
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+/* Estado vazio */
+.empty-favorites {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.empty-favorites p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Botão atualizado com bordas arredondadas e texto preto */
+.shop-now-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0);
+  color: black;
+  padding: 12px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.shop-now-btn:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* Suggestions - agora sempre visível e com texto maior */
+.suggestions-section {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.suggestions-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .favorites-grid, .suggestions-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .favorites-grid, .suggestions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .favorites-page {
+    padding: 20px 20px 20px;
+  }
+  .favorites-grid, .suggestions-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .favorites-header h1 {
+    font-size: 22px;
+  }
+  .favorites-header p {
+    font-size: 16px;
+  }
+  .suggestions-section h2 {
+    font-size: 24px;
+  }
+}

@@ -12,6 +12,7 @@ import { CartProvider } from './contexts/CartContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
 import { ProductProvider } from './contexts/ProductContext';
 import './styles/global.css';
+import NotificationSystem from './components/ui/NotificationSystem';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                   <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </main>
+              <NotificationSystem />
               <Footer />
             </div>
           </Router>
