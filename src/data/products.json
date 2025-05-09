@@ -1288,25 +1288,462 @@
   },
   {
     "id": 115,
-    "name": "Calças Largas De Ganga",
-    "description": "Jeans oversize relax fit confecionados em denim de algodão. Bolsos frontais e detalhe de bolsos traseiros de bolso de chapa com aba. Efeito lavado. Bainha com acabamento irregular. Fecho frontal com fecho de correr e botão.",
+    "name": "Casaco Algodão - Linho Bolsos",
+    "description": "Casaco regular fit confecionado em tecido com algodão e linho. Gola subida e manga comprida com punho com botões de pressão. Bolsos frontais de chapa com aba. Fecho frontal de abotoadura oculta por aba.",
     "price": 25.99,
-    "category": "new in",
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH1 - 1.jpg",
+      "/assets/images/products/CasacoH1 - 2.jpg",
+      "/assets/images/products/CasacoH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Blusão Técnico Color Block",
+    "description": "Blusão relax fit confecionado em tecido técnico leve. Forro interior em tecido com estrutura de rede. Gola subida e manga comprida. Bolsos frontais ocultos na costura. Detalhe de bolso interior. Acabamentos com elástico. Bainha ajustável com elástico oculto nas laterais. Fecho frontal com fecho de correr.",
+    "price": 25.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH2 - 1.jpg",
+      "/assets/images/products/CasacoH2 - 2.jpg",
+      "/assets/images/products/CasacoH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Casaco Técnico Contraste",
+    "description": "Casaco relaxed fit confecionado em tecido técnico. Gola subida e manga comprida. Bolsos com fecho de correr na cintura. Acabamentos com elástico. Fecho frontal com fecho de correr.",
+    "price": 25.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH3 - 1.jpg",
+      "/assets/images/products/CasacoH3 - 2.jpg",
+      "/assets/images/products/CasacoH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Blusão Técnico Acolchoado",
+    "description": "Blusão relaxed fit confecionado em tecido técnico. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de linha viva na anca. Bainha ajustável com elásticos frontais. Fecho frontal com botões de pressão.",
+    "price": 20.99,
+    "category": "casacos",
     "subcategory": "",
     "rating": 4.5,
     "popularity": 100,
     "stock": 20,
-    "image": "/assets/images/products/CalçasH20 - 1.jpg",
+    "image": "/assets/images/products/CasacoH4 - 1.jpg",
     "images": [
-      "/assets/images/products/CalçasH20 - 1.jpg",
-      "/assets/images/products/CalçasH20 - 2.jpg",
-      "/assets/images/products/CalçasH20 - 3.jpg"
+      "/assets/images/products/CasacoH4 - 1.jpg",
+      "/assets/images/products/CasacoH4 - 2.jpg",
+      "/assets/images/products/CasacoH4 - 3.jpg"
     ],
     "variants": [
-      { "color": "Brown", "size": "S", "stock": 5 },
-      { "color": "Brown", "size": "M", "stock": 5 },
-      { "color": "Brown", "size": "L", "stock": 5 },
-      { "color": "Brown", "size": "XL", "stock": 5 }
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Blusão Técnico Acolchoado",
+    "description": "Blusão relaxed fit confecionado em tecido técnico. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de linha viva na anca. Bainha ajustável com elásticos frontais. Fecho frontal com botões de pressão.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH5 - 1.jpg",
+      "/assets/images/products/CasacoH5 - 2.jpg",
+      "/assets/images/products/CasacoH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH6 - 1.jpg",
+      "/assets/images/products/CasacoH6 - 2.jpg",
+      "/assets/images/products/CasacoH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH7 - 1.jpg",
+      "/assets/images/products/CasacoH7 - 2.jpg",
+      "/assets/images/products/CasacoH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH8 - 1.jpg",
+      "/assets/images/products/CasacoH8 - 2.jpg",
+      "/assets/images/products/CasacoH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Blusão Com Print Floral",
+    "description": "Blusão relaxed fit confecionado em tecido com estrutura. Gola de pontas e manga comprida acabada em punho com elástico. Bolsos de linhas vivas na anca. Bainha acabada com elástico. Fecho de correr frontal.",
+    "price": 28.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH9 - 1.jpg",
+      "/assets/images/products/CasacoH9 - 2.jpg",
+      "/assets/images/products/CasacoH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 5 },
+      { "color": "Bege", "size": "M", "stock": 5 },
+      { "color": "Bege", "size": "L", "stock": 5 },
+      { "color": "Bege", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Blusão Com Estrutura Em Espiga",
+    "description": "Blusão regular fit confecionado em tecido de algodão ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com botão. Bolsos com fecho de correr na anca. Fecho frontal com fecho de correr.",
+    "price": 26.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH10 - 1.jpg",
+      "/assets/images/products/CasacoH10 - 2.jpg",
+      "/assets/images/products/CasacoH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH1 - 1.jpg",
+      "/assets/images/products/JeansH1 - 2.jpg",
+      "/assets/images/products/JeansH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH2 - 1.jpg",
+      "/assets/images/products/JeansH2 - 2.jpg",
+      "/assets/images/products/JeansH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH3 - 1.jpg",
+      "/assets/images/products/JeansH3 - 2.jpg",
+      "/assets/images/products/JeansH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH4 - 1.jpg",
+      "/assets/images/products/JeansH4 - 2.jpg",
+      "/assets/images/products/JeansH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH5 - 1.jpg",
+      "/assets/images/products/JeansH5 - 2.jpg",
+      "/assets/images/products/JeansH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH6 - 1.jpg",
+      "/assets/images/products/JeansH6 - 2.jpg",
+      "/assets/images/products/JeansH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH7 - 1.jpg",
+      "/assets/images/products/JeansH7 - 2.jpg",
+      "/assets/images/products/JeansH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH8 - 1.jpg",
+      "/assets/images/products/JeansH8 - 2.jpg",
+      "/assets/images/products/JeansH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH9 - 1.jpg",
+      "/assets/images/products/JeansH9 - 2.jpg",
+      "/assets/images/products/JeansH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH10 - 1.jpg",
+      "/assets/images/products/JeansH10 - 2.jpg",
+      "/assets/images/products/JeansH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
     ]
   }
 
