@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
 import './ResponsibilityPage.css';
 
 const ResponsibilityPage = () => {
@@ -32,10 +31,55 @@ const ResponsibilityPage = () => {
                 </p>
             </div>
         </div>
-            <div class="title2">
+            <div class="container2">
+                <div class="title2">
                     <h1>OS NOSSOS MATERIAIS</h1>
+                </div>
+                <div class="materials">
+                    <div class="material">
+                        <img src="/assets/images/materiais/algodao_reciclado.png" alt="Poliéster Reciclado" />
+                        <p>Poliéster Reciclado</p>
+                    </div>
+                    <div class="material">
+                        <img src="/assets/images/materiais/algodao_regenerativo.png" alt="Algodão Regerativo"/>
+                        <p>Algodão regenerativo</p>
+                    </div>
+                    <div class="material">
+                        <img src="/assets/images/materiais/algodao_bci.png" alt="Algodão BCI"/>
+                        <p>Algodão BCI</p>
+                    </div>
+                    <div class="material">
+                        <img src="/assets/images/materiais/algodao_organico.png" alt="Algodão Orgânico" />
+                        <p>Algodão orgânico</p>
+                    </div>
+                </div>
             </div>
-      </div>
+            <div class="container">
+            <div class="title">
+                <h1>RECICLAGEM</h1>
+            </div>
+            <div class="content">
+                <p>
+                    Em alinhamento com os Objetivos de Desenvolvimento Sustentável das Nações Unidas, a BDRP disponibiliza aos seus clientes a oportunidade de darem uma nova vida à roupa e calçado usados, através das nossas Recycling Boxes.
+                </p>
+                <p>
+                    Todos os artigos depositados nestes contentores serão encaminhados para um novo destino, respeitando a hierarquia de gestão de resíduos:
+                </p>
+                <p>
+                    <h3>Reutilização</h3>
+                     As peças em bom estado são encaminhadas para o mercado de segunda mão.
+                </p>
+                <p>
+                     <h3>Reciclagem</h3>
+                     As peças mais danificadas são convertidas em fibras têxteis ou em matérias-primas para outros usos, como isolamento térmico, entre outros.
+                </p>
+                <p>
+                     <h3>Valorização energética</h3>
+                    Os materiais que já não podem ser reciclados são transformados em energia (electricidade ou vapor) através de um processo de combustão controlada.
+                </p>
+            </div>
+        </div>
+        </div>
     );
   };
   
