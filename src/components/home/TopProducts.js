@@ -146,7 +146,9 @@ const TopProducts = () => {
       <div className="responsibility-section">
         <div className="responsibility-content">
           <h2>O NOSSO SENTIDO DE RESPONSABILIDADE</h2>
-          <button className="outline-button">DESCUBRA MAIS</button>
+          <Link to="/responsibility">
+            <button className="outline-button">DESCUBRA MAIS</button>
+          </Link>
         </div>
       </div>
       

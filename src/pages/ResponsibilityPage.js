@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/layout/Header';
 import './ResponsibilityPage.css';
 
+
 const ResponsibilityPage = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+    }, []);
+
     return (
       <div className="responsibility-page">
         <Header />
