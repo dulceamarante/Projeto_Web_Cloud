@@ -1,9 +1,13 @@
-/* 1) Wrapper full-bleed */
+/* 1) Wrapper full-bleed com padding */
 .top-products-section {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin: 40px 0 0px;
-  padding: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 60px 5px 10px;
+  padding: 0 0px;  /* Padding para criar espaço nas bordas */
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 /* 2) Título centralizado */
@@ -14,24 +18,27 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: #121212;
 }
 
-/* 3) Grid de produtos */
+/* 3) Grid de produtos - com gap entre cards */
 .top-products-section .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap: 25px;
+  gap: 20px; /* Gap em todas as direções */
+  position: relative;
 }
 
 /* 4) Responsabilidade full-bleed */
 .responsibility-section {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: 60vh;
   min-height: 300px;
-  max-height: 500px;
+  max-height: 700px;
   background-image: url('../../assets/images/responsability2-bg.png');
   background-size: cover;
   background-position: center;
@@ -39,6 +46,7 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+  margin-top: 60px;
 }
 
 /* 5) Conteúdo de responsabilidade alinhado*/
@@ -53,8 +61,8 @@
 }
 
 .responsibility-title {
-  font-size: 34x;       
-  font-weight: 400;      
+  font-size: 50px;
+  font-weight: 600;      
   font-style: bold;
   letter-spacing: 1px;
   color: #fff;
@@ -66,7 +74,7 @@
   border: 1px solid white;
   color: white;
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
@@ -93,6 +101,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 768px) {
   .top-products-section .products-grid {
     grid-template-columns: repeat(2, 1fr);

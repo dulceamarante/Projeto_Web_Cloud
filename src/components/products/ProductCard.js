@@ -1,5 +1,5 @@
 // src/components/products/ProductCard.js
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import './ProductCard.css';
@@ -12,7 +12,10 @@ export default function ProductCard({
 }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [hover, setHover] = useState(false);
+  const [animateHeart, setAnimateHeart] = useState(false);
+  const [selectedSize, setSelectedSize] = useState(null);
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
+  const favBtnRef = useRef(null);
 
   const isProductFavorite = isFavorite(product.id);
 
@@ -34,7 +37,32 @@ export default function ProductCard({
     e.stopPropagation();
     e.preventDefault();
     toggleFavorite(product);
+    
+    // Adicionar animação de pulsar
+    setAnimateHeart(true);
+    setTimeout(() => setAnimateHeart(false), 1200);
   };
+
+  const handleSizeSelect = (e, productId, variant) => {
+    e.stopPropagation();
+    setSelectedSize(variant.size);
+    
+    // Reset após um tempo para permitir que a animação ocorra novamente
+    setTimeout(() => {
+      addToCart(productId, variant);
+    }, 300);
+  };
+
+  // Efeito para remover a classe de animação após a animação terminar
+  useEffect(() => {
+    if (animateHeart) {
+      const timer = setTimeout(() => {
+        setAnimateHeart(false);
+      }, 1200); // Duração da animação
+      
+      return () => clearTimeout(timer);
+    }
+  }, [animateHeart]);
 
   return (
     <div
@@ -52,10 +80,10 @@ export default function ProductCard({
         {product.images?.length > 1 && (
           <>
             <button className="nav-arrow left" onClick={prev}>
-              <FaChevronLeft />
+              <FaChevronLeft size={24} /> {/* Tamanho aumentado */}
             </button>
             <button className="nav-arrow right" onClick={next}>
-              <FaChevronRight />
+              <FaChevronRight size={24} /> {/* Tamanho aumentado */}
             </button>
           </>
         )}
@@ -65,12 +93,9 @@ export default function ProductCard({
             {product.variants.map(v => (
               <button
                 key={v.size || 'default'}
-                className="size-btn"
+                className={`size-btn ${selectedSize === v.size ? 'selected' : ''}`}
                 disabled={v.stock === 0}
-                onClick={e => {
-                  e.stopPropagation();
-                  addToCart(product.id, v);
-                }}
+                onClick={(e) => handleSizeSelect(e, product.id, v)}
               >
                 {v.size || 'Único'}
               </button>
@@ -115,7 +140,8 @@ export default function ProductCard({
             </div>
           </div>
           <button
-            className="fav-btn"
+            ref={favBtnRef}
+            className={`fav-btn ${animateHeart ? 'active' : ''}`}
             onClick={handleToggleFavorite}
             aria-label={
               isProductFavorite
