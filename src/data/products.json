@@ -1285,7 +1285,33 @@
       { "color": "Brown", "size": "L", "stock": 5 },
       { "color": "Brown", "size": "XL", "stock": 5 }
     ]
+  },
+  {
+    "id": 115,
+    "name": "Calças Largas De Ganga",
+    "description": "Jeans oversize relax fit confecionados em denim de algodão. Bolsos frontais e detalhe de bolsos traseiros de bolso de chapa com aba. Efeito lavado. Bainha com acabamento irregular. Fecho frontal com fecho de correr e botão.",
+    "price": 25.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH20 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH20 - 1.jpg",
+      "/assets/images/products/CalçasH20 - 2.jpg",
+      "/assets/images/products/CalçasH20 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
   }
+
+
+
   
   
 ]
