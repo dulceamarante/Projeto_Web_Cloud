@@ -8,21 +8,21 @@ import './TopProducts.css';
 export default function TopProducts() {
   const { getTopSellingProducts, loading } = useContext(ProductContext);
   const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
-
+  
   const topProducts = getTopSellingProducts(5);
   
   const addToCart = (productId, variant) => {
     alert(`Item ${productId} (tamanho ${variant.size}) adicionado!`);
   };
-
+  
   if (loading) return <div className="loading">Carregando...</div>;
   if (!topProducts.length) return <div className="no-products">Sem produtos</div>;
-
+  
   return (
     <section className="top-products-section">
       {/* Título da secção */}
       <h2 className="section-title">TOP SELLERS</h2>
-
+      
       {/* Grid de produtos */}
       <div className="products-grid">
         {topProducts.map(prod => (
@@ -32,17 +32,16 @@ export default function TopProducts() {
               ...prod,
               isFavorite: isFavorite(prod.id)
             }}
-            toggleFavorite={() => toggleFavorite(prod)}
             addToCart={addToCart}
           />
         ))}
       </div>
-
+      
       {/* Seção de responsabilidade */}
       <div className="responsibility-section">
         <div className="responsibility-content">
           <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>
-          <button className="outline-button">DESCUBRA MAIS</button>
+          <button className="outline-button">DESCOBRIR MAIS</button>
         </div>
       </div>
     </section>

@@ -1,21 +1,20 @@
 // src/components/layout/FavoritesPopOver.js
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaShoppingBag } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
-import shoppingBagIcon from '../../assets/images/icons/shopping-cart.png'; // Importe a imagem PNG
 import './FavoritesPopOver.css';
 
 const FavoritesPopOver = ({ onClose }) => {
   const { favorites, removeFromFavorites } = useContext(FavoritesContext);
   const [isExiting, setIsExiting] = useState(false);
   
-  // Fechar o popover com animação
+  // Fechar com animação
   const handleClose = () => {
     setIsExiting(true);
-    // Aguardar a animação terminar antes de chamar onClose
     setTimeout(() => {
       onClose();
-    }, 300); // mesma duração da animação CSS
+    }, 300);
   };
   
   // Fechar com ESC
@@ -37,11 +36,11 @@ const FavoritesPopOver = ({ onClose }) => {
   return (
     <div className="favorites-popover-overlay" onClick={handleClose}>
       <div 
-        className={`favorites-popover ${isExiting ? 'slide-out' : 'slide-in'}`} 
+        className={`favorites-popover ${isExiting ? 'slide-out' : ''}`} 
         onClick={e => e.stopPropagation()}
       >
         <div className="favorites-header">
-          <h2>CESTA ({favorites.length})</h2>
+          <h2>FAVORITOS ({favorites.length})</h2>
           <button className="close-favorites" onClick={handleClose}>×</button>
         </div>
         
@@ -65,11 +64,7 @@ const FavoritesPopOver = ({ onClose }) => {
                         </div>
                         <div className="item-actions">
                           <button className="action-button cart">
-                            <img 
-                              src={shoppingBagIcon} 
-                              alt="Shopping Bag" 
-                              className="shopping-bag-icon" 
-                            />
+                            <FaShoppingBag className="shopping-bag-icon" />
                             <span>Comprar mais tarde</span>
                           </button>
                           <button 
@@ -105,10 +100,10 @@ const FavoritesPopOver = ({ onClose }) => {
               
               <div className="favorites-actions">
                 <Link to="/favorites" className="btn-secondary" onClick={handleClose}>
-                  Ver cesta
+                  VER FAVORITOS
                 </Link>
                 <Link to="/checkout" className="btn-primary" onClick={handleClose}>
-                  Iniciar um pedido
+                  INICIAR UM PEDIDO
                 </Link>
               </div>
             </>
