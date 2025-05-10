@@ -10,6 +10,7 @@ export const ProductProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [recentlyViewed, setRecentlyViewed] = useState([]); // Estado para produtos vistos recentemente
   const [filters, setFilters] = useState({
     category: '',
     minPrice: 0,
@@ -43,6 +44,27 @@ export const ProductProvider = ({ children }) => {
 
     fetchProducts();
   }, []);
+
+  // Carregar produtos vistos recentemente do localStorage
+  useEffect(() => {
+    try {
+      const storedRecentlyViewed = localStorage.getItem('recentlyViewed');
+      if (storedRecentlyViewed) {
+        setRecentlyViewed(JSON.parse(storedRecentlyViewed));
+      }
+    } catch (error) {
+      console.error('Erro ao carregar produtos vistos recentemente:', error);
+    }
+  }, []);
+
+  // Salvar produtos vistos recentemente no localStorage quando mudar
+  useEffect(() => {
+    try {
+      localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+    } catch (error) {
+      console.error('Erro ao salvar produtos vistos recentemente:', error);
+    }
+  }, [recentlyViewed]);
 
   useEffect(() => {
     // Aplicar filtros aos produtos
@@ -115,7 +137,6 @@ export const ProductProvider = ({ children }) => {
       .slice(0, limit);
   };
 
-  // Adicione esta função antes do return
   const getTopSellingProducts = (limit = 5) => {
     // Em um cenário real, você teria um campo como 'salesCount' ou 'popularity'
     // que seria atualizado através de um sistema de back-end
@@ -124,7 +145,29 @@ export const ProductProvider = ({ children }) => {
       .slice(0, limit); // Limitar ao número especificado
   };
 
-  // Um único return com todas as funções incluídas
+  // Função para adicionar um produto à lista de vistos recentemente
+  const addToRecentlyViewed = (product) => {
+    if (!product) return;
+    
+    // Remover o produto da lista atual, se já estiver presente
+    const filteredList = recentlyViewed.filter(p => p.id !== product.id);
+    
+    // Adicionar o produto ao início da lista
+    const updatedList = [product, ...filteredList].slice(0, 10); // Limitar a 10 produtos
+    
+    setRecentlyViewed(updatedList);
+  };
+
+  // Função para obter produtos vistos recentemente
+  const getRecentlyViewedProducts = (limit = 5) => {
+    // Filtrar produtos que ainda existem na lista de produtos atual
+    const validProducts = recentlyViewed.filter(viewed => 
+      products.some(p => p.id === viewed.id)
+    );
+    
+    return validProducts.slice(0, limit);
+  };
+
   return (
     <ProductContext.Provider value={{
       products,
@@ -135,8 +178,10 @@ export const ProductProvider = ({ children }) => {
       updateFilters,
       getProductById,
       getTopProducts,
-      getTopSellingProducts, // Função adicionada aqui
-      getSimilarProducts
+      getTopSellingProducts,
+      getSimilarProducts,
+      addToRecentlyViewed, // Nova função
+      getRecentlyViewedProducts // Nova função
     }}>
       {children}
     </ProductContext.Provider>

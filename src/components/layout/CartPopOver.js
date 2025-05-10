@@ -123,7 +123,7 @@ const CartPopOver = ({ onClose }) => {
               
               <div className="cart-actions">
                 <Link to="/cart" className="btn-secondary" onClick={handleClose}>
-                  VER CESTA
+                  VER CARRINHO
                 </Link>
                 <Link to="/checkout" className="btn-primary" onClick={handleClose}>
                   INICIAR UM PEDIDO

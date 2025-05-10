@@ -55,7 +55,7 @@ export default function FavoritesPage() {
       <header className="favorites-header">
         <div className="titles">
           <h1>OS MEUS ARTIGOS PREFERIDOS</h1>
-          <p>Estes são os artigos de que mais gosta</p>
+          <p>Estes são os artigos de que mais gosta.</p>
           <hr className="single-line" />
         </div>
         <div className="actions">

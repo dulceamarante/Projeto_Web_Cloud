@@ -143,7 +143,7 @@ const Header = () => {
             setCartOpen(o => !o);
             if (favOpen) setFavOpen(false); // Fecha os favoritos se estiverem abertos
           }}>
-            CESTA ({cartItemCount})
+            CARRINHO ({cartItemCount})
           </a>
         </div>
       </header>
