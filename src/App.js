@@ -14,6 +14,7 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ResponsibilityPage from './pages/ResponsibilityPage';
 
 
 function App() {
