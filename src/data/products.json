@@ -1722,7 +1722,472 @@
       { "color": "Red/White", "size": "L", "stock": 5 },
       { "color": "Red/White", "size": "XL", "stock": 5 }
     ]
+  },
+   {
+    "id": 135,
+    "name": "Camisa de Popelina Extra Comprida 50th Anniversary",
+    "description": "Camisa extra comprida confecionada com fiação 100% algodão. Gola de abas e manga comprida acabada em punho com prega. Pormenor de pinça atrás. Bainha com aberturas laterais. Fecho frontal com botões.",
+    "price": 38.00,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 63,
+    "stock": 13,
+    "image": "/assets/images/products/CamisaM-1-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-1-1.jpg",
+      "/assets/images/products/CamisaM-1-2.jpg",
+      "/assets/images/products/CamisaM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 3 },
+      { "color": "White", "size": "M", "stock": 3 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+     {
+    "id": 136,
+    "name": "Camisa de Popelina Oversize 50th Anniversary",
+    "description": "Camisa oversize confecionada com fiação 100% algodão. Gola de abas. Manga comprida acabada em punho com prega. Pormenor de pinças atrás. Fecho frontal com botões.",
+    "price": 35.20,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 92,
+    "stock": 10,
+    "image": "/assets/images/products/CamisaM-2-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-2-1.jpg",
+      "/assets/images/products/CamisaM-2-2.jpg",
+      "/assets/images/products/CamisaM-2-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+       {
+    "id": 137,
+    "name": "Camisa Fluida com Cupro 50th Anniversary",
+    "description": "Camisa fluida confecionada em fiação com cupro. Gola de lapela e manga comprida acabada em punho. Fecho frontal com botões.",
+    "price": 52.15,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 60,
+    "stock": 8,
+    "image": "/assets/images/products/CamisaM-3-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-3-1.jpg",
+      "/assets/images/products/CamisaM-3-2.jpg",
+      "/assets/images/products/CamisaM-3-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 3 },
+      { "color": "Black", "size": "M", "stock": 1 },
+      { "color": "Black", "size": "L", "stock": 1 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 138,
+    "name": "Camisa Popelina Manga Morcego 50th Anniversary",
+    "description": "Camisa confecionada com fiação 100% algodão. Gola de abas. Manga comprida manga morcego acabada em punho com ombro descaído. Bolso de chapa à frente. Pormenor de pinças atrás. Fecho frontal com botões.",
+    "price": 35.25,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 82,
+    "stock": 7,
+    "image": "/assets/images/products/CamisaM-4-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-4-1.jpg",
+      "/assets/images/products/CamisaM-4-2.jpg",
+      "/assets/images/products/CamisaM-4-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 1 },
+      { "color": "Black", "size": "M", "stock": 1 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 1 }
+    ]
+  },
+      {
+    "id": 139,
+    "name": "Camisa Combinada Popelina 50th Anniversary",
+    "description": "Camisa confecionada em fiação de algodão. Gola de abas e manga comprida com botões acabada em punho. Pormenor de tecidos combinados a contrastar. Bainha com aberturas laterais. Fecho à frente com botões.",
+    "price": 45.50,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 3,
+    "popularity": 22,
+    "stock": 13,
+    "image": "/assets/images/products/CamisaM-5-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-5-1.jpg",
+      "/assets/images/products/CamisaM-5-2.jpg",
+      "/assets/images/products/CamisaM-5-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 3 },
+      { "color": "White", "size": "L", "stock": 3 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 140,
+    "name": "Camisa Botões Combinados 100% Linho",
+    "description": "Camisa confecionada em linho. Colarinho de abas e manga comprida. Bainha com aberturas laterais. Fecho frontal com botões combinados.",
+    "price": 23.00,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 55,
+    "stock": 10,
+    "image": "/assets/images/products/CamisaM-6-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-6-1.jpg",
+      "/assets/images/products/CamisaM-6-2.jpg",
+      "/assets/images/products/CamisaM-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 1 },
+      { "color": "White", "size": "M", "stock": 3 },
+      { "color": "White", "size": "L", "stock": 3 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 141,
+    "name": "Blusa Bordados Manga Larga",
+    "description": "Blusa de decote redondo com decote em bico e manga larga abaixo do cotovelo. Detalhe de acabamentos com bordados. Fecho frontal com botões.",
+    "price": 30.55,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 55,
+    "stock": 12,
+    "image": "/assets/images/products/CamisaM-7-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-7-1.jpg",
+      "/assets/images/products/CamisaM-7-2.jpg",
+      "/assets/images/products/CamisaM-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 2 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+    {
+    "id": 142,
+    "name": "Blusa Curta com Bordados Perfurados",
+    "description": "Blusa de decote redondo com decote em bico e manga comprida acabada com folho. Detalhe de bordados perfurados à frente combinados no tom. Fecho frontal com botões no tom.",
+    "price": 20.15,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 70,
+    "stock": 6,
+    "image": "/assets/images/products/CamisaM-8-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-8-1.jpg",
+      "/assets/images/products/CamisaM-8-2.jpg",
+      "/assets/images/products/CamisaM-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 2 },
+      { "color": "White", "size": "M", "stock": 1 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 1 }
+    ]
+  },
+      {
+    "id": 143,
+    "name": "Blusa Algodão Bordados",
+    "description": "Blusa de decote redondo com decote em bico e manga comprida acabada em elástico. Detalhe de bordados frontais no tom. Fecho frontal com botões.",
+    "price": 25.00,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 92,
+    "stock": 14,
+    "image": "/assets/images/products/CamisaM-9-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-9-1.jpg",
+      "/assets/images/products/CamisaM-9-2.jpg",
+      "/assets/images/products/CamisaM-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 144,
+    "name": "Camisa Entremeio",
+    "description": "Camisa de decote em bico e manga larga abaixo do cotovelo. Detalhe de entremeios no mesmo tom. Fecho frontal com botões.",
+    "price": 25.90,
+    "category": "camisas",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 85,
+    "stock": 10,
+    "image": "/assets/images/products/CamisaM-10-1.jpg",
+    "images": [
+      "/assets/images/products/CamisaM-10-1.jpg",
+      "/assets/images/products/CamisaM-10-2.jpg",
+      "/assets/images/products/CamisaM-10-3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 3 },
+      { "color": "White", "size": "M", "stock": 2 },
+      { "color": "White", "size": "L", "stock": 2 },
+      { "color": "White", "size": "XL", "stock": 3 }
+    ]
+  },
+      {
+    "id": 145,
+    "name": "Trench Algodão 50th Anniversary",
+    "description": "Trench confecionado com fiação de algodão. Gola de abas com e manga comprida acabada em punho. Pormenor de aba com presilha e botão na gola. Bolsos laterais. Cinto de laçada no mesmo tecido. Bainha com abertura atrás. Fecho frontal com botões.",
+    "price": 129.90,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 92,
+    "stock": 13,
+    "image": "/assets/images/products/CasacoM-1-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-1-1.jpg",
+      "/assets/images/products/CasacoM-1-2.jpg",
+      "/assets/images/products/CasacoM-1-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 3 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 3 }
+    ]
+  },
+    {
+    "id": 146,
+    "name": "Trench Oversize 50th Anniversary",
+    "description": "Trench oversize de gola de abas e manga comprida com presilha e botão. Bolsos à frente. Cinto no mesmo tecido ajustável com laçadas. Bainha com acabamento com abertura atrás. Fecho frontal com botões ocultos por aba.",
+    "price": 139.90,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 64,
+    "stock": 9,
+    "image": "/assets/images/products/CasacoM-2-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-2-1.jpg",
+      "/assets/images/products/CasacoM-2-2.jpg",
+      "/assets/images/products/CasacoM-2-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 3 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 2 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+      {
+    "id": 147,
+    "name": "Quimono Cruzado",
+    "description": "Quimono com decote em bico cruzado e manga comprida ampla. Aperta com laçada interior e lateral.",
+    "price": 29.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 75,
+    "stock": 14,
+    "image": "/assets/images/products/CasacoM-3-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-3-1.jpg",
+      "/assets/images/products/CasacoM-3-2.jpg",
+      "/assets/images/products/CasacoM-3-3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 4 },
+      { "color": "Brown", "size": "L", "stock": 3 },
+      { "color": "Brown", "size": "XL", "stock": 2 }
+    ]
+  },
+    {
+    "id": 148,
+    "name": "Casaco Quimono com Cinto",
+    "description": "Casaco quimono com gola de lapela e decote em bico cruzado. Manga comprida. Cinto laço no mesmo tecido.",
+    "price": 29.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 69,
+    "stock": 13,
+    "image": "/assets/images/products/CasacoM-4-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-4-1.jpg",
+      "/assets/images/products/CasacoM-4-2.jpg",
+      "/assets/images/products/CasacoM-4-3.jpg"
+    ],
+    "variants": [
+      { "color": "Pink", "size": "S", "stock": 4 },
+      { "color": "Pink", "size": "M", "stock": 4 },
+      { "color": "Pink", "size": "L", "stock": 3 },
+      { "color": "Pink", "size": "XL", "stock": 2 }
+    ]
+  },
+      {
+    "id": 149,
+    "name": "Casaco Quimono com Laço Lateral",
+    "description": "Casaco tipo quimono. Decote em bico cruzado e manga comprida. Fecho cruzado com laçada na lateral.",
+    "price": 29.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 3,
+    "popularity": 23,
+    "stock": 4,
+    "image": "/assets/images/products/CasacoM-5-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-5-1.jpg",
+      "/assets/images/products/CasacoM-5-2.jpg",
+      "/assets/images/products/CasacoM-5-3.jpg"
+    ],
+    "variants": [
+      { "color": "Gray", "size": "S", "stock": 1 },
+      { "color": "Gray", "size": "M", "stock": 1 },
+      { "color": "Gray", "size": "L", "stock": 1 },
+      { "color": "Gray", "size": "XL", "stock": 1 }
+    ]
+  },
+        {
+    "id": 150,
+    "name": "Casaco Quimono com Textura",
+    "description": "Casaco tipo quimono. Decote em bico cruzado e manga comprida. Fecho cruzado com laço na lateral.",
+    "price": 29.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 2,
+    "popularity": 20,
+    "stock": 6,
+    "image": "/assets/images/products/CasacoM-6-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-6-1.jpg",
+      "/assets/images/products/CasacoM-6-2.jpg",
+      "/assets/images/products/CasacoM-6-3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 1 },
+      { "color": "Bege", "size": "M", "stock": 1 },
+      { "color": "Bege", "size": "L", "stock": 3 },
+      { "color": "Bege", "size": "XL", "stock": 1 }
+    ]
+  },
+    {
+    "id": 151,
+    "name": "Blazer Quimono Cruzado",
+    "description": "Blazer tipo quimono de decote em bico cruzado. Manga comprida com ombro descaído. Forro interior. Fecho cruzado com laço no mesmo tecido.",
+    "price": 39.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 82,
+    "stock": 9,
+    "image": "/assets/images/products/CasacoM-7-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-7-1.jpg",
+      "/assets/images/products/CasacoM-7-2.jpg",
+      "/assets/images/products/CasacoM-7-3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 2 },
+      { "color": "Black", "size": "M", "stock": 2 },
+      { "color": "Black", "size": "L", "stock": 3 },
+      { "color": "Black", "size": "XL", "stock": 2 }
+    ]
+  },
+      {
+    "id": 152,
+    "name": "Blazer Quimono Bordado",
+    "description": "Blazer estilo quimono longo e aberto com manga longa. Detalhe de bordados combinados em contraste. Bolsos laterais ocultos na costura. Barra com aberturas laterais.",
+    "price": 59.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 95,
+    "stock": 13,
+    "image": "/assets/images/products/CasacoM-8-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-8-1.jpg",
+      "/assets/images/products/CasacoM-8-2.jpg",
+      "/assets/images/products/CasacoM-8-3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 3 },
+      { "color": "Bege", "size": "M", "stock": 4 },
+      { "color": "Bege", "size": "L", "stock": 4 },
+      { "color": "Bege", "size": "XL", "stock": 2 }
+    ]
+  },
+      {
+    "id": 153,
+    "name": "Blusão com Fecho de Correr e Rami",
+    "description": "Blusão confecionado com rami. Gola de lapela e manga larga abaixo do cotovelo. Bolsos frontais de chapa com aba. Bainha com acabamento elástico. Fecho frontal com fecho de correr.",
+    "price": 35.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 52,
+    "stock": 10,
+    "image": "/assets/images/products/CasacoM-9-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-9-1.jpg",
+      "/assets/images/products/CasacoM-9-2.jpg",
+      "/assets/images/products/CasacoM-9-3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 4 },
+      { "color": "Brown", "size": "M", "stock": 2 },
+      { "color": "Brown", "size": "L", "stock": 2 },
+      { "color": "Brown", "size": "XL", "stock": 2 }
+    ]
+  },
+        {
+    "id": 153,
+    "name": "Casaco Curto com Presilhas",
+    "description": "Casaco curto com gola de pontas. Manga comprida ajustável com presilha. Bolsos de chapa com lapela à frente. Bainha ajustável com cordões interiores. Fecho frontal com botões metálicos.",
+    "price": 29.95,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4,
+    "popularity": 34,
+    "stock": 10,
+    "image": "/assets/images/products/CasacoM-10-1.jpg",
+    "images": [
+      "/assets/images/products/CasacoM-10-1.jpg",
+      "/assets/images/products/CasacoM-10-2.jpg",
+      "/assets/images/products/CasacoM-10-3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 4 },
+      { "color": "Brown", "size": "M", "stock": 2 },
+      { "color": "Brown", "size": "L", "stock": 2 },
+      { "color": "Brown", "size": "XL", "stock": 2 }
+    ]
   }
+  
+  
+  
+  
+  
 
 
 
