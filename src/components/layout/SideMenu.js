@@ -54,6 +54,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
   // Definindo as subcategorias e seus respectivos caminhos de URL
   const categories = {
     mulher: [
+      { name: 'TODOS OS ARTIGOS', path: '/produtos/mulher/todos' },
       { name: 'CAMISAS', path: '/produtos/mulher/camisas' },
       { name: 'T-SHIRTS', path: '/produtos/mulher/t-shirts' },
       { name: 'JEANS', path: '/produtos/mulher/jeans' },
@@ -65,6 +66,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
       { name: 'MALHA', path: '/produtos/mulher/malha' }
     ],
     homem: [
+      { name: 'TODOS OS ARTIGOS', path: '/produtos/homem/todos' },
       { name: 'CAMISAS', path: '/produtos/homem/camisas' },
       { name: 'T-SHIRTS', path: '/produtos/homem/t-shirts' },
       { name: 'JEANS', path: '/produtos/homem/jeans' },
@@ -76,6 +78,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
       { name: 'ACESSÓRIOS', path: '/produtos/homem/acessorios' }
     ],
     beauty: [
+      { name: 'TODOS OS ARTIGOS', path: '/produtos/beauty/todos' },
       { name: 'MAKEUP', path: '/produtos/beauty/makeup' },
       { name: 'PERFUMES', path: '/produtos/beauty/perfumes' },
       { name: 'SKINCARE', path: '/produtos/beauty/skincare' }
