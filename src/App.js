@@ -16,7 +16,6 @@ import FavoritesPage from './pages/FavoritesPage';
 import NotFoundPage from './pages/NotFoundPage';
 import ResponsibilityPage from './pages/ResponsibilityPage';
 
-
 function App() {
   return (
     <ProductProvider>
@@ -28,15 +27,19 @@ function App() {
               <main>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-                  <Route path="/products" element={<ProductsPage />} />
+                  
+                  {/* Rotas para produtos por gênero */}
+                  <Route path="/:gender/products" element={<ProductsPage />} />
+                  <Route path="/:gender/:category" element={<ProductsPage />} />
+                  
                   <Route path="/product/:productId" element={<ProductDetailPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/favorites" element={<FavoritesPage />} />
-                  <Route path="*" element={<NotFoundPage />} />
                   <Route path="/responsibility" element={<ResponsibilityPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
-              </main>
-              <Footer />
+                </main>
+               <Footer />
             </Router>
           </NotificationProvider>
         </FavoritesProvider>
