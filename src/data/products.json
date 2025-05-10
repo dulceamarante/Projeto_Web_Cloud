@@ -2182,16 +2182,1643 @@
       { "color": "Brown", "size": "L", "stock": 2 },
       { "color": "Brown", "size": "XL", "stock": 2 }
     ]
+  },
+  {
+    "id": 6,
+    "name": "Camisa 100% linho Branco",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH1 - 1.jpg",
+      "/assets/images/products/CamisaH1 - 2.jpg",
+      "/assets/images/products/CamisaH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 7 },
+      { "color": "White", "size": "M", "stock": 7 },
+      { "color": "White", "size": "L", "stock": 7 },
+      { "color": "White", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Camisa 100% linho branco",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH1 - 1.jpg",
+      "/assets/images/products/CamisaH1 - 2.jpg",
+      "/assets/images/products/CamisaH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 7 },
+      { "color": "White", "size": "M", "stock": 7 },
+      { "color": "White", "size": "L", "stock": 7 },
+      { "color": "White", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Camisa 100% linho verde",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH2 - 1.jpg",
+      "/assets/images/products/CamisaH2 - 2.jpg",
+      "/assets/images/products/CamisaH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Camisa 100% linho bege",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH3 - 1.jpg",
+      "/assets/images/products/CamisaH3 - 2.jpg",
+      "/assets/images/products/CamisaH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 4 },
+      { "color": "Bege", "size": "M", "stock": 4 },
+      { "color": "Bege", "size": "L", "stock": 4 },
+      { "color": "Bege", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Camisa Com Estrutura Às Riscas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH4 - 1.jpg",
+      "/assets/images/products/CamisaH4 - 2.jpg",
+      "/assets/images/products/CamisaH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Grey", "size": "S", "stock": 4 },
+      { "color": "White/Grey", "size": "M", "stock": 4 },
+      { "color": "White/Grey", "size": "L", "stock": 4 },
+      { "color": "White/Grey", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Camisa Com Estampado Abstrato",
+    "description": "Camisa relaxed fit confecionada em tecido fluído. Gola de lapela e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH5 - 1.jpg",
+      "/assets/images/products/CamisaH5 - 2.jpg",
+      "/assets/images/products/CamisaH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Grey", "size": "S", "stock": 5 },
+      { "color": "White/Grey", "size": "M", "stock": 5 },
+      { "color": "White/Grey", "size": "L", "stock": 5 },
+      { "color": "White/Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Camisa Com Estrutura Às Riscas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 95,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH6 - 1.jpg",
+      "/assets/images/products/CamisaH6 - 2.jpg",
+      "/assets/images/products/CamisaH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Black", "size": "S", "stock": 5 },
+      { "color": "White/Black", "size": "M", "stock": 5 },
+      { "color": "White/Black", "size": "L", "stock": 5 },
+      { "color": "White/Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Camisa 100% Linho Castanho",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH7 - 1.jpg",
+      "/assets/images/products/CamisaH7 - 2.jpg",
+      "/assets/images/products/CamisaH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White/Black", "size": "S", "stock": 5 },
+      { "color": "White/Black", "size": "M", "stock": 5 },
+      { "color": "White/Black", "size": "L", "stock": 5 },
+      { "color": "White/Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Camisa 100% Linho Preto",
+    "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho frontal de botões.",
+    "price": 12.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 5,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/CamisaH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH8 - 1.jpg",
+      "/assets/images/products/CamisaH8 - 2.jpg",
+      "/assets/images/products/CamisaH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Camisa De Jacquard Geométrico",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de viscose e linho. Gola bowling e manga curta. Bainha com aberturas laterais. Fecho com botões à frente.",
+    "price": 15.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH9 - 1.jpg",
+      "/assets/images/products/CamisaH9- 2.jpg",
+      "/assets/images/products/CamisaH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Camisa Lyocell - Algodão",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de liocel e algodão. Colarinho de pontas e manga curta. Bolso de chapa no peito. Fecho com botões à frente.",
+    "price": 15.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH10 - 1.jpg",
+      "/assets/images/products/CamisaH10 - 2.jpg",
+      "/assets/images/products/CamisaH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Camisa Relaxed Fit Aos Quadrados",
+    "description": "Camisa relaxed fit confecionada em tecido com mistura de liocel e algodão. Colarinho de pontas e manga curta. Bolso de chapa no peito. Fecho com botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH11 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH11 - 1.jpg",
+      "/assets/images/products/CamisaH11 - 2.jpg",
+      "/assets/images/products/CamisaH11 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Camisa Com Bordados a Contrastar",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Parte inferior com aberturas laterais. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 24,
+    "image": "/assets/images/products/CamisaH12 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH12 - 1.jpg",
+      "/assets/images/products/CamisaH12 - 2.jpg",
+      "/assets/images/products/CamisaH12 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 6 },
+      { "color": "Blue", "size": "M", "stock": 6 },
+      { "color": "Blue", "size": "L", "stock": 6 },
+      { "color": "Blue", "size": "XL", "stock": 6 }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Camisa Relaxed Fit Conchas",
+    "description": "Camisa relaxed fit. Gola bowling e manga curta. Aplicação frontal combinada a contraste. Parte inferior com aberturas laterais. Fecho frontal de botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH13 - 1.jpg",
+      "/assets/images/products/CamisaH13 - 2.jpg",
+      "/assets/images/products/CamisaH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 7 },
+      { "color": "Black", "size": "M", "stock": 7 },
+      { "color": "Black", "size": "L", "stock": 7 },
+      { "color": "Black", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Camisa Jacquard Com Textura",
+    "description": "Camisa relaxed fit confecionada em tecido de viscose. Colarinho bowling e manga curta. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 3.8,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH14 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH14 - 1.jpg",
+      "/assets/images/products/CamisaH14 - 2.jpg",
+      "/assets/images/products/CamisaH14 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 4 },
+      { "color": "Brown", "size": "M", "stock": 4 },
+      { "color": "Brown", "size": "L", "stock": 4 },
+      { "color": "Brown", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Camisa Jacquard Com Textura",
+    "description": "Camisa relaxed fit confecionada em tecido de viscose. Colarinho bowling e manga curta. Fecho de botões à frente.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 80,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH15 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH15 - 1.jpg",
+      "/assets/images/products/CamisaH15 - 2.jpg",
+      "/assets/images/products/CamisaH15 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Camisa Com Bolsos e Bordado",
+    "description": "Camisa boxy fit confecionada em tecido de algodão com estrutura. Gola de lapela e manga curta. Aplicação de bolsos multifunções de chapa com lapela. Texto bordado combinado a contraste no peito. Efeito lavado. Fecho frontal de botões.",
+    "price": 18.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 110,
+    "stock": 28,
+    "image": "/assets/images/products/CamisaH16 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH16 - 1.jpg",
+      "/assets/images/products/CamisaH16 - 2.jpg",
+      "/assets/images/products/CamisaH16 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 7 },
+      { "color": "Blue", "size": "M", "stock": 7 },
+      { "color": "Blue", "size": "L", "stock": 7 },
+      { "color": "Blue", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 3.8,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH17 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH17 - 1.jpg",
+      "/assets/images/products/CamisaH17 - 2.jpg",
+      "/assets/images/products/CamisaH17 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 14.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 16,
+    "image": "/assets/images/products/CamisaH18 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH18 - 1.jpg",
+      "/assets/images/products/CamisaH18 - 2.jpg",
+      "/assets/images/products/CamisaH18 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Camisa Relaxed Fit Às Riscas",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 16.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 90,
+    "stock": 12,
+    "image": "/assets/images/products/CamisaH19 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH19 - 1.jpg",
+      "/assets/images/products/CamisaH19 - 2.jpg",
+      "/assets/images/products/CamisaH19 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 3 },
+      { "color": "Blue", "size": "M", "stock": 3 },
+      { "color": "Blue", "size": "L", "stock": 3 },
+      { "color": "Blue", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Camisa Relaxed Fit Aos Quadrados",
+    "description": "Camisa relaxed fit confecionada em tecido leve de algodão. Colarinho de abas e manga curta. Fecho frontal com botões.",
+    "price": 18.99,
+    "category": "camisa",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CamisaH20 - 1.jpg",
+    "images": [
+      "/assets/images/products/CamisaH20 - 1.jpg",
+      "/assets/images/products/CamisaH20 - 2.jpg",
+      "/assets/images/products/CamisaH20 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Red", "size": "S", "stock": 3 },
+      { "color": "Red", "size": "M", "stock": 3 },
+      { "color": "Red", "size": "L", "stock": 3 },
+      { "color": "Red", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH1 - 1.jpg",
+      "/assets/images/products/TshirtH1 - 2.jpg",
+      "/assets/images/products/TshirtH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 80,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH2 - 1.jpg",
+      "/assets/images/products/TshirtH2 - 2.jpg",
+      "/assets/images/products/TshirtH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 8 },
+      { "color": "Brown", "size": "M", "stock": 8 },
+      { "color": "Brown", "size": "L", "stock": 8 },
+      { "color": "Brown", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 100,
+    "stock": 40,
+    "image": "/assets/images/products/TshirtH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH3 - 1.jpg",
+      "/assets/images/products/TshirtH3 - 2.jpg",
+      "/assets/images/products/TshirtH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 10 },
+      { "color": "White", "size": "M", "stock": 10 },
+      { "color": "White", "size": "L", "stock": 10 },
+      { "color": "White", "size": "XL", "stock": 10 }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/TshirtH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH4 - 1.jpg",
+      "/assets/images/products/TshirtH4 - 2.jpg",
+      "/assets/images/products/TshirtH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 8 },
+      { "color": "Blue", "size": "M", "stock": 8 },
+      { "color": "Blue", "size": "L", "stock": 8 },
+      { "color": "Blue", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "T-shirt De Malha Relaxed Fit ",
+    "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
+    "price": 9.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 40,
+    "image": "/assets/images/products/TshirtH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH5 - 1.jpg",
+      "/assets/images/products/TshirtH5 - 2.jpg",
+      "/assets/images/products/TshirtH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "T-shirt Básica Com Decote Em V",
+    "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
+    "price": 12.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 3.6,
+    "popularity": 70,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH6 - 1.jpg",
+      "/assets/images/products/TshirtH6 - 2.jpg",
+      "/assets/images/products/TshirtH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "T-shirt Básica Com Decote Em V",
+    "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
+    "price": 12.99,
+    "category": "tshirt",
+    "subcategory": "",
+    "rating": 3.8,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH7 - 1.jpg",
+      "/assets/images/products/TshirtH7 - 2.jpg",
+      "/assets/images/products/TshirtH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH8 - 1.jpg",
+      "/assets/images/products/TshirtH8 - 2.jpg",
+      "/assets/images/products/TshirtH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH9 - 1.jpg",
+      "/assets/images/products/TshirtH9 - 2.jpg",
+      "/assets/images/products/TshirtH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "T-shirt Básica Malha",
+    "description": "T-shirt regular fit de malha tecida em fio de algodão. Decote redondo e manga curta. Acabamentos em nervuras.",
+    "price": 10.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.9,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/TshirtH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/TshirtH10 - 1.jpg",
+      "/assets/images/products/TshirtH10 - 2.jpg",
+      "/assets/images/products/TshirtH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 32,
+    "image": "/assets/images/products/CalçasH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH1 - 1.jpg",
+      "/assets/images/products/CalçasH1 - 2.jpg",
+      "/assets/images/products/CalçasH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 8 },
+      { "color": "Black", "size": "M", "stock": 8 },
+      { "color": "Black", "size": "L", "stock": 8 },
+      { "color": "Black", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH2 - 1.jpg",
+      "/assets/images/products/CalçasH2 - 2.jpg",
+      "/assets/images/products/CalçasH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 7 },
+      { "color": "Grey", "size": "M", "stock": 7 },
+      { "color": "Grey", "size": "L", "stock": 7 },
+      { "color": "Grey", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 100,
+    "stock": 32,
+    "image": "/assets/images/products/CalçasH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH3 - 1.jpg",
+      "/assets/images/products/CalçasH3 - 2.jpg",
+      "/assets/images/products/CalçasH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 8 },
+      { "color": "White", "size": "M", "stock": 8 },
+      { "color": "White", "size": "L", "stock": 8 },
+      { "color": "White", "size": "XL", "stock": 8 }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH4 - 1.jpg",
+      "/assets/images/products/CalçasH4 - 2.jpg",
+      "/assets/images/products/CalçasH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 7 },
+      { "color": "Bege", "size": "M", "stock": 7 },
+      { "color": "Bege", "size": "L", "stock": 7 },
+      { "color": "Bege", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Calças Com Estrutura Confort",
+    "description": "Calças slim fit confecionadas em tecido com elasticidade em ambas as direções. Bolsos à frente e pormenor de bolsos traseiros de abertura debruada com botão. Fecho de correr e botão à frente.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 100,
+    "stock": 28,
+    "image": "/assets/images/products/CalçasH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH5 - 1.jpg",
+      "/assets/images/products/CalçasH5 - 2.jpg",
+      "/assets/images/products/CalçasH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 7 },
+      { "color": "Grey", "size": "M", "stock": 7 },
+      { "color": "Grey", "size": "L", "stock": 7 },
+      { "color": "Grey", "size": "XL", "stock": 7 }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.8,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH6 - 1.jpg",
+      "/assets/images/products/CalçasH6 - 2.jpg",
+      "/assets/images/products/CalçasH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH7 - 1.jpg",
+      "/assets/images/products/CalçasH7 - 2.jpg",
+      "/assets/images/products/CalçasH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 5 },
+      { "color": "White", "size": "M", "stock": 5 },
+      { "color": "White", "size": "L", "stock": 5 },
+      { "color": "White", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH8 - 1.jpg",
+      "/assets/images/products/CalçasH8 - 2.jpg",
+      "/assets/images/products/CalçasH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 4 },
+      { "color": "Bege", "size": "M", "stock": 4 },
+      { "color": "Bege", "size": "L", "stock": 4 },
+      { "color": "Bege", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 75,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH9 - 1.jpg",
+      "/assets/images/products/CalçasH9 - 2.jpg",
+      "/assets/images/products/CalçasH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 4 },
+      { "color": "Blue", "size": "M", "stock": 4 },
+      { "color": "Blue", "size": "L", "stock": 4 },
+      { "color": "Blue", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Calças De Cintura Jogger",
+    "description": "Calças de cintura elástica ajustável com cordão. Bolsos laterais e detalhe de bolsos traseiros debruados. Bainha com acabamento com dobra.",
+    "price": 16.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH10 - 1.jpg",
+      "/assets/images/products/CalçasH10 - 2.jpg",
+      "/assets/images/products/CalçasH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 4 },
+      { "color": "Green", "size": "M", "stock": 4 },
+      { "color": "Green", "size": "L", "stock": 4 },
+      { "color": "Green", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.7,
+    "popularity": 60,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH11 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH11 - 1.jpg",
+      "/assets/images/products/CalçasH11 - 2.jpg",
+      "/assets/images/products/CalçasH11 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 65,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH12 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH12 - 1.jpg",
+      "/assets/images/products/CalçasH12 - 2.jpg",
+      "/assets/images/products/CalçasH12 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "White", "size": "S", "stock": 4 },
+      { "color": "White", "size": "M", "stock": 4 },
+      { "color": "White", "size": "L", "stock": 4 },
+      { "color": "White", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.5,
+    "popularity": 55,
+    "stock": 12,
+    "image": "/assets/images/products/CalçasH13 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH13 - 1.jpg",
+      "/assets/images/products/CalçasH13 - 2.jpg",
+      "/assets/images/products/CalçasH13 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 3 },
+      { "color": "Brown", "size": "M", "stock": 3 },
+      { "color": "Brown", "size": "L", "stock": 3 },
+      { "color": "Brown", "size": "XL", "stock": 3 }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Calças 100% Linho",
+    "description": "Calças relaxed fit confecionadas em tecido de linho. Cintura ajustável com cordão. Bolsos à frente e detalhe de bolsos de chapa atrás.",
+    "price": 18.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 3.9,
+    "popularity": 70,
+    "stock": 16,
+    "image": "/assets/images/products/CalçasH14 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH14 - 1.jpg",
+      "/assets/images/products/CalçasH14 - 2.jpg",
+      "/assets/images/products/CalçasH14 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 4 },
+      { "color": "Black", "size": "M", "stock": 4 },
+      { "color": "Black", "size": "L", "stock": 4 },
+      { "color": "Black", "size": "XL", "stock": 4 }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Calças Pregas Cinto",
+    "description": "Calças relaxed fit. Cintura com detalhe de cinto do mesmo tecido e pregas frontais. Bolsos na frente e detalhe de bolsos traseiros de linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 25.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH15 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH15 - 1.jpg",
+      "/assets/images/products/CalçasH15 - 2.jpg",
+      "/assets/images/products/CalçasH15 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH16 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH16 - 1.jpg",
+      "/assets/images/products/CalçasH16 - 2.jpg",
+      "/assets/images/products/CalçasH16 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.4,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH17 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH17 - 1.jpg",
+      "/assets/images/products/CalçasH17 - 2.jpg",
+      "/assets/images/products/CalçasH17 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.6,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH18 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH18 - 1.jpg",
+      "/assets/images/products/CalçasH18 - 2.jpg",
+      "/assets/images/products/CalçasH18 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Calças De Fato Conforto",
+    "description": "Calças slim fit confecionadas em tecido com viscose. Bolsos à frente e detalhe de bolsos traseiros com linha viva. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "calças",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH19 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH19 - 1.jpg",
+      "/assets/images/products/CalçasH19 - 2.jpg",
+      "/assets/images/products/CalçasH19 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Calças Largas De Ganga",
+    "description": "Jeans oversize relax fit confecionados em denim de algodão. Bolsos frontais e detalhe de bolsos traseiros de bolso de chapa com aba. Efeito lavado. Bainha com acabamento irregular. Fecho frontal com fecho de correr e botão.",
+    "price": 25.99,
+    "category": "new in",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CalçasH20 - 1.jpg",
+    "images": [
+      "/assets/images/products/CalçasH20 - 1.jpg",
+      "/assets/images/products/CalçasH20 - 2.jpg",
+      "/assets/images/products/CalçasH20 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Brown", "size": "S", "stock": 5 },
+      { "color": "Brown", "size": "M", "stock": 5 },
+      { "color": "Brown", "size": "L", "stock": 5 },
+      { "color": "Brown", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Casaco Algodão - Linho Bolsos",
+    "description": "Casaco regular fit confecionado em tecido com algodão e linho. Gola subida e manga comprida com punho com botões de pressão. Bolsos frontais de chapa com aba. Fecho frontal de abotoadura oculta por aba.",
+    "price": 25.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH1 - 1.jpg",
+      "/assets/images/products/CasacoH1 - 2.jpg",
+      "/assets/images/products/CasacoH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Blusão Técnico Color Block",
+    "description": "Blusão relax fit confecionado em tecido técnico leve. Forro interior em tecido com estrutura de rede. Gola subida e manga comprida. Bolsos frontais ocultos na costura. Detalhe de bolso interior. Acabamentos com elástico. Bainha ajustável com elástico oculto nas laterais. Fecho frontal com fecho de correr.",
+    "price": 25.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH2 - 1.jpg",
+      "/assets/images/products/CasacoH2 - 2.jpg",
+      "/assets/images/products/CasacoH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Casaco Técnico Contraste",
+    "description": "Casaco relaxed fit confecionado em tecido técnico. Gola subida e manga comprida. Bolsos com fecho de correr na cintura. Acabamentos com elástico. Fecho frontal com fecho de correr.",
+    "price": 25.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH3 - 1.jpg",
+      "/assets/images/products/CasacoH3 - 2.jpg",
+      "/assets/images/products/CasacoH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Blusão Técnico Acolchoado",
+    "description": "Blusão relaxed fit confecionado em tecido técnico. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de linha viva na anca. Bainha ajustável com elásticos frontais. Fecho frontal com botões de pressão.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH4 - 1.jpg",
+      "/assets/images/products/CasacoH4 - 2.jpg",
+      "/assets/images/products/CasacoH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Blusão Técnico Acolchoado",
+    "description": "Blusão relaxed fit confecionado em tecido técnico. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de linha viva na anca. Bainha ajustável com elásticos frontais. Fecho frontal com botões de pressão.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH5 - 1.jpg",
+      "/assets/images/products/CasacoH5 - 2.jpg",
+      "/assets/images/products/CasacoH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH6 - 1.jpg",
+      "/assets/images/products/CasacoH6 - 2.jpg",
+      "/assets/images/products/CasacoH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "size": "S", "stock": 5 },
+      { "color": "Grey", "size": "M", "stock": 5 },
+      { "color": "Grey", "size": "L", "stock": 5 },
+      { "color": "Grey", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH7 - 1.jpg",
+      "/assets/images/products/CasacoH7 - 2.jpg",
+      "/assets/images/products/CasacoH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Blusão Técnico",
+    "description": "Blusão relax fit confecionado em tecido técnico ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com elástico. Bolsos de chapa na anca. Fecho frontal com fecho de correr.",
+    "price": 20.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.1,
+    "popularity": 100,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH8 - 1.jpg",
+      "/assets/images/products/CasacoH8 - 2.jpg",
+      "/assets/images/products/CasacoH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Green", "size": "S", "stock": 5 },
+      { "color": "Green", "size": "M", "stock": 5 },
+      { "color": "Green", "size": "L", "stock": 5 },
+      { "color": "Green", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Blusão Com Print Floral",
+    "description": "Blusão relaxed fit confecionado em tecido com estrutura. Gola de pontas e manga comprida acabada em punho com elástico. Bolsos de linhas vivas na anca. Bainha acabada com elástico. Fecho de correr frontal.",
+    "price": 28.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.0,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH9 - 1.jpg",
+      "/assets/images/products/CasacoH9 - 2.jpg",
+      "/assets/images/products/CasacoH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Bege", "size": "S", "stock": 5 },
+      { "color": "Bege", "size": "M", "stock": 5 },
+      { "color": "Bege", "size": "L", "stock": 5 },
+      { "color": "Bege", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Blusão Com Estrutura Em Espiga",
+    "description": "Blusão regular fit confecionado em tecido de algodão ligeiramente acolchoado no seu interior. Gola de abas e manga comprida acabada em punho com botão. Bolsos com fecho de correr na anca. Fecho frontal com fecho de correr.",
+    "price": 26.99,
+    "category": "casacos",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "/assets/images/products/CasacoH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/CasacoH10 - 1.jpg",
+      "/assets/images/products/CasacoH10 - 2.jpg",
+      "/assets/images/products/CasacoH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH1 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH1 - 1.jpg",
+      "/assets/images/products/JeansH1 - 2.jpg",
+      "/assets/images/products/JeansH1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH2 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH2 - 1.jpg",
+      "/assets/images/products/JeansH2 - 2.jpg",
+      "/assets/images/products/JeansH2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.2,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH3 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH3 - 1.jpg",
+      "/assets/images/products/JeansH3 - 2.jpg",
+      "/assets/images/products/JeansH3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Jeans Baggy Flare Fit",
+    "description": "Jeans baggy flare fit. Cinco bolsos. Efeito lavado. Fecho frontal com botões.",
+    "price": 22.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.5,
+    "popularity": 80,
+    "stock": 20,
+    "image": "assets/images/products/JeansH4 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH4 - 1.jpg",
+      "/assets/images/products/JeansH4 - 2.jpg",
+      "/assets/images/products/JeansH4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH5 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH5 - 1.jpg",
+      "/assets/images/products/JeansH5 - 2.jpg",
+      "/assets/images/products/JeansH5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH6 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH6 - 1.jpg",
+      "/assets/images/products/JeansH6 - 2.jpg",
+      "/assets/images/products/JeansH6 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Jeans Skinny Fit Com Rasgões",
+    "description": "Jeans skinny fit. Cinco bolsos. Lavagem com efeito de rasgões. Fecho frontal com fecho de correr e botão.",
+    "price": 20.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.3,
+    "popularity": 90,
+    "stock": 20,
+    "image": "assets/images/products/JeansH7 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH7 - 1.jpg",
+      "/assets/images/products/JeansH7 - 2.jpg",
+      "/assets/images/products/JeansH7 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH8 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH8 - 1.jpg",
+      "/assets/images/products/JeansH8 - 2.jpg",
+      "/assets/images/products/JeansH8 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH9 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH9 - 1.jpg",
+      "/assets/images/products/JeansH9 - 2.jpg",
+      "/assets/images/products/JeansH9 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Black", "size": "S", "stock": 5 },
+      { "color": "Black", "size": "M", "stock": 5 },
+      { "color": "Black", "size": "L", "stock": 5 },
+      { "color": "Black", "size": "XL", "stock": 5 }
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Jeans Skinny Fit Com Rasgões E Salpicos",
+    "description": "Jeans skinny fit. Cinco bolsos. Bleach efeito rasgões com remendos interiores e estampado tipo salpicos nas perneiras. Fecho frontal com botões.",
+    "price": 23.99,
+    "category": "Jeans",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 100,
+    "stock": 20,
+    "image": "assets/images/products/JeansH10 - 1.jpg",
+    "images": [
+      "/assets/images/products/JeansH10 - 1.jpg",
+      "/assets/images/products/JeansH10 - 2.jpg",
+      "/assets/images/products/JeansH10 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Blue", "size": "S", "stock": 5 },
+      { "color": "Blue", "size": "M", "stock": 5 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 5 }
+    ]
   }
-  
-  
-  
-  
-  
-
 
 
 
   
+ 
 ]
-
