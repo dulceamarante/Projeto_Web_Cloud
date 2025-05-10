@@ -13,6 +13,7 @@ import { FavoritesProvider } from './contexts/FavoritesContext';
 import { ProductProvider } from './contexts/ProductContext';
 import './styles/global.css';
 import NotificationSystem from './components/ui/NotificationSystem';
+import ResponsibilityPage from './pages/ResponsibilityPage';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/favorites" element={<FavoritesPage />} />
                   <Route path="*" element={<NotFoundPage />} />
+                  <Route path="/responsibility" element={<ResponsibilityPage />} />
                 </Routes>
               </main>
               <NotificationSystem />
