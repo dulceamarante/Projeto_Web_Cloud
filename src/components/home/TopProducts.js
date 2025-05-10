@@ -1,5 +1,6 @@
 // src/components/layout/TopProducts.js
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { ProductContext } from '../../contexts/ProductContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import ProductCard from '../products/ProductCard';
@@ -41,7 +42,9 @@ export default function TopProducts() {
       <div className="responsibility-section">
         <div className="responsibility-content">
           <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>
-          <button className="outline-button">DESCOBRIR MAIS</button>
+          <Link to = "/responsibility">
+            <button className="outline-button">DESCOBRIR MAIS</button>
+          </Link>
         </div>
       </div>
     </section>
