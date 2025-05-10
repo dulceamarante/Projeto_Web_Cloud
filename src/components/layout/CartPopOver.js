@@ -1,14 +1,14 @@
 // src/components/layout/CartPopOver.js
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingBag, FaTrash, FaHeart } from 'react-icons/fa';
+import { FaHeart, FaTrash } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
-import './CartPopOver.css';
+import './FavoritesPopOver.css'; // Usando o mesmo CSS
 
 const CartPopOver = ({ onClose }) => {
-  const { cart, removeFromCart, updateQuantity, getCartTotal } = useContext(CartContext);
-  const { addToFavorites } = useContext(FavoritesContext);
+  const { cart, removeFromCart, moveToFavorites } = useContext(CartContext);
+  const { addToFavorites, favorites } = useContext(FavoritesContext);
   const [isExiting, setIsExiting] = useState(false);
   
   // Fechar com animação
@@ -31,35 +31,37 @@ const CartPopOver = ({ onClose }) => {
     return () => window.removeEventListener('keydown', handleEscKey);
   }, []);
   
-  // Mover para favoritos
-  const moveToFavorites = (item) => {
-    // Remover tamanho e quantidade para adicionar aos favoritos
-    const { quantity, selectedSize, ...productWithoutCartDetails } = item;
-    addToFavorites(productWithoutCartDetails);
-    removeFromCart(item.id, item.selectedSize);
+  // Calcular o total
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
+  const total = subtotal;
+
+  // Verificar se o item já está nos favoritos
+  const isInFavorites = (itemId) => {
+    return favorites.some(item => item.id === itemId);
   };
   
-  // Calcular o total
-  const subtotal = getCartTotal();
-  const total = subtotal;
+  // Adicionar aos favoritos e remover do carrinho
+  const handleMoveToFavorites = (item) => {
+    moveToFavorites(item, addToFavorites);
+  };
   
   return (
-    <div className="cart-popover-overlay" onClick={handleClose}>
+    <div className="favorites-popover-overlay" onClick={handleClose}>
       <div 
-        className={`cart-popover ${isExiting ? 'slide-out' : ''}`} 
+        className={`favorites-popover ${isExiting ? 'slide-out' : ''}`} 
         onClick={e => e.stopPropagation()}
       >
-        <div className="cart-header">
-          <h2>CESTA ({cart.length})</h2>
-          <button className="close-cart" onClick={handleClose}>×</button>
+        <div className="favorites-header">
+          <h2>CARRINHO ({cart.length})</h2>
+          <button className="close-favorites" onClick={handleClose}>×</button>
         </div>
         
-        <div className="cart-content">
+        <div className="favorites-content">
           {cart.length > 0 ? (
             <>
-              <div className="cart-items">
+              <div className="favorites-items">
                 {cart.map(item => (
-                  <div key={`${item.id}-${item.selectedSize}`} className="cart-item">
+                  <div key={`${item.id}-${item.selectedSize || 'default'}`} className="favorites-item">
                     <div className="item-info-container">
                       <div className="item-image">
                         <img src={item.image || (item.images && item.images[0])} alt={item.name} />
@@ -67,34 +69,26 @@ const CartPopOver = ({ onClose }) => {
                       <div className="item-details">
                         <h3 className="item-name">{item.name}</h3>
                         <div className="item-meta">
-                          <p>Quantidade: 
-                            <select 
-                              value={item.quantity} 
-                              onChange={(e) => updateQuantity(item.id, parseInt(e.target.value), item.selectedSize)}
-                            >
-                              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-                                <option key={num} value={num}>{num}</option>
-                              ))}
-                            </select>
-                          </p>
+                          <p>Quantidade: {item.quantity || 1}</p>
                           {item.selectedSize && <p>Tamanho: {item.selectedSize}</p>}
                         </div>
                         <div className="item-price">
                           {item.price.toFixed(2)} €
                         </div>
-                        <div className="item-actions">
+                        <div className="item-icons">
                           <button 
-                            className="action-button favorite"
-                            onClick={() => moveToFavorites(item)}
+                            className={`icon-button heart-icon ${isInFavorites(item.id) ? 'active' : ''}`}
+                            onClick={() => handleMoveToFavorites(item)}
+                            title="Guardar nos favoritos"
                           >
-                            <FaHeart className="heart-icon" />
-                            <span>Mover para favoritos</span>
+                            <FaHeart />
                           </button>
                           <button 
-                            className="action-button remove"
+                            className="icon-button remove"
                             onClick={() => removeFromCart(item.id, item.selectedSize)}
+                            title="Eliminar"
                           >
-                            Eliminar
+                            <FaTrash />
                           </button>
                         </div>
                       </div>
@@ -103,7 +97,7 @@ const CartPopOver = ({ onClose }) => {
                 ))}
               </div>
               
-              <div className="cart-summary">
+              <div className="favorites-summary">
                 <div className="summary-row">
                   <span>Subtotal</span>
                   <span>{subtotal.toFixed(2)} €</span>
@@ -121,20 +115,20 @@ const CartPopOver = ({ onClose }) => {
                 </div>
               </div>
               
-              <div className="cart-actions">
+              <div className="favorites-actions">
                 <Link to="/cart" className="btn-secondary" onClick={handleClose}>
                   VER CARRINHO
                 </Link>
                 <Link to="/checkout" className="btn-primary" onClick={handleClose}>
-                  INICIAR UM PEDIDO
+                  FINALIZAR COMPRA
                 </Link>
               </div>
             </>
           ) : (
-            <div className="empty-cart">
-              <p>Ainda não tem produtos na cesta</p>
+            <div className="empty-favorites">
+              <p>O seu carrinho está vazio</p>
               <Link to="/" className="continue-shopping" onClick={handleClose}>
-                CONTINUAR A COMPRAR
+                Continuar a comprar
               </Link>
             </div>
           )}

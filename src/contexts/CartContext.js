@@ -54,9 +54,8 @@ export const CartProvider = ({ children }) => {
     // Mostrar notificação
     setNotification({
       message: "PRODUTO ADICIONADO AO CARRINHO",
-      actionText: "VER CESTA",
+      actionText: "VER CARRINHO",
       onAction: () => {
-        // Ao clicar no botão de ação, redireciona para a página do carrinho
         window.location.href = '/cart';
         setNotification(null);
       }
@@ -76,9 +75,7 @@ export const CartProvider = ({ children }) => {
       const productToRemove = cart[productToRemoveIndex];
       
       // Remover o produto do carrinho
-      const newCart = [...cart];
-      newCart.splice(productToRemoveIndex, 1);
-      setCart(newCart);
+      setCart(prev => prev.filter((item, index) => index !== productToRemoveIndex));
       
       // Guardar o produto removido para caso de desfazer
       setRemovedProduct(productToRemove);
@@ -86,22 +83,19 @@ export const CartProvider = ({ children }) => {
       // Mostrar a notificação
       setNotification({
         message: "PRODUTO REMOVIDO DO CARRINHO",
-        actionText: "DESFAZER",
-        onAction: handleUndo
+        actionText: "DESFAZER"
       });
     }
   };
 
   // Função para atualizar a quantidade de um produto
   const updateQuantity = (productId, quantity, selectedSize = null) => {
-    const updatedCart = cart.map(item => {
+    setCart(prev => prev.map(item => {
       if (item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)) {
         return { ...item, quantity };
       }
       return item;
-    });
-    
-    setCart(updatedCart);
+    }));
   };
 
   // Função para limpar o carrinho
@@ -146,12 +140,12 @@ export const CartProvider = ({ children }) => {
 
   // Função para calcular o total do carrinho
   const getCartTotal = () => {
-    return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    return cart.reduce((total, item) => total + (item.price * (item.quantity || 1)), 0);
   };
 
   // Função para contar o número de itens no carrinho
   const getCartItemCount = () => {
-    return cart.reduce((count, item) => count + item.quantity, 0);
+    return cart.reduce((count, item) => count + (item.quantity || 1), 0);
   };
 
   // Função para verificar se um produto está no carrinho
@@ -161,12 +155,18 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Mover um produto dos favoritos para o carrinho
-  const moveFromFavoritesToCart = (product, quantity = 1, selectedSize = null) => {
-    // Adicionar ao carrinho
-    addToCart(product, quantity, selectedSize);
-    
-    // A remoção dos favoritos deve ser feita no componente usando o FavoritesContext
+  // Mover um produto para os favoritos e remover do carrinho
+  const moveToFavorites = (product, addToFavorites) => {
+    if (addToFavorites) {
+      // Remover propriedades específicas do carrinho
+      const { quantity, addedAt, ...productWithoutCartDetails } = product;
+      
+      // Adicionar aos favoritos (função passada como parâmetro)
+      addToFavorites(productWithoutCartDetails);
+      
+      // Remover do carrinho
+      removeFromCart(product.id, product.selectedSize);
+    }
   };
 
   return (
@@ -180,7 +180,7 @@ export const CartProvider = ({ children }) => {
         getCartTotal,
         getCartItemCount,
         isInCart,
-        moveFromFavoritesToCart
+        moveToFavorites
       }}
     >
       {children}
@@ -189,7 +189,7 @@ export const CartProvider = ({ children }) => {
         <NotificationSystem 
           message={notification.message}
           actionText={notification.actionText}
-          onAction={notification.onAction}
+          onAction={notification.onAction || handleUndo}
           onClose={closeNotification}
         />
       )}

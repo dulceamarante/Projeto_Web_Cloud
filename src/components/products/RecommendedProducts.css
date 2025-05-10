@@ -1,0 +1,78 @@
+/* src/components/products/RecommendedProducts.css */
+
+.recommended-products-section {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  text-align: left;
+  padding-bottom: 20px;
+  width: 100%;
+  clear: both;
+}
+
+.recommended-products-section h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Estilo para mensagem quando não há produtos */
+.no-products-message {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.no-products-message p {
+  font-size: 24px;
+  color: #666;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.no-products-message .suggestion {
+  font-size: 16px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .recommended-products-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .recommended-products-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}

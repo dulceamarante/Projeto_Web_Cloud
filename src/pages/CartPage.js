@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 import { FavoritesContext } from '../contexts/FavoritesContext';
 import { FaHeart, FaTrash } from 'react-icons/fa';
+import RecommendedProducts from '../components/products/RecommendedProducts';
 import './CartPage.css';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, getCartTotal } = useContext(CartContext);
-  const { addToFavorites, toggleFavorite } = useContext(FavoritesContext);
+  const { addToFavorites } = useContext(FavoritesContext);
   
-  const [removingItems, setRemovingItems] = useState([]);
   const [activeHearts, setActiveHearts] = useState({});
   
   // update document title
@@ -159,6 +159,12 @@ export default function CartPage() {
           </Link>
         </div>
       )}
+      
+      {/* Seção "Viu Recentemente" usando o componente RecommendedProducts */}
+      <RecommendedProducts 
+        title="VIU RECENTEMENTE" 
+        limit={5}
+      />
       
       {/* Espaçador adicional antes do footer */}
       <div className="footer-spacer"></div>

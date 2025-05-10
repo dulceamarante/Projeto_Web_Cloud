@@ -21,18 +21,20 @@ export const FavoritesProvider = ({ children }) => {
     }
   }, []);
 
-  // Salvar favoritos no localStorage quando mudar
-  useEffect(() => {
+  // Função para atualizar favoritos e localStorage
+  const updateFavoritesAndStorage = (newFavorites) => {
+    setFavorites(newFavorites);
     try {
-      localStorage.setItem('favorites', JSON.stringify(favorites));
+      localStorage.setItem('favorites', JSON.stringify(newFavorites));
     } catch (error) {
       console.error('Erro ao salvar favoritos:', error);
     }
-  }, [favorites]);
+  };
 
   const addToFavorites = (product) => {
     if (!favorites.some(item => item.id === product.id)) {
-      setFavorites(prev => [...prev, product]);
+      const newFavorites = [...favorites, product];
+      updateFavoritesAndStorage(newFavorites);
       
       // Mostrar notificação quando produto é adicionado
       setNotification({
@@ -44,7 +46,10 @@ export const FavoritesProvider = ({ children }) => {
       setTimeout(() => {
         setNotification(null);
       }, 3000);
+
+      return true;
     }
+    return false;
   };
 
   const removeFromFavorites = (productId) => {
@@ -52,7 +57,8 @@ export const FavoritesProvider = ({ children }) => {
     
     if (productToRemove) {
       // Remover o produto dos favoritos
-      setFavorites(prev => prev.filter(item => item.id !== productId));
+      const newFavorites = favorites.filter(item => item.id !== productId);
+      updateFavoritesAndStorage(newFavorites);
       
       // Guardar o produto removido para caso de desfazer
       setRemovedProduct(productToRemove);
@@ -60,9 +66,13 @@ export const FavoritesProvider = ({ children }) => {
       // Mostrar a notificação
       setNotification({
         message: "ELIMINADO DOS SEUS ARTIGOS PREFERIDOS",
-        actionText: "DESFAZER"
+        actionText: "DESFAZER",
+        onAction: () => handleUndo() // Importante: Usamos uma arrow function aqui
       });
+
+      return true;
     }
+    return false;
   };
 
   const clearFavorites = () => {
@@ -70,7 +80,7 @@ export const FavoritesProvider = ({ children }) => {
     const previousFavorites = [...favorites];
     
     // Limpar todos os favoritos
-    setFavorites([]);
+    updateFavoritesAndStorage([]);
     
     // Mostrar notificação
     setNotification({
@@ -78,22 +88,27 @@ export const FavoritesProvider = ({ children }) => {
       actionText: "DESFAZER",
       onAction: () => {
         // Restaurar favoritos anteriores
-        setFavorites(previousFavorites);
+        updateFavoritesAndStorage(previousFavorites);
         setNotification(null);
       }
     });
   };
 
   const handleUndo = () => {
+    console.log("Executing handleUndo in FavoritesContext", removedProduct); // Debug log
+    
     if (removedProduct) {
       // Adicionar o produto de volta aos favoritos
-      setFavorites(prev => [removedProduct, ...prev]);
+      const newFavorites = [...favorites, removedProduct];
+      updateFavoritesAndStorage(newFavorites);
       
       // Limpar o produto removido
       setRemovedProduct(null);
       
       // Esconder a notificação
       setNotification(null);
+    } else {
+      console.log("No removed product to restore"); // Debug log
     }
   };
 
@@ -114,6 +129,23 @@ export const FavoritesProvider = ({ children }) => {
     return favorites.some(item => item.id === productId);
   };
 
+  // Mover produto para o carrinho e remover dos favoritos
+  const moveToCart = (product, addToCart, removeAfterAdd = true) => {
+    // Adicionar ao carrinho
+    if (addToCart) {
+      const selectedSize = product.selectedSize || 'M';
+      addToCart(product, 1, selectedSize);
+      
+      // Se necessário, remover dos favoritos após adicionar ao carrinho
+      if (removeAfterAdd) {
+        removeFromFavorites(product.id);
+      }
+      
+      return true;
+    }
+    return false;
+  };
+
   return (
     <FavoritesContext.Provider
       value={{
@@ -122,7 +154,9 @@ export const FavoritesProvider = ({ children }) => {
         removeFromFavorites,
         clearFavorites,
         toggleFavorite,
-        isFavorite
+        isFavorite,
+        moveToCart,
+        handleUndo // Expor handleUndo para uso direto se necessário
       }}
     >
       {children}
@@ -132,7 +166,7 @@ export const FavoritesProvider = ({ children }) => {
         <NotificationSystem 
           message={notification.message}
           actionText={notification.actionText}
-          onAction={notification.onAction || handleUndo}
+          onAction={notification.onAction}
           onClose={closeNotification}
         />
       )}

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
 import { ProductProvider } from './contexts/ProductContext';
+import { NotificationProvider } from './components/ui/NotificationSystem';
 
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
@@ -19,20 +20,22 @@ function App() {
     <ProductProvider>
       <CartProvider>
         <FavoritesProvider>
-          <Router>
-            <Header />
-            <main>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/products" element={<ProductsPage />} />
-                <Route path="/product/:productId" element={<ProductDetailPage />} />
-                <Route path="/cart" element={<CartPage />} />
-                <Route path="/favorites" element={<FavoritesPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </main>
-            <Footer />
-          </Router>
+          <NotificationProvider>
+            <Router>
+              <Header />
+              <main>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/products" element={<ProductsPage />} />
+                  <Route path="/product/:productId" element={<ProductDetailPage />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/favorites" element={<FavoritesPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+              </main>
+              <Footer />
+            </Router>
+          </NotificationProvider>
         </FavoritesProvider>
       </CartProvider>
     </ProductProvider>

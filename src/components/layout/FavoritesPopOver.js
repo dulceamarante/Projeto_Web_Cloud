@@ -1,12 +1,15 @@
 // src/components/layout/FavoritesPopOver.js
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaShoppingBag } from 'react-icons/fa';
+import { FaTrash } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
+import { CartContext } from '../../contexts/CartContext';
+import ShoppingCartIcon from '../../assets/images/icons/shopping-cart.png';
 import './FavoritesPopOver.css';
 
 const FavoritesPopOver = ({ onClose }) => {
-  const { favorites, removeFromFavorites } = useContext(FavoritesContext);
+  const { favorites, removeFromFavorites, moveToCart } = useContext(FavoritesContext);
+  const { addToCart, cart } = useContext(CartContext);
   const [isExiting, setIsExiting] = useState(false);
   
   // Fechar com animação
@@ -32,6 +35,17 @@ const FavoritesPopOver = ({ onClose }) => {
   // Calcular o total
   const subtotal = favorites.reduce((sum, item) => sum + item.price, 0);
   const total = subtotal;
+
+  // Adicionar ao carrinho e remover dos favoritos
+  const handleMoveToCart = (item) => {
+    // Usa a função para mover o item para o carrinho e removê-lo dos favoritos
+    moveToCart(item, addToCart, true);
+  };
+  
+  // Verificar se o item já está no carrinho
+  const isInCart = (itemId) => {
+    return cart.some(item => item.id === itemId);
+  };
   
   return (
     <div className="favorites-popover-overlay" onClick={handleClose}>
@@ -62,16 +76,20 @@ const FavoritesPopOver = ({ onClose }) => {
                         <div className="item-price">
                           {item.price.toFixed(2)} €
                         </div>
-                        <div className="item-actions">
-                          <button className="action-button cart">
-                            <FaShoppingBag className="shopping-bag-icon" />
-                            <span>Comprar mais tarde</span>
+                        <div className="item-icons">
+                          <button 
+                            className={`icon-button cart ${isInCart(item.id) ? 'active' : ''}`}
+                            onClick={() => handleMoveToCart(item)}
+                            title="Comprar mais tarde"
+                          >
+                            <img src={ShoppingCartIcon} alt="Carrinho" className="cart-icon" />
                           </button>
                           <button 
-                            className="action-button remove"
+                            className="icon-button remove"
                             onClick={() => removeFromFavorites(item.id)}
+                            title="Eliminar"
                           >
-                            Eliminar
+                            <FaTrash />
                           </button>
                         </div>
                       </div>

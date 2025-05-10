@@ -2,7 +2,7 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
-import { CartContext } from '../../contexts/CartContext'; // Importar CartContext
+import { CartContext } from '../../contexts/CartContext'; 
 import './ProductCard.css';
 
 export default function ProductCard({
