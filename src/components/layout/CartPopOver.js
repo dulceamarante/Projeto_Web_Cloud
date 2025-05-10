@@ -1,15 +1,14 @@
-// src/components/layout/FavoritesPopOver.js
+// src/components/layout/CartPopOver.js
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaTrash } from 'react-icons/fa';
-import { FavoritesContext } from '../../contexts/FavoritesContext';
+import { FaHeart, FaTrash } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
-import ShoppingCartIcon from '../../assets/images/icons/shopping-cart.png';
-import './FavoritesPopOver.css';
+import { FavoritesContext } from '../../contexts/FavoritesContext';
+import './FavoritesPopOver.css'; // Usando o mesmo CSS
 
-const FavoritesPopOver = ({ onClose }) => {
-  const { favorites, removeFromFavorites, moveToCart } = useContext(FavoritesContext);
-  const { addToCart, cart } = useContext(CartContext);
+const CartPopOver = ({ onClose }) => {
+  const { cart, removeFromCart, moveToFavorites } = useContext(CartContext);
+  const { addToFavorites, favorites } = useContext(FavoritesContext);
   const [isExiting, setIsExiting] = useState(false);
   
   // Fechar com animação
@@ -33,18 +32,17 @@ const FavoritesPopOver = ({ onClose }) => {
   }, []);
   
   // Calcular o total
-  const subtotal = favorites.reduce((sum, item) => sum + item.price, 0);
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
   const total = subtotal;
 
-  // Adicionar ao carrinho e remover dos favoritos
-  const handleMoveToCart = (item) => {
-    // Usa a função para mover o item para o carrinho e removê-lo dos favoritos
-    moveToCart(item, addToCart, true);
+  // Verificar se o item já está nos favoritos
+  const isInFavorites = (itemId) => {
+    return favorites.some(item => item.id === itemId);
   };
   
-  // Verificar se o item já está no carrinho
-  const isInCart = (itemId) => {
-    return cart.some(item => item.id === itemId);
+  // Adicionar aos favoritos e remover do carrinho
+  const handleMoveToFavorites = (item) => {
+    moveToFavorites(item, addToFavorites);
   };
   
   return (
@@ -54,16 +52,16 @@ const FavoritesPopOver = ({ onClose }) => {
         onClick={e => e.stopPropagation()}
       >
         <div className="favorites-header">
-          <h2>FAVORITOS ({favorites.length})</h2>
+          <h2>CARRINHO ({cart.length})</h2>
           <button className="close-favorites" onClick={handleClose}>×</button>
         </div>
         
         <div className="favorites-content">
-          {favorites.length > 0 ? (
+          {cart.length > 0 ? (
             <>
               <div className="favorites-items">
-                {favorites.map(item => (
-                  <div key={item.id} className="favorites-item">
+                {cart.map(item => (
+                  <div key={`${item.id}-${item.selectedSize || 'default'}`} className="favorites-item">
                     <div className="item-info-container">
                       <div className="item-image">
                         <img src={item.image || (item.images && item.images[0])} alt={item.name} />
@@ -71,22 +69,23 @@ const FavoritesPopOver = ({ onClose }) => {
                       <div className="item-details">
                         <h3 className="item-name">{item.name}</h3>
                         <div className="item-meta">
-                          <p>Quantidade: 1</p>
+                          <p>Quantidade: {item.quantity || 1}</p>
+                          {item.selectedSize && <p>Tamanho: {item.selectedSize}</p>}
                         </div>
                         <div className="item-price">
                           {item.price.toFixed(2)} €
                         </div>
                         <div className="item-icons">
                           <button 
-                            className={`icon-button cart ${isInCart(item.id) ? 'active' : ''}`}
-                            onClick={() => handleMoveToCart(item)}
-                            title="Comprar mais tarde"
+                            className={`icon-button heart-icon ${isInFavorites(item.id) ? 'active' : ''}`}
+                            onClick={() => handleMoveToFavorites(item)}
+                            title="Guardar nos favoritos"
                           >
-                            <img src={ShoppingCartIcon} alt="Carrinho" className="cart-icon" />
+                            <FaHeart />
                           </button>
                           <button 
                             className="icon-button remove"
-                            onClick={() => removeFromFavorites(item.id)}
+                            onClick={() => removeFromCart(item.id, item.selectedSize)}
                             title="Eliminar"
                           >
                             <FaTrash />
@@ -117,17 +116,17 @@ const FavoritesPopOver = ({ onClose }) => {
               </div>
               
               <div className="favorites-actions">
-                <Link to="/favorites" className="btn-secondary" onClick={handleClose}>
-                  VER FAVORITOS
+                <Link to="/cart" className="btn-secondary" onClick={handleClose}>
+                  VER CARRINHO
                 </Link>
                 <Link to="/checkout" className="btn-primary" onClick={handleClose}>
-                  INICIAR UM PEDIDO
+                  FINALIZAR COMPRA
                 </Link>
               </div>
             </>
           ) : (
             <div className="empty-favorites">
-              <p>Ainda não tem favoritos</p>
+              <p>O seu carrinho está vazio</p>
               <Link to="/" className="continue-shopping" onClick={handleClose}>
                 Continuar a comprar
               </Link>
@@ -139,4 +138,4 @@ const FavoritesPopOver = ({ onClose }) => {
   );
 };
 
-export default FavoritesPopOver;
+export default CartPopOver;

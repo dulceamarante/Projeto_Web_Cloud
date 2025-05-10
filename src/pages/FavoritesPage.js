@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FavoritesContext } from '../contexts/FavoritesContext';
 import { ProductContext } from '../contexts/ProductContext';
+import { CartContext } from '../contexts/CartContext'; // Importando CartContext
 import ProductCard from '../components/products/ProductCard';
 import { FaTrash, FaTimes } from 'react-icons/fa';
 import './FavoritesPage.css';
@@ -10,6 +11,7 @@ import './FavoritesPage.css';
 export default function FavoritesPage() {
   const { favorites, toggleFavorite, removeFromFavorites, clearFavorites } = useContext(FavoritesContext);
   const { getTopSellingProducts } = useContext(ProductContext);
+  const { addToCart } = useContext(CartContext); // Adicionando acesso ao CartContext
   
   const [selectMode, setSelectMode] = useState(false);
   const [removingItems, setRemovingItems] = useState([]);
@@ -35,9 +37,17 @@ export default function FavoritesPage() {
     
     // Aguardar a animação terminar antes de remover do estado
     setTimeout(() => {
-      removeFromFavorites(product.id);
+      removeFromFavorites(product.id); // CORRIGIDO: Passar o ID em vez do produto completo
       setRemovingItems(prev => prev.filter(id => id !== product.id));
     }, 400); // Duração da animação
+  };
+
+  // Função para adicionar ao carrinho diretamente dos favoritos
+  const handleAddToCart = (productId, variant) => {
+    const product = favorites.find(fav => fav.id === productId);
+    if (product) {
+      addToCart(product, 1, variant?.size || null);
+    }
   };
 
   return (
@@ -45,7 +55,7 @@ export default function FavoritesPage() {
       <header className="favorites-header">
         <div className="titles">
           <h1>OS MEUS ARTIGOS PREFERIDOS</h1>
-          <p>Estes são os artigos de que mais gosta</p>
+          <p>Estes são os artigos de que mais gosta.</p>
           <hr className="single-line" />
         </div>
         <div className="actions">
@@ -80,9 +90,9 @@ export default function FavoritesPage() {
               <ProductCard
                 product={{ ...prod, isFavorite: true }}
                 toggleFavorite={() => toggleFavorite(prod)}
-                addToCart={() => {}}
+                addToCart={handleAddToCart} // Usando a função para adicionar ao carrinho
                 showTrash={!selectMode} // Mostrar lixeira apenas no modo normal
-                removeFromFavorites={() => handleRemoveProduct(prod)} // Usar a função com animação
+                removeFromFavorites={handleRemoveProduct} // Usar a função com animação
               />
             </div>
           ))}
@@ -106,7 +116,7 @@ export default function FavoritesPage() {
                 isFavorite: favorites.some(fav => fav.id === prod.id) 
               }}
               toggleFavorite={() => toggleFavorite(prod)}
-              addToCart={() => {}}
+              addToCart={handleAddToCart} // Usando a mesma função para adicionar ao carrinho
             />
           ))}
         </div>

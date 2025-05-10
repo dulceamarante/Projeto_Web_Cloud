@@ -1,5 +1,11 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './contexts/CartContext';
+import { FavoritesProvider } from './contexts/FavoritesContext';
+import { ProductProvider } from './contexts/ProductContext';
+import { NotificationProvider } from './components/ui/NotificationSystem';
+
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
@@ -8,22 +14,17 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import CartPage from './pages/CartPage';
 import FavoritesPage from './pages/FavoritesPage';
 import NotFoundPage from './pages/NotFoundPage';
-import { CartProvider } from './contexts/CartContext';
-import { FavoritesProvider } from './contexts/FavoritesContext';
-import { ProductProvider } from './contexts/ProductContext';
-import './styles/global.css';
-import NotificationSystem from './components/ui/NotificationSystem';
-import ResponsibilityPage from './pages/ResponsibilityPage';
+
 
 function App() {
   return (
     <ProductProvider>
       <CartProvider>
         <FavoritesProvider>
-          <Router>
-            <div className="app">
+          <NotificationProvider>
+            <Router>
               <Header />
-              <main className="main-content">
+              <main>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/products" element={<ProductsPage />} />
@@ -34,10 +35,9 @@ function App() {
                   <Route path="/responsibility" element={<ResponsibilityPage />} />
                 </Routes>
               </main>
-              <NotificationSystem />
               <Footer />
-            </div>
-          </Router>
+            </Router>
+          </NotificationProvider>
         </FavoritesProvider>
       </CartProvider>
     </ProductProvider>

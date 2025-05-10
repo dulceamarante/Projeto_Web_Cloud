@@ -2,11 +2,12 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
+import { CartContext } from '../../contexts/CartContext'; 
 import './ProductCard.css';
 
 export default function ProductCard({
   product,
-  addToCart,
+  addToCart, // Esta prop será usada apenas como fallback
   showTrash = false,
   removeFromFavorites,
 }) {
@@ -14,7 +15,9 @@ export default function ProductCard({
   const [hover, setHover] = useState(false);
   const [animateHeart, setAnimateHeart] = useState(false);
   const [selectedSize, setSelectedSize] = useState(null);
+  const [animateSize, setAnimateSize] = useState(false);
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
+  const { addToCart: contextAddToCart } = useContext(CartContext); // Usar addToCart do contexto
   const favBtnRef = useRef(null);
 
   const isProductFavorite = isFavorite(product.id);
@@ -45,11 +48,25 @@ export default function ProductCard({
 
   const handleSizeSelect = (e, productId, variant) => {
     e.stopPropagation();
+    
+    // Animação de seleção
     setSelectedSize(variant.size);
+    setAnimateSize(true);
     
     // Reset após um tempo para permitir que a animação ocorra novamente
     setTimeout(() => {
-      addToCart(productId, variant);
+      // Tentar usar addToCart do contexto primeiro, se disponível
+      if (contextAddToCart) {
+        contextAddToCart(product, 1, variant.size);
+      } else if (addToCart) {
+        // Fallback para a prop
+        addToCart(productId, variant);
+      }
+      
+      // Resetar animação após um tempo
+      setTimeout(() => {
+        setAnimateSize(false);
+      }, 600);
     }, 300);
   };
 
@@ -80,10 +97,10 @@ export default function ProductCard({
         {product.images?.length > 1 && (
           <>
             <button className="nav-arrow left" onClick={prev}>
-              <FaChevronLeft size={24} /> {/* Tamanho aumentado */}
+              <FaChevronLeft size={24} />
             </button>
             <button className="nav-arrow right" onClick={next}>
-              <FaChevronRight size={24} /> {/* Tamanho aumentado */}
+              <FaChevronRight size={24} />
             </button>
           </>
         )}
@@ -93,7 +110,7 @@ export default function ProductCard({
             {product.variants.map(v => (
               <button
                 key={v.size || 'default'}
-                className={`size-btn ${selectedSize === v.size ? 'selected' : ''}`}
+                className={`size-btn ${selectedSize === v.size ? 'selected' : ''} ${selectedSize === v.size && animateSize ? 'animate-selection' : ''}`}
                 disabled={v.stock === 0}
                 onClick={(e) => handleSizeSelect(e, product.id, v)}
               >

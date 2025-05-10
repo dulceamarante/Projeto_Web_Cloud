@@ -1,4 +1,4 @@
-/* src/components/layout/FavoritesPopOver.css */
+/* src/components/layout/FavoritesPopOver.css (Versão completa com estilos para ícones) */
 .favorites-popover-overlay {
   position: fixed;
   top: 0;
@@ -86,7 +86,7 @@
 .item-image img {
   width: 110px;
   height: 140px;
-  object-fit: contain;
+  object-fit:contain;
 }
 
 .item-details {
@@ -107,7 +107,7 @@
 .item-meta {
   font-size: 14px;
   color: #777;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
 }
 
 .item-meta p {
@@ -117,78 +117,80 @@
 .item-price {
   font-size: 18px;
   font-weight: 700;
-  margin: 5px 0;
+  margin: 5px 0 12px;
   color: #000;
 }
 
-/* Ícones à esquerda */
-.item-icons {
+/* Estilos antigos para botões textuais (mantidos para compatibilidade) */
+.item-actions {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin: 10px 0;
 }
 
-.icon-button {
+.action-button {
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #333;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.action-button.cart {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.action-button.remove {
+  margin-right: 0;
+}
+
+.shopping-bag-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  opacity: 0.7;
+}
+
+/* Novos estilos para os ícones de ação */
+.action-icon {
   background: transparent;
   border: none;
   cursor: pointer;
   color: #666;
   font-size: 18px;
-  padding: 0;
+  padding: 5px;
+  margin-right: 15px;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.icon-button:hover {
+.action-icon:hover {
   color: #131313;
   transform: scale(1.1);
 }
 
-.icon-button:active {
-  transform: scale(0.95);
+.action-icon.favorite:hover, 
+.action-icon.favorite.active {
+  color: #000000;
 }
 
-.icon-button svg,
-.icon-button img {
-  width: 22px;
-  height: 22px;
-  opacity: 0.7;
+.action-icon.cart:hover {
+  color: #000;
 }
 
-.icon-button:hover svg,
-.icon-button:hover img {
-  opacity: 1;
-}
-
-/* Estilos específicos para ícones */
-.heart-icon:hover {
-  color: #f10d09 !important;
-}
-
-.heart-icon:hover svg,
-.heart-icon.active svg {
-  opacity: 1;
-}
-
-.icon-button:has(svg[data-icon="trash"]):hover {
+.action-icon.remove:hover {
   color: #d32f2f;
 }
 
-/* Animação para o coração quando clicado */
-@keyframes heartbeat {
-  0% { transform: scale(1); }
-  15% { transform: scale(1.25); }
-  30% { transform: scale(1); }
-  45% { transform: scale(1.15); }
-  60% { transform: scale(1); }
+.action-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
-.heart-icon.active {
-  color: #f10d09 !important;
-  animation: heartbeat 0.8s ease-in-out;
+.action-icon:active {
+  transform: scale(0.95);
 }
 
 .favorites-summary {
@@ -269,6 +271,34 @@
 }
 
 .empty-favorites p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.continue-shopping {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.continue-shopping:hover {
+  background: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.empty-favorites {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.empty-favorites p {
   margin-bottom: 30px;
   font-size: 16px;
   color: #666;
@@ -283,10 +313,10 @@
   font-weight: 600;
   text-transform: uppercase;
   font-size: 14px;
-  border-radius: 30px;
+  border-radius: 30px; /* Adicionado border-radius para cantos arredondados */
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
-  min-width: 200px;
+  min-width: 200px; /* Garante uma largura mínima */
 }
 
 .continue-shopping:hover {

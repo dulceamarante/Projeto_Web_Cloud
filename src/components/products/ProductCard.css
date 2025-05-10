@@ -43,6 +43,7 @@
   z-index: 2;
   color: rgba(0, 0, 0, 0.7); /* Cor escura */
   font-size: 18px;
+  margin-right:0px;
 }
 
 .nav-arrow svg {
@@ -244,4 +245,20 @@
   30% { transform: scale(1); }
   45% { transform: scale(1.2); }
   60% { transform: scale(1); }
+}
+
+/* Adicione isso ao seu ProductCard.css */
+.size-btn.animate-selection {
+  animation: sizeSelected 0.8s ease-in-out;
+  background-color: #333;
+  color: white;
+}
+
+@keyframes sizeSelected {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.2); }
+  40% { transform: scale(0.9); }
+  60% { transform: scale(1.1); }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
 }
