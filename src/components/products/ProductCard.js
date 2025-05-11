@@ -6,6 +6,7 @@ import { CartContext } from '../../contexts/CartContext';
 import './ProductCard.css';
 import { Link } from 'react-router-dom';
 
+
 export default function ProductCard({
   product,
   addToCart, // Fallback caso não venha do context
@@ -21,8 +22,9 @@ export default function ProductCard({
   const { addToCart: contextAddToCart } = useContext(CartContext);
   const favBtnRef = useRef(null);
 
-  const isProductFavorite = isFavorite(product.id);
 
+  const isProductFavorite = isFavorite(product.id);
+  
   const prev = e => {
     e.stopPropagation();
     setCurrentImage(i =>
