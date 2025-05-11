@@ -35,7 +35,7 @@ function App() {
                   {/* Rotas para produtos por gênero */}
                   <Route path="/:gender/products" element={<ProductsPage />} />
                   <Route path="/:gender/:category" element={<ProductsPage />} />
-                  <Route path="/product/:productId" element={<ProductDetailPage />} />
+                  <Route path="/product/:id" element={<ProductDetails products={products} />} />
                   <Route path="/product/:productId" element={<ProductDetailPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/favorites" element={<FavoritesPage />} />
