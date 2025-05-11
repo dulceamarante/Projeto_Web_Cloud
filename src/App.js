@@ -17,6 +17,8 @@ import NotFoundPage from './pages/NotFoundPage';
 import ResponsibilityPage from './pages/ResponsibilityPage';
 import ProductDetails from './components/products/ProductDetails';
 import products from './data/products.json';
+import HomeHomem from './pages/HomePageHomem';
+import HomeBeauty from './pages/HomePageBeauty';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
                   <Route path="/favorites" element={<FavoritesPage />} />
                   <Route path="/responsibility" element={<ResponsibilityPage />} />
                   <Route path="*" element={<NotFoundPage />} />
+                  <Route path="/homem" element={<HomeHomem />} />
+                  <Route path="/beauty" element={<HomeBeauty />} />
                 </Routes>
                 </main>
                <Footer />
@@ -51,3 +55,5 @@ function App() {
 }
 
 export default App;
+
+
