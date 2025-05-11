@@ -140,7 +140,7 @@
     "id": 29,
     "name": "Vestido Midi às Bolinhas zw Collection",
     "description": "Vestido midi confecionado em fiado com linho 10%. Gola redonda e manga cava. Bainha com acabamento em linha evasé. Fecho nas costas com fecho de correr oculto na costura.",
-    "price":49.95,
+    "price": 49.95,
     "category": "vestidos",
     "subcategory": "",
     "rating": 3.5,
@@ -1098,10 +1098,10 @@
       
     ],
     "variants": [
-      { "color": "Black", "size": "S", "stock": 4 },
-      { "color": "Black", "size": "M", "stock": 2 },
-      { "color": "Black", "size": "L", "stock": 5 },
-      { "color": "Black", "size": "XL", "stock": 3 }
+      { "color": "Blue", "size": "S", "stock": 4 },
+      { "color": "Blue", "size": "M", "stock": 2 },
+      { "color": "Blue", "size": "L", "stock": 5 },
+      { "color": "Blue", "size": "XL", "stock": 3 }
     ]
   },
   {
@@ -1673,10 +1673,10 @@
       "/assets/images/products/Saia-9-3.jpg"
     ],
     "variants": [
-      { "color": "Red/White", "size": "S", "stock": 5 },
-      { "color": "Red/White", "size": "M", "stock": 5 },
-      { "color": "Red/White", "size": "L", "stock": 5 },
-      { "color": "Red/White", "size": "XL", "stock": 5 }
+      { "color": "Red", "size": "S", "stock": 5 },
+      { "color": "Red", "size": "M", "stock": 5 },
+      { "color": "Red", "size": "L", "stock": 5 },
+      { "color": "Red", "size": "XL", "stock": 5 }
     ]
   },
           {
@@ -1696,10 +1696,10 @@
       "/assets/images/products/Saia-9-3.jpg"
     ],
     "variants": [
-      { "color": "Red/White", "size": "S", "stock": 5 },
-      { "color": "Red/White", "size": "M", "stock": 5 },
-      { "color": "Red/White", "size": "L", "stock": 5 },
-      { "color": "Red/White", "size": "XL", "stock": 5 }
+      { "color": "Red", "size": "S", "stock": 5 },
+      { "color": "Red", "size": "M", "stock": 5 },
+      { "color": "Red", "size": "L", "stock": 5 },
+      { "color": "Red", "size": "XL", "stock": 5 }
     ]
   },
    {

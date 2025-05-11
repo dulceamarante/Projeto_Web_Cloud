@@ -12,9 +12,9 @@ const CategorySection = () => {
     },
     {
       id: 2,
-      name: 'SAPATOS',
+      name: 'CALÇAS',
       image: "/assets/images/categories/sapatos.png",
-      link: '/products?category=sapatos'
+      link: '/products?category=calças'
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const CategorySection = () => {
       id: 4,
       name: 'CASACOS',
       image: "/assets/images/categories/casaco.png",
-      link: '/products?category=coats'
+      link: '/products?category=casacos'
     },
     {
       id: 5,
@@ -40,7 +40,7 @@ const CategorySection = () => {
     <section className="categories-section">
 
 <div className="pack-bags-section">
-        <h2 className="bags-title">PACK YOR BAGS</h2>
+        <h2 className="bags-title">PACK YOUR BAGS</h2>
       </div>
       
       <div className="categories-grid">
