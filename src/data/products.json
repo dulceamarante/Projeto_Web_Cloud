@@ -3875,7 +3875,193 @@
     "variants": [
       { "color": "Golden", "stock": 5 }
     ]
+  },   
+  {
+    "id": 178,
+    "name": "Fashionably London Edp 100 Ml (3.4 Fl.Oz)",
+    "description": "Eau de Parfum. Uma fragrância floral e almiscarada que combina a frescura cítrica da bergamota, um coração romântico de rosa e um fundo suave e envolvente de almíscar. Perfeita para quem procura elegância e modernidade.",
+    "price": 15.95,
+    "category": "Perfume",
+    "subcategory": "",
+    "rating": 6,
+    "popularity": 64,
+    "stock": 5,
+    "image": "/assets/images/products/Perfume1 - 1.jpg",
+    "images": [
+      "/assets/images/products/Perfume1 - 1.jpg",
+      "/assets/images/products/Perfume1 - 2.jpg",
+      "/assets/images/products/Perfume1 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "stock": 5 }
+    ]
+  },   
+  {
+    "id": 179,
+    "name": "Fashionably London Edp 10 Ml (0.34 Fl. Oz)",
+    "description": "Eau de Parfum. Uma fragrância floral e almiscarada que combina a frescura cítrica da bergamota, um coração romântico de rosa e um fundo suave e envolvente de almíscar. Perfeita para quem procura elegância e modernidade.",
+    "price": 12.95,
+    "category": "Perfume",
+    "subcategory": "",
+    "rating": 8,
+    "popularity": 84,
+    "stock": 5,
+    "image": "/assets/images/products/Perfume2 - 1.jpg",
+    "images": [
+      "/assets/images/products/Perfume2 - 1.jpg",
+      "/assets/images/products/Perfume2 - 2.jpg",
+      "/assets/images/products/Perfume2 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "stock": 5 }
+    ]
+  },   
+  {
+    "id": 180,
+    "name": "Fashionably London Edp 30ml (1.01 Fl. Oz)",
+    "description": "Eau de Parfum. Uma fragrância floral e almiscarada que combina a frescura cítrica da bergamota, um coração romântico de rosa e um fundo suave e envolvente de almíscar. Perfeita para quem procura elegância e modernidade.",
+    "price": 13.95,
+    "category": "Perfume",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 94,
+    "stock": 5,
+    "image": "/assets/images/products/Perfume3 - 1.jpg",
+    "images": [
+      "/assets/images/products/Perfume3 - 1.jpg",
+      "/assets/images/products/Perfume3 - 2.jpg",
+      "/assets/images/products/Perfume3 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Grey", "stock": 5 }
+    ]
+  },   
+  {
+    "id": 181,
+    "name": "Vibrant Caramel Candy Edp 90ml (3.04 Fl. Oz)",
+    "description": "Eau de Parfum. Uma versão mais gourmand do icónico Vibrant Caramel da coleção Básicos. Um aroma sensual e viciante que a envolve em doçura e encanto. O caramelo vibrante entrelaça-se com praliné e algodão doce, acompanhado pela frescura suculenta do morango Mara des Bois. Uma delícia tentadora, impossível de resistir.",
+    "price": 18.95,
+    "category": "Perfume",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Perfume4 - 1.jpg",
+    "images": [
+      "/assets/images/products/Perfume4 - 1.jpg",
+      "/assets/images/products/Perfume4 - 2.jpg",
+      "/assets/images/products/Perfume4 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Golden", "stock": 5 }
+    ]
+  },   
+  {
+    "id": 182,
+    "name": "Red Zara Temptation Edp 80ml (2.71 Fl. Oz)",
+    "description": "Eau de Parfum. O nosso grande bestseller, uma criação luminosa e viciante. O calor do açafrão e da flor de laranjeira envolve um bouquet floral onde o jasmim revela a sua sensualidade. Um toque de praliné confere doçura, enquanto o âmbar e o almíscar criam uma aura sofisticada e memorável.",
+    "price": 19.95,
+    "category": "Perfume",
+    "subcategory": "",
+    "rating": 9,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Perfume5 - 1.jpg",
+    "images": [
+      "/assets/images/products/Perfume5 - 1.jpg",
+      "/assets/images/products/Perfume5 - 2.jpg",
+      "/assets/images/products/Perfume5 - 3.jpg"
+    ],
+    "variants": [
+      { "color": "Red", "stock": 5 }
+    ]
+  },   
+  {
+    "id": 183,
+    "name": "A Day Body Oil 100ml (3.4 Fl. Oz)",
+    "description": "Óleo corporal que envolve a pele numa fragrância luminosa com citrinos vibrantes, flor de laranjeira mediterrânica e um fundo sensual de âmbar negro e almíscares reconfortantes.",
+    "price": 12.95,
+    "category": "Skincare",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Skincare1 - 1.jpg",
+    "images": [
+      "/assets/images/products/Skincare1 - 1.jpg",
+      "/assets/images/products/Skincare1 - 2.jpg",
+      "/assets/images/products/Skincare1 - 3.jpg"
+    ]
+  },   
+  {
+    "id": 184,
+    "name": "A Night Body Wash 400ml (13.6 Fl. Oz)",
+    "description": "Gel de duche. Limpa e envolve a pele com notas especiadas de pimenta preta e cravo-da-índia. Um fundo de âmbar e madeiras fumadas confere uma sensação intensa e sensual, ideal para um banho reconfortante.",
+    "price": 12.95,
+    "category": "Skincare",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Skincare2 - 1.jpg",
+    "images": [
+      "/assets/images/products/Skincare2 - 1.jpg",
+      "/assets/images/products/Skincare2 - 2.jpg",
+      "/assets/images/products/Skincare2 - 3.jpg"
+    ]
+  },   
+  {
+    "id": 185,
+    "name": "Majolica Body Wash 400 Ml (13.6 Fl. Oz)",
+    "description": "Gel de duche. Refrescante, suave e inspirado na beleza artesanal da majólica, combina notas revitalizantes de gengibre, flor de laranjeira e amêndoa. Um coração floral mistura-se com um fundo de baunilha e sândalo, deixando uma suavidade duradoura na pele.",
+    "price": 12.95,
+    "category": "Skincare",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Skincare3 - 1.jpg",
+    "images": [
+      "/assets/images/products/Skincare3 - 1.jpg",
+      "/assets/images/products/Skincare3 - 2.jpg",
+      "/assets/images/products/Skincare3 - 3.jpg"
+    ]
+  },   
+  {
+    "id": 186,
+    "name": "Marble Body Wash 400ml (13.6 Fl. Oz)",
+    "description": "Gel de duche. Refresca a pele com notas de tangerina, tomilho e noz-moscada. Um fundo de almíscar e musgo deixa um rasto floral e amadeirado, ideal para um banho refinado. ",
+    "price": 12.95,
+    "category": "Skincare",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Skincare4 - 1.jpg",
+    "images": [
+      "/assets/images/products/Skincare4 - 1.jpg",
+      "/assets/images/products/Skincare4 - 2.jpg",
+      "/assets/images/products/Skincare4 - 3.jpg"
+    ]
+  },   
+  {
+    "id": 187,
+    "name": "A Night Body Oil 100ml (3.4 Fl. Oz)",
+    "description": "Óleo corporal que combina o calor da pimenta preta, as madeiras fumadas e o âmbar, deixando a pele hidratada e perfumada com uma sensação de profundidade e elegância.",
+    "price": 12.95,
+    "category": "Skincare",
+    "subcategory": "",
+    "rating": 7,
+    "popularity": 80,
+    "stock": 5,
+    "image": "/assets/images/products/Skincare5 - 1.jpg",
+    "images": [
+      "/assets/images/products/Skincare5 - 1.jpg",
+      "/assets/images/products/Skincare5 - 2.jpg",
+      "/assets/images/products/Skincare5 - 3.jpg"
+    ]
   }
+
 
 
 
