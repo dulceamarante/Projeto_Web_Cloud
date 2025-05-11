@@ -54,19 +54,20 @@ export default function ProductDetails({ products }) {
     }
   }, [animateHeart]);
 
-  const renderStars = rating => {
-    const fullStars = Math.floor(rating);
-    const hasHalf = rating % 1 >= 0.5;
-    const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+  function renderStars(rating) {
+    const validRating = Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
 
     return (
       <>
-        {[...Array(fullStars)].map((_, i) => <FaStar key={`full-${i}`} color="#ffc107" />)}
-        {hasHalf && <FaStarHalfAlt color="#ffc107" />}
-        {[...Array(emptyStars)].map((_, i) => <FaRegStar key={`empty-${i}`} color="#ffc107" />)}
+        {[...Array(validRating)].map((_, i) => (
+          <FaStar key={i} color="#ffc107" />
+        ))}
+        {[...Array(5 - validRating)].map((_, i) => (
+          <FaRegStar key={i + validRating} color="#ccc" />
+        ))}
       </>
     );
-  };
+  }
 
   if (!product) return <p>Produto não encontrado.</p>;
 
@@ -95,9 +96,9 @@ export default function ProductDetails({ products }) {
       <div className="product-info-column">
         <h1 className="product-title">{product.name}</h1>
             <div className="rating">
-            Rating: 
-            <span className="rating-value">{product.rating}</span>
-            <span className="stars">{renderStars(product.rating)}</span>
+              Rating:
+              <span className="stars">{renderStars(product.rating)}</span>
+              <span className="rating-value"> {product.rating}</span>
             </div>
                     <p className="product-description">{product.description}</p>
 
