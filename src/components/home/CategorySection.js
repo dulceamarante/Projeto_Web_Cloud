@@ -8,31 +8,31 @@ const CategorySection = () => {
       id: 1,
       name: 'VESTIDOS',
       image: "/assets/images/categories/vestido.png",
-      link: '/products?category=vestidos'
+      link: '/mulher/vestidos'
     },
     {
       id: 2,
       name: 'SAIAS',
       image: "/assets/images/categories/saias.png",
-      link: '/products?category=saias'
+      link: '/mulher/saias'
     },
     {
       id: 3,
       name: 'T-SHIRTS',
       image: "/assets/images/categories/tshirt.png",
-      link: '/products?category=tshirts'
+      link: '/mulher/tshirt'
     },
     {
       id: 4,
       name: 'CASACOS',
       image: "/assets/images/categories/casaco.png",
-      link: '/products?category=coats'
+      link: '/mulher/casacos'
     },
     {
       id: 5,
       name: 'JEANS',
       image: "/assets/images/categories/jeans.png",
-      link: '/products?category=jeans'
+      link: '/mulher/jeans'
     }
   ];
 
