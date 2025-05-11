@@ -2,12 +2,13 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
-import { CartContext } from '../../contexts/CartContext'; 
+import { CartContext } from '../../contexts/CartContext';
 import './ProductCard.css';
+import { Link } from 'react-router-dom';
 
 export default function ProductCard({
   product,
-  addToCart, // Esta prop será usada apenas como fallback
+  addToCart, // Fallback caso não venha do context
   showTrash = false,
   removeFromFavorites,
 }) {
@@ -17,7 +18,7 @@ export default function ProductCard({
   const [selectedSize, setSelectedSize] = useState(null);
   const [animateSize, setAnimateSize] = useState(false);
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
-  const { addToCart: contextAddToCart } = useContext(CartContext); // Usar addToCart do contexto
+  const { addToCart: contextAddToCart } = useContext(CartContext);
   const favBtnRef = useRef(null);
 
   const isProductFavorite = isFavorite(product.id);
@@ -40,43 +41,31 @@ export default function ProductCard({
     e.stopPropagation();
     e.preventDefault();
     toggleFavorite(product);
-    
-    // Adicionar animação de pulsar
     setAnimateHeart(true);
     setTimeout(() => setAnimateHeart(false), 1200);
   };
 
   const handleSizeSelect = (e, productId, variant) => {
     e.stopPropagation();
-    
-    // Animação de seleção
     setSelectedSize(variant.size);
     setAnimateSize(true);
-    
-    // Reset após um tempo para permitir que a animação ocorra novamente
     setTimeout(() => {
-      // Tentar usar addToCart do contexto primeiro, se disponível
       if (contextAddToCart) {
         contextAddToCart(product, 1, variant.size);
       } else if (addToCart) {
-        // Fallback para a prop
         addToCart(productId, variant);
       }
-      
-      // Resetar animação após um tempo
       setTimeout(() => {
         setAnimateSize(false);
       }, 600);
     }, 300);
   };
 
-  // Efeito para remover a classe de animação após a animação terminar
   useEffect(() => {
     if (animateHeart) {
       const timer = setTimeout(() => {
         setAnimateHeart(false);
-      }, 1200); // Duração da animação
-      
+      }, 1200);
       return () => clearTimeout(timer);
     }
   }, [animateHeart]);
@@ -88,12 +77,16 @@ export default function ProductCard({
       onMouseLeave={() => setHover(false)}
     >
       <div className="product-image-container">
-        <img
-          src={product.images?.[currentImage] || product.image}
-          alt={product.name}
-          className="product-image"
-        />
+        {/* Imagem com Link */}
+        <Link to={`/product/${product.id}`} className="product-card-link">
+          <img
+            src={product.images?.[currentImage] || product.image}
+            alt={product.name}
+            className="product-image"
+          />
+        </Link>
 
+        {/* Setas de navegação fora do Link */}
         {product.images?.length > 1 && (
           <>
             <button className="nav-arrow left" onClick={prev}>
@@ -105,6 +98,7 @@ export default function ProductCard({
           </>
         )}
 
+        {/* Tamanhos em hover */}
         {hover && product.variants?.length > 0 && (
           <div className="size-overlay">
             {product.variants.map(v => (
@@ -119,8 +113,8 @@ export default function ProductCard({
             ))}
           </div>
         )}
-        
-        {/* Ícone de lixeira */}
+
+        {/* Botão de lixeira se for para remover favoritos */}
         {showTrash && removeFromFavorites && (
           <button
             className="trash-button"
@@ -135,6 +129,7 @@ export default function ProductCard({
         )}
       </div>
 
+      {/* Info do produto + botão de favorito */}
       <div className="product-info">
         <div className="title-heart">
           <div className="product-info-left">
