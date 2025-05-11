@@ -36,6 +36,75 @@
     ]
   },
   {
+    "id": 2,
+    "name": "Sabrinas Metalizadas",
+    "description": "Tecido metalizado. Flat. Bico redondo. Sem fecho. Forro interior.",
+    "price": 39.99,
+    "category": "sapatos",
+    "subcategory": "Edição Exclusiva",
+    "rating": 4.5,
+    "popularity": 88,
+    "gender": "mulher",
+    "stock": 18,
+    "image": "/assets/images/products/sabrina-1.jpg",
+    "images": [
+      "/assets/images/products/sabrina-1.jpg",
+      "/assets/images/products/sabrina-1-2.jpg",
+      "/assets/images/products/sabrina-1-3.jpg"
+    ],
+    "variants": [
+      {
+        "color": "Black",
+        "size": "36",
+        "stock": 3
+      },
+      {
+        "color": "Black",
+        "size": "37",
+        "stock": 5
+      },
+      {
+        "color": "Black",
+        "size": "38",
+        "stock": 4
+      },
+      {
+        "color": "Black",
+        "size": "39",
+        "stock": 3
+      },
+      {
+        "color": "Black",
+        "size": "40",
+        "stock": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mala de Ombro de Pele com Estampado",
+    "description": "100% pele bovina. Tamanho grande. Alça de ombro. Asa de fivelas ajustável. Logotipo estampado. Fecho de botão com íman. Forro interior.",
+    "price": 79.99,
+    "category": "acessorios",
+    "subcategory": "",
+    "rating": 4.7,
+    "popularity": 92,
+    "stock": 8,
+    "gender": "mulher",
+    "image": "/assets/images/products/mala-1.jpg",
+    "images": [
+      "/assets/images/products/mala-1.jpg",
+      "/assets/images/products/mala-1-2.jpg",
+      "/assets/images/products/mala-1-3.jpg"
+    ],
+    "variants": [
+      {
+        "color": "Brown",
+        "stock": 8
+      }
+    ]
+  },
+  {
     "id": 4,
     "name": "Casaco de Algodão com Botões de Jóia",
     "description": "Tecido com mistura de algodão e lã. Tecido tweed. Design reto. Tamanho médio. Gola redonda. Manga comprida. Punhos com botões. Dois bolsos de aplicação à frente. Fecho de botões na frente. Extremidades desfiadas.",
@@ -85,7 +154,7 @@
     "name": "Camisa 100% linho Branco",
     "description": "Camisa relax fit confecionada em tecido de linho. Gola bowling e manga curta. Bolsos de chapa no peito. Bainha com aberturas laterais. Fecho frontal de botões.",
     "price": 12.99,
-    "category": "camisas",
+    "category": "camisa",
     "subcategory": "",
     "rating": 4.9,
     "popularity": 70,
@@ -1645,7 +1714,7 @@
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 4.3,
     "popularity": 100,
@@ -1685,7 +1754,7 @@
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 4.1,
     "popularity": 80,
@@ -1725,7 +1794,7 @@
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 4.6,
     "popularity": 100,
@@ -1765,7 +1834,7 @@
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 4.1,
     "popularity": 100,
@@ -1805,7 +1874,7 @@
     "name": "T-shirt De Malha Relaxed Fit ",
     "description": "T-shirt relaxed fit tecida em fio com mistura de algodão. Gola redonda e manga curta. Acabamentos em canelado.",
     "price": 9.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 4.7,
     "popularity": 100,
@@ -1845,7 +1914,7 @@
     "name": "T-shirt Básica Com Decote Em V",
     "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
     "price": 12.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 3.6,
     "popularity": 70,
@@ -1885,7 +1954,7 @@
     "name": "T-shirt Básica Com Decote Em V",
     "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
     "price": 12.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 3.8,
     "popularity": 80,
@@ -2851,11 +2920,11 @@
     "popularity": 73,
     "stock": 6,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-1-1.jpg",
+    "image": "/assets/images/products/tshirtM-1-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-1-1.jpg",
-      "/assets/images/products/tshirt-1-2.jpg",
-      "/assets/images/products/tshirt-1-3.jpg"
+      "/assets/images/products/tshirtM-1-1.jpg",
+      "/assets/images/products/tshirtM-1-2.jpg",
+      "/assets/images/products/tshirtM-1-3.jpg"
     ],
     "variants": [
       {
@@ -2891,11 +2960,11 @@
     "popularity": 40,
     "stock": 12,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-2-1.jpg",
+    "image": "/assets/images/products/tshirtM-2-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-2-1.jpg",
-      "/assets/images/products/tshirt-2-2.jpg",
-      "/assets/images/products/tshirt-2-3.jpg"
+      "/assets/images/products/tshirtM-2-1.jpg",
+      "/assets/images/products/tshirtM-2-2.jpg",
+      "/assets/images/products/tshirtM-2-3.jpg"
     ],
     "variants": [
       {
@@ -2931,11 +3000,11 @@
     "popularity": 82,
     "stock": 6,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-3-1.jpg",
+    "image": "/assets/images/products/tshirtM-3-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-3-1.jpg",
-      "/assets/images/products/tshirt-3-2.jpg",
-      "/assets/images/products/tshirt-3-3.jpg"
+      "/assets/images/products/tshirtM-3-1.jpg",
+      "/assets/images/products/tshirtM-3-2.jpg",
+      "/assets/images/products/tshirtM-3-3.jpg"
     ],
     "variants": [
       {
@@ -2971,11 +3040,11 @@
     "popularity": 76,
     "stock": 5,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-4-1.jpg",
+    "image": "/assets/images/products/tshirtM-4-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-4-1.jpg",
-      "/assets/images/products/tshirt-4-2.jpg",
-      "/assets/images/products/tshirt-4-3.jpg"
+      "/assets/images/products/tshirtM-4-1.jpg",
+      "/assets/images/products/tshirtM-4-2.jpg",
+      "/assets/images/products/tshirtM-4-3.jpg"
     ],
     "variants": [
       {
@@ -3011,11 +3080,11 @@
     "popularity": 82,
     "stock": 7,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-5-1.jpg",
+    "image": "/assets/images/products/tshirtM-5-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-5-1.jpg",
-      "/assets/images/products/tshirt-5-2.jpg",
-      "/assets/images/products/tshirt-5-3.jpg"
+      "/assets/images/products/tshirtM-5-1.jpg",
+      "/assets/images/products/tshirtM-5-2.jpg",
+      "/assets/images/products/tshirtM-5-3.jpg"
     ],
     "variants": [
       {
@@ -3051,11 +3120,11 @@
     "popularity": 55,
     "stock": 10,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-6-1.jpg",
+    "image": "/assets/images/products/tshirtM-6-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-6-1.jpg",
-      "/assets/images/products/tshirt-6-2.jpg",
-      "/assets/images/products/tshirt-6-3.jpg"
+      "/assets/images/products/tshirtM-6-1.jpg",
+      "/assets/images/products/tshirtM-6-2.jpg",
+      "/assets/images/products/tshirtM-6-3.jpg"
     ],
     "variants": [
       {
@@ -3091,11 +3160,11 @@
     "popularity": 75,
     "stock": 12,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-7-1.jpg",
+    "image": "/assets/images/products/tshirtM-7-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-7-1.jpg",
-      "/assets/images/products/tshirt-7-2.jpg",
-      "/assets/images/products/tshirt-7-3.jpg"
+      "/assets/images/products/tshirtM-7-1.jpg",
+      "/assets/images/products/tshirtM-7-2.jpg",
+      "/assets/images/products/tshirtM-7-3.jpg"
     ],
     "variants": [
       {
@@ -3131,11 +3200,11 @@
     "popularity": 85,
     "stock": 10,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-8-1.jpg",
+    "image": "/assets/images/products/tshirtM-8-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-8-1.jpg",
-      "/assets/images/products/tshirt-8-2.jpg",
-      "/assets/images/products/tshirt-8-3.jpg"
+      "/assets/images/products/tshirtM-8-1.jpg",
+      "/assets/images/products/tshirtM-8-2.jpg",
+      "/assets/images/products/tshirtM-8-3.jpg"
     ],
     "variants": [
       {
@@ -3171,11 +3240,11 @@
     "popularity": 97,
     "stock": 15,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-9-1.jpg",
+    "image": "/assets/images/products/tshirtM-9-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-9-1.jpg",
-      "/assets/images/products/tshirt-9-2.jpg",
-      "/assets/images/products/tshirt-9-3.jpg"
+      "/assets/images/products/tshirtM-9-1.jpg",
+      "/assets/images/products/tshirtM-9-2.jpg",
+      "/assets/images/products/tshirtM-9-3.jpg"
     ],
     "variants": [
       {
@@ -3211,11 +3280,11 @@
     "popularity": 78,
     "stock": 14,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-10-1.jpg",
+    "image": "/assets/images/products/tshirtM-10-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-10-1.jpg",
-      "/assets/images/products/tshirt-10-2.jpg",
-      "/assets/images/products/tshirt-10-3.jpg"
+      "/assets/images/products/tshirtM-10-1.jpg",
+      "/assets/images/products/tshirtM-10-2.jpg",
+      "/assets/images/products/tshirtM-10-3.jpg"
     ],
     "variants": [
       {
@@ -3251,11 +3320,11 @@
     "popularity": 57,
     "stock": 8,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-11-1.jpg",
+    "image": "/assets/images/products/tshirtM-11-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-11-1.jpg",
-      "/assets/images/products/tshirt-11-2.jpg",
-      "/assets/images/products/tshirt-11-3.jpg"
+      "/assets/images/products/tshirtM-11-1.jpg",
+      "/assets/images/products/tshirtM-11-2.jpg",
+      "/assets/images/products/tshirtM-11-3.jpg"
     ],
     "variants": [
       {
@@ -3371,11 +3440,11 @@
     "popularity": 62,
     "stock": 11,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-14-1.jpg",
+    "image": "/assets/images/products/tshirtM-14-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-14-1.jpg",
-      "/assets/images/products/tshirt-14-2.jpg",
-      "/assets/images/products/tshirt-14-3.jpg"
+      "/assets/images/products/tshirtM-14-1.jpg",
+      "/assets/images/products/tshirtM-14-2.jpg",
+      "/assets/images/products/tshirtM-14-3.jpg"
     ],
     "variants": [
       {
@@ -6461,11 +6530,11 @@
     "popularity": 87,
     "stock": 8,
     "gender": "mulher",
-    "image": "/assets/images/products/tshirt-12-1.jpg",
+    "image": "/assets/images/products/tshirtM-12-1.jpg",
     "images": [
-      "/assets/images/products/tshirt-12-1.jpg",
-      "/assets/images/products/tshirt-12-2.jpg",
-      "/assets/images/products/tshirt-12-3.jpg"
+      "/assets/images/products/tshirtM-12-1.jpg",
+      "/assets/images/products/tshirtM-12-2.jpg",
+      "/assets/images/products/tshirtM-12-3.jpg"
     ],
     "variants": [
       {
