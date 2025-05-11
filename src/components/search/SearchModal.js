@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ProductContext } from '../../contexts/ProductContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import ProductCard from '../products/ProductCard';
@@ -12,6 +13,8 @@ export default function SearchModal({ onClose, onCategoryClick }) {
   const [searchResults, setSearchResults] = useState([]);
   const [showNoResults, setShowNoResults] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+
+  const navigate = useNavigate();
 
   const addToCart = (productId, variant) => {
     alert(`Item ${productId} (tamanho ${variant.size}) adicionado!`);
@@ -45,17 +48,21 @@ export default function SearchModal({ onClose, onCategoryClick }) {
     setTimeout(onClose, 300);
   };
 
-  // Esta função permite que eventos de clique passem para o SideMenu
   const handleSearchAreaClick = (e) => {
-    // Se o clique for em um elemento do header ou SideMenu, não fazer nada
-    // Isso permite que esses cliques sejam capturados por esses componentes
     if (
-      e.target.closest('.header-item') || 
-      e.target.closest('.side-menu') || 
+      e.target.closest('.header-item') ||
+      e.target.closest('.side-menu') ||
       e.target.closest('.side-menu-wrapper')
     ) {
       return;
     }
+  };
+
+  const handleProductClick = (productId) => {
+    handleClose(); // fade out + fechar modal
+    setTimeout(() => {
+      navigate(`/product/${productId}`);
+    }, 300); // espera a animação terminar
   };
 
   const suggested = [...products]
@@ -63,14 +70,12 @@ export default function SearchModal({ onClose, onCategoryClick }) {
     .slice(0, 5);
 
   return (
-    <div 
+    <div
       className={`search-modal-overlay ${fadeOut ? 'fade-out' : ''}`}
-      onClick={handleSearchAreaClick} // Permite clicar "através" para o SideMenu
+      onClick={handleSearchAreaClick}
     >
       <button className="close-modal" onClick={handleClose}>×</button>
       <div className="search-page">
-        {/* Removidas as categorias MULHER, HOMEM e BEAUTY */}
-        
         <div className="search-header">
           <form onSubmit={handleSearch} className="search-form">
             <input
@@ -92,15 +97,17 @@ export default function SearchModal({ onClose, onCategoryClick }) {
             <h2 className="section-title">RESULTADOS DA PESQUISA</h2>
             <div className="products-grid">
               {searchResults.map(p => (
-                <ProductCard
+                <div
                   key={p.id}
-                  product={{
-                    ...p,
-                    isFavorite: isFavorite(p.id)
-                  }}
-                  toggleFavorite={() => toggleFavorite(p)}
-                  addToCart={addToCart}
-                />
+                  className="clickable-card"
+                  onClick={() => handleProductClick(p.id)}
+                >
+                  <ProductCard
+                    product={{ ...p, isFavorite: isFavorite(p.id) }}
+                    toggleFavorite={() => toggleFavorite(p)}
+                    addToCart={addToCart}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -117,15 +124,17 @@ export default function SearchModal({ onClose, onCategoryClick }) {
           <h2 className="section-title">TALVEZ LHE INTERESSE</h2>
           <div className="products-grid">
             {suggested.map(p => (
-              <ProductCard
+              <div
                 key={p.id}
-                product={{
-                  ...p,
-                  isFavorite: isFavorite(p.id)
-                }}
-                toggleFavorite={() => toggleFavorite(p)}
-                addToCart={addToCart}
-              />
+                className="clickable-card"
+                onClick={() => handleProductClick(p.id)}
+              >
+                <ProductCard
+                  product={{ ...p, isFavorite: isFavorite(p.id) }}
+                  toggleFavorite={() => toggleFavorite(p)}
+                  addToCart={addToCart}
+                />
+              </div>
             ))}
           </div>
         </div>
