@@ -2170,7 +2170,7 @@
     "category": "camisa",
     "subcategory": "",
     "rating": 4.9,
-    "popularity": 110,
+    "popularity": 70,
     "stock": 28,
     "image": "/assets/images/products/CamisaH1 - 1.jpg",
     "images": [
@@ -2193,7 +2193,7 @@
     "category": "camisa",
     "subcategory": "",
     "rating": 4.5,
-    "popularity": 90,
+    "popularity": 70,
     "stock": 20,
     "image": "/assets/images/products/CamisaH2 - 1.jpg",
     "images": [
@@ -2216,7 +2216,7 @@
     "category": "camisa",
     "subcategory": "",
     "rating": 4.7,
-    "popularity": 100,
+    "popularity": 70,
     "stock": 16,
     "image": "/assets/images/products/CamisaH3 - 1.jpg",
     "images": [
@@ -2308,7 +2308,7 @@
     "category": "camisa",
     "subcategory": "",
     "rating": 4.1,
-    "popularity": 100,
+    "popularity": 70,
     "stock": 20,
     "image": "/assets/images/products/CamisaH7 - 1.jpg",
     "images": [
@@ -2331,7 +2331,7 @@
     "category": "camisa",
     "subcategory": "",
     "rating": 5,
-    "popularity": 100,
+    "popularity": 70,
     "stock": 32,
     "image": "/assets/images/products/CamisaH8 - 1.jpg",
     "images": [
