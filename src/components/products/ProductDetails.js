@@ -94,11 +94,12 @@ export default function ProductDetails({ products }) {
 
       <div className="product-info-column">
         <h1 className="product-title">{product.name}</h1>
-        <div className="rating">
-          <span className="rating-value">{product.rating}</span>
-          <span className="stars">{renderStars(product.rating)}</span>
-        </div>
-        <p className="product-description">{product.description}</p>
+            <div className="rating">
+            Rating: 
+            <span className="rating-value">{product.rating}</span>
+            <span className="stars">{renderStars(product.rating)}</span>
+            </div>
+                    <p className="product-description">{product.description}</p>
 
         {product.oldPrice && (
           <p className="old-price">Antes: <span>{product.oldPrice.toFixed(2)} €</span></p>
