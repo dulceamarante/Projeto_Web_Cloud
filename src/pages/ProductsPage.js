@@ -352,14 +352,11 @@ export default function ProductsPage() {
 // Helpers
 function filterProductsByGender(products, genderFilter) {
   if (!genderFilter) return products;
+
   const g = genderFilter.toLowerCase();
-  return products.filter(p => {
-    const cat = p.category.toLowerCase();
-    if (g === 'mulher') return !cat.includes('m') || cat === 'mulher';
-    if (g === 'homem') return cat.includes('m') || cat === 'homem';
-    if (g === 'beauty') return cat === 'beauty';
-    return true;
-  });
+
+  return products.filter(product => product.gender?.toLowerCase() === g);
+  
 }
 
 function getColorHex(name) {
