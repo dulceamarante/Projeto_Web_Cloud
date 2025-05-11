@@ -14,7 +14,7 @@ export default function TopProducts() {
   const getTopSellingWomenProducts = (count) => {
     // Filter products for women only
     const womenProducts = products.filter(product => 
-      product.gender?.toLowerCase() === 'mulher'
+      product.gender?.toLowerCase() === 'homem'
     );
     
     // Sort by popularity (highest first)
@@ -31,12 +31,12 @@ export default function TopProducts() {
   };
  
   if (loading) return <div className="loading">Carregando...</div>;
-  if (!topProducts.length) return <div className="no-products">Sem produtos para mulher</div>;
+  if (!topProducts.length) return <div className="no-products">Sem produtos para homem</div>;
  
   return (
     <section className="top-products-section">
       {/* Título da secção */}
-      <h2 className="section-title">TOP SELLERS MULHER</h2>
+      <h2 className="section-title">TOP SELLERS HOMEM</h2>
      
       {/* Grid de produtos */}
       <div className="products-grid">

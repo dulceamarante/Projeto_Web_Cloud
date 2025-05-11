@@ -2,10 +2,10 @@ import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import SearchModal from '../search/SearchModal'; 
 import FavoritesPopOver from './FavoritesPopOver'; 
-import CartPopOver from './CartPopOver'; // Importando o CartPopOver
+import CartPopOver from './CartPopOver';
 import SideMenu from './SideMenu'; 
 import { FavoritesContext } from '../../contexts/FavoritesContext'; 
-import { CartContext } from '../../contexts/CartContext'; // Importando o CartContext
+import { CartContext } from '../../contexts/CartContext';
 import './Header.css';
 
 const Header = () => {
@@ -13,10 +13,10 @@ const Header = () => {
   const [activeCategory, setActiveCategory] = useState('mulher');
   const [searchOpen, setSearchOpen] = useState(false);
   const [favOpen, setFavOpen] = useState(false);
-  const [cartOpen, setCartOpen] = useState(false); // Estado para controlar a visibilidade do CartPopOver
+  const [cartOpen, setCartOpen] = useState(false);
   
   const { favorites } = useContext(FavoritesContext);
-  const { cart, getCartItemCount } = useContext(CartContext); // Usando o CartContext
+  const { cart, getCartItemCount } = useContext(CartContext);
   
   // Calcular a quantidade total de itens no carrinho
   const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
@@ -43,14 +43,15 @@ const Header = () => {
   
   const categories = ['mulher', 'homem', 'beauty'];
   
-  const handleCategoryHover = cat => {
-    // Permitir hover mesmo com o modal de pesquisa aberto
-    setActiveCategory(cat);
-    setMenuOpen(true);
+  // Mapeamento de categorias para as suas respectivas páginas
+  const categoryPages = {
+    'mulher': '\components\home',
+    'homem': '\components\homeHomem',
+    'beauty': '\components\homeBeauty'
   };
   
-  const handleCategoryClick = (e, cat) => {
-    e.preventDefault();
+  const handleCategoryHover = cat => {
+    // Permitir hover mesmo com o modal de pesquisa aberto
     setActiveCategory(cat);
     setMenuOpen(true);
   };
@@ -99,14 +100,14 @@ const Header = () => {
         <ul className="header-left">
           {categories.map(cat => (
             <li key={cat} className="header-item">
-              <a
-                href="#"
+              <Link
+                to={categoryPages[cat]}
                 className={menuOpen && activeCategory === cat ? 'active' : ''}
-                onClick={e => handleCategoryClick(e, cat)}
                 onMouseEnter={() => handleCategoryHover(cat)}
+                onClick={() => setActiveCategory(cat)}
               >
                 {cat.toUpperCase()}
-              </a>
+              </Link>
             </li>
           ))}
           {menuOpen && (
