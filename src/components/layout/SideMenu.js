@@ -60,10 +60,8 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
       { name: 'JEANS', path: '/mulher/jeans' },
       { name: 'CALÇAS', path: '/mulher/calcas' },
       { name: 'CASACOS', path: '/mulher/casacos' },
-      { name: 'SAPATOS', path: '/mulher/sapatos' },
       { name: 'VESTIDOS', path: '/mulher/vestidos' },
-      { name: 'ACESSÓRIOS', path: '/mulher/acessorios' },
-      { name: 'MALHA', path: '/mulher/malha' }
+      { name: 'SAIAS', path: '/mulher/saias' }
     ],
     homem: [
       { name: 'TODOS OS ARTIGOS', path: '/homem/products' },
@@ -71,11 +69,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
       { name: 'T-SHIRTS', path: '/homem/tshirtM' },
       { name: 'JEANS', path: '/homem/jeans' },
       { name: 'CALÇAS', path: '/homem/calcas' },
-      { name: 'CASACOS', path: '/homem/casacos' },
-      { name: 'SAPATOS', path: '/homem/sapatos' },
-      { name: 'SWEATSHIRTS', path: '/homem/sweatshirts' },
-      { name: 'FATOS', path: '/homem/fatos' },
-      { name: 'ACESSÓRIOS', path: '/homem/acessorios' }
+      { name: 'CASACOS', path: '/homem/casacos' }
     ],
     beauty: [
       { name: 'TODOS OS ARTIGOS', path: '/beauty/products' },

@@ -12,9 +12,9 @@ const CategorySection = () => {
     },
     {
       id: 2,
-      name: 'SAPATOS',
-      image: "/assets/images/categories/sapatos.png",
-      link: '/products?category=sapatos'
+      name: 'SAIAS',
+      image: "/assets/images/categories/saias.png",
+      link: '/products?category=saias'
     },
     {
       id: 3,
