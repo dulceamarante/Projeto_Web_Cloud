@@ -2746,6 +2746,7 @@
     "subcategory": "",
     "rating": 3.6,
     "popularity": 70,
+    "gender":"homem",
     "stock": 20,
     "image": "/assets/images/products/TshirtH6 - 1.jpg",
     "images": [
@@ -2838,6 +2839,7 @@
     "subcategory": "",
     "rating": 4.9,
     "popularity": 100,
+    "g":"homem",
     "stock": 20,
     "image": "/assets/images/products/TshirtH10 - 1.jpg",
     "images": [
