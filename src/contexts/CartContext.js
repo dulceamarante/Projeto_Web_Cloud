@@ -21,14 +21,15 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
-  // Salvar carrinho no localStorage quando mudar
-  useEffect(() => {
+  // Função para atualizar carrinho e localStorage
+  const updateCartAndStorage = (newCart) => {
+    setCart(newCart);
     try {
-      localStorage.setItem('cart', JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(newCart));
     } catch (error) {
       console.error('Erro ao salvar carrinho:', error);
     }
-  }, [cart]);
+  };
 
   const addToCart = (product, quantity = 1, selectedSize = null) => {
     // Verificar se o produto já está no carrinho com o mesmo tamanho
@@ -36,20 +37,22 @@ export const CartProvider = ({ children }) => {
       item => item.id === product.id && item.selectedSize === selectedSize
     );
 
+    let newCart;
     if (existingItemIndex !== -1) {
       // Atualizar quantidade se o produto já estiver no carrinho
-      const updatedCart = [...cart];
-      updatedCart[existingItemIndex].quantity += quantity;
-      setCart(updatedCart);
+      newCart = [...cart];
+      newCart[existingItemIndex].quantity += quantity;
     } else {
       // Adicionar novo item ao carrinho
-      setCart(prev => [...prev, {
+      newCart = [...cart, {
         ...product,
         quantity,
         selectedSize,
         addedAt: new Date().toISOString()
-      }]);
+      }];
     }
+    
+    updateCartAndStorage(newCart);
     
     // Mostrar notificação
     setNotification({
@@ -75,7 +78,8 @@ export const CartProvider = ({ children }) => {
       const productToRemove = cart[productToRemoveIndex];
       
       // Remover o produto do carrinho
-      setCart(prev => prev.filter((item, index) => index !== productToRemoveIndex));
+      const newCart = cart.filter((item, index) => index !== productToRemoveIndex);
+      updateCartAndStorage(newCart);
       
       // Guardar o produto removido para caso de desfazer
       setRemovedProduct(productToRemove);
@@ -83,19 +87,21 @@ export const CartProvider = ({ children }) => {
       // Mostrar a notificação
       setNotification({
         message: "PRODUTO REMOVIDO DO CARRINHO",
-        actionText: "DESFAZER"
+        actionText: "DESFAZER",
+        onAction: () => handleUndo() // Usar uma arrow function como no FavoritesContext
       });
     }
   };
 
   // Função para atualizar a quantidade de um produto
   const updateQuantity = (productId, quantity, selectedSize = null) => {
-    setCart(prev => prev.map(item => {
+    const newCart = cart.map(item => {
       if (item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)) {
         return { ...item, quantity };
       }
       return item;
-    }));
+    });
+    updateCartAndStorage(newCart);
   };
 
   // Função para limpar o carrinho
@@ -104,7 +110,7 @@ export const CartProvider = ({ children }) => {
     const previousCart = [...cart];
     
     // Limpar o carrinho
-    setCart([]);
+    updateCartAndStorage([]);
     
     // Mostrar notificação
     setNotification({
@@ -112,7 +118,7 @@ export const CartProvider = ({ children }) => {
       actionText: "DESFAZER",
       onAction: () => {
         // Restaurar carrinho anterior
-        setCart(previousCart);
+        updateCartAndStorage(previousCart);
         setNotification(null);
       }
     });
@@ -120,15 +126,20 @@ export const CartProvider = ({ children }) => {
 
   // Função para desfazer a remoção de um produto
   const handleUndo = () => {
+    console.log("Executing handleUndo in CartContext", removedProduct); // Debug log
+    
     if (removedProduct) {
       // Adicionar o produto de volta ao carrinho
-      setCart(prev => [...prev, removedProduct]);
+      const newCart = [...cart, removedProduct];
+      updateCartAndStorage(newCart);
       
       // Limpar o produto removido
       setRemovedProduct(null);
       
       // Esconder a notificação
       setNotification(null);
+    } else {
+      console.log("No removed product to restore"); // Debug log
     }
   };
 
@@ -180,7 +191,8 @@ export const CartProvider = ({ children }) => {
         getCartTotal,
         getCartItemCount,
         isInCart,
-        moveToFavorites
+        moveToFavorites,
+        handleUndo // Expor handleUndo para uso direto se necessário, como no FavoritesContext
       }}
     >
       {children}
