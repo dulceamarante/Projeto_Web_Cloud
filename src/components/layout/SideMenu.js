@@ -66,7 +66,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
     homem: [
       { name: 'TODOS OS ARTIGOS', path: '/homem/products' },
       { name: 'CAMISAS', path: '/homem/camisas' },
-      { name: 'T-SHIRTS', path: '/homem/tshirtM' },
+      { name: 'T-SHIRTS', path: '/homem/tshirt' },
       { name: 'JEANS', path: '/homem/jeans' },
       { name: 'CALÇAS', path: '/homem/calcas' },
       { name: 'CASACOS', path: '/homem/casacos' }

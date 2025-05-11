@@ -11,7 +11,7 @@ import calcasImg from '../../assets/images/categories/Calcas-Homem.jpg';
 const CategorySectionHomem = () => {
   const categories = [
     { id: 1, name: 'CAMISA', image: camisaImg, link: '/homem/camisas' },
-    { id: 2, name: 'T-SHIRT', image: tshirtImg, link: '/homem/tshirtM' },
+    { id: 2, name: 'T-SHIRT', image: tshirtImg, link: '/homem/tshirt' },
     { id: 3, name: 'CASACO', image: casacoImg, link: '/homem/casacos' },
     { id: 4, name: 'JEANS', image: jeansImg, link: '/homem/jeans' },
     { id: 5, name: 'CALÇAS', image: calcasImg, link: '/homem/calcas' }
