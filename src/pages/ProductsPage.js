@@ -28,6 +28,9 @@ export default function ProductsPage() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(o => !o);
+  
+  // Verifica se estamos na categoria beauty
+  const isBeautyCategory = gender === 'beauty';
 
   useEffect(() => {
     const p = new URLSearchParams(location.search);
@@ -37,9 +40,16 @@ export default function ProductsPage() {
       p.get('type') ||
       (category ? category.toUpperCase() : 'VER TUDO')
     );
-    setActiveColor(p.get('color') || '');
-    setActiveSize(p.get('size') || '');
-  }, [location.search, category]);
+    
+    // Não aplicar filtros de cor e tamanho para beauty
+    if (!isBeautyCategory) {
+      setActiveColor(p.get('color') || '');
+      setActiveSize(p.get('size') || '');
+    } else {
+      setActiveColor('');
+      setActiveSize('');
+    }
+  }, [location.search, category, isBeautyCategory]);
 
   useEffect(() => {
     if (!products.length) return;
@@ -56,7 +66,7 @@ export default function ProductsPage() {
   }, [products, gender, category]);
 
   useEffect(() => {
-    if (!products.length) return;
+    if (!products.length || isBeautyCategory) return;
     let f = filterProductsByGender(products, gender);
     if (category) {
       f = f.filter(p => p.category.toLowerCase() === category.toLowerCase());
@@ -76,7 +86,7 @@ export default function ProductsPage() {
       ...Array.from(extra).filter(c => !defaultColors.includes(c))
     ];
     setColors(allColors);
-  }, [products, gender, category]);
+  }, [products, gender, category, isBeautyCategory]);
 
   useEffect(() => {
     if (!products.length) return;
@@ -88,15 +98,18 @@ export default function ProductsPage() {
       f = f.filter(p => p.category.toUpperCase() === activeType);
     }
 
-    if (activeColor) {
-      f = f.filter(p =>
-        p.variants?.some(v => v.color.toLowerCase() === activeColor.toLowerCase())
-      );
-    }
-    if (activeSize) {
-      f = f.filter(p =>
-        p.variants?.some(v => v.size?.toUpperCase() === activeSize)
-      );
+    // Aplica filtros de cor e tamanho apenas se não for beauty
+    if (!isBeautyCategory) {
+      if (activeColor) {
+        f = f.filter(p =>
+          p.variants?.some(v => v.color.toLowerCase() === activeColor.toLowerCase())
+        );
+      }
+      if (activeSize) {
+        f = f.filter(p =>
+          p.variants?.some(v => v.size?.toUpperCase() === activeSize)
+        );
+      }
     }
 
     switch (sortOption) {
@@ -116,7 +129,7 @@ export default function ProductsPage() {
     setCurrentProducts(f);
   }, [
     products, gender, category,
-    activeType, activeColor, activeSize, sortOption
+    activeType, activeColor, activeSize, sortOption, isBeautyCategory
   ]);
 
   useEffect(() => {
@@ -124,13 +137,18 @@ export default function ProductsPage() {
     if (currentPage > 1) p.set('page', currentPage);
     if (sortOption !== 'popularity') p.set('sort', sortOption);
     if (activeType !== 'VER TUDO' && !category) p.set('type', activeType);
-    if (activeColor) p.set('color', activeColor);
-    if (activeSize) p.set('size', activeSize);
+    
+    // Adiciona filtros de cor e tamanho apenas se não for beauty
+    if (!isBeautyCategory) {
+      if (activeColor) p.set('color', activeColor);
+      if (activeSize) p.set('size', activeSize);
+    }
+    
     navigate(`${location.pathname}?${p.toString()}`, { replace: true });
   }, [
     currentPage, sortOption,
     activeType, activeColor, activeSize,
-    category, location.pathname, navigate
+    category, location.pathname, navigate, isBeautyCategory
   ]);
 
   const handleTypeChange = t => {
@@ -140,10 +158,12 @@ export default function ProductsPage() {
     else navigate(`/${gender}/${t.toLowerCase()}`);
   };
   const handleColorChange = c => {
+    if (isBeautyCategory) return;
     setActiveColor(prev => (prev === c ? '' : c));
     setCurrentPage(1);
   };
   const handleSizeChange = s => {
+    if (isBeautyCategory) return;
     setActiveSize(prev => (prev === s ? '' : s));
     setCurrentPage(1);
   };
@@ -152,8 +172,10 @@ export default function ProductsPage() {
     setCurrentPage(1);
   };
   const clearFilters = () => {
-    setActiveColor('');
-    setActiveSize('');
+    if (!isBeautyCategory) {
+      setActiveColor('');
+      setActiveSize('');
+    }
     setSortOption('popularity');
     setCurrentPage(1);
     if (!category) setActiveType('VER TUDO');
@@ -256,36 +278,42 @@ export default function ProductsPage() {
           </button>
         </div>
 
-        <div className="filter-section">
-          <h4>Cor</h4>
-          <div className="color-filters">
-            {colors.map(c => (
-              <button
-                key={c}
-                className={`color-filter ${activeColor === c ? 'active' : ''}`}
-                onClick={() => handleColorChange(c)}
-                style={{ backgroundColor: getColorHex(c) }}
-                title={c}
-              />
-            ))}
-          </div>
-        </div>
+        {/* Mostrar filtros de cor e tamanho apenas se não for beauty */}
+        {!isBeautyCategory && (
+          <>
+            <div className="filter-section">
+              <h4>Cor</h4>
+              <div className="color-filters">
+                {colors.map(c => (
+                  <button
+                    key={c}
+                    className={`color-filter ${activeColor === c ? 'active' : ''}`}
+                    onClick={() => handleColorChange(c)}
+                    style={{ backgroundColor: getColorHex(c) }}
+                    title={c}
+                  />
+                ))}
+              </div>
+            </div>
 
-        <div className="filter-section">
-          <h4>Tamanho</h4>
-          <div className="size-filters">
-            {sizes.map(s => (
-              <button
-                key={s}
-                className={`size-filter ${activeSize === s ? 'active' : ''}`}
-                onClick={() => handleSizeChange(s)}
-              >
-                {s}
-              </button>
-            ))}
-          </div>
-        </div>
+            <div className="filter-section">
+              <h4>Tamanho</h4>
+              <div className="size-filters">
+                {sizes.map(s => (
+                  <button
+                    key={s}
+                    className={`size-filter ${activeSize === s ? 'active' : ''}`}
+                    onClick={() => handleSizeChange(s)}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
 
+        {/* Mostrar sempre o filtro de preço para todos os gêneros */}
         <div className="filter-section">
           <h4>Preço</h4>
           <div className="price-filters">
@@ -300,17 +328,20 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        <div className="filter-section">
-          <h4>Ordenar</h4>
-          <select
-            className="sort-select"
-            value={sortOption}
-            onChange={handleSortChange}
-          >
-            <option value="popularity">Mais Populares</option>
-            <option value="rating">Avaliação</option>
-          </select>
-        </div>
+        {/* Mostrar ordenação por popularidade e avaliação apenas se não for beauty */}
+        {!isBeautyCategory && (
+          <div className="filter-section">
+            <h4>Ordenar</h4>
+            <select
+              className="sort-select"
+              value={sortOption}
+              onChange={handleSortChange}
+            >
+              <option value="popularity">Mais Populares</option>
+              <option value="rating">Avaliação</option>
+            </select>
+          </div>
+        )}
 
         <button
           className="clear-filters-btn"
