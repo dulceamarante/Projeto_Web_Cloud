@@ -2742,7 +2742,7 @@
     "name": "T-shirt Básica Com Decote Em V",
     "description": "T-shirt slim fit confecionada em algodão com elasticidade. Decote em bico e manga curta.",
     "price": 12.99,
-    "category": "tshirt",
+    "category": "tshirtM",
     "subcategory": "",
     "rating": 3.6,
     "popularity": 70,
@@ -3324,6 +3324,7 @@
     "rating": 4.3,
     "popularity": 100,
     "stock": 20,
+    "gender":"homem",
     "image": "/assets/images/products/CasacoH1 - 1.jpg",
     "images": [
       "/assets/images/products/CasacoH1 - 1.jpg",
