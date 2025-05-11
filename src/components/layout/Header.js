@@ -113,7 +113,6 @@ const Header = () => {
 
         <div className="header-right">
           <a href="#" onClick={e => { e.preventDefault(); setSearchOpen(true); }}>PESQUISAR</a>
-          <Link to="/login">INICIAR SESSÃO</Link>
           <a href="#" onClick={e => { e.preventDefault(); setFavOpen(o => !o); if (cartOpen) setCartOpen(false); }}>FAVORITOS ({favorites.length})</a>
           <a href="#" onClick={e => { e.preventDefault(); setCartOpen(o => !o); if (favOpen) setFavOpen(false); }}>CARRINHO ({cartItemCount})</a>
         </div>
