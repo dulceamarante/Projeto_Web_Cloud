@@ -23,15 +23,15 @@ import HomeBeauty from './pages/HomePageBeauty';
 function App() {
   return (
     <ProductProvider>
-      <CartProvider>
-        <FavoritesProvider>
-          <NotificationProvider>
+      <NotificationProvider>
+        <CartProvider>
+          <FavoritesProvider>
             <Router>
               <Header />
               <main>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-                  
+
                   {/* Rotas para produtos por gênero */}
                   <Route path="/:gender/products" element={<ProductsPage />} />
                   <Route path="/:gender/:category" element={<ProductsPage />} />
@@ -44,16 +44,14 @@ function App() {
                   <Route path="/homem" element={<HomeHomem />} />
                   <Route path="/beauty" element={<HomeBeauty />} />
                 </Routes>
-                </main>
-               <Footer />
+              </main>
+              <Footer />
             </Router>
-          </NotificationProvider>
-        </FavoritesProvider>
-      </CartProvider>
+          </FavoritesProvider>
+        </CartProvider>
+      </NotificationProvider>
     </ProductProvider>
   );
 }
 
 export default App;
-
-

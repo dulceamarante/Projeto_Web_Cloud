@@ -4,11 +4,11 @@ import React, { createContext, useState, useEffect } from 'react';
 // Importar os dados de produtos
 import initialProductsData from '../data/products.json';
 
-// Criar o contexto e exportá-lo como exportação nomeada
+// Criar o contexto
 export const ProductContext = createContext();
 
 // Exportar o Provider como uma função nomeada
-export function ProductProvider({ children }) {
+export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -104,4 +104,4 @@ export function ProductProvider({ children }) {
       {children}
     </ProductContext.Provider>
   );
-}
+};
