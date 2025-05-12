@@ -104,7 +104,7 @@ body {
   color: #e41e63;
 }
 
-/* Favorites grid */
+/* Favorites grid - CORRIGIDO para manter o mesmo tamanho dos cards */
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -114,6 +114,32 @@ body {
 
 .favorites-item {
   transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Garantir que ProductCards na página de favoritos mantenham o tamanho padrão */
+.favorites-grid .product-card {
+  width: 100%;
+  height: auto;
+  /* Resetar qualquer estilo específico que possa estar afetando o tamanho */
+  font-size: inherit;
+  transform: none !important;
+}
+
+/* Garantir que as imagens mantenham a proporção correta */
+.favorites-grid .product-card .product-image-container {
+  aspect-ratio: 4/5;
+  width: 100%;
+}
+
+/* Garantir que o texto mantém o tamanho correto */
+.favorites-grid .product-card .product-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.favorites-grid .product-card .final-price {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Animações de fade */
@@ -180,14 +206,14 @@ body {
 }
 
 .similar-products-section h2 {
-  font-size: 36px; /* Aumentado de 24px para 36px */
-  font-weight: 600; /* Aumentado de 500 para 600 (mais negrito) */
-  margin-bottom: 40px; /* Aumentado de 30px para 40px */
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   text-align: left;
   color: #000;
-  letter-spacing: 1px; /* Adicionado espaçamento entre letras */
+  letter-spacing: 1px;
 }
 
 /* Grid com exatamente 5 colunas em desktop */
