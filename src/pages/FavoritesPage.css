@@ -168,54 +168,120 @@ body {
   transform: translateY(-2px);
 }
 
-/* Suggestions - agora sempre visível e com texto maior */
-.suggestions-section {
+/* ===== Seção "Talvez Lhe Interesse" - Igual ao SimilarProducts ===== */
+.similar-products-section {
   margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  text-align: left;
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: none;
+  overflow: visible;
 }
 
-.suggestions-section h2 {
-  font-size: 28px;
-  font-weight: 600;
+.similar-products-section h2 {
+  font-size: 36px; /* Aumentado de 24px para 36px */
+  font-weight: 600; /* Aumentado de 500 para 600 (mais negrito) */
+  margin-bottom: 40px; /* Aumentado de 30px para 40px */
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  color: #000;
+  letter-spacing: 1px; /* Adicionado espaçamento entre letras */
 }
 
-.suggestions-grid {
+/* Grid com exatamente 5 colunas em desktop */
+.similar-products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: none;
+  overflow: visible;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
 }
 
+/* Responsividade - mantendo divisões lógicas */
+@media (min-width: 1400px) {
+  .similar-products-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+}
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .favorites-grid, .suggestions-grid {
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .similar-products-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .similar-products-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Tablet - 3 produtos por linha (5 linhas) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .similar-products-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  /* Título um pouco menor em tablet */
+  .similar-products-section h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
   }
 }
 
-@media (max-width: 768px) {
-  .favorites-grid, .suggestions-grid {
+/* Mobile - 2 produtos por linha */
+@media (max-width: 767px) {
+  .similar-products-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  /* Título menor em mobile */
+  .similar-products-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
   }
 }
 
-@media (max-width: 576px) {
-  .favorites-page {
-    padding: 20px 20px 20px;
-  }
-  .favorites-grid, .suggestions-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .favorites-header h1 {
-    font-size: 22px;
-  }
-  .favorites-header p {
-    font-size: 16px;
-  }
-  .suggestions-section h2 {
-    font-size: 24px;
-  }
+/* Garantir que cada Product Card seja visível */
+.similar-products-grid .product-card {
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.similar-products-grid .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Estilos para garantir que todas as linhas sejam exibidas */
+.similar-products-section {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.similar-products-grid {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Adicionar espaçamento extra entre a seção similar e o footer */
+.similar-products-section + .footer-spacer {
+  height: 100px;
 }

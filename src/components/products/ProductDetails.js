@@ -29,6 +29,14 @@ export default function ProductDetails({ products }) {
   const product = products.find(p => String(p.id) === id);
   const isProductFavorite = isFavorite(product?.id);
 
+  // Verificar se é um produto que não requer tamanho
+  const doesNotRequireSize = 
+    product?.category === 'beauty' || 
+    product?.gender === 'beauty' ||
+    product?.subcategory === 'skincare' ||
+    !product?.variants || 
+    product?.variants.length === 0;
+
   const handleToggleFavorite = e => {
     e.stopPropagation();
     e.preventDefault();
@@ -54,14 +62,17 @@ export default function ProductDetails({ products }) {
   };
 
   const handleAddToCart = () => {
-    // Se o produto tem variantes (tamanhos), verificar se foi selecionado
-    if (product.variants && product.variants.length > 0 && !selectedSize) {
-      showError("Por favor, selecione um tamanho antes de adicionar ao carrinho.", 3000);
-      return;
+    // Se o produto não requer tamanho (beauty, skincare, ou sem variantes), adicionar diretamente
+    if (!doesNotRequireSize) {
+      // Para produtos que requerem tamanho, verificar se foi selecionado
+      if (product.variants && product.variants.length > 0 && !selectedSize) {
+        showError("Por favor, selecione um tamanho antes de adicionar ao carrinho.", 3000);
+        return;
+      }
     }
 
-    // Adicionar ao carrinho
-    addToCart(product, 1, selectedSize);
+    // Adicionar ao carrinho (sem tamanho para produtos que não requerem, com tamanho para os outros)
+    addToCart(product, 1, selectedSize || null);
     
     // Mostrar notificação de sucesso com botão funcional VER CARRINHO
     showToast(
@@ -135,7 +146,8 @@ export default function ProductDetails({ products }) {
         )}
         <p className="price">{product.price.toFixed(2)} €</p>
 
-        {product.variants?.length > 0 && (
+        {/* Só mostrar seletor de tamanho se o produto requer tamanho */}
+        {!doesNotRequireSize && product.variants?.length > 0 && (
           <select 
             className="size-select"
             value={selectedSize}

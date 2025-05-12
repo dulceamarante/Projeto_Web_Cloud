@@ -3,27 +3,95 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FavoritesContext } from '../contexts/FavoritesContext';
 import { ProductContext } from '../contexts/ProductContext';
-import { CartContext } from '../contexts/CartContext'; // Importando CartContext
+import { CartContext } from '../contexts/CartContext';
 import ProductCard from '../components/products/ProductCard';
 import { FaTrash, FaTimes } from 'react-icons/fa';
+import products from '../data/products.json'; // Importar diretamente como no SimilarProducts
 import './FavoritesPage.css';
 
 export default function FavoritesPage() {
   const { favorites, toggleFavorite, removeFromFavorites, clearFavorites } = useContext(FavoritesContext);
   const { getTopSellingProducts } = useContext(ProductContext);
-  const { addToCart } = useContext(CartContext); // Adicionando acesso ao CartContext
+  const { addToCart } = useContext(CartContext);
   
   const [selectMode, setSelectMode] = useState(false);
   const [removingItems, setRemovingItems] = useState([]);
-  
-  // always fetch 5 suggestions
-  const suggestedProducts = getTopSellingProducts(5);
+  const [similarProducts, setSimilarProducts] = useState([]);
   
   // update document title
   useEffect(() => {
     document.title = 'Meus Favoritos | BDRP';
     return () => { document.title = 'BDRP'; };
   }, []);
+  
+  // Lógica igual à do SimilarProducts, mas baseada nos favoritos
+  useEffect(() => {
+    let selectedProducts = [];
+         
+    if (favorites && favorites.length > 0) {
+      // Extrair informações dos produtos nos favoritos (igual ao carrinho)
+      const favoriteItems = favorites.map(item => item.id);
+      const favoriteCategories = [...new Set(favorites.map(item => item.category))];
+      const favoriteSubcategories = [...new Set(favorites.map(item => item.subcategory).filter(Boolean))];
+      const favoriteGenders = [...new Set(favorites.map(item => item.gender))];
+       
+      // Filtrar produtos similares
+      const similar = products.filter(product => {
+        // Não incluir produtos que já estão nos favoritos
+        if (favoriteItems.includes(product.id)) return false;
+         
+        // Calcular pontuação de similaridade
+        let similarity = 0;
+         
+        // Mesma categoria = +5 pontos
+        if (favoriteCategories.includes(product.category)) {
+          similarity += 5;
+        }
+         
+        // Mesma subcategoria = +3 pontos
+        if (favoriteSubcategories.includes(product.subcategory)) {
+          similarity += 3;
+        }
+         
+        // Mesmo gênero = +2 pontos
+        if (favoriteGenders.includes(product.gender)) {
+          similarity += 2;
+        }
+         
+        return similarity > 0;
+      });
+       
+      // Ordenar por similaridade e popularidade
+      const sortedSimilar = similar.sort((a, b) => {
+        const aScore = (favoriteCategories.includes(a.category) ? 5 : 0) +
+                      (favoriteGenders.includes(a.gender) ? 2 : 0) +
+                      (a.popularity / 100);
+        const bScore = (favoriteCategories.includes(b.category) ? 5 : 0) +
+                      (favoriteGenders.includes(b.gender) ? 2 : 0) +
+                      (b.popularity / 100);
+        return bScore - aScore;
+      });
+       
+      // Se temos produtos similares suficientes, usar eles
+      if (sortedSimilar.length >= 15) {
+        selectedProducts = sortedSimilar.slice(0, 15);
+      } else {
+        // Se não temos suficientes, misturar com produtos populares
+        const popularProducts = products
+          .filter(product => !favoriteItems.includes(product.id) && !sortedSimilar.includes(product))
+          .sort((a, b) => b.popularity - a.popularity);
+                 
+        selectedProducts = [...sortedSimilar, ...popularProducts].slice(0, 15);
+      }
+    } else {
+      // Se os favoritos estiverem vazios, mostrar produtos populares
+      selectedProducts = products
+        .sort((a, b) => b.popularity - a.popularity)
+        .slice(0, 15);
+    }
+     
+    setSimilarProducts(selectedProducts);
+  }, [favorites]);
   
   // Toggle select mode with animation
   const toggleSelectMode = () => {
@@ -37,17 +105,24 @@ export default function FavoritesPage() {
     
     // Aguardar a animação terminar antes de remover do estado
     setTimeout(() => {
-      removeFromFavorites(product.id); // CORRIGIDO: Passar o ID em vez do produto completo
+      removeFromFavorites(product.id);
       setRemovingItems(prev => prev.filter(id => id !== product.id));
-    }, 400); // Duração da animação
+    }, 400);
   };
 
-  // Função para adicionar ao carrinho diretamente dos favoritos
-  const handleAddToCart = (productId, variant) => {
-    const product = favorites.find(fav => fav.id === productId);
-    if (product) {
-      addToCart(product, 1, variant?.size || null);
-    }
+  // Preparar os dados uniformemente
+  const prepareFavoriteForCard = (product) => {
+    return {
+      ...product,
+      isFavorite: true // Garantir que todos os favoritos têm esta flag
+    };
+  };
+
+  const prepareSuggestionForCard = (product) => {
+    return {
+      ...product,
+      isFavorite: favorites.some(fav => fav.id === product.id) // Verificar se já é favorito
+    };
   };
 
   return (
@@ -88,11 +163,8 @@ export default function FavoritesPage() {
               className={`favorites-item ${removingItems.includes(prod.id) ? 'fade-out' : 'fade-in'}`}
             >
               <ProductCard
-                product={{ ...prod, isFavorite: true }}
+                product={prepareFavoriteForCard(prod)}
                 toggleFavorite={() => toggleFavorite(prod)}
-                addToCart={handleAddToCart} // Usando a função para adicionar ao carrinho
-                showTrash={!selectMode} // Mostrar lixeira apenas no modo normal
-                removeFromFavorites={handleRemoveProduct} // Usar a função com animação
               />
             </div>
           ))}
@@ -104,23 +176,21 @@ export default function FavoritesPage() {
         </div>
       )}
       
-      {/* A seção de sugestões SEMPRE aparece */}
-      <section className="suggestions-section">
-        <h2>TALVEZ LHE INTERESSE</h2>
-        <div className="suggestions-grid">
-          {suggestedProducts.map(prod => (
-            <ProductCard
-              key={prod.id}
-              product={{ 
-                ...prod, 
-                isFavorite: favorites.some(fav => fav.id === prod.id) 
-              }}
-              toggleFavorite={() => toggleFavorite(prod)}
-              addToCart={handleAddToCart} // Usando a mesma função para adicionar ao carrinho
-            />
-          ))}
-        </div>
-      </section>
+      {/* A seção de sugestões SEMPRE aparece - igual ao SimilarProducts */}
+      {similarProducts && similarProducts.length > 0 && (
+        <section className="similar-products-section">
+          <h2>TALVEZ LHE INTERESSE</h2>
+          <div className="similar-products-grid">
+            {similarProducts.map(product => (
+              <ProductCard 
+                key={product.id}
+                product={prepareSuggestionForCard(product)}
+                toggleFavorite={() => toggleFavorite(product)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

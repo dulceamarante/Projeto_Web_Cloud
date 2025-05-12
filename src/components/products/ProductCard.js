@@ -10,9 +10,8 @@ import { Link } from 'react-router-dom';
 
 export default function ProductCard({
   product,
-  addToCart, // Fallback caso não venha do context
-  showTrash = false,
-  removeFromFavorites,
+  toggleFavorite: externalToggleFavorite,
+  addToCart: externalAddToCart, // Fallback, mas normalmente não usado
 }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [hover, setHover] = useState(false);
@@ -27,8 +26,9 @@ export default function ProductCard({
 
   // Verificar se estamos na página do carrinho
   const isOnCartPage = location.pathname === '/cart';
-
-  const isProductFavorite = isFavorite(product.id);
+  
+  // Verificar se é favorito (usando a prop product.isFavorite como prioridade)
+  const isProductFavorite = product.isFavorite !== undefined ? product.isFavorite : isFavorite(product.id);
   
   const prev = e => {
     e.stopPropagation();
@@ -47,7 +47,14 @@ export default function ProductCard({
   const handleToggleFavorite = e => {
     e.stopPropagation();
     e.preventDefault();
-    toggleFavorite(product);
+    
+    // Usar a função externa se fornecida, senão usar a do context
+    if (externalToggleFavorite) {
+      externalToggleFavorite();
+    } else {
+      toggleFavorite(product);
+    }
+    
     setAnimateHeart(true);
     setTimeout(() => setAnimateHeart(false), 1200);
   };
@@ -56,7 +63,9 @@ export default function ProductCard({
     e.stopPropagation();
     setSelectedSize(variant.size);
     setAnimateSize(true);
+    
     setTimeout(() => {
+      // Sempre usar o context addToCart primeiro
       if (contextAddToCart) {
         contextAddToCart(product, 1, variant.size);
         
@@ -74,8 +83,9 @@ export default function ProductCard({
             }
           );
         }
-      } else if (addToCart) {
-        addToCart(productId, variant);
+      } else if (externalAddToCart) {
+        // Fallback para a função externa
+        externalAddToCart(productId, variant);
         
         // Mesmo comportamento para fallback
         if (isOnCartPage) {
@@ -90,6 +100,7 @@ export default function ProductCard({
           );
         }
       }
+      
       setTimeout(() => {
         setAnimateSize(false);
       }, 600);
@@ -147,20 +158,6 @@ export default function ProductCard({
               </button>
             ))}
           </div>
-        )}
-
-        {/* Botão de lixeira se for para remover favoritos */}
-        {showTrash && removeFromFavorites && (
-          <button
-            className="trash-button"
-            onClick={e => {
-              e.stopPropagation();
-              removeFromFavorites(product);
-            }}
-            aria-label="Remover dos favoritos"
-          >
-            <FaTrash />
-          </button>
         )}
       </div>
 
