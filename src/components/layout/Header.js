@@ -16,6 +16,7 @@ import {
 import './Header.css';
 
 const Header = () => {
+  // Estados locais para controlar interações do utilizador
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('mulher');
   const [searchOpen, setSearchOpen] = useState(false);
@@ -23,11 +24,12 @@ const Header = () => {
   const [cartOpen, setCartOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  // Contextos globais de favoritos e carrinho
   const { favorites } = useContext(FavoritesContext);
   const { cart, getCartItemCount } = useContext(CartContext);
   const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
 
-
+  // Atualiza estado de mobile consoante o tamanho do ecrã
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -37,6 +39,7 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Fecha modais/menus com a tecla Escape
   useEffect(() => {
     const handleKey = e => {
       if (e.key === 'Escape') {
@@ -50,14 +53,15 @@ const Header = () => {
     return () => window.removeEventListener('keydown', handleKey);
   }, [menuOpen, searchOpen, favOpen, cartOpen]);
 
+  // Categorias e respetivas rotas
   const categories = ['mulher', 'homem', 'beauty'];
-
   const categoryPages = {
     mulher: '/',
     homem: '/homem',
     beauty: '/beauty'
   };
 
+  // Ações ao passar o rato (apenas em desktop)
   const handleCategoryHover = cat => {
     if (!isMobile) {
       setActiveCategory(cat);
@@ -65,16 +69,19 @@ const Header = () => {
     }
   };
 
+  // Ações ao clicar em categorias
   const handleCategoryClick = cat => {
     setActiveCategory(cat);
     setMenuOpen(true);
   };
 
+  // Ações ao clicar numa categoria a partir da pesquisa
   const handleSearchCategoryClick = (category) => {
     setActiveCategory(category);
     setMenuOpen(true);
   };
 
+  // Fecha o menu lateral com animação
   const closeMenuWithAnimation = () => {
     const sidemenusRef = document.querySelectorAll('.side-menu');
     const subcategoriesRef = document.querySelectorAll('.subcategories-container');
@@ -105,9 +112,11 @@ const Header = () => {
 
   return (
     <>
+      {/* Cabeçalho principal */}
       <header className="header">
         <div className="header-left">
           {isMobile ? (
+            // Botão do menu (hamburger) para mobile
             <button 
               className="mobile-hamburger"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -116,6 +125,7 @@ const Header = () => {
               {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
             </button>
           ) : (
+            // Navegação de categorias para desktop
             <ul className="desktop-nav">
               {categories.map(cat => (
                 <li key={cat} className="header-item">
@@ -144,12 +154,12 @@ const Header = () => {
           )}
         </div>
 
-
+        {/* Logotipo ao centro */}
         <div className="header-center">
           <Link to="/">BDRP</Link>
         </div>
 
-
+        {/* Ícones ou links à direita (pesquisa, favoritos, carrinho) */}
         <div className="header-right">
           {isMobile ? (
             <>
@@ -187,7 +197,7 @@ const Header = () => {
         </div>
       </header>
 
-
+      {/* Menu lateral mobile */}
       {isMobile && menuOpen && (
         <div className="mobile-menu-overlay" onClick={closeMenuWithAnimation}>
           <div className="mobile-menu" onClick={e => e.stopPropagation()}>
@@ -218,6 +228,7 @@ const Header = () => {
         </div>
       )}
 
+      {/* Menu lateral de categorias (desktop) */}
       <SideMenu
         isOpen={menuOpen && !isMobile}
         onClose={closeMenuWithAnimation}
@@ -225,6 +236,7 @@ const Header = () => {
         onCategoryChange={setActiveCategory}
       />
 
+      {/* Modais para pesquisa, favoritos e carrinho */}
       {searchOpen && <SearchModal onClose={() => setSearchOpen(false)} onCategoryClick={handleSearchCategoryClick} />}
       {favOpen && <FavoritesPopOver onClose={() => setFavOpen(false)} />}
       {cartOpen && <CartPopOver onClose={() => setCartOpen(false)} />}
