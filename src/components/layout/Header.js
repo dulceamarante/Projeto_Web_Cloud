@@ -6,6 +6,13 @@ import CartPopOver from './CartPopOver';
 import SideMenu from './SideMenu';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import { CartContext } from '../../contexts/CartContext';
+import { 
+  FiMenu, 
+  FiX, 
+  FiSearch, 
+  FiHeart, 
+  FiShoppingBag 
+} from 'react-icons/fi';
 import './Header.css';
 
 const Header = () => {
@@ -14,10 +21,21 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [favOpen, setFavOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const { favorites } = useContext(FavoritesContext);
   const { cart, getCartItemCount } = useContext(CartContext);
   const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
+
+  // Monitor window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const handleKey = e => {
@@ -41,6 +59,13 @@ const Header = () => {
   };
 
   const handleCategoryHover = cat => {
+    if (!isMobile) {
+      setActiveCategory(cat);
+      setMenuOpen(true);
+    }
+  };
+
+  const handleCategoryClick = cat => {
     setActiveCategory(cat);
     setMenuOpen(true);
   };
@@ -81,45 +106,121 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <ul className="header-left">
-          {categories.map(cat => (
-            <li key={cat} className="header-item">
-              <Link
-                to={categoryPages[cat]}
-                className={menuOpen && activeCategory === cat ? 'active' : ''}
-                onMouseEnter={() => handleCategoryHover(cat)}
-                onClick={() => setActiveCategory(cat)}
-              >
-                {cat.toUpperCase()}
-              </Link>
-            </li>
-          ))}
-          {menuOpen && (
-            <li className="header-item close-button-container">
-              <button
-                className="close-menu-button"
-                onClick={closeMenuWithAnimation}
-                aria-label="Fechar menu"
-              >
-                ×
-              </button>
-            </li>
+        {/* Mobile Left - Hamburger */}
+        <div className="header-left">
+          {isMobile ? (
+            <button 
+              className="mobile-hamburger"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Abrir menu"
+            >
+              {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          ) : (
+            <ul className="desktop-nav">
+              {categories.map(cat => (
+                <li key={cat} className="header-item">
+                  <Link
+                    to={categoryPages[cat]}
+                    className={menuOpen && activeCategory === cat ? 'active' : ''}
+                    onMouseEnter={() => handleCategoryHover(cat)}
+                    onClick={() => handleCategoryClick(cat)}
+                  >
+                    {cat.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
+              {menuOpen && (
+                <li className="header-item close-button-container">
+                  <button
+                    className="close-menu-button"
+                    onClick={closeMenuWithAnimation}
+                    aria-label="Fechar menu"
+                  >
+                    ×
+                  </button>
+                </li>
+              )}
+            </ul>
           )}
-        </ul>
+        </div>
 
+        {/* Logo Center */}
         <div className="header-center">
           <Link to="/">BDRP</Link>
         </div>
 
+        {/* Right Side */}
         <div className="header-right">
-          <a href="#" onClick={e => { e.preventDefault(); setSearchOpen(true); }}>PESQUISAR</a>
-          <a href="#" onClick={e => { e.preventDefault(); setFavOpen(o => !o); if (cartOpen) setCartOpen(false); }}>FAVORITOS ({favorites.length})</a>
-          <a href="#" onClick={e => { e.preventDefault(); setCartOpen(o => !o); if (favOpen) setFavOpen(false); }}>CARRINHO ({cartItemCount})</a>
+          {isMobile ? (
+            <>
+              <button 
+                className="icon-button"
+                onClick={() => setSearchOpen(true)}
+                aria-label="Pesquisar"
+              >
+                <FiSearch size={20} />
+              </button>
+              <button 
+                className="icon-button"
+                onClick={() => { setFavOpen(!favOpen); if (cartOpen) setCartOpen(false); }}
+                aria-label="Favoritos"
+              >
+                <FiHeart size={20} />
+                {favorites.length > 0 && <span className="badge">{favorites.length}</span>}
+              </button>
+              <button 
+                className="icon-button"
+                onClick={() => { setCartOpen(!cartOpen); if (favOpen) setFavOpen(false); }}
+                aria-label="Carrinho"
+              >
+                <FiShoppingBag size={20} />
+                {cartItemCount > 0 && <span className="badge">{cartItemCount}</span>}
+              </button>
+            </>
+          ) : (
+            <>
+              <a href="#" onClick={e => { e.preventDefault(); setSearchOpen(true); }}>PESQUISAR</a>
+              <a href="#" onClick={e => { e.preventDefault(); setFavOpen(!favOpen); if (cartOpen) setCartOpen(false); }}>FAVORITOS ({favorites.length})</a>
+              <a href="#" onClick={e => { e.preventDefault(); setCartOpen(!cartOpen); if (favOpen) setFavOpen(false); }}>CARRINHO ({cartItemCount})</a>
+            </>
+          )}
         </div>
       </header>
 
+      {/* Mobile Menu Overlay */}
+      {isMobile && menuOpen && (
+        <div className="mobile-menu-overlay" onClick={closeMenuWithAnimation}>
+          <div className="mobile-menu" onClick={e => e.stopPropagation()}>
+            <div className="mobile-menu-categories">
+              {categories.map(cat => (
+                <Link
+                  key={cat}
+                  to={categoryPages[cat]}
+                  className="mobile-category-link"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setActiveCategory(cat);
+                  }}
+                >
+                  <span>{cat.toUpperCase()}</span>
+                  <svg 
+                    className="category-arrow" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       <SideMenu
-        isOpen={menuOpen}
+        isOpen={menuOpen && !isMobile}
         onClose={closeMenuWithAnimation}
         initialCategory={activeCategory}
         onCategoryChange={setActiveCategory}
