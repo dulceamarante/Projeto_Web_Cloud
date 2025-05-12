@@ -1,16 +1,16 @@
-/* 1) Wrapper full-bleed com padding */
+
 .top-products-section {
   width: 100vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   margin: 60px 5px 10px;
-  padding: 0 0px;  /* Padding para criar espaço nas bordas */
+  padding: 0 0px;  
   box-sizing: border-box;
   overflow: visible;
 }
 
-/* 2) Título centralizado */
+
 .top-products-section .section-title {
   font-size: 40px;
   font-weight: bold;
@@ -22,15 +22,14 @@
   color: #121212;
 }
 
-/* 3) Grid de produtos - com gap entre cards */
+
 .top-products-section .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap: 20px; /* Gap em todas as direções */
+  gap: 20px;
   position: relative;
 }
 
-/* 4) Responsabilidade full-bleed */
 .responsibility-section {
   width: 100vw;
   position: relative;
@@ -49,7 +48,7 @@
   margin-top: 60px;
 }
 
-/* 5) Conteúdo de responsabilidade alinhado*/
+
 .responsibility-content {
   max-width: 1600px;
   width: 100%;
@@ -68,7 +67,7 @@
   color: #fff;
 }
 
-/* 6) Botão outline */
+
 .outline-button {
   background: transparent;
   border: 1px solid white;
@@ -86,7 +85,7 @@
   transform: translateY(-2px);
 }
 
-/* 7) Estados loading / sem produtos */
+
 .loading,
 .no-products {
   text-align: center;
@@ -95,7 +94,7 @@
   color: #666;
 }
 
-/* 8) Responsivo */
+
 @media (max-width: 1024px) {
   .top-products-section .products-grid {
     grid-template-columns: repeat(3, 1fr);

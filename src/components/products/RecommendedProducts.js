@@ -1,23 +1,20 @@
-// src/components/products/RecommendedProducts.js
+
 import React, { useContext } from 'react';
 import { ProductContext } from '../../contexts/ProductContext';
-import ProductCard from './ProductCard'; // Importa o ProductCard existente
+import ProductCard from './ProductCard'; 
 import './RecommendedProducts.css';
 
-/**
- * Componente para exibir produtos vistos recentemente
- * Sempre exibe a seção, mesmo quando não há produtos
- */
+
 export default function RecommendedProducts({
   title = "VIU RECENTEMENTE",
   limit = 5
 }) {
   const { getRecentlyViewedProducts } = useContext(ProductContext);
   
-  // Obter produtos vistos recentemente
+
   const products = getRecentlyViewedProducts ? getRecentlyViewedProducts(limit) : [];
   
-  // Verificar se há produtos para mostrar
+
   const hasProducts = products && products.length > 0;
   
   return (

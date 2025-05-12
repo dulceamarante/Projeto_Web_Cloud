@@ -29,7 +29,7 @@ export default function ProductsPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => setSidebarOpen(o => !o);
   
-  // Verifica se estamos na categoria beauty
+
   const isBeautyCategory = gender === 'beauty';
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function ProductsPage() {
       (category ? category.toUpperCase() : 'VER TUDO')
     );
     
-    // Não aplicar filtros de cor e tamanho para beauty
+ 
     if (!isBeautyCategory) {
       setActiveColor(p.get('color') || '');
       setActiveSize(p.get('size') || '');
@@ -98,7 +98,7 @@ export default function ProductsPage() {
       f = f.filter(p => p.category.toUpperCase() === activeType);
     }
 
-    // Aplica filtros de cor e tamanho apenas se não for beauty
+
     if (!isBeautyCategory) {
       if (activeColor) {
         f = f.filter(p =>
@@ -138,7 +138,7 @@ export default function ProductsPage() {
     if (sortOption !== 'popularity') p.set('sort', sortOption);
     if (activeType !== 'VER TUDO' && !category) p.set('type', activeType);
     
-    // Adiciona filtros de cor e tamanho apenas se não for beauty
+ 
     if (!isBeautyCategory) {
       if (activeColor) p.set('color', activeColor);
       if (activeSize) p.set('size', activeSize);
@@ -243,7 +243,7 @@ export default function ProductsPage() {
     <div className="products-page">
       <h1 className="page-title">{getPageTitle()}</h1>
 
-      {/* Categories + Filters */}
+ 
       <div className="products-view-controls">
         <div className="product-type-filters-inline">
           {productTypes.map(t => (
@@ -263,13 +263,13 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* Overlay */}
+
       <div
         className={sidebarOpen ? 'overlay open' : 'overlay'}
         onClick={toggleSidebar}
       />
 
-      {/* Sidebar */}
+
       <div className={sidebarOpen ? 'filter-sidebar open' : 'filter-sidebar'}>
         <div className="sidebar-header">
           <h3>Filtros</h3>
@@ -278,7 +278,7 @@ export default function ProductsPage() {
           </button>
         </div>
 
-        {/* Mostrar filtros de cor e tamanho apenas se não for beauty */}
+
         {!isBeautyCategory && (
           <>
             <div className="filter-section">
@@ -313,7 +313,7 @@ export default function ProductsPage() {
           </>
         )}
 
-        {/* Mostrar sempre o filtro de preço para todos os gêneros */}
+
         <div className="filter-section">
           <h4>Preço</h4>
           <div className="price-filters">
@@ -328,7 +328,7 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* Mostrar ordenação por popularidade e avaliação apenas se não for beauty */}
+
         {!isBeautyCategory && (
           <div className="filter-section">
             <h4>Ordenar</h4>
@@ -380,7 +380,7 @@ export default function ProductsPage() {
   );
 }
 
-// Helpers
+
 function filterProductsByGender(products, genderFilter) {
   if (!genderFilter) return products;
 

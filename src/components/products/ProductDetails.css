@@ -1,4 +1,4 @@
-/* CSS original mantido, apenas adicionando cursor nos tamanhos */
+
 
 .product-details-page {
   display: flex;
@@ -53,7 +53,7 @@
   border-radius: 999px;
   padding: 8px;
   font-size: 16px;
-  cursor: pointer; /* ÚNICO ACRÉSCIMO - cursor nos tamanhos */
+  cursor: pointer;
 }
 
 .add-to-cart-btn {

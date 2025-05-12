@@ -1,4 +1,4 @@
-// src/components/products/ProductCard.js
+
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 export default function ProductCard({
   product,
   toggleFavorite: externalToggleFavorite,
-  addToCart: externalAddToCart, // Fallback, mas normalmente não usado
+  addToCart: externalAddToCart, 
 }) {
   const [currentImage, setCurrentImage] = useState(0);
   const [hover, setHover] = useState(false);
@@ -24,10 +24,10 @@ export default function ProductCard({
   const location = useLocation();
   const notification = useNotification();
 
-  // Verificar se estamos na página do carrinho
+
   const isOnCartPage = location.pathname === '/cart';
   
-  // Verificar se é favorito (usando a prop product.isFavorite como prioridade)
+
   const isProductFavorite = product.isFavorite !== undefined ? product.isFavorite : isFavorite(product.id);
   
   const prev = e => {
@@ -48,7 +48,7 @@ export default function ProductCard({
     e.stopPropagation();
     e.preventDefault();
     
-    // Usar a função externa se fornecida, senão usar a do context
+
     if (externalToggleFavorite) {
       externalToggleFavorite();
     } else {
@@ -65,16 +65,16 @@ export default function ProductCard({
     setAnimateSize(true);
     
     setTimeout(() => {
-      // Sempre usar o context addToCart primeiro
+
       if (contextAddToCart) {
         contextAddToCart(product, 1, variant.size);
         
-        // Mostrar notificação baseada na página atual
+
         if (isOnCartPage) {
-          // Na página do carrinho: notificação simples SEM botão "Ver Carrinho"
+
           notification.showToast('Produto adicionado ao carrinho!');
         } else {
-          // Outras páginas: notificação COM botão "Ver Carrinho"
+
           notification.showToast(
             'Produto adicionado ao carrinho!',
             'VER CARRINHO',
@@ -84,10 +84,10 @@ export default function ProductCard({
           );
         }
       } else if (externalAddToCart) {
-        // Fallback para a função externa
+
         externalAddToCart(productId, variant);
         
-        // Mesmo comportamento para fallback
+
         if (isOnCartPage) {
           notification.showToast('Produto adicionado ao carrinho!');
         } else {
@@ -123,7 +123,7 @@ export default function ProductCard({
       onMouseLeave={() => setHover(false)}
     >
       <div className="product-image-container">
-        {/* Imagem com Link */}
+
         <Link to={`/product/${product.id}`} className="product-card-link">
           <img
             src={product.images?.[currentImage] || product.image}
@@ -132,7 +132,7 @@ export default function ProductCard({
           />
         </Link>
 
-        {/* Setas de navegação fora do Link */}
+
         {product.images?.length > 1 && (
           <>
             <button className="nav-arrow left" onClick={prev}>
@@ -144,7 +144,7 @@ export default function ProductCard({
           </>
         )}
 
-        {/* Tamanhos em hover */}
+
         {hover && product.variants?.length > 0 && (
           <div className="size-overlay">
             {product.variants.map(v => (
@@ -161,7 +161,7 @@ export default function ProductCard({
         )}
       </div>
 
-      {/* Info do produto + botão de favorito */}
+
       <div className="product-info">
         <div className="title-heart">
           <div className="product-info-left">

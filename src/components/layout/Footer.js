@@ -8,7 +8,7 @@ const Footer = () => {
   const { showSuccess } = useNotification();
   const location = useLocation();
 
-  // Scroll to top whenever location changes
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
@@ -16,15 +16,15 @@ const Footer = () => {
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
     if (email.trim()) {
-      // Aqui você pode adicionar a lógica para enviar o email para o backend
+
       showSuccess("Newsletter subscrita!");
-      setEmail(''); // Limpar o campo
+      setEmail(''); 
     }
   };
 
-  // Handler para links internos - garantir scroll to top
+
   const handleInternalLink = () => {
-    // Pequeno delay para garantir que o React Router atualize primeiro
+
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, 10);

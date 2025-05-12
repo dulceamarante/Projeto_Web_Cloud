@@ -6,14 +6,14 @@
     padding: 0;
   }
   
-  /* Limita o conteúdo interno a 1600px e aplica gutters */
+ 
   .categories-inner {
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
   }
   
-  /* Título */
+
   .pack-bags-section {
     text-align: center;
     margin: 35px 0 0;
@@ -31,21 +31,21 @@
   }
   
   
-  /* Grid de 5 colunas iguais */
+
   .categories-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0,1fr));
     gap: 10px;
   }
   
-  /* Cada item */
+
   .category-item {
     display: block;
     text-decoration: none;
     color: inherit;
   }
   
-  /* Envelope retangular 4/5 e cantos arredondados */
+
   .category-image {
     width: 100%;
     aspect-ratio: 4 / 5;
@@ -64,7 +64,7 @@
     transform: scale(1.05);
   }
   
-  /* Legenda abaixo, centralizada */
+
   .category-item h3 {
     margin-top: 12px;
     font-size: 18px;
@@ -74,7 +74,7 @@
     color: #333;
   }
   
-  /* Responsivo: 3 colunas em tablet, 2 em mobile */
+
   @media (max-width: 1024px) {
     .categories-grid {
       grid-template-columns: repeat(3, minmax(0,1fr));

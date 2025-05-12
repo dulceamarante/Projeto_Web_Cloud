@@ -1,11 +1,11 @@
 .search-modal-overlay {
   position: fixed;
-  top: 70px; /* abaixo do header */
+  top: 70px;
   left: 0;
   width: 100%;
   height: calc(100vh - 70px);
   background: white;
-  z-index: 998; /* Menor que o z-index do SideMenu (999) */
+  z-index: 998; 
   overflow-y: auto;
   padding: 40px 0;
   animation: fadeIn 0.3s ease-in-out;
@@ -25,9 +25,7 @@
   to { opacity: 0; transform: translateY(-10px); }
 }
 
-/* ----------------------------------------
-   CONTAINER GERAL
-   ---------------------------------------- */
+
 .search-page {
   width: 100%;
   margin: 0 auto;
@@ -35,9 +33,7 @@
   box-sizing: border-box;
 }
 
-/* ----------------------------------------
-   CATEGORIAS
-   ---------------------------------------- */
+
 .search-categories {
   display: flex;
   justify-content: center;
@@ -66,27 +62,23 @@
   background-color: #000;
 }
 
-/* ----------------------------------------
-   CLOSE BUTTON (o "×")
-   ---------------------------------------- */
+
 .close-modal {
   position: absolute;
-  top: 15px;        /* distancia ao topo do overlay */
-  right: 15px;      /* distancia ao canto direito */
-  font-size: 36px;  /* tamanho maior do "×" */
-  line-height: 1;   /* evita desalinhamentos */
+  top: 15px;       
+  right: 15px;      
+  font-size: 36px;  
+  line-height: 1;   
   background: none;
   border: none;
   cursor: pointer;
   z-index: 10000;
 }
 
-/* ----------------------------------------
-   CABEÇALHO: O QUE PROCURA?
-   ---------------------------------------- */
+
 .search-header {
   width: 100%;
-  padding: 40px 0 60px;   /* mais espaçamento em cima e em baixo */
+  padding: 40px 0 60px;   
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -94,14 +86,14 @@
 
 .search-form {
   width: 100%; 
-  text-align: center;    /* centra o inline-block interno */
+  text-align: center;    
 }
 
 .search-input {
-  display: block;          /* Change from inline-block to block */
-  width: 80%;              /* Use percentage of parent instead of viewport width */
-  max-width: 800px;        /* Reasonable max-width */
-  margin: 0 auto;          /* Center the input */
+  display: block;          
+  width: 80%;              
+  max-width: 800px;      
+  margin: 0 auto;        
   padding: 16px 0;
   font-size: 20px;
   text-align: center;
@@ -123,9 +115,7 @@
   font-size: 20px;
 }
 
-/* ----------------------------------------
-   TÍTULO DE SECÇÃO
-   ---------------------------------------- */
+
 .section-title {
   font-size: 28px;
   font-weight: 700;
@@ -136,9 +126,7 @@
   font-style: normal;
 }
 
-/* ----------------------------------------
-   GRID DE PRODUTOS: SEMPRE 5 COLUNAS
-   ---------------------------------------- */
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr) !important;
@@ -149,9 +137,7 @@
   justify-items: center;
 }
 
-/* ----------------------------------------
-   CARTÕES DE PRODUTO
-   ---------------------------------------- */
+
 .product-card {
   width: 100%;
   text-align: center;
@@ -230,9 +216,7 @@
   font-size: 14px;
 }
 
-/* ----------------------------------------
-   "Talvez lhe interesse"
-   ---------------------------------------- */
+
 .interest-section .products-grid {
   margin-top: 20px;
 }
@@ -242,9 +226,7 @@
   color:#6a6969;
 }
 
-/* ----------------------------------------
-   SEM RESULTADOS
-   ---------------------------------------- */
+
 .no-results {
   text-align: center;
   margin: 0 auto 60px;
@@ -260,16 +242,12 @@
   color: #666;
 }
 
-/* ----------------------------------------
-   REMOVE SIDEBARS GLOBAIS (se houver)
-   ---------------------------------------- */
+
 .sidebar, .side-nav {
   display: none !important;
 }
 
-/* ----------------------------------------
-   RESPONSIVO
-   ---------------------------------------- */
+
 @media (max-width: 1300px) {
   .products-grid { gap: 40px; }
 }

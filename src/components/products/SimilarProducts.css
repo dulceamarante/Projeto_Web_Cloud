@@ -1,6 +1,4 @@
-/* src/components/products/SimilarProducts.css */
 
-/* Seção "Talvez Lhe Interesse" */
 .similar-products-section {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -12,17 +10,17 @@
 }
 
 .similar-products-section h2 {
-  font-size: 36px; /* Aumentado de 24px para 36px */
-  font-weight: 600; /* Aumentado de 500 para 600 (mais negrito) */
-  margin-bottom: 40px; /* Aumentado de 30px para 40px */
+  font-size: 36px; 
+  font-weight: 600; 
+  margin-bottom: 40px; 
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
   text-align: left;
   color: #000;
-  letter-spacing: 1px; /* Adicionado espaçamento entre letras */
+  letter-spacing: 1px;
 }
 
-/* Grid com exatamente 5 colunas em desktop */
+
 .similar-products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -34,7 +32,7 @@
   grid-auto-flow: row;
 }
 
-/* Responsividade - mantendo divisões lógicas */
+
 @media (min-width: 1400px) {
   .similar-products-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -56,28 +54,28 @@
   }
 }
 
-/* Tablet - 3 produtos por linha (5 linhas) */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .similar-products-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
   
-  /* Título um pouco menor em tablet */
+
   .similar-products-section h2 {
     font-size: 32px;
     margin-bottom: 35px;
   }
 }
 
-/* Mobile - 2 produtos por linha */
+
 @media (max-width: 767px) {
   .similar-products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
   
-  /* Título menor em mobile */
+
   .similar-products-section h2 {
     font-size: 28px;
     margin-bottom: 30px;
@@ -85,7 +83,7 @@
   }
 }
 
-/* Garantir que cada Product Card seja visível */
+
 .similar-products-grid .product-card {
   width: 100%;
   height: auto;
@@ -100,7 +98,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Estilos para garantir que todas as linhas sejam exibidas */
+
 .similar-products-section {
   height: auto !important;
   max-height: none !important;
@@ -113,7 +111,7 @@
   overflow: visible !important;
 }
 
-/* Adicionar espaçamento extra entre a seção similar e o footer */
+
 .similar-products-section + .footer-spacer {
   height: 100px;
 }

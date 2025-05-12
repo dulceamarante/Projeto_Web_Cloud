@@ -1,4 +1,4 @@
-/* Reset & Base */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Container */
+
 .favorites-page {
   padding: 20px 40px 40px;
   max-width: 1600px;
@@ -18,7 +18,7 @@ body {
   margin-top: 70px; 
 }
 
-/* Header */
+
 .favorites-header {
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ body {
   flex: 1;
 }
 
-/* Tamanho de título */
+
 .favorites-header h1 {
   font-size: 30px;
   font-weight: 600;
@@ -39,14 +39,14 @@ body {
   color: #000;
 }
 
-/* Tamanho de subtítulo */
+
 .favorites-header p {
   font-size: 18px;
   color: #535252;
   margin-bottom: 8px;
 }
 
-/* linha única */
+
 .favorites-header hr.single-line {
   border: none;
   height: 0px;
@@ -55,7 +55,7 @@ body {
   padding: 0;
 }
 
-/* Actions */
+
 .favorites-header .actions {
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ body {
   opacity: 0.7;
 }
 
-/* Controles de seleção */
+
 .selection-controls {
   display: flex;
   gap: 15px;
@@ -104,7 +104,7 @@ body {
   color: #e41e63;
 }
 
-/* Favorites grid - Um pouco maiores */
+
 .favorites-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
@@ -117,7 +117,7 @@ body {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Cards um pouco maiores */
+
 .favorites-grid .product-card {
   width: 100%;
   height: auto;
@@ -132,7 +132,7 @@ body {
   overflow: hidden;
 }
 
-/* Imagens um pouco maiores */
+
 .favorites-grid .product-card .product-image-container {
   aspect-ratio: 4/5;
   width: 100%;
@@ -140,7 +140,7 @@ body {
   min-height: 240px;
 }
 
-/* Texto um pouco maior */
+
 .favorites-grid .product-card .product-name {
   font-size: 14px !important;
   font-weight: 500 !important;
@@ -168,7 +168,7 @@ body {
   color: #fff !important;
 }
 
-/* Padding um pouco maior */
+
 .favorites-grid .product-card .product-info {
   padding: 14px 16px 20px !important;
   border: none !important;
@@ -176,7 +176,7 @@ body {
   border-bottom: none !important;
 }
 
-/* REMOVER TODAS as linhas cinzentas possíveis */
+
 .favorites-grid .product-card,
 .favorites-grid .product-card *,
 .favorites-grid .product-card .product-info,
@@ -191,20 +191,20 @@ body {
   border-right: none !important;
 }
 
-/* Também garantir que não há outlines */
+
 .favorites-grid .product-card,
 .favorites-grid .product-card * {
   outline: none !important;
 }
 
-/* Hover state sem linhas */
+
 .favorites-grid .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
   border: none !important;
 }
 
-/* Animações de fade */
+
 .fade-in {
   animation: fadeIn 0.4s ease forwards;
 }
@@ -223,7 +223,7 @@ body {
   to { opacity: 0; transform: translateY(10px); }
 }
 
-/* Estado vazio */
+
 .empty-favorites {
   text-align: center;
   padding: 40px 0;
@@ -235,7 +235,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Botão atualizado com bordas arredondadas e texto preto */
+
 .shop-now-btn {
   display: inline-block;
   background: rgba(255, 255, 255, 0);
@@ -256,7 +256,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===== Seção "Talvez Lhe Interesse" - Igual ao SimilarProducts ===== */
+
 .similar-products-section {
   margin-top: 60px;
   margin-bottom: 80px;
@@ -278,7 +278,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* Grid com exatamente 5 colunas em desktop */
+
 .similar-products-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -290,7 +290,7 @@ body {
   grid-auto-flow: row;
 }
 
-/* Responsividade - mantendo divisões lógicas */
+
 @media (min-width: 1400px) {
   .similar-products-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -312,28 +312,28 @@ body {
   }
 }
 
-/* Tablet - 3 produtos por linha (5 linhas) */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .similar-products-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
   
-  /* Título um pouco menor em tablet */
+
   .similar-products-section h2 {
     font-size: 32px;
     margin-bottom: 35px;
   }
 }
 
-/* Mobile - 2 produtos por linha */
+
 @media (max-width: 767px) {
   .similar-products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
   
-  /* Título menor em mobile */
+
   .similar-products-section h2 {
     font-size: 28px;
     margin-bottom: 30px;
@@ -341,7 +341,7 @@ body {
   }
 }
 
-/* Garantir que cada Product Card seja visível e do mesmo tamanho */
+
 .similar-products-grid .product-card {
   width: 100%;
   height: auto;
@@ -360,7 +360,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Garantir que as propriedades dos cards sejam idênticas */
+
 .similar-products-grid .product-card .product-image-container {
   aspect-ratio: 4/5;
   width: 100%;
@@ -382,7 +382,7 @@ body {
   padding: 14px 16px 20px !important;
 }
 
-/* Estilos para garantir que todas as linhas sejam exibidas */
+
 .similar-products-section {
   height: auto !important;
   max-height: none !important;
@@ -395,7 +395,7 @@ body {
   overflow: visible !important;
 }
 
-/* Adicionar espaçamento extra entre a seção similar e o footer */
+
 .similar-products-section + .footer-spacer {
   height: 100px;
 }

@@ -1,4 +1,4 @@
-/* Reset / básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Header fixo */
+
 .header {
   position: fixed;
   top: 0;
@@ -25,13 +25,13 @@ body {
   z-index: 10000;
 }
 
-/* Header Left */
+
 .header-left {
   display: flex;
   align-items: center;
 }
 
-/* Desktop Navigation */
+
 .desktop-nav {
   display: flex;
   list-style: none;
@@ -60,7 +60,7 @@ body {
   opacity: 0.7;
 }
 
-/* Categoria ativa */
+
 .header-left a.active {
   font-weight: 800;
 }
@@ -75,7 +75,7 @@ body {
   background: #000;
 }
 
-/* Botão X */
+
 .close-button-container {
   margin-left: 60px;
 }
@@ -96,7 +96,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Mobile Hamburger */
+
 .mobile-hamburger {
   background: none;
   border: none;
@@ -110,7 +110,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Logo Centro */
+
 .header-center {
   position: absolute;
   left: 50%;
@@ -126,7 +126,7 @@ body {
   text-decoration: none;
 }
 
-/* Header Right */
+
 .header-right {
   display: flex;
   gap: 25px;
@@ -148,7 +148,7 @@ body {
   opacity: 0.7;
 }
 
-/* Icon Buttons for Mobile */
+
 .icon-button {
   background: none;
   border: none;
@@ -163,7 +163,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Badge for counters */
+
 .badge {
   position: absolute;
   top: -2px;
@@ -181,7 +181,7 @@ body {
   line-height: 1;
 }
 
-/* Mobile Menu Overlay */
+
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -209,7 +209,7 @@ body {
 .mobile-menu-categories {
   display: flex;
   flex-direction: column;
-  padding-top: 120px; /* Movido mais para baixo */
+  padding-top: 120px;
 }
 
 .mobile-category-link {
@@ -250,7 +250,7 @@ body {
   transform: translateX(5px);
 }
 
-/* Mobile Menu Animations */
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-100%);
@@ -269,7 +269,7 @@ body {
   }
 }
 
-/* Responsive Breakpoints */
+
 @media (max-width: 768px) {
   .desktop-nav {
     display: none;
@@ -307,7 +307,7 @@ body {
   }
 }
 
-/* Tablet Breakpoint */
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .header {
     padding: 20px 30px;

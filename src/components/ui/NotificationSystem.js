@@ -1,12 +1,11 @@
-// src/components/ui/NotificationSystem.js
+
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import './NotificationSystem.css';
 
-// 1. Contexto para gerenciar notificações
 const NotificationContext = createContext();
 
-// 2. Tipos de notificações
+
 export const NOTIFICATION_TYPES = {
   TOAST: 'toast',
   PRODUCT_ADDED: 'product-added',
@@ -14,15 +13,15 @@ export const NOTIFICATION_TYPES = {
   SUCCESS: 'success'
 };
 
-// 3. Provider que gerencia as notificações
+
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
   
   const addNotification = (notification) => {
-    const id = Date.now() + Math.random(); // Garantir IDs únicos
+    const id = Date.now() + Math.random(); 
     setNotifications(prev => [...prev, { ...notification, id }]);
     
-    // Auto-remover após a duração especificada
+
     if (notification.duration !== 0) {
       const duration = notification.duration || 3000;
       setTimeout(() => removeNotification(id), duration);
@@ -38,7 +37,7 @@ export const NotificationProvider = ({ children }) => {
       )
     );
     
-    // Dar tempo para a animação de saída
+
     setTimeout(() => {
       setNotifications(prev => prev.filter(note => note.id !== id));
     }, 300);
@@ -50,11 +49,11 @@ export const NotificationProvider = ({ children }) => {
   
   const notificationAPI = React.useMemo(() => ({
     showToast: (message, actionText, onAction, duration = 3000) => {
-      // Se a ação for ver carrinho, preparamos um redirecionamento seguro
+
       let finalAction = onAction;
       if (actionText === "VER CARRINHO" || actionText === "VER CESTA") {
         finalAction = () => {
-          // Usando window.location para navegação
+
           window.location.href = '/cart';
         };
       }
@@ -96,7 +95,7 @@ export const NotificationProvider = ({ children }) => {
       });
     },
     
-    // Função especial para notificações com opção de anular (apenas para favorites e cart)
+
     showUndoableToast: (message, onUndo, duration = 3000) => {
       return addNotification({
         type: NOTIFICATION_TYPES.TOAST,
@@ -111,7 +110,7 @@ export const NotificationProvider = ({ children }) => {
     clearAll: clearNotifications
   }), [addNotification, removeNotification, clearNotifications]);
   
-  // Expor a API para métodos estáticos
+
   useEffect(() => {
     window._notificationSystem = notificationAPI;
     
@@ -124,7 +123,7 @@ export const NotificationProvider = ({ children }) => {
     <NotificationContext.Provider value={notificationAPI}>
       {children}
       
-      {/* Portal para renderizar notificações */}
+
       {createPortal(
         <div className="notifications-container">
           {notifications.map(notification => (
@@ -141,14 +140,14 @@ export const NotificationProvider = ({ children }) => {
   );
 };
 
-// 4. Hook para usar notificações em componentes funcionais
+
 export const useNotification = () => {
   const context = useContext(NotificationContext);
   
   if (!context) {
     console.warn('useNotification deve ser usado dentro de um NotificationProvider');
     
-    // Retornar API simulada para evitar erros
+
     return {
       showToast: (message) => console.log('Toast:', message),
       showError: (message) => console.log('Error:', message),
@@ -163,7 +162,7 @@ export const useNotification = () => {
   return context;
 };
 
-// 5. Componente para renderizar diferentes tipos de notificação
+
 const NotificationItem = ({ notification, onClose, closing }) => {
   const { type, closing: notificationClosing } = notification;
   const isClosing = closing || notificationClosing;
@@ -202,7 +201,7 @@ const NotificationItem = ({ notification, onClose, closing }) => {
   }
 };
 
-// 6. Componentes específicos para cada tipo de notificação
+
 const ToastNotification = ({ notification, onClose, closing }) => {
   const { message, actionText, onAction } = notification;
   
@@ -212,7 +211,7 @@ const ToastNotification = ({ notification, onClose, closing }) => {
         onAction();
       } catch (error) {
         console.error("Error in toast notification action:", error);
-        // Fallback for VER CARRINHO if onAction fails
+
         if (actionText === "VER CARRINHO" || actionText === "VER CESTA") {
           window.location.href = '/cart';
         }
@@ -264,7 +263,7 @@ const ProductAddedNotification = ({ notification, onClose, closing }) => {
     e.preventDefault();
     onClose();
     
-    // Redirecionar após fechar notificação
+
     setTimeout(() => {
       window.location.href = '/cart';
     }, 310);
@@ -309,7 +308,7 @@ const ProductAddedNotification = ({ notification, onClose, closing }) => {
   );
 };
 
-// 7. Métodos estáticos para compatibilidade com código existente
+
 const NotificationSystem = {
   showToast: (message, actionText, onAction, duration = 3000) => {
     const notifications = window._notificationSystem;
@@ -318,7 +317,7 @@ const NotificationSystem = {
     } else {
       console.warn('NotificationSystem não está inicializado corretamente');
       
-      // Fallback: Mostrar uma notificação simples
+
       const container = document.createElement('div');
       container.style.position = 'fixed';
       container.style.top = '20px';
@@ -378,5 +377,5 @@ const NotificationSystem = {
   }
 };
 
-// Exportar o objeto NotificationSystem como default para compatibilidade
+
 export default NotificationSystem;

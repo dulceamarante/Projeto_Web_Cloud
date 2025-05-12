@@ -5,7 +5,7 @@
   padding: 20px;
 }
 
-/* Título da página */
+
 .page-title {
   font-size: 32px;
   font-weight: 700;
@@ -15,12 +15,12 @@
   text-align: center;
 }
 
-/* Esconde a antiga barra “vista” */
+
 .view-options {
   display: none;
 }
 
-/* Controles superiores: categorias + botão filtros */
+
 .products-view-controls {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   margin-bottom: 30px;
 }
 
-/* Botões de categorias em linha */
+
 .product-type-filters-inline {
   display: flex;
   flex-wrap: wrap;
@@ -59,7 +59,7 @@
   border-color: #161616;
 }
 
-/* Botão abrir sidebar de filtros */
+
 .filter-dropdown .filter-btn {
   background: none;
   border: 1px solid #ddd;
@@ -74,7 +74,7 @@
   background-color: #f5f5f5;
 }
 
-/* Overlay atrás da sidebar */
+
 .overlay {
   position: fixed;
   top: 0; left: 0;
@@ -90,7 +90,7 @@
   visibility: visible;
 }
 
-/* Header da sidebar */
+
 .sidebar-header {
   position: absolute;
   top: 0; left: 0;
@@ -121,14 +121,14 @@
   z-index: 1003;
 }
 
-/* Sidebar container */
+
 .filter-sidebar {
   position: fixed;
   top: 0; right: -320px;
   width: 300px; height: 100%;
   background: #fff;
   box-shadow: -2px 0 8px rgba(0,0,0,0.1);
-  padding: 80px 20px 20px; /* espaço para o header */
+  padding: 80px 20px 20px; 
   transition: right 0.3s ease;
   z-index: 1001;
   overflow-y: auto;
@@ -137,7 +137,7 @@
   right: 0;
 }
 
-/* Cada seção dentro da sidebar */
+
 .filter-section {
   margin-top: 40px;
 }
@@ -151,7 +151,7 @@
   letter-spacing: 0.5px;
 }
 
-/* Filtros de cor */
+
 .color-filters {
   display: flex;
   flex-wrap: wrap;
@@ -169,7 +169,7 @@
   transform: scale(1.1);
 }
 
-/* Filtros de tamanho */
+
 .size-filters {
   display: flex;
   flex-wrap: wrap;
@@ -189,7 +189,7 @@
   transform: scale(1.1);
 }
 
-/* Preço = dropdown Ascendente / Descendente */
+
 .price-filters .sort-select {
   width: 100%;
   padding: 8px 12px;
@@ -199,7 +199,7 @@
   cursor: pointer;
 }
 
-/* Ordenar (popularity / rating) também pill-shaped */
+
 .sort-select {
   width: 100%;
   padding: 8px 12px;
@@ -209,7 +209,7 @@
   cursor: pointer;
 }
 
-/* Botão Limpar filtros (sidebar) */
+
 .filter-sidebar .clear-filters-btn {
   background: #161616;
   color: #fff;
@@ -227,7 +227,7 @@
   background: #333;
 }
 
-/* Grid de produtos */
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
@@ -235,7 +235,7 @@
   margin-bottom: 40px;
 }
 
-/* Mensagem “nenhum produto” */
+
 .no-products-message {
   display: flex;
   flex-direction: column;
@@ -249,7 +249,7 @@
   margin: 20px 0;
 }
 
-/* Botão Limpar filtros na mensagem */
+
 .clear-filters-btn-empty {
   background: #161616;
   color: #fff;
@@ -265,7 +265,7 @@
   background: #333;
 }
 
-/* Paginação */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -298,12 +298,12 @@
   cursor: not-allowed;
   opacity: 0.5;
 }
-/* Setas modernas */
+
 .pagination-arrow {
   font-size: 18px;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .products-grid {
     grid-template-columns: repeat(auto-fill,minmax(230px,1fr));

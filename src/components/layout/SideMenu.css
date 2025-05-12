@@ -1,6 +1,4 @@
-/* SideMenu.css - Versão corrigida */
 
-/* Menu lateral */
 .side-menu-wrapper {
   position: fixed;
   top: 0;
@@ -18,10 +16,10 @@
   overflow-y: auto;
   position: relative;
   z-index: 1001;
-  transform: translateX(-100%); /* Inicia fora da tela */
+  transform: translateX(-100%); 
 }
 
-/* Animações do menu */
+
 .side-menu.slide-in {
   animation: slideInMenu 0.8s ease-in-out forwards;
 }
@@ -30,7 +28,7 @@
   animation: slideOutMenu 0.8s ease-in-out forwards;
 }
 
-/* Barra de navegação superior */
+
 .nav-top-bar {
   display: flex;
   align-items: center;
@@ -38,7 +36,7 @@
   border-bottom: 1px solid #eee;
 }
 
-/* Itens de navegação */
+
 .nav-item {
   cursor: pointer;
   font-size: 16px;
@@ -65,7 +63,7 @@
   background-color: #000;
 }
 
-/* X no canto direito */
+
 .nav-item.close-x {
   margin-left: auto;
   margin-right: 0;
@@ -80,12 +78,12 @@
   transform: scale(1.1);
 }
 
-/* Conteúdo do menu */
+
 .side-menu-content {
   padding: 25px 0px; 
 }
 
-/* Subcategorias */
+
 .subcategories-container {
   position: relative;
   min-height: 200px;
@@ -125,7 +123,7 @@
 .category-list {
   list-style: none;
   margin: 0;
-  padding: 0; /* Removido padding à esquerda para alinhar exatamente com as categorias */
+  padding: 0; 
 }
 
 .category-list li {
@@ -193,7 +191,7 @@
   }
 }
 
-/* Garantir que as animações sejam aplicadas mesmo quando o componente é removido */
+
 .side-menu-wrapper {
   animation: none !important;
 }

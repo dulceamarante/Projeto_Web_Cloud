@@ -1,4 +1,4 @@
-// src/components/layout/SideMenu.js
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './SideMenu.css';
@@ -9,11 +9,11 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
   const [menuAnimation, setMenuAnimation] = useState('');
   const menuRef = useRef(null);
 
-  // Efeito para inicializar a categoria quando o componente é montado ou quando initialCategory muda
+
   useEffect(() => {
     if (isOpen) {
       setActiveCategory(initialCategory);
-      // Garantir que as animações comecem corretamente
+
       requestAnimationFrame(() => {
         setSubMenuAnimation('slide-in');
         setMenuAnimation('slide-in');
@@ -21,18 +21,18 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
     }
   }, [isOpen, initialCategory]);
 
-  // Função para fechar o menu com animação
+
   const handleClose = () => {
     setMenuAnimation('slide-out');
     setSubMenuAnimation('slide-out');
     
-    // Esperar a animação terminar antes de chamar onClose
+
     setTimeout(() => {
       onClose();
     }, 800);
   };
 
-  // Função para fechar o menu quando o mouse sai
+
   const handleMouseLeave = () => {
     handleClose();
   };
@@ -51,7 +51,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
     }, 800);
   };
 
-  // Definindo as subcategorias e seus respectivos caminhos de URL
+
   const categories = {
     mulher: [
       { name: 'TODOS OS ARTIGOS', path: '/mulher/products' },
@@ -79,7 +79,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
     ]
   };
 
-  // Se o menu não estiver aberto, não renderizar nada
+
   if (!isOpen) return null;
 
   return (
@@ -89,7 +89,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
       ref={menuRef}
     >
       <div className={`side-menu ${menuAnimation}`}>
-        {/* Menu de navegação do topo (sem X) */}
+
         <div className="nav-top-bar">
           <span 
             className={activeCategory === 'mulher' ? 'nav-item active' : 'nav-item'} 
@@ -112,7 +112,7 @@ const SideMenu = ({ isOpen, onClose, initialCategory, onCategoryChange }) => {
         </div>
         
         <div className="side-menu-content">
-          {/* Subcategorias */}
+
           <div className={`subcategories-container ${subMenuAnimation}`}>
             <ul className="category-list">
               {categories[activeCategory].map((sub, i) => (

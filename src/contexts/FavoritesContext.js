@@ -1,4 +1,4 @@
-// src/contexts/FavoritesContext.js
+
 import React, { createContext, useState, useEffect, useContext, useCallback, useRef } from 'react';
 import { useNotification } from '../components/ui/NotificationSystem';
 
@@ -9,7 +9,7 @@ const FavoritesProviderComponent = ({ children }) => {
   const { showToast, showUndoableToast } = useNotification();
   const previousStateRef = useRef(null);
   
-  // Carregar favoritos do localStorage quando o componente montar
+
   useEffect(() => {
     try {
       const storedFavorites = localStorage.getItem('favorites');
@@ -21,7 +21,7 @@ const FavoritesProviderComponent = ({ children }) => {
     }
   }, []);
 
-  // Função para atualizar favoritos e localStorage
+
   const updateFavoritesAndStorage = useCallback((newFavorites) => {
     setFavorites(newFavorites);
     try {
@@ -31,7 +31,7 @@ const FavoritesProviderComponent = ({ children }) => {
     }
   }, []);
 
-  // Função para salvar estado antes de uma ação
+
   const saveCurrentState = useCallback(() => {
     previousStateRef.current = [...favorites];
   }, [favorites]);
@@ -41,7 +41,7 @@ const FavoritesProviderComponent = ({ children }) => {
       const newFavorites = [...favorites, product];
       updateFavoritesAndStorage(newFavorites);
       
-      // Mostrar notificação quando produto é adicionado
+  
       showToast("ADICIONADO AOS SEUS ARTIGOS PREFERIDOS", null, null, 3000);
       
       return true;
@@ -50,21 +50,21 @@ const FavoritesProviderComponent = ({ children }) => {
   }, [favorites, updateFavoritesAndStorage, showToast]);
 
   const removeFromFavorites = useCallback((productId) => {
-    // SALVAR ESTADO ANTES DE REMOVER
+
     saveCurrentState();
     
     const productToRemove = favorites.find(item => item.id === productId);
     
     if (productToRemove) {
-      // Remover o produto dos favoritos
+
       const newFavorites = favorites.filter(item => item.id !== productId);
       updateFavoritesAndStorage(newFavorites);
       
-      // Mostrar a notificação específica com o nome do produto
+
       showUndoableToast(
         `ELIMINADO DOS FAVORITOS: ${productToRemove.name.toUpperCase()}`, 
         () => {
-          // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR
+
           updateFavoritesAndStorage(previousStateRef.current);
         }
       );
@@ -75,15 +75,14 @@ const FavoritesProviderComponent = ({ children }) => {
   }, [favorites, updateFavoritesAndStorage, showUndoableToast, saveCurrentState]);
 
   const clearFavorites = useCallback(() => {
-    // SALVAR ESTADO ANTES DE LIMPAR
+
     saveCurrentState();
     
-    // Limpar todos os favoritos
+
     updateFavoritesAndStorage([]);
     
-    // Mostrar notificação
+
     showUndoableToast("TODOS OS FAVORITOS FORAM ELIMINADOS", () => {
-      // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR
       updateFavoritesAndStorage(previousStateRef.current);
     });
   }, [updateFavoritesAndStorage, showUndoableToast, saveCurrentState]);
@@ -100,28 +99,28 @@ const FavoritesProviderComponent = ({ children }) => {
     return favorites.some(item => item.id === productId);
   }, [favorites]);
 
-  // Mover produto para o carrinho e remover dos favoritos
+
   const moveToCart = useCallback((product, addToCart, removeAfterAdd = true) => {
-    // Adicionar ao carrinho
+
     if (addToCart) {
-      // SALVAR ESTADO ANTES DE MOVER
+
       saveCurrentState();
       
       const selectedSize = product.selectedSize || 'M';
       addToCart(product, 1, selectedSize);
       
-      // Se necessário, remover dos favoritos após adicionar ao carrinho
+
       if (removeAfterAdd) {
         const newFavorites = favorites.filter(item => item.id !== product.id);
         updateFavoritesAndStorage(newFavorites);
         
-        // Mostrar notificação para mover para carrinho
+
         const message = `MOVIDO PARA CARRINHO: ${product.name.toUpperCase()}`;
         showUndoableToast(message, () => {
-          // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR DOS FAVORITOS
+
           updateFavoritesAndStorage(previousStateRef.current);
           
-          // E REMOVER DO CARRINHO
+
           window.undoMoveToCart?.(product.id, selectedSize);
         });
       }
@@ -131,10 +130,10 @@ const FavoritesProviderComponent = ({ children }) => {
     return false;
   }, [favorites, updateFavoritesAndStorage, showUndoableToast, saveCurrentState]);
 
-  // Expor função para undo externos
+
   useEffect(() => {
     window.undoMoveToFavorites = (productId) => {
-      // Esta função será chamada quando anular "mover para favoritos"
+
       removeFromFavorites(productId);
     };
     
@@ -168,5 +167,5 @@ const FavoritesProviderComponent = ({ children }) => {
   );
 };
 
-// Para manter a compatibilidade, exportar FavoritesProvider
+
 export { FavoritesProviderComponent as FavoritesProvider };

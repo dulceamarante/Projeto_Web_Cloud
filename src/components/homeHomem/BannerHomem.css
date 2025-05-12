@@ -23,20 +23,20 @@
   }
   
   .banner-button {
-    /* fundo escuro translúcido */
+
     background: rgba(0, 0, 0, 0);
     border: 1px solid white;
     color: white;
     
-    /* shape e size */
+
     border-radius: 30px;
     font-weight: 700;
-    font-size: 16px;       /* aumenta se quiseres */
+    font-size: 16px;       
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 12px 32px;
     
-    /* centralização e transições */
+
     display: inline-block;
     text-align: center;
     cursor: pointer;
@@ -44,7 +44,7 @@
   }
   
   .banner-button:hover {
-    /* ao passar o rato, fundo branco e texto escuro */
+
     background-color: white;
     color: #333;
     transform: translateY(-2px);

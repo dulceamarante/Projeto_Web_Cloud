@@ -27,7 +27,7 @@ const Header = () => {
   const { cart, getCartItemCount } = useContext(CartContext);
   const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
 
-  // Monitor window resize
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -106,7 +106,6 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        {/* Mobile Left - Hamburger */}
         <div className="header-left">
           {isMobile ? (
             <button 
@@ -145,12 +144,12 @@ const Header = () => {
           )}
         </div>
 
-        {/* Logo Center */}
+
         <div className="header-center">
           <Link to="/">BDRP</Link>
         </div>
 
-        {/* Right Side */}
+
         <div className="header-right">
           {isMobile ? (
             <>
@@ -188,7 +187,7 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+
       {isMobile && menuOpen && (
         <div className="mobile-menu-overlay" onClick={closeMenuWithAnimation}>
           <div className="mobile-menu" onClick={e => e.stopPropagation()}>

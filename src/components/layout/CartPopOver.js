@@ -1,17 +1,17 @@
-// src/components/layout/CartPopOver.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaHeart, FaTrash } from 'react-icons/fa';
 import { CartContext } from '../../contexts/CartContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
-import './FavoritesPopOver.css'; // Usando o mesmo CSS
+import './FavoritesPopOver.css';
 
 const CartPopOver = ({ onClose }) => {
   const { cart, removeFromCart, moveToFavorites } = useContext(CartContext);
   const { addToFavorites, favorites } = useContext(FavoritesContext);
   const [isExiting, setIsExiting] = useState(false);
   
-  // Fechar com animação
+
   const handleClose = () => {
     setIsExiting(true);
     setTimeout(() => {
@@ -19,7 +19,7 @@ const CartPopOver = ({ onClose }) => {
     }, 300);
   };
   
-  // Fechar com ESC
+
   useEffect(() => {
     const handleEscKey = (e) => {
       if (e.key === 'Escape') {
@@ -31,16 +31,16 @@ const CartPopOver = ({ onClose }) => {
     return () => window.removeEventListener('keydown', handleEscKey);
   }, []);
   
-  // Calcular o total
+
   const subtotal = cart.reduce((sum, item) => sum + (item.price * (item.quantity || 1)), 0);
   const total = subtotal;
 
-  // Verificar se o item já está nos favoritos
+
   const isInFavorites = (itemId) => {
     return favorites.some(item => item.id === itemId);
   };
   
-  // Adicionar aos favoritos e remover do carrinho
+
   const handleMoveToFavorites = (item) => {
     moveToFavorites(item, addToFavorites);
   };
@@ -119,7 +119,7 @@ const CartPopOver = ({ onClose }) => {
                 <Link to="/cart" className="btn-secondary" onClick={handleClose}>
                   VER CARRINHO
                 </Link>
-                <Link to="/checkout" className="btn-primary" onClick={handleClose}>
+                <Link to="#" className="btn-primary" onClick={handleClose}>
                   FINALIZAR COMPRA
                 </Link>
               </div>

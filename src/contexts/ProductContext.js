@@ -1,13 +1,13 @@
-// src/contexts/ProductContext.js
+
 import React, { createContext, useState, useEffect } from 'react';
 
-// Importar os dados de produtos
+
 import initialProductsData from '../data/products.json';
 
-// Criar o contexto
+
 export const ProductContext = createContext();
 
-// Exportar o Provider como uma função nomeada
+
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -23,16 +23,16 @@ export const ProductProvider = ({ children }) => {
   });
 
   useEffect(() => {
-    // Simulando uma chamada de API
+
     const fetchProducts = () => {
       setLoading(true);
       
-      // Simular uma pequena demora para dar a sensação de carregamento de dados
+
       setTimeout(() => {
         try {
           setProducts(initialProductsData);
           
-          // Extrair categorias únicas dos produtos
+
           const uniqueCategories = [...new Set(initialProductsData.map(product => product.category))];
           setCategories(uniqueCategories);
           
@@ -48,7 +48,7 @@ export const ProductProvider = ({ children }) => {
     fetchProducts();
   }, []);
 
-  // Funções para manipulação dos dados
+
   const updateFilters = (newFilters) => {
     setFilters(prev => ({ ...prev, ...newFilters }));
   };

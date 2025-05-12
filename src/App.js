@@ -21,16 +21,16 @@ import HomeHomem from './pages/HomePageHomem';
 import HomeBeauty from './pages/HomePageBeauty';
 
 function App() {
-  // Configurar handlers globais para undo de movimentações
+
   useEffect(() => {
-    // Handler para anular "mover para carrinho"
+
     window.undoMoveToCart = (productId, selectedSize) => {
       console.log(`Removing from cart: ${productId}, size: ${selectedSize}`);
-      // A implementação será feita via window._cartProvider se necessário
+
     };
     
     return () => {
-      // Cleanup
+
       window.undoMoveToCart = null;
     };
   }, []);
@@ -46,7 +46,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<HomePage />} />
 
-                  {/* Rotas para produtos por gênero */}
+
                   <Route path="/:gender/products" element={<ProductsPage />} />
                   <Route path="/:gender/:category" element={<ProductsPage />} />
                   <Route path="/product/:id" element={<ProductDetails products={products} />} />

@@ -1,14 +1,12 @@
-/* src/components/layout/Footer.css */
 
-/* 1) Usa a mesma fonte do site (por ex. Oswald) */
 .footer {
   font-size: 22px;
   background-color: #f3f3f3;
   padding: 40px 20px;
-  font-family: 'Oswald', sans-serif;   /* <— trocado de Arial para a fonte do site */
+  font-family: 'Oswald', sans-serif;   
 }
 
-/* Seção Newsletter */
+
 .newsletter-section {
   text-align: center;
   max-width: 600px;
@@ -20,19 +18,19 @@
   margin-bottom: 20px;
 }
 
-/* Form arredondado */
+
 .newsletter-form {
   display: flex;
   margin-bottom: 10px;
   border: 1px solid #ddd;
-  border-radius: 8px;      /* <— cantos arredondados no container */
-  overflow: hidden;        /* esconde bordas internas */
+  border-radius: 8px;     
+  overflow: hidden;      
 }
 
 .newsletter-form input {
   flex: 1;
   padding: 10px;
-  border: none;            /* já tem border no container */
+  border: none;          
   font-size: 14px;
 }
 
@@ -60,7 +58,7 @@
   text-decoration: underline;
 }
 
-/* Seletor de país */
+
 .country-selector {
   text-align: center;
   margin-bottom: 20px;
@@ -68,7 +66,7 @@
   font-size: 12px;
 }
 
-/* Links sociais */
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -83,7 +81,7 @@
   color: #333;
 }
 
-/* Links do rodapé */
+
 .footer-links {
   display: flex;
   justify-content: space-between;

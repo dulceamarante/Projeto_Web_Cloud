@@ -1,4 +1,4 @@
-// src/components/layout/TopProducts.js
+
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ProductContext } from '../../contexts/ProductContext';
@@ -10,17 +10,17 @@ export default function TopProducts() {
   const { products, loading } = useContext(ProductContext);
   const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
  
-  // Filter products to only show women's products and then get top sellers
+
   const getTopSellingWomenProducts = (count) => {
-    // Filter products for women only
+
     const womenProducts = products.filter(product => 
       product.gender?.toLowerCase() === 'homem'
     );
     
-    // Sort by popularity (highest first)
+
     const sorted = [...womenProducts].sort((a, b) => b.popularity - a.popularity);
     
-    // Return the top N products
+
     return sorted.slice(0, count);
   };
  
@@ -35,10 +35,10 @@ export default function TopProducts() {
  
   return (
     <section className="top-products-section">
-      {/* Título da secção */}
+
       <h2 className="section-title">TOP SELLERS HOMEM</h2>
      
-      {/* Grid de produtos */}
+
       <div className="products-grid">
         {topProducts.map(prod => (
           <ProductCard
@@ -52,7 +52,7 @@ export default function TopProducts() {
         ))}
       </div>
      
-      {/* Seção de responsabilidade */}
+
       <div className="responsibility-section">
         <div className="responsibility-content">
           <h2 className="responsibility-title">VESTIR COM CONSCIÊNCIA</h2>

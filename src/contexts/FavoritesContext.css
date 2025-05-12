@@ -1,15 +1,15 @@
-/* src/contexts/FavoritesContext.css */
+
 .notification-toast {
   position: fixed;
-  top: 70px; /* Logo abaixo da navbar */
+  top: 70px; 
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10002; /* Acima de quase tudo */
+  z-index: 10002;
   min-width: 400px;
   max-width: 600px;
   background-color: #000;
   color: white;
-  border-radius: 10px; /* Bordas arredondadas como solicitado */
+  border-radius: 10px; 
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.3s ease-out;

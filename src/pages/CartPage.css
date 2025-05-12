@@ -1,4 +1,4 @@
-/* src/pages/CartPage.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
@@ -11,7 +11,7 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-/* Container */
+
 .cart-page {
   max-width: 1500px;
   margin: 0 auto;
@@ -56,7 +56,7 @@ body {
   position: static !important;
 }
 
-/* Layout do conteúdo */
+
 .cart-content {
   display: grid;
   grid-template-columns: 1fr 350px;
@@ -65,13 +65,13 @@ body {
   padding-left: 0;
 }
 
-/* Item do carrinho - AMPLIADO */
+
 .cart-item {
   display: grid;
-  grid-template-columns: 200px 1fr 100px; /* Aumentado de 150px 1fr 80px */
-  gap: 20px; /* Aumentado de 10px */
-  padding: 30px 0; /* Aumentado de 20px */
-  margin-bottom: 20px; /* Aumentado de 15px */
+  grid-template-columns: 200px 1fr 100px;
+  gap: 20px; 
+  padding: 30px 0;
+  margin-bottom: 20px; 
   align-items: start;
   position: relative;
   width: 100%;
@@ -93,89 +93,89 @@ body {
   display: none;
 }
 
-/* Imagem do item - MAIOR com bordas arredondadas */
+
 .item-image {
-  width: 200px; /* Aumentado de 150px */
+  width: 200px; 
   padding-left: 0;
   margin-left: 0;
-  min-height: 250px; /* Aumentado de 200px */
-  overflow: hidden; /* Para garantir que as bordas arredondadas funcionem */
-  border-radius: 12px; /* Bordas arredondadas */
+  min-height: 250px; 
+  overflow: hidden; 
+  border-radius: 12px; 
 }
 
 .item-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 12px; /* Aplicar também na imagem */
-  transition: transform 0.2s ease; /* Suave transição no hover */
+  border-radius: 12px; 
+  transition: transform 0.2s ease; 
 }
 
-/* Efeito hover na imagem */
+
 .item-image:hover img {
   transform: scale(1.02);
 }
 
-/* Detalhes do item - MAIOR */
+
 .item-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 250px; /* Aumentado de 200px */
+  height: 250px; 
   padding: 0;
   margin: 0;
 }
 
-/* Nome do item - MAIOR */
+
 .item-name {
-  font-size: 22px; /* Aumentado de 18px */
+  font-size: 22px; 
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
 
-/* Tamanho do item - MAIOR */
+
 .item-size {
-  font-size: 18px; /* Aumentado de 16px */
+  font-size: 18px;
   color: #666;
   margin: 0;
   padding: 0;
   font-weight: 300;
 }
 
-/* Preço do item - MAIOR */
+
 .item-price {
-  font-size: 20px; /* Aumentado de 18px */
+  font-size: 20px; 
   font-weight: 500;
   margin: 0;
   padding: 0;
 }
 
-/* Controles de quantidade - MAIORES */
+
 .quantity-controls {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 20px 0; /* Aumentado de 15px */
+  margin: 20px 0;
   padding: 0;
-  height: 50px; /* Aumentado de 40px */
-  gap: 20px; /* Aumentado de 15px */
+  height: 50px;
+  gap: 20px;
 }
 
-/* Botões de quantidade - MAIORES */
+
 .quantity-btn {
   background: #1e1d1d;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 40px; /* Aumentado de 30px */
-  height: 40px; /* Aumentado de 30px */
+  width: 40px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 32px; /* Aumentado de 28px */
+  font-size: 32px; 
   font-weight: 400;
   transition: all 0.2s ease;
   padding: 0;
@@ -191,11 +191,11 @@ body {
   transform: scale(0.95);
 }
 
-/* Valor da quantidade - MAIOR */
+
 .quantity-value {
-  font-size: 24px; /* Aumentado de 20px */
-  font-weight: 600; /* Aumentado de 500 */
-  min-width: 40px; /* Aumentado de 30px */
+  font-size: 24px; 
+  font-weight: 600; 
+  min-width: 40px; 
   text-align: center;
 }
 
@@ -208,25 +208,25 @@ body {
   line-height: 1;
 }
 
-/* Ações do item - MAIORES */
+
 .item-actions {
   display: flex;
   flex-direction: row;
-  gap: 20px; /* Aumentado de 15px */
+  gap: 20px; 
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 0;
   height: auto;
 }
 
-/* Ícones de ação - MAIORES */
+
 .action-icon {
   background: transparent;
   border: none;
   cursor: pointer;
   color: #666;
-  font-size: 22px; /* Aumentado de 18px */
-  padding: 8px; /* Aumentado de 5px */
+  font-size: 22px; 
+  padding: 8px; 
   transition: all 0.2s ease;
 }
 
@@ -254,7 +254,7 @@ body {
   100% { transform: scale(1); }
 }
 
-/* Resumo do carrinho */
+
 .cart-summary {
   width: 350px;
   background-color: #f5f5f5;
@@ -289,7 +289,7 @@ body {
   font-style: italic;
 }
 
-/* Botões do carrinho */
+
 .cart-buttons {
   display: flex;
   flex-direction: column;
@@ -337,7 +337,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estado vazio */
+
 .empty-cart {
   text-align: center;
   padding: 40px 0;
@@ -368,13 +368,13 @@ body {
   background: #f5f5f5;
 }
 
-/* Footer Spacing */
+
 .footer-spacer {
   height: 80px;
   width: 100%;
 }
 
-/* Animações */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -401,12 +401,12 @@ body {
   animation: fadeOut 0.4s ease forwards;
 }
 
-/* Garantir que a seção de produtos similares tenha espaço suficiente */
+
 .cart-page > * {
   overflow: visible;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .cart-page {
     padding: 0 15px;
@@ -422,38 +422,38 @@ body {
   }
   
   .cart-item {
-    grid-template-columns: 150px 1fr 80px; /* Menor em mobile */
+    grid-template-columns: 150px 1fr 80px; 
     gap: 15px;
   }
   
   .item-image {
-    width: 150px; /* Menor em mobile */
+    width: 150px; 
     min-height: 200px;
-    border-radius: 8px; /* Bordas menores em mobile */
+    border-radius: 8px;
   }
   
   .item-image img {
-    border-radius: 8px; /* Bordas menores em mobile */
+    border-radius: 8px; 
   }
   
   .item-details {
-    height: 200px; /* Menor em mobile */
+    height: 200px; 
   }
   
   .item-name {
-    font-size: 18px; /* Menor em mobile */
+    font-size: 18px; 
   }
   
   .item-size {
-    font-size: 16px; /* Menor em mobile */
+    font-size: 16px; 
   }
   
   .item-price {
-    font-size: 18px; /* Menor em mobile */
+    font-size: 18px; 
   }
   
   .action-icon {
-    font-size: 18px; /* Menor em mobile */
+    font-size: 18px; 
     padding: 5px;
   }
 }

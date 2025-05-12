@@ -1,4 +1,4 @@
-/* src/components/layout/FavoritesPopOver.css */
+
 .favorites-popover-overlay {
   position: fixed;
   top: 0;
@@ -121,7 +121,7 @@
   color: #000;
 }
 
-/* Ícones à esquerda */
+
 .item-icons {
   display: flex;
   align-items: center;
@@ -177,7 +177,7 @@
   color: #d32f2f;
 }
 
-/* Animação para o coração quando clicado */
+
 @keyframes heartbeat {
   0% { transform: scale(1); }
   15% { transform: scale(1.25); }
@@ -224,7 +224,7 @@
   padding: 20px;
 }
 
-/* Botões com animações de hover */
+
 .btn-secondary, .btn-primary {
   flex: 1;
   padding: 15px 0;

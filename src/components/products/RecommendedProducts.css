@@ -1,4 +1,4 @@
-/* src/components/products/RecommendedProducts.css */
+
 
 .recommended-products-section {
   margin-top: 60px;
@@ -25,7 +25,7 @@
   width: 100%;
 }
 
-/* Estilo para mensagem quando não há produtos */
+
 .no-products-message {
   text-align: center;
   padding: 40px 0;
@@ -47,7 +47,7 @@
   font-style: italic;
 }
 
-/* Responsividade */
+
 @media (max-width: 1024px) {
   .products-grid {
     grid-template-columns: repeat(4, 1fr);

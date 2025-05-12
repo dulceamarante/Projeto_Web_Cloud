@@ -1,4 +1,4 @@
-// src/components/layout/FavoritesPopOver.js
+
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
@@ -12,7 +12,7 @@ const FavoritesPopOver = ({ onClose }) => {
   const { addToCart, cart } = useContext(CartContext);
   const [isExiting, setIsExiting] = useState(false);
   
-  // Fechar com animação
+
   const handleClose = () => {
     setIsExiting(true);
     setTimeout(() => {
@@ -20,7 +20,7 @@ const FavoritesPopOver = ({ onClose }) => {
     }, 300);
   };
   
-  // Fechar com ESC
+
   useEffect(() => {
     const handleEscKey = (e) => {
       if (e.key === 'Escape') {
@@ -32,17 +32,17 @@ const FavoritesPopOver = ({ onClose }) => {
     return () => window.removeEventListener('keydown', handleEscKey);
   }, []);
   
-  // Calcular o total
+
   const subtotal = favorites.reduce((sum, item) => sum + item.price, 0);
   const total = subtotal;
 
-  // Adicionar ao carrinho e remover dos favoritos
+
   const handleMoveToCart = (item) => {
-    // Usa a função para mover o item para o carrinho e removê-lo dos favoritos
+
     moveToCart(item, addToCart, true);
   };
   
-  // Verificar se o item já está no carrinho
+
   const isInCart = (itemId) => {
     return cart.some(item => item.id === itemId);
   };
