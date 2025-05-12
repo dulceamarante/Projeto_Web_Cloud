@@ -104,42 +104,104 @@ body {
   color: #e41e63;
 }
 
-/* Favorites grid - CORRIGIDO para manter o mesmo tamanho dos cards */
+/* Favorites grid - Um pouco maiores */
 .favorites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+  gap: 2px;
   margin-bottom: 40px;
+  padding: 0 10px;
 }
 
 .favorites-item {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Garantir que ProductCards na página de favoritos mantenham o tamanho padrão */
+/* Cards um pouco maiores */
 .favorites-grid .product-card {
   width: 100%;
   height: auto;
-  /* Resetar qualquer estilo específico que possa estar afetando o tamanho */
+  min-height: 360px;
   font-size: inherit;
   transform: none !important;
+  scale: 1 !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* Garantir que as imagens mantenham a proporção correta */
+/* Imagens um pouco maiores */
 .favorites-grid .product-card .product-image-container {
   aspect-ratio: 4/5;
   width: 100%;
+  height: auto;
+  min-height: 240px;
 }
 
-/* Garantir que o texto mantém o tamanho correto */
+/* Texto um pouco maior */
 .favorites-grid .product-card .product-name {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase !important;
+  color: #222 !important;
+  line-height: 1.2 !important;
 }
 
 .favorites-grid .product-card .final-price {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #222 !important;
+}
+
+.favorites-grid .product-card .original-price {
+  font-size: 13px !important;
+  color: #999 !important;
+}
+
+.favorites-grid .product-card .discount-badge {
+  font-size: 11px !important;
+  padding: 2px 6px !important;
+  background: #161616 !important;
+  color: #fff !important;
+}
+
+/* Padding um pouco maior */
+.favorites-grid .product-card .product-info {
+  padding: 14px 16px 20px !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* REMOVER TODAS as linhas cinzentas possíveis */
+.favorites-grid .product-card,
+.favorites-grid .product-card *,
+.favorites-grid .product-card .product-info,
+.favorites-grid .product-card::after,
+.favorites-grid .product-card::before,
+.favorites-grid .product-card > *,
+.favorites-grid .product-card > * > * {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Também garantir que não há outlines */
+.favorites-grid .product-card,
+.favorites-grid .product-card * {
+  outline: none !important;
+}
+
+/* Hover state sem linhas */
+.favorites-grid .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+  border: none !important;
 }
 
 /* Animações de fade */
@@ -279,19 +341,45 @@ body {
   }
 }
 
-/* Garantir que cada Product Card seja visível */
+/* Garantir que cada Product Card seja visível e do mesmo tamanho */
 .similar-products-grid .product-card {
   width: 100%;
   height: auto;
-  min-height: 320px;
+  min-height: 360px;
   position: relative;
   opacity: 1;
   visibility: visible;
+  transform: none !important;
+  scale: 1 !important;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .similar-products-grid .product-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Garantir que as propriedades dos cards sejam idênticas */
+.similar-products-grid .product-card .product-image-container {
+  aspect-ratio: 4/5;
+  width: 100%;
+  min-height: 240px;
+}
+
+.similar-products-grid .product-card .product-name {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.similar-products-grid .product-card .final-price {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.similar-products-grid .product-card .product-info {
+  padding: 14px 16px 20px !important;
 }
 
 /* Estilos para garantir que todas as linhas sejam exibidas */

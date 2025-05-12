@@ -1,21 +1,17 @@
-/* ============================= */
-/*       ProductsPage.css        */
-/* ============================= */
 
-/* Contêiner principal */
 .products-page {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
 }
 
 /* Título da página */
 .page-title {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-align: center;
 }
 
