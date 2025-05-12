@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
@@ -21,17 +21,31 @@ import HomeHomem from './pages/HomePageHomem';
 import HomeBeauty from './pages/HomePageBeauty';
 
 function App() {
+  // Configurar handlers globais para undo de movimentações
+  useEffect(() => {
+    // Handler para anular "mover para carrinho"
+    window.undoMoveToCart = (productId, selectedSize) => {
+      console.log(`Removing from cart: ${productId}, size: ${selectedSize}`);
+      // A implementação será feita via window._cartProvider se necessário
+    };
+    
+    return () => {
+      // Cleanup
+      window.undoMoveToCart = null;
+    };
+  }, []);
+
   return (
     <ProductProvider>
-      <CartProvider>
-        <FavoritesProvider>
-          <NotificationProvider>
+      <NotificationProvider>
+        <CartProvider>
+          <FavoritesProvider>
             <Router>
               <Header />
               <main>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-                  
+
                   {/* Rotas para produtos por gênero */}
                   <Route path="/:gender/products" element={<ProductsPage />} />
                   <Route path="/:gender/:category" element={<ProductsPage />} />
@@ -44,16 +58,14 @@ function App() {
                   <Route path="/homem" element={<HomeHomem />} />
                   <Route path="/beauty" element={<HomeBeauty />} />
                 </Routes>
-                </main>
-               <Footer />
+              </main>
+              <Footer />
             </Router>
-          </NotificationProvider>
-        </FavoritesProvider>
-      </CartProvider>
+          </FavoritesProvider>
+        </CartProvider>
+      </NotificationProvider>
     </ProductProvider>
   );
 }
 
 export default App;
-
-

@@ -1,3 +1,5 @@
+/* CSS original mantido, apenas adicionando cursor nos tamanhos */
+
 .product-details-page {
   display: flex;
   gap: 40px;
@@ -51,6 +53,7 @@
   border-radius: 999px;
   padding: 8px;
   font-size: 16px;
+  cursor: pointer; /* ÚNICO ACRÉSCIMO - cursor nos tamanhos */
 }
 
 .add-to-cart-btn {
@@ -100,6 +103,7 @@
   gap: 10px;
   margin-top: 1rem;
 }
+
 .image-wrapper {
   position: relative;
   width: 100%;

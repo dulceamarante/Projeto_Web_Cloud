@@ -1,13 +1,13 @@
 // src/contexts/CartContext.js
-import React, { createContext, useState, useEffect } from 'react';
-import NotificationSystem from '../components/ui/NotificationSystem';
+import React, { createContext, useState, useEffect, useContext, useCallback, useRef } from 'react';
+import { useNotification } from '../components/ui/NotificationSystem';
 
 export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+const CartProviderComponent = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [removedProduct, setRemovedProduct] = useState(null);
-  const [notification, setNotification] = useState(null);
+  const { showToast, showUndoableToast } = useNotification();
+  const previousStateRef = useRef(null);
   
   // Carregar carrinho do localStorage quando o componente montar
   useEffect(() => {
@@ -22,16 +22,26 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   // Função para atualizar carrinho e localStorage
-  const updateCartAndStorage = (newCart) => {
+  const updateCartAndStorage = useCallback((newCart) => {
     setCart(newCart);
     try {
       localStorage.setItem('cart', JSON.stringify(newCart));
     } catch (error) {
       console.error('Erro ao salvar carrinho:', error);
     }
+  }, []);
+
+  // Função para salvar estado antes de uma ação
+  const saveCurrentState = useCallback(() => {
+    previousStateRef.current = [...cart];
+  }, [cart]);
+
+  // Função para verificar se estamos na página do carrinho
+  const isOnCartPage = () => {
+    return window.location.pathname === '/cart';
   };
 
-  const addToCart = (product, quantity = 1, selectedSize = null) => {
+  const addToCart = useCallback((product, quantity = 1, selectedSize = null) => {
     // Verificar se o produto já está no carrinho com o mesmo tamanho
     const existingItemIndex = cart.findIndex(
       item => item.id === product.id && item.selectedSize === selectedSize
@@ -54,21 +64,25 @@ export const CartProvider = ({ children }) => {
     
     updateCartAndStorage(newCart);
     
-    // Mostrar notificação
-    setNotification({
-      message: "PRODUTO ADICIONADO AO CARRINHO",
-      actionText: "VER CARRINHO",
-      onAction: () => {
+    // Mostrar notificação baseada na página atual
+    if (isOnCartPage()) {
+      // Na página do carrinho: notificação SEM botão "VER CARRINHO"
+      showToast("PRODUTO ADICIONADO AO CARRINHO", null, null);
+    } else {
+      // Outras páginas: notificação COM botão "VER CARRINHO"
+      showToast("PRODUTO ADICIONADO AO CARRINHO", "VER CARRINHO", () => {
         window.location.href = '/cart';
-        setNotification(null);
-      }
-    });
+      });
+    }
     
-    return true; // Retornar true para indicar sucesso
-  };
+    return true;
+  }, [cart, updateCartAndStorage, showToast]);
 
   // Função para remover um produto do carrinho
-  const removeFromCart = (productId, selectedSize = null) => {
+  const removeFromCart = useCallback((productId, selectedSize = null) => {
+    // SALVAR ESTADO ANTES DE REMOVER
+    saveCurrentState();
+    
     // Encontrar o produto a ser removido
     const productToRemoveIndex = cart.findIndex(
       item => item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)
@@ -81,20 +95,27 @@ export const CartProvider = ({ children }) => {
       const newCart = cart.filter((item, index) => index !== productToRemoveIndex);
       updateCartAndStorage(newCart);
       
-      // Guardar o produto removido para caso de desfazer
-      setRemovedProduct(productToRemove);
+      // Criar mensagem específica do produto
+      let message = `REMOVIDO DO CARRINHO: ${productToRemove.name.toUpperCase()}`;
+      if (productToRemove.selectedSize) {
+        message += ` (${productToRemove.selectedSize})`;
+      }
       
-      // Mostrar a notificação
-      setNotification({
-        message: "PRODUTO REMOVIDO DO CARRINHO",
-        actionText: "DESFAZER",
-        onAction: () => handleUndo() // Usar uma arrow function como no FavoritesContext
+      // Mostrar a notificação com opção de anular
+      showUndoableToast(message, () => {
+        // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR
+        updateCartAndStorage(previousStateRef.current);
       });
     }
-  };
+  }, [cart, updateCartAndStorage, showUndoableToast, saveCurrentState]);
 
   // Função para atualizar a quantidade de um produto
-  const updateQuantity = (productId, quantity, selectedSize = null) => {
+  const updateQuantity = useCallback((productId, quantity, selectedSize = null) => {
+    if (quantity <= 0) {
+      removeFromCart(productId, selectedSize);
+      return;
+    }
+
     const newCart = cart.map(item => {
       if (item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)) {
         return { ...item, quantity };
@@ -102,73 +123,46 @@ export const CartProvider = ({ children }) => {
       return item;
     });
     updateCartAndStorage(newCart);
-  };
+  }, [cart, updateCartAndStorage, removeFromCart]);
 
   // Função para limpar o carrinho
-  const clearCart = () => {
-    // Criar uma cópia do carrinho antes de limpar
-    const previousCart = [...cart];
+  const clearCart = useCallback(() => {
+    // SALVAR ESTADO ANTES DE LIMPAR
+    saveCurrentState();
     
     // Limpar o carrinho
     updateCartAndStorage([]);
     
     // Mostrar notificação
-    setNotification({
-      message: "CARRINHO ESVAZIADO",
-      actionText: "DESFAZER",
-      onAction: () => {
-        // Restaurar carrinho anterior
-        updateCartAndStorage(previousCart);
-        setNotification(null);
-      }
+    showUndoableToast("CARRINHO ESVAZIADO", () => {
+      // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR
+      updateCartAndStorage(previousStateRef.current);
     });
-  };
-
-  // Função para desfazer a remoção de um produto
-  const handleUndo = () => {
-    console.log("Executing handleUndo in CartContext", removedProduct); // Debug log
-    
-    if (removedProduct) {
-      // Adicionar o produto de volta ao carrinho
-      const newCart = [...cart, removedProduct];
-      updateCartAndStorage(newCart);
-      
-      // Limpar o produto removido
-      setRemovedProduct(null);
-      
-      // Esconder a notificação
-      setNotification(null);
-    } else {
-      console.log("No removed product to restore"); // Debug log
-    }
-  };
-
-  // Função para fechar notificações
-  const closeNotification = () => {
-    setNotification(null);
-    setRemovedProduct(null);
-  };
+  }, [updateCartAndStorage, showUndoableToast, saveCurrentState]);
 
   // Função para calcular o total do carrinho
-  const getCartTotal = () => {
+  const getCartTotal = useCallback(() => {
     return cart.reduce((total, item) => total + (item.price * (item.quantity || 1)), 0);
-  };
+  }, [cart]);
 
   // Função para contar o número de itens no carrinho
-  const getCartItemCount = () => {
+  const getCartItemCount = useCallback(() => {
     return cart.reduce((count, item) => count + (item.quantity || 1), 0);
-  };
+  }, [cart]);
 
   // Função para verificar se um produto está no carrinho
-  const isInCart = (productId, selectedSize = null) => {
+  const isInCart = useCallback((productId, selectedSize = null) => {
     return cart.some(
       item => item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)
     );
-  };
+  }, [cart]);
 
   // Mover um produto para os favoritos e remover do carrinho
-  const moveToFavorites = (product, addToFavorites) => {
+  const moveToFavorites = useCallback((product, addToFavorites) => {
     if (addToFavorites) {
+      // SALVAR ESTADO ANTES DE MOVER
+      saveCurrentState();
+      
       // Remover propriedades específicas do carrinho
       const { quantity, addedAt, ...productWithoutCartDetails } = product;
       
@@ -176,35 +170,54 @@ export const CartProvider = ({ children }) => {
       addToFavorites(productWithoutCartDetails);
       
       // Remover do carrinho
-      removeFromCart(product.id, product.selectedSize);
+      const newCart = cart.filter(item => 
+        !(item.id === product.id && item.selectedSize === product.selectedSize)
+      );
+      updateCartAndStorage(newCart);
+      
+      // Mostrar notificação para mover para favoritos
+      const message = `MOVIDO PARA FAVORITOS: ${product.name.toUpperCase()}${product.selectedSize ? ` (${product.selectedSize})` : ''}`;
+      showUndoableToast(message, () => {
+        // SIMPLESMENTE RESTAURAR O ESTADO ANTERIOR DO CARRINHO
+        updateCartAndStorage(previousStateRef.current);
+        
+        // E REMOVER DOS FAVORITOS
+        window.undoMoveToFavorites?.(product.id);
+      });
+      
+      return true;
     }
-  };
+    return false;
+  }, [cart, updateCartAndStorage, showUndoableToast, saveCurrentState]);
+
+  const value = React.useMemo(() => ({
+    cart,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+    getCartTotal,
+    getCartItemCount,
+    isInCart,
+    moveToFavorites
+  }), [
+    cart,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+    getCartTotal,
+    getCartItemCount,
+    isInCart,
+    moveToFavorites
+  ]);
 
   return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        getCartTotal,
-        getCartItemCount,
-        isInCart,
-        moveToFavorites,
-        handleUndo // Expor handleUndo para uso direto se necessário, como no FavoritesContext
-      }}
-    >
+    <CartContext.Provider value={value}>
       {children}
-      
-      {notification && (
-        <NotificationSystem 
-          message={notification.message}
-          actionText={notification.actionText}
-          onAction={notification.onAction || handleUndo}
-          onClose={closeNotification}
-        />
-      )}
     </CartContext.Provider>
   );
 };
+
+// Para manter a compatibilidade, exportar CartProvider
+export { CartProviderComponent as CartProvider };

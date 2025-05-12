@@ -1,7 +1,8 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
+import { useNotification } from '../ui/NotificationSystem';
 import {
   FaChevronLeft,
   FaChevronRight,
@@ -15,15 +16,26 @@ import './ProductDetails.css';
 
 export default function ProductDetails({ products }) {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
+  const { showToast, showError } = useNotification();
 
   const [animateHeart, setAnimateHeart] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  const [selectedSize, setSelectedSize] = useState('');
   const favBtnRef = useRef(null);
 
   const product = products.find(p => String(p.id) === id);
   const isProductFavorite = isFavorite(product?.id);
+
+  // Verificar se é um produto que não requer tamanho
+  const doesNotRequireSize = 
+    product?.category === 'beauty' || 
+    product?.gender === 'beauty' ||
+    product?.subcategory === 'skincare' ||
+    !product?.variants || 
+    product?.variants.length === 0;
 
   const handleToggleFavorite = e => {
     e.stopPropagation();
@@ -42,6 +54,33 @@ export default function ProductDetails({ products }) {
   const next = () => {
     setCurrentImage(i =>
       i === (product.images?.length || 1) - 1 ? 0 : i + 1
+    );
+  };
+
+  const handleSizeChange = (e) => {
+    setSelectedSize(e.target.value);
+  };
+
+  const handleAddToCart = () => {
+    // Se o produto não requer tamanho (beauty, skincare, ou sem variantes), adicionar diretamente
+    if (!doesNotRequireSize) {
+      // Para produtos que requerem tamanho, verificar se foi selecionado
+      if (product.variants && product.variants.length > 0 && !selectedSize) {
+        showError("Por favor, selecione um tamanho antes de adicionar ao carrinho.", 3000);
+        return;
+      }
+    }
+
+    // Adicionar ao carrinho (sem tamanho para produtos que não requerem, com tamanho para os outros)
+    addToCart(product, 1, selectedSize || null);
+    
+    // Mostrar notificação de sucesso com botão funcional VER CARRINHO
+    showToast(
+      "PRODUTO ADICIONADO AO CARRINHO",
+      "VER CARRINHO",
+      () => {
+        navigate('/cart');
+      }
     );
   };
 
@@ -95,20 +134,25 @@ export default function ProductDetails({ products }) {
 
       <div className="product-info-column">
         <h1 className="product-title">{product.name}</h1>
-            <div className="rating">
-              Rating:
-              <span className="stars">{renderStars(product.rating)}</span>
-              <span className="rating-value"> {product.rating}</span>
-            </div>
-                    <p className="product-description">{product.description}</p>
+        <div className="rating">
+          Rating:
+          <span className="stars">{renderStars(product.rating)}</span>
+          <span className="rating-value"> {product.rating}</span>
+        </div>
+        <p className="product-description">{product.description}</p>
 
         {product.oldPrice && (
           <p className="old-price">Antes: <span>{product.oldPrice.toFixed(2)} €</span></p>
         )}
         <p className="price">{product.price.toFixed(2)} €</p>
 
-        {product.variants?.length > 0 && (
-          <select className="size-select">
+        {/* Só mostrar seletor de tamanho se o produto requer tamanho */}
+        {!doesNotRequireSize && product.variants?.length > 0 && (
+          <select 
+            className="size-select"
+            value={selectedSize}
+            onChange={handleSizeChange}
+          >
             <option value="">Tamanho</option>
             {product.variants.map((v, index) => (
               <option key={index} value={v.size}>{v.size}</option>
@@ -119,7 +163,7 @@ export default function ProductDetails({ products }) {
         <div className="product-actions">
           <button
             className="add-to-cart-btn"
-            onClick={() => addToCart(product, 1)}
+            onClick={handleAddToCart}
           >
             Adicionar ao cesto
           </button>

@@ -14,118 +14,17 @@ export const NOTIFICATION_TYPES = {
   SUCCESS: 'success'
 };
 
-// 3. Componente NotificationSystem que pode ser importado e usado diretamente
-// (Compatível com código existente que usa import NotificationSystem from '...')
-const NotificationSystem = ({ message, actionText, onAction, onClose }) => {
-  const [isExiting, setIsExiting] = useState(false);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      handleClose();
-    }, 5000);
-    
-    return () => clearTimeout(timer);
-  }, []);
-  
-  const handleClose = () => {
-    setIsExiting(true);
-    setTimeout(() => {
-      if (onClose) onClose();
-    }, 300);
-  };
-  
-  const handleAction = () => {
-    if (onAction) {
-      try {
-        // Call the onAction callback directly
-        onAction();
-      } catch (error) {
-        console.error("Error in notification action:", error);
-      }
-    }
-    handleClose();
-  };
-  
-  if (!message) return null;
-  
-  return (
-    <div className={`notification-toast ${isExiting ? 'hide' : ''}`}>
-      <div className="notification-content">
-        <span className="notification-message">{message}</span>
-        {actionText && (
-          <button 
-            className="notification-action" 
-            onClick={handleAction}
-          >
-            {actionText}
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-// 4. Métodos estáticos para o componente NotificationSystem
-// Estes permitem usar NotificationSystem.showToast(), etc.
-NotificationSystem.showToast = (message, actionText, onAction, duration = 5000) => {
-  const notifications = window._notificationSystem;
-  if (notifications && notifications.showToast) {
-    return notifications.showToast(message, actionText, onAction, duration);
-  } else {
-    console.warn('NotificationSystem não está inicializado corretamente');
-    
-    // Fallback: Mostrar uma notificação simples
-    const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.top = '20px';
-    container.style.left = '50%';
-    container.style.transform = 'translateX(-50%)';
-    container.style.backgroundColor = '#000';
-    container.style.color = '#fff';
-    container.style.padding = '12px 20px';
-    container.style.borderRadius = '8px';
-    container.style.zIndex = '10000';
-    container.textContent = message;
-    
-    document.body.appendChild(container);
-    
-    setTimeout(() => {
-      document.body.removeChild(container);
-    }, duration);
-    
-    return { id: Date.now() };
-  }
-};
-
-NotificationSystem.showError = (message, duration = 5000) => {
-  return NotificationSystem.showToast(message, null, null, duration);
-};
-
-NotificationSystem.showSuccess = (message, duration = 5000) => {
-  return NotificationSystem.showToast(message, null, null, duration);
-};
-
-NotificationSystem.showProductAdded = (product, selectedSize, onViewCart, duration = 5000) => {
-  const notifications = window._notificationSystem;
-  if (notifications && notifications.showProductAdded) {
-    return notifications.showProductAdded(product, selectedSize, onViewCart, duration);
-  } else {
-    console.warn('NotificationSystem não está inicializado corretamente');
-    return { id: Date.now() };
-  }
-};
-
-// 5. Provider que gerencia as notificações
+// 3. Provider que gerencia as notificações
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
   
   const addNotification = (notification) => {
-    const id = Date.now();
+    const id = Date.now() + Math.random(); // Garantir IDs únicos
     setNotifications(prev => [...prev, { ...notification, id }]);
     
     // Auto-remover após a duração especificada
     if (notification.duration !== 0) {
-      const duration = notification.duration || 5000;
+      const duration = notification.duration || 3000;
       setTimeout(() => removeNotification(id), duration);
     }
     
@@ -149,8 +48,8 @@ export const NotificationProvider = ({ children }) => {
     setNotifications([]);
   };
   
-  const notificationAPI = {
-    showToast: (message, actionText, onAction, duration = 5000) => {
+  const notificationAPI = React.useMemo(() => ({
+    showToast: (message, actionText, onAction, duration = 3000) => {
       // Se a ação for ver carrinho, preparamos um redirecionamento seguro
       let finalAction = onAction;
       if (actionText === "VER CARRINHO" || actionText === "VER CESTA") {
@@ -169,7 +68,7 @@ export const NotificationProvider = ({ children }) => {
       });
     },
     
-    showProductAdded: (product, selectedSize, onViewCart, duration = 5000) => {
+    showProductAdded: (product, selectedSize, onViewCart, duration = 3000) => {
       return addNotification({
         type: NOTIFICATION_TYPES.PRODUCT_ADDED,
         product,
@@ -181,7 +80,7 @@ export const NotificationProvider = ({ children }) => {
       });
     },
     
-    showError: (message, duration = 5000) => {
+    showError: (message, duration = 3000) => {
       return addNotification({
         type: NOTIFICATION_TYPES.ERROR,
         message,
@@ -189,7 +88,7 @@ export const NotificationProvider = ({ children }) => {
       });
     },
     
-    showSuccess: (message, duration = 5000) => {
+    showSuccess: (message, duration = 3000) => {
       return addNotification({
         type: NOTIFICATION_TYPES.SUCCESS,
         message,
@@ -197,9 +96,20 @@ export const NotificationProvider = ({ children }) => {
       });
     },
     
+    // Função especial para notificações com opção de anular (apenas para favorites e cart)
+    showUndoableToast: (message, onUndo, duration = 3000) => {
+      return addNotification({
+        type: NOTIFICATION_TYPES.TOAST,
+        message,
+        actionText: "ANULAR",
+        onAction: onUndo,
+        duration
+      });
+    },
+    
     closeNotification: removeNotification,
     clearAll: clearNotifications
-  };
+  }), [addNotification, removeNotification, clearNotifications]);
   
   // Expor a API para métodos estáticos
   useEffect(() => {
@@ -208,7 +118,7 @@ export const NotificationProvider = ({ children }) => {
     return () => {
       window._notificationSystem = null;
     };
-  }, []);
+  }, [notificationAPI]);
   
   return (
     <NotificationContext.Provider value={notificationAPI}>
@@ -231,7 +141,7 @@ export const NotificationProvider = ({ children }) => {
   );
 };
 
-// 6. Hook para usar notificações em componentes funcionais
+// 4. Hook para usar notificações em componentes funcionais
 export const useNotification = () => {
   const context = useContext(NotificationContext);
   
@@ -244,6 +154,7 @@ export const useNotification = () => {
       showError: (message) => console.log('Error:', message),
       showSuccess: (message) => console.log('Success:', message),
       showProductAdded: () => console.log('Product added notification'),
+      showUndoableToast: (message, onUndo) => console.log('Undoable toast:', message),
       closeNotification: () => {},
       clearAll: () => {}
     };
@@ -252,7 +163,7 @@ export const useNotification = () => {
   return context;
 };
 
-// 7. Componente para renderizar diferentes tipos de notificação
+// 5. Componente para renderizar diferentes tipos de notificação
 const NotificationItem = ({ notification, onClose, closing }) => {
   const { type, closing: notificationClosing } = notification;
   const isClosing = closing || notificationClosing;
@@ -291,7 +202,7 @@ const NotificationItem = ({ notification, onClose, closing }) => {
   }
 };
 
-// 8. Componentes específicos para cada tipo de notificação
+// 6. Componentes específicos para cada tipo de notificação
 const ToastNotification = ({ notification, onClose, closing }) => {
   const { message, actionText, onAction } = notification;
   
@@ -308,8 +219,6 @@ const ToastNotification = ({ notification, onClose, closing }) => {
       }
     } else if (actionText === "VER CARRINHO" || actionText === "VER CESTA") {
       window.location.href = '/cart';
-    } else if (actionText === "DESFAZER") {
-      console.log("DESFAZER action triggered without handler");
     }
     onClose();
   };
@@ -400,5 +309,74 @@ const ProductAddedNotification = ({ notification, onClose, closing }) => {
   );
 };
 
-// Exportar como default para compatibilidade com código existente
+// 7. Métodos estáticos para compatibilidade com código existente
+const NotificationSystem = {
+  showToast: (message, actionText, onAction, duration = 3000) => {
+    const notifications = window._notificationSystem;
+    if (notifications && notifications.showToast) {
+      return notifications.showToast(message, actionText, onAction, duration);
+    } else {
+      console.warn('NotificationSystem não está inicializado corretamente');
+      
+      // Fallback: Mostrar uma notificação simples
+      const container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.top = '20px';
+      container.style.left = '50%';
+      container.style.transform = 'translateX(-50%)';
+      container.style.backgroundColor = '#000';
+      container.style.color = '#fff';
+      container.style.padding = '12px 20px';
+      container.style.borderRadius = '8px';
+      container.style.zIndex = '10000';
+      container.textContent = message;
+      
+      document.body.appendChild(container);
+      
+      setTimeout(() => {
+        document.body.removeChild(container);
+      }, duration);
+      
+      return { id: Date.now() };
+    }
+  },
+
+  showError: (message, duration = 3000) => {
+    const notifications = window._notificationSystem;
+    if (notifications && notifications.showError) {
+      return notifications.showError(message, duration);
+    }
+    return NotificationSystem.showToast(message, null, null, duration);
+  },
+
+  showSuccess: (message, duration = 3000) => {
+    const notifications = window._notificationSystem;
+    if (notifications && notifications.showSuccess) {
+      return notifications.showSuccess(message, duration);
+    }
+    return NotificationSystem.showToast(message, null, null, duration);
+  },
+
+  showProductAdded: (product, selectedSize, onViewCart, duration = 3000) => {
+    const notifications = window._notificationSystem;
+    if (notifications && notifications.showProductAdded) {
+      return notifications.showProductAdded(product, selectedSize, onViewCart, duration);
+    } else {
+      console.warn('NotificationSystem não está inicializado corretamente');
+      return { id: Date.now() };
+    }
+  },
+
+  showUndoableToast: (message, onUndo, duration = 3000) => {
+    const notifications = window._notificationSystem;
+    if (notifications && notifications.showUndoableToast) {
+      return notifications.showUndoableToast(message, onUndo, duration);
+    } else {
+      console.warn('NotificationSystem não está inicializado corretamente');
+      return { id: Date.now() };
+    }
+  }
+};
+
+// Exportar o objeto NotificationSystem como default para compatibilidade
 export default NotificationSystem;

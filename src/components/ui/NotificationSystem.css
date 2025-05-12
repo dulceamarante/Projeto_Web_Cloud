@@ -8,10 +8,12 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 10000;
+  z-index: 99999; /* Z-index muito alto para ficar acima dos popovers */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Fonte Oswald do site */
+  font-family: 'Oswald', sans-serif;
 }
 
 /* Cada notificação deve ter pointer-events ativado */
@@ -25,9 +27,9 @@
   top: 70px; /* Logo abaixo da navbar */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10002;
+  z-index: 100000; /* Z-index ainda mais alto */
   min-width: 400px;
-  max-width: 600px;
+  max-width: 700px; /* Aumentado para acomodar nomes de produtos mais longos */
   background-color: #000;
   color: white;
   border-radius: 10px;
@@ -35,6 +37,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: slideDown 0.3s ease-out;
   margin-bottom: 15px;
+  font-family: inherit; /* Herdar fonte do container */
 }
 
 .notification-toast.hide {
@@ -49,9 +52,14 @@
 }
 
 .notification-toast .notification-message {
-  font-size: 14px;
+  font-size: 14px; /* Oswald funciona melhor com tamanhos ligeiramente maiores */
   font-weight: 500;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.5px; /* Oswald já tem spacing natural */
+  flex: 1; /* Permite que a mensagem ocupe o espaço disponível */
+  margin-right: 15px; /* Espaço entre mensagem e botão */
+  line-height: 1.3; /* Melhor espaçamento para mensagens longas */
 }
 
 .notification-toast .notification-action {
@@ -59,11 +67,14 @@
   border: none;
   color: white;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 14px; /* Tamanho consistente com Oswald */
   text-transform: uppercase;
   cursor: pointer;
   padding: 0 0 0 20px;
   text-decoration: underline;
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* Evita quebra de linha no botão */
 }
 
 .notification-toast .notification-action:hover {
@@ -79,8 +90,9 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 10000;
+  z-index: 100000; /* Z-index muito alto */
   overflow: hidden;
+  font-family: inherit;
 }
 
 .product-notification .notification-content {
@@ -98,6 +110,7 @@
   line-height: 1;
   cursor: pointer;
   color: #999;
+  font-family: inherit;
 }
 
 .product-notification .notification-header {
@@ -117,12 +130,14 @@
   justify-content: center;
   margin-right: 10px;
   font-size: 14px;
+  font-family: inherit;
 }
 
 .product-notification .notification-header h3 {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
+  font-family: inherit;
 }
 
 .product-info {
@@ -150,21 +165,25 @@
 
 .product-details h4 {
   margin: 0 0 5px;
-  font-size: 14px;
+  font-size: 14px; /* Aumentado para Oswald */
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.3px;
 }
 
 .product-size {
   margin: 3px 0;
   font-size: 12px;
   color: #666;
+  font-family: inherit;
 }
 
 .product-price {
   margin: 3px 0;
   font-size: 14px;
   font-weight: 600;
+  font-family: inherit;
 }
 
 .notification-actions {
@@ -175,13 +194,15 @@
 .continue-btn, .view-cart-btn {
   flex: 1;
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 14px; /* Aumentado para Oswald */
   font-weight: 600;
   text-align: center;
   border-radius: 4px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.3px;
 }
 
 .continue-btn {
@@ -214,7 +235,7 @@
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10001;
+  z-index: 100000; /* Z-index muito alto */
   min-width: 300px;
   max-width: 500px;
   padding: 15px 20px;
@@ -224,6 +245,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   animation: slideDown 0.3s ease-out;
   margin-bottom: 15px;
+  font-family: inherit;
 }
 
 .status-notification.success {
@@ -252,6 +274,7 @@
   margin-right: 12px;
   font-size: 14px;
   font-weight: bold;
+  font-family: inherit;
 }
 
 .error-icon {
@@ -266,7 +289,9 @@
 
 .status-notification .notification-message {
   flex: 1;
-  font-size: 14px;
+  font-size: 14px; /* Aumentado para Oswald */
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 0.3px;
 }
 
 .status-notification.hide {
@@ -276,6 +301,7 @@
 .status-notification .close-notification {
   color: white;
   margin-left: 12px;
+  font-family: inherit;
 }
 
 /* ===== Animações Compartilhadas ===== */
@@ -330,4 +356,34 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .notification-toast {
+    min-width: 300px;
+    max-width: 90vw;
+    left: 5vw;
+    transform: none;
+  }
+  
+  .product-notification {
+    width: 90vw;
+    right: 5vw;
+    left: 5vw;
+  }
+  
+  .status-notification {
+    min-width: 250px;
+    max-width: 90vw;
+    left: 5vw;
+    transform: none;
+  }
+}
+
+/* Customizações específicas para a fonte Oswald */
+.notifications-container,
+.notifications-container * {
+  /* Força a fonte Oswald em todas as notificações */
+  font-family: 'Oswald', sans-serif !important;
 }

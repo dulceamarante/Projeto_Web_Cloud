@@ -16,6 +16,9 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
 }
 
 .cart-header {
@@ -23,7 +26,7 @@ body {
   margin-bottom: 30px;
   padding-top: 15px;
   width: 100%;
-  display: block; /* Para garantir que ocupe toda a largura */
+  display: block;
 }
 
 .cart-title {
@@ -32,7 +35,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 8px;
   letter-spacing: 0.5px;
-  display: block; /* Forçar a quebra de linha */
+  display: block;
   width: 100%;
   text-align: left;
 }
@@ -42,13 +45,12 @@ body {
   color: #535252;
   font-weight: 400;
   margin-bottom: 0px;
-  display: block; /* Forçar a quebra de linha */
+  display: block;
   width: 100%;
   text-align: left;
-  clear: both; /* Garantir que fique abaixo de qualquer elemento flutuante */
+  clear: both;
 }
 
-/* Remover qualquer posicionamento de estilo inline que possa estar interferindo */
 .cart-header * {
   float: none !important;
   position: static !important;
@@ -63,21 +65,20 @@ body {
   padding-left: 0;
 }
 
-/* Item do carrinho */
+/* Item do carrinho - AMPLIADO */
 .cart-item {
   display: grid;
-  grid-template-columns: 150px 1fr 80px;
-  gap: 10px;
-  padding: 20px 0;
-  margin-bottom: 15px; /* Substituir bordas por margin */
+  grid-template-columns: 200px 1fr 100px; /* Aumentado de 150px 1fr 80px */
+  gap: 20px; /* Aumentado de 10px */
+  padding: 30px 0; /* Aumentado de 20px */
+  margin-bottom: 20px; /* Aumentado de 15px */
   align-items: start;
   position: relative;
   width: 100%;
   padding-left: 0;
-  border-bottom: none !important; /* Remover todas as bordas */
+  border-bottom: none !important;
 }
 
-/* Adicionar uma linha visual mais suave entre itens */
 .cart-item:after {
   content: '';
   position: absolute;
@@ -92,134 +93,140 @@ body {
   display: none;
 }
 
-/* Ajuste para distribuir as informações uniformemente na altura da imagem */
-
-/* Definir altura mínima da imagem para referência */
+/* Imagem do item - MAIOR com bordas arredondadas */
 .item-image {
-  width: 150px;
+  width: 200px; /* Aumentado de 150px */
   padding-left: 0;
   margin-left: 0;
-  min-height: 200px; /* Altura aproximada da imagem */
+  min-height: 250px; /* Aumentado de 200px */
+  overflow: hidden; /* Para garantir que as bordas arredondadas funcionem */
+  border-radius: 12px; /* Bordas arredondadas */
 }
 
 .item-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 12px; /* Aplicar também na imagem */
+  transition: transform 0.2s ease; /* Suave transição no hover */
 }
 
-/* Ajustar os detalhes do item para distribuir verticalmente */
+/* Efeito hover na imagem */
+.item-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Detalhes do item - MAIOR */
 .item-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribuir elementos verticalmente */
-  height: 200px; /* Mesma altura da imagem */
+  justify-content: space-between;
+  height: 250px; /* Aumentado de 200px */
   padding: 0;
   margin: 0;
 }
 
-/* Ajustes no espaçamento entre os elementos */
+/* Nome do item - MAIOR */
 .item-name {
-  font-size: 18px;
+  font-size: 22px; /* Aumentado de 18px */
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
 }
 
+/* Tamanho do item - MAIOR */
 .item-size {
-  font-size: 16px;
+  font-size: 18px; /* Aumentado de 16px */
   color: #666;
   margin: 0;
   padding: 0;
   font-weight: 300;
 }
 
+/* Preço do item - MAIOR */
 .item-price {
-  font-size: 18px;
+  font-size: 20px; /* Aumentado de 18px */
   font-weight: 500;
   margin: 0;
   padding: 0;
 }
 
-/* Controles de quantidade */
+/* Controles de quantidade - MAIORES */
 .quantity-controls {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 15px 0;
+  margin: 20px 0; /* Aumentado de 15px */
   padding: 0;
-  height: 40px;
-  gap: 15px; /* Espaçamento entre os elementos */
+  height: 50px; /* Aumentado de 40px */
+  gap: 20px; /* Aumentado de 15px */
 }
 
-/* Botões circulares de quantidade */
+/* Botões de quantidade - MAIORES */
 .quantity-btn {
   background: #1e1d1d;
   color: #fff;
   border: none;
-  border-radius: 50%; /* Torna o botão circular */
-  width: 30px;
-  height: 30px;
+  border-radius: 50%;
+  width: 40px; /* Aumentado de 30px */
+  height: 40px; /* Aumentado de 30px */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 32px; /* Aumentado de 28px */
   font-weight: 400;
   transition: all 0.2s ease;
   padding: 0;
   line-height: 0;
 }
 
-/* Efeito hover para os botões */
 .quantity-btn:hover {
   background-color: #333;
   transform: scale(1.05);
 }
 
-/* Efeito de clique */
 .quantity-btn:active {
   transform: scale(0.95);
 }
 
-/* Valor da quantidade */
+/* Valor da quantidade - MAIOR */
 .quantity-value {
-  font-size: 20px;
-  font-weight: 500;
-  min-width: 30px;
+  font-size: 24px; /* Aumentado de 20px */
+  font-weight: 600; /* Aumentado de 500 */
+  min-width: 40px; /* Aumentado de 30px */
   text-align: center;
 }
 
-/* Para garantir que o sinal de menos seja posicionado corretamente */
 .quantity-btn.minus {
-  line-height: 0.9; /* Ajuste fino para centralizar o sinal - */
-  padding-bottom: 2px; /* Pequeno ajuste para centralizar visualmente */
+  line-height: 0.9;
+  padding-bottom: 2px;
 }
 
-/* Para garantir que o sinal de mais seja posicionado corretamente */
 .quantity-btn.plus {
-  line-height: 1; /* Ajuste fino para centralizar o sinal + */
+  line-height: 1;
 }
 
-/* Ações do item */
+/* Ações do item - MAIORES */
 .item-actions {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px; /* Aumentado de 15px */
   justify-content: flex-end;
-  align-items: flex-start; /* Alinhar ao topo */
-  padding-top: 0; /* Remover padding superior */
+  align-items: flex-start;
+  padding-top: 0;
   height: auto;
 }
 
+/* Ícones de ação - MAIORES */
 .action-icon {
   background: transparent;
   border: none;
   cursor: pointer;
   color: #666;
-  font-size: 18px;
-  padding: 5px;
+  font-size: 22px; /* Aumentado de 18px */
+  padding: 8px; /* Aumentado de 5px */
   transition: all 0.2s ease;
 }
 
@@ -361,255 +368,10 @@ body {
   background: #f5f5f5;
 }
 
-/* Seção "Viu Recentemente" */
-.recently-viewed-section {
-  margin-top: 60px;
-  margin-bottom: 80px;
-  text-align: left;
-  padding-bottom: 40px;
-}
-
-.recently-viewed-section h2 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  text-align: left;
-}
-
-.recently-viewed-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-}
-
 /* Footer Spacing */
 .footer-spacer {
   height: 80px;
   width: 100%;
-}
-
-/* Estilos para ProductCard na seção "Viu Recentemente" */
-.recently-viewed-grid .product-card {
-  position: relative;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform .2s, box-shadow .2s;
-  border: none;
-}
-
-.recently-viewed-grid .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* Imagem do produto */
-.recently-viewed-grid .product-image-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/5;
-  background: #f5f5f5;
-  overflow: hidden;
-}
-
-.recently-viewed-grid .product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Navegação do produto */
-.recently-viewed-grid .nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 18px;
-}
-
-.recently-viewed-grid .nav-arrow svg {
-  width: 24px;
-  height: 24px;
-}
-
-.recently-viewed-grid .nav-arrow:hover {
-  background: transparent;
-  color: rgba(0, 0, 0, 1);
-}
-
-.recently-viewed-grid .nav-arrow.left { left: 8px; }
-.recently-viewed-grid .nav-arrow.right { right: 8px; }
-
-/* Overlay de tamanhos */
-.recently-viewed-grid .size-overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -100%;
-  background: rgba(255,255,255,1);
-  backdrop-filter: blur(6px);
-  padding: 12px 0;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  transition: bottom .3s ease;
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
-
-.recently-viewed-grid .product-card:hover .size-overlay {
-  bottom: 0;
-}
-
-.recently-viewed-grid .size-btn {
-  background: transparent;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 6px 10px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.recently-viewed-grid .size-btn:hover:not(:disabled) {
-  background: #333;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.recently-viewed-grid .size-btn:active:not(:disabled) {
-  transform: scale(0.95);
-}
-
-.recently-viewed-grid .size-btn.selected {
-  background: #333;
-  color: white;
-  animation: heartbeat 1s ease-in-out;
-}
-
-.recently-viewed-grid .size-btn:disabled {
-  opacity: .4;
-  cursor: not-allowed;
-}
-
-/* Botão de lixeira em ProductCard */
-.recently-viewed-grid .trash-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: white;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 10;
-  transition: transform 0.2s;
-}
-
-.recently-viewed-grid .trash-button:hover {
-  transform: scale(1.1);
-}
-
-.recently-viewed-grid .trash-button svg {
-  color: #666;
-  font-size: 16px;
-}
-
-/* Informações do produto */
-.recently-viewed-grid .product-info {
-  padding: 14px 24px 20px;
-  position: relative;
-  border-top: none;
-  border-bottom: none;
-}
-
-.recently-viewed-grid .title-heart {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-right: 15px;
-}
-
-.recently-viewed-grid .product-info-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.recently-viewed-grid .product-name {
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  color: #222;
-  text-align: left;
-  margin-left: 15px;
-}
-
-.recently-viewed-grid .product-price-container {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  justify-content: flex-start;
-  text-align: left;
-  margin-left: 15px;
-  margin-bottom: 5px;
-}
-
-.recently-viewed-grid .original-price {
-  text-decoration: line-through;
-  font-size: 13px;
-  color: #999;
-}
-
-.recently-viewed-grid .discount-badge {
-  background: #161616;
-  color: #fff;
-  padding: 2px 6px;
-  font-size: 11px;
-  border-radius: 2px;
-}
-
-.recently-viewed-grid .final-price {
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-}
-
-/* Botão de favoritos em ProductCard */
-.recently-viewed-grid .fav-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  color: #666;
-  cursor: pointer;
-  margin-right: 0;
-  transition: transform .2s, color .2s;
-}
-
-.recently-viewed-grid .fav-btn:hover {
-  color: #e41e63;
-  transform: scale(1.1);
-}
-
-.recently-viewed-grid .fav-btn.active svg {
-  animation: heartbeat 1.2s ease-in-out;
 }
 
 /* Animações */
@@ -639,16 +401,15 @@ body {
   animation: fadeOut 0.4s ease forwards;
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-  .recently-viewed-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+/* Garantir que a seção de produtos similares tenha espaço suficiente */
+.cart-page > * {
+  overflow: visible;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-  .recently-viewed-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .cart-page {
+    padding: 0 15px;
   }
   
   .cart-content {
@@ -661,17 +422,38 @@ body {
   }
   
   .cart-item {
-    grid-template-columns: 120px 1fr 80px;
+    grid-template-columns: 150px 1fr 80px; /* Menor em mobile */
     gap: 15px;
   }
-}
-
-@media (max-width: 576px) {
-  .cart-page {
-    padding: 0 15px;
+  
+  .item-image {
+    width: 150px; /* Menor em mobile */
+    min-height: 200px;
+    border-radius: 8px; /* Bordas menores em mobile */
   }
   
-  .recently-viewed-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .item-image img {
+    border-radius: 8px; /* Bordas menores em mobile */
+  }
+  
+  .item-details {
+    height: 200px; /* Menor em mobile */
+  }
+  
+  .item-name {
+    font-size: 18px; /* Menor em mobile */
+  }
+  
+  .item-size {
+    font-size: 16px; /* Menor em mobile */
+  }
+  
+  .item-price {
+    font-size: 18px; /* Menor em mobile */
+  }
+  
+  .action-icon {
+    font-size: 18px; /* Menor em mobile */
+    padding: 5px;
   }
 }
