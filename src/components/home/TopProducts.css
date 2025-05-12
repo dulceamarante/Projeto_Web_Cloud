@@ -1,109 +1,114 @@
+/* TopProducts.css */
 
+/* Secção dos produtos em destaque */
 .top-products-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 60px 5px 10px;
-  padding: 0 0px;  
-  box-sizing: border-box;
-  overflow: visible;
+  width: 100vw;                    /* Largura de 100% da viewport */
+  position: relative;              /* Posicionamento relativo */
+  left: 50%;                       /* Posiciona a 50% da esquerda */
+  transform: translateX(-50%);     /* Centraliza movendo -50% para a esquerda */
+  margin: 60px 5px 10px;          /* Margens: 60px topo, 5px lados, 10px fundo */
+  padding: 0 0px;                  /* Preenchimento zero */
+  box-sizing: border-box;          /* Inclui bordas e preenchimento no tamanho total */
+  overflow: visible;               /* Permite conteúdo visível fora dos limites */
 }
 
-
+/* Título da secção de produtos em destaque */
 .top-products-section .section-title {
-  font-size: 40px;
-  font-weight: bold;
-  font-style: italic;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 4px;
-  color: #121212;
+  font-size: 40px;                /* Tamanho da fonte de 40 pixéis */
+  font-weight: bold;              /* Peso da fonte em negrito */
+  font-style: italic;             /* Estilo da fonte em itálico */
+  letter-spacing: 1px;            /* Espaçamento entre letras de 1 pixel */
+  text-transform: uppercase;      /* Transforma o texto em maiúsculas */
+  text-align: center;             /* Alinhamento de texto ao centro */
+  margin-bottom: 4px;             /* Margem inferior de 4 pixéis */
+  color: #121212;                 /* Cor cinzenta muito escura */
 }
 
-
+/* Grelha de produtos */
 .top-products-section .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap: 20px; 
-  position: relative;
+  display: grid;                                     /* Exibição em grelha */
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));  /* Colunas automáticas com mínimo de 280px */
+  gap: 20px;                                        /* Espaçamento entre itens de 20 pixéis */
+  position: relative;                               /* Posicionamento relativo */
 }
 
-
+/* Secção de responsabilidade */
 .responsibility-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 60vh;
-  min-height: 300px;
-  max-height: 700px;
-  background-image: url('../../assets/images/responsability2-bg.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin-top: 60px;
+  width: 100vw;                    /* Largura de 100% da viewport */
+  position: relative;              /* Posicionamento relativo */
+  left: 50%;                       /* Posiciona a 50% da esquerda */
+  transform: translateX(-50%);     /* Centraliza movendo -50% para a esquerda */
+  height: 60vh;                    /* Altura de 60% da viewport */
+  min-height: 300px;               /* Altura mínima de 300 pixéis */
+  max-height: 700px;               /* Altura máxima de 700 pixéis */
+  background-image: url('../../assets/images/responsability2-bg.png');  /* Imagem de fundo */
+  background-size: cover;          /* Redimensiona para cobrir todo o contentor */
+  background-position: center;     /* Centra a imagem de fundo */
+  display: flex;                   /* Exibição flexível */
+  align-items: center;            /* Alinha itens ao centro verticalmente */
+  justify-content: center;        /* Alinha itens ao centro horizontalmente */
+  padding: 0;                      /* Remove preenchimento */
+  margin-top: 60px;               /* Margem superior de 60 pixéis */
 }
 
-
+/* Conteúdo da secção de responsabilidade */
 .responsibility-content {
-  max-width: 1600px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-  color: white;
-  font-size: 40px;
+  max-width: 1600px;              /* Largura máxima de 1600 pixéis */
+  width: 100%;                    /* Largura a 100% */
+  margin: 0 auto;                 /* Centraliza horizontalmente */
+  padding: 0 20px;                /* Preenchimento lateral de 20 pixéis */
+  text-align: center;             /* Alinhamento de texto ao centro */
+  color: white;                   /* Cor do texto em branco */
+  font-size: 40px;                /* Tamanho da fonte de 40 pixéis */
 }
 
+/* Título da secção de responsabilidade */
 .responsibility-title {
-  font-size: 50px;
-  font-weight: 600;      
-  font-style: bold;
-  letter-spacing: 1px;
-  color: #fff;
+  font-size: 50px;                /* Tamanho da fonte de 50 pixéis */
+  font-weight: 600;               /* Peso da fonte semibold */      
+  font-style: bold;               /* Estilo da fonte em negrito */
+  letter-spacing: 1px;            /* Espaçamento entre letras de 1 pixel */
+  color: #fff;                    /* Cor branca */
 }
 
-
+/* Botão com contorno */
 .outline-button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 20px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  border-radius: 30px;
+  background: transparent;         /* Fundo transparente */
+  border: 1px solid white;        /* Borda branca de 1 pixel */
+  color: white;                   /* Cor do texto em branco */
+  padding: 10px 20px;             /* Preenchimento: 10px vertical, 20px horizontal */
+  font-size: 20px;                /* Tamanho da fonte de 20 pixéis */
+  letter-spacing: 1px;            /* Espaçamento entre letras de 1 pixel */
+  cursor: pointer;                /* Cursor em forma de ponteiro */
+  transition: background-color 0.3s, transform 0.2s;  /* Transições suaves */
+  border-radius: 30px;            /* Cantos arredondados com raio de 30 pixéis */
 }
+
+/* Efeito hover para o botão com contorno */
 .outline-button:hover {
-  background-color: white;
-  color: #333;
-  transform: translateY(-2px);
+  background-color: white;        /* Fundo branco quando o rato passa por cima */
+  color: #333;                    /* Cor do texto muda para cinzento escuro */
+  transform: translateY(-2px);    /* Move o botão 2 pixéis para cima */
 }
 
-
+/* Estilos para estados de carregamento e sem produtos */
 .loading,
 .no-products {
-  text-align: center;
-  padding: 40px;
-  font-size: 16px;
-  color: #666;
+  text-align: center;             /* Alinhamento de texto ao centro */
+  padding: 40px;                  /* Preenchimento de 40 pixéis */
+  font-size: 16px;                /* Tamanho da fonte de 16 pixéis */
+  color: #666;                    /* Cor cinzenta */
 }
 
-
+/* Consultas de media para diferentes tamanhos de ecrã */
 @media (max-width: 1024px) {
   .top-products-section .products-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);  /* 3 colunas em tablets */
   }
 }
 
 @media (max-width: 768px) {
   .top-products-section .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);  /* 2 colunas em dispositivos móveis */
   }
 }
