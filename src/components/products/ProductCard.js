@@ -1,11 +1,12 @@
 // src/components/products/ProductCard.js
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight, FaRegHeart, FaHeart, FaTrash } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
 import { CartContext } from '../../contexts/CartContext';
+import { useNotification } from '../ui/NotificationSystem';
 import './ProductCard.css';
 import { Link } from 'react-router-dom';
-
 
 export default function ProductCard({
   product,
@@ -21,7 +22,11 @@ export default function ProductCard({
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
   const { addToCart: contextAddToCart } = useContext(CartContext);
   const favBtnRef = useRef(null);
+  const location = useLocation();
+  const notification = useNotification();
 
+  // Verificar se estamos na página do carrinho
+  const isOnCartPage = location.pathname === '/cart';
 
   const isProductFavorite = isFavorite(product.id);
   
@@ -54,8 +59,36 @@ export default function ProductCard({
     setTimeout(() => {
       if (contextAddToCart) {
         contextAddToCart(product, 1, variant.size);
+        
+        // Mostrar notificação baseada na página atual
+        if (isOnCartPage) {
+          // Na página do carrinho: notificação simples SEM botão "Ver Carrinho"
+          notification.showToast('Produto adicionado ao carrinho!');
+        } else {
+          // Outras páginas: notificação COM botão "Ver Carrinho"
+          notification.showToast(
+            'Produto adicionado ao carrinho!',
+            'VER CARRINHO',
+            () => {
+              window.location.href = '/cart';
+            }
+          );
+        }
       } else if (addToCart) {
         addToCart(productId, variant);
+        
+        // Mesmo comportamento para fallback
+        if (isOnCartPage) {
+          notification.showToast('Produto adicionado ao carrinho!');
+        } else {
+          notification.showToast(
+            'Produto adicionado ao carrinho!',
+            'VER CARRINHO',
+            () => {
+              window.location.href = '/cart';
+            }
+          );
+        }
       }
       setTimeout(() => {
         setAnimateSize(false);

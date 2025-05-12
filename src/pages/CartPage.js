@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 import { FavoritesContext } from '../contexts/FavoritesContext';
 import { FaHeart, FaTrash } from 'react-icons/fa';
-import RecommendedProducts from '../components/products/RecommendedProducts';
+import SimilarProducts from '../components/products/SimilarProducts';
 import './CartPage.css';
 
 export default function CartPage() {
@@ -160,11 +160,8 @@ export default function CartPage() {
         </div>
       )}
       
-      {/* Seção "Viu Recentemente" usando o componente RecommendedProducts */}
-      <RecommendedProducts 
-        title="VIU RECENTEMENTE" 
-        limit={5}
-      />
+      {/* Seção "Talvez Lhe Interesse" */}
+      <SimilarProducts />
       
       {/* Espaçador adicional antes do footer */}
       <div className="footer-spacer"></div>

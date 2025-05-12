@@ -31,6 +31,11 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  // Função para verificar se estamos na página do carrinho
+  const isOnCartPage = () => {
+    return window.location.pathname === '/cart';
+  };
+
   const addToCart = (product, quantity = 1, selectedSize = null) => {
     // Verificar se o produto já está no carrinho com o mesmo tamanho
     const existingItemIndex = cart.findIndex(
@@ -54,15 +59,24 @@ export const CartProvider = ({ children }) => {
     
     updateCartAndStorage(newCart);
     
-    // Mostrar notificação
-    setNotification({
-      message: "PRODUTO ADICIONADO AO CARRINHO",
-      actionText: "VER CARRINHO",
-      onAction: () => {
-        window.location.href = '/cart';
-        setNotification(null);
-      }
-    });
+    // Mostrar notificação baseada na página atual
+    if (isOnCartPage()) {
+      // Na página do carrinho: notificação SEM botão "VER CARRINHO"
+      setNotification({
+        message: "PRODUTO ADICIONADO AO CARRINHO"
+        // Sem actionText nem onAction = sem botão
+      });
+    } else {
+      // Outras páginas: notificação COM botão "VER CARRINHO"
+      setNotification({
+        message: "PRODUTO ADICIONADO AO CARRINHO",
+        actionText: "VER CARRINHO",
+        onAction: () => {
+          window.location.href = '/cart';
+          setNotification(null);
+        }
+      });
+    }
     
     return true; // Retornar true para indicar sucesso
   };
@@ -84,17 +98,22 @@ export const CartProvider = ({ children }) => {
       // Guardar o produto removido para caso de desfazer
       setRemovedProduct(productToRemove);
       
-      // Mostrar a notificação
+      // Mostrar a notificação (sempre com DESFAZER, independente da página)
       setNotification({
         message: "PRODUTO REMOVIDO DO CARRINHO",
         actionText: "DESFAZER",
-        onAction: () => handleUndo() // Usar uma arrow function como no FavoritesContext
+        onAction: () => handleUndo()
       });
     }
   };
 
   // Função para atualizar a quantidade de um produto
   const updateQuantity = (productId, quantity, selectedSize = null) => {
+    if (quantity <= 0) {
+      removeFromCart(productId, selectedSize);
+      return;
+    }
+
     const newCart = cart.map(item => {
       if (item.id === productId && (selectedSize === null || item.selectedSize === selectedSize)) {
         return { ...item, quantity };
@@ -126,7 +145,7 @@ export const CartProvider = ({ children }) => {
 
   // Função para desfazer a remoção de um produto
   const handleUndo = () => {
-    console.log("Executing handleUndo in CartContext", removedProduct); // Debug log
+    console.log("Executing handleUndo in CartContext", removedProduct);
     
     if (removedProduct) {
       // Adicionar o produto de volta ao carrinho
@@ -139,7 +158,7 @@ export const CartProvider = ({ children }) => {
       // Esconder a notificação
       setNotification(null);
     } else {
-      console.log("No removed product to restore"); // Debug log
+      console.log("No removed product to restore");
     }
   };
 
@@ -192,7 +211,7 @@ export const CartProvider = ({ children }) => {
         getCartItemCount,
         isInCart,
         moveToFavorites,
-        handleUndo // Expor handleUndo para uso direto se necessário, como no FavoritesContext
+        handleUndo
       }}
     >
       {children}
