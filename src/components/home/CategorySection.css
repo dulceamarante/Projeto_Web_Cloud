@@ -1,88 +1,94 @@
+/* CategorySection.css */
 
-   .categories-section {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-bottom: 40px;
-    padding: 0;
-  }
-  
- 
-  .categories-inner {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
+/* Secção das categorias com largura total da janela */
+.categories-section {
+    width: 100vw;                    /* Largura de 100% da viewport */
+    margin-left: calc(-50vw + 50%);  /* Centraliza calculando metade da viewport */
+    margin-bottom: 40px;             /* Margem inferior de 40 pixéis */
+    padding: 0;                      /* Remove qualquer preenchimento */
+}
 
-  .pack-bags-section {
-    text-align: center;
-    margin: 35px 0 0;
-  }
+/* Contentor interno das categorias */
+.categories-inner {
+    max-width: 1600px;              /* Largura máxima de 1600 pixéis */
+    margin: 0 auto;                 /* Centraliza horizontalmente */
+    padding: 0 20px;                /* Preenchimento lateral de 20 pixéis */
+}
 
-  .bags-title {
-    font-size: 36px;     
-    font-weight: 700;   
-    font-style: italic;  
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 4px;
-    color: #121212;
-  }
-  
-  
+/* Secção de mochilas */
+.pack-bags-section {
+    text-align: center;             /* Alinhamento de texto ao centro */
+    margin: 35px 0 0;              /* Margem superior de 35 pixéis */
+}
 
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0,1fr));
-    gap: 10px;
-  }
-  
+/* Título da secção de mochilas */
+.bags-title {
+    font-size: 36px;               /* Tamanho da fonte de 36 pixéis */     
+    font-weight: 700;              /* Peso da fonte em negrito */   
+    font-style: italic;            /* Estilo da fonte em itálico */  
+    letter-spacing: 1px;           /* Espaçamento entre letras de 1 pixel */
+    text-transform: uppercase;     /* Transforma o texto em maiúsculas */
+    color: #666;                   /* Cor cinzenta clara */
+    margin-bottom: 4px;            /* Margem inferior de 4 pixéis */
+    color: #121212;                /* Cor sobreposta em cinzento muito escuro */
+}
 
-  .category-item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-  
+/* Grelha das categorias */
+.categories-grid {
+    display: grid;                              /* Exibição em grelha */
+    grid-template-columns: repeat(5, minmax(0,1fr));  /* 5 colunas com tamanho flexível */
+    gap: 10px;                                  /* Espaçamento entre itens de 10 pixéis */
+}
 
-  .category-image {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #f5f5f5;
-  }
-  .category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s;
-  }
-  .category-item:hover .category-image img {
-    transform: scale(1.05);
-  }
-  
+/* Item individual de categoria */
+.category-item {
+    display: block;                /* Exibição como bloco */
+    text-decoration: none;         /* Remove decoração de link */
+    color: inherit;                /* Herda a cor do elemento pai */
+}
 
-  .category-item h3 {
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
-    color: #333;
-  }
-  
+/* Contentor da imagem da categoria */
+.category-image {
+    width: 100%;                   /* Largura a 100% do contentor */
+    aspect-ratio: 4 / 5;          /* Proporção de 4:5 */
+    overflow: hidden;              /* Oculta conteúdo que transborde */
+    border-radius: 8px;           /* Cantos arredondados com raio de 8 pixéis */
+    background: #f5f5f5;          /* Cor de fundo cinzenta clara */
+}
 
-  @media (max-width: 1024px) {
+/* Estilo para as imagens dentro do contentor */
+.category-image img {
+    width: 100%;                   /* Largura a 100% */
+    height: 100%;                  /* Altura a 100% */
+    object-fit: cover;             /* Ajusta a imagem para cobrir o contentor */
+    display: block;                /* Exibição como bloco */
+    transition: transform 0.3s;    /* Transição suave para transformações */
+}
+
+/* Efeito hover nas imagens das categorias */
+.category-item:hover .category-image img {
+    transform: scale(1.05);        /* Aumenta a imagem em 5% quando o rato passa por cima */
+}
+
+/* Título de cada categoria */
+.category-item h3 {
+    margin-top: 12px;              /* Margem superior de 12 pixéis */
+    font-size: 18px;               /* Tamanho da fonte de 18 pixéis */
+    font-weight: 400;              /* Peso da fonte normal */
+    text-transform: uppercase;     /* Transforma o texto em maiúsculas */
+    text-align: center;            /* Alinhamento de texto ao centro */
+    color: #333;                   /* Cor cinzenta escura */
+}
+
+/* Consultas de media para diferentes tamanhos de ecrã */
+@media (max-width: 1024px) {
     .categories-grid {
-      grid-template-columns: repeat(3, minmax(0,1fr));
+        grid-template-columns: repeat(3, minmax(0,1fr));  /* 3 colunas em tablets */
     }
-  }
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .categories-grid {
-      grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));  /* 2 colunas em dispositivos móveis */
     }
-  }
-  
+}
