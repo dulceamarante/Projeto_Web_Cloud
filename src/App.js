@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { FavoritesProvider } from './contexts/FavoritesContext';
@@ -21,6 +21,20 @@ import HomeHomem from './pages/HomePageHomem';
 import HomeBeauty from './pages/HomePageBeauty';
 
 function App() {
+  // Configurar handlers globais para undo de movimentações
+  useEffect(() => {
+    // Handler para anular "mover para carrinho"
+    window.undoMoveToCart = (productId, selectedSize) => {
+      console.log(`Removing from cart: ${productId}, size: ${selectedSize}`);
+      // A implementação será feita via window._cartProvider se necessário
+    };
+    
+    return () => {
+      // Cleanup
+      window.undoMoveToCart = null;
+    };
+  }, []);
+
   return (
     <ProductProvider>
       <NotificationProvider>
