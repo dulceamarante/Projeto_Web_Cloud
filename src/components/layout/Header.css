@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   overflow-x: hidden;
 }
-
 
 .header {
   position: fixed;
@@ -25,12 +23,10 @@ body {
   z-index: 10000;
 }
 
-
 .header-left {
   display: flex;
   align-items: center;
 }
-
 
 .desktop-nav {
   display: flex;
@@ -60,7 +56,6 @@ body {
   opacity: 0.7;
 }
 
-
 .header-left a.active {
   font-weight: 800;
 }
@@ -74,7 +69,6 @@ body {
   height: 2px;
   background: #000;
 }
-
 
 .close-button-container {
   margin-left: 60px;
@@ -96,7 +90,6 @@ body {
   transform: scale(1.1);
 }
 
-
 .mobile-hamburger {
   background: none;
   border: none;
@@ -109,7 +102,6 @@ body {
 .mobile-hamburger:hover {
   transform: scale(1.1);
 }
-
 
 .header-center {
   position: absolute;
@@ -125,7 +117,6 @@ body {
   color: #000;
   text-decoration: none;
 }
-
 
 .header-right {
   display: flex;
@@ -148,7 +139,6 @@ body {
   opacity: 0.7;
 }
 
-
 .icon-button {
   background: none;
   border: none;
@@ -162,7 +152,6 @@ body {
 .icon-button:hover {
   transform: scale(1.1);
 }
-
 
 .badge {
   position: absolute;
@@ -180,7 +169,6 @@ body {
   justify-content: center;
   line-height: 1;
 }
-
 
 .mobile-menu-overlay {
   position: fixed;
@@ -250,6 +238,140 @@ body {
   transform: translateX(5px);
 }
 
+/* ========== ESTILOS DE AUTENTICAÇÃO ========== */
+
+/* Desktop - Menu de utilizador */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.user-greeting {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.logout-button:hover {
+  opacity: 0.7;
+}
+
+.login-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.login-link:hover {
+  opacity: 0.7;
+}
+
+/* Mobile - Seção de autenticação no menu */
+.mobile-auth-section {
+  border-top: 1px solid #f0f0f0;
+  margin-top: 0;
+}
+
+.mobile-user-info {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  padding: 20px 25px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-logout-button {
+  width: 100%;
+  background: none;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+  padding: 20px 25px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobile-logout-button:hover {
+  background: #f8f8f8;
+  padding-left: 35px;
+}
+
+.mobile-logout-button:hover .category-arrow {
+  color: rgba(0, 0, 0, 1);
+  transform: translateX(5px);
+}
+
+.mobile-login-link {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+  text-decoration: none;
+  padding: 20px 25px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-login-link:hover {
+  background: #f8f8f8;
+  padding-left: 35px;
+}
+
+.mobile-login-link:hover .category-arrow {
+  color: rgba(0, 0, 0, 1);
+  transform: translateX(5px);
+}
+
+.mobile-login-link .category-arrow {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.2s;
+}
+
+/* ========== ANIMAÇÕES ========== */
 
 @keyframes slideInLeft {
   from {
@@ -269,6 +391,7 @@ body {
   }
 }
 
+/* ========== MEDIA QUERIES ========== */
 
 @media (max-width: 768px) {
   .desktop-nav {
@@ -285,6 +408,15 @@ body {
   
   .header-right {
     gap: 15px;
+  }
+
+  /* Esconder elementos desktop de auth no mobile */
+  .user-menu {
+    display: none;
+  }
+  
+  .login-link {
+    display: none;
   }
 }
 
@@ -305,8 +437,18 @@ body {
     width: 100%;
     padding: 40px 20px;
   }
-}
 
+  /* Ajustes mobile para auth */
+  .mobile-auth-section {
+    padding: 0;
+  }
+  
+  .mobile-user-info,
+  .mobile-logout-button,
+  .mobile-login-link {
+    padding: 20px 20px;
+  }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .header {
@@ -327,5 +469,16 @@ body {
   
   .header-center a {
     font-size: 30px;
+  }
+
+  /* Ajustes tablet para auth */
+  .user-menu {
+    gap: 20px;
+  }
+  
+  .user-greeting,
+  .logout-button,
+  .login-link {
+    font-size: 15px;
   }
 }

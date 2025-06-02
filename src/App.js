@@ -19,6 +19,7 @@ import ProductDetails from './components/products/ProductDetails';
 import products from './data/products.json';
 import HomeHomem from './pages/HomePageHomem';
 import HomeBeauty from './pages/HomePageBeauty';
+import LoginPage from './pages/LoginPage';
 
 function App() {
 
@@ -45,8 +46,6 @@ function App() {
               <main>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
-
-
                   <Route path="/:gender/products" element={<ProductsPage />} />
                   <Route path="/:gender/:category" element={<ProductsPage />} />
                   <Route path="/product/:id" element={<ProductDetails products={products} />} />
@@ -57,6 +56,7 @@ function App() {
                   <Route path="*" element={<NotFoundPage />} />
                   <Route path="/homem" element={<HomeHomem />} />
                   <Route path="/beauty" element={<HomeBeauty />} />
+                  <Route path="/login" element={<LoginPage />} />
                 </Routes>
               </main>
               <Footer />

@@ -11,7 +11,8 @@ import {
   FiX, 
   FiSearch, 
   FiHeart, 
-  FiShoppingBag 
+  FiShoppingBag,
+  FiUser
 } from 'react-icons/fi';
 import './Header.css';
 
@@ -28,6 +29,66 @@ const Header = () => {
   const { favorites } = useContext(FavoritesContext);
   const { cart, getCartItemCount } = useContext(CartContext);
   const cartItemCount = getCartItemCount ? getCartItemCount() : cart?.length || 0;
+
+  // Estado de autenticação
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+
+  // Verificar estado de autenticação
+  useEffect(() => {
+    const checkAuthStatus = () => {
+      const token = localStorage.getItem('authToken');
+      const userData = localStorage.getItem('userData');
+      
+      if (token && userData) {
+        try {
+          const parsedUser = JSON.parse(userData);
+          setIsLoggedIn(true);
+          setUser(parsedUser);
+        } catch (error) {
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('userData');
+          setIsLoggedIn(false);
+          setUser(null);
+        }
+      } else {
+        setIsLoggedIn(false);
+        setUser(null);
+      }
+    };
+
+    // Verificar no início
+    checkAuthStatus();
+
+    // Listener customizado para mudanças locais no localStorage
+    const handleLocalStorageChange = () => {
+      checkAuthStatus();
+    };
+
+    // Listener para mudanças no localStorage de outras abas
+    const handleStorageChange = (e) => {
+      if (e.key === 'authToken' || e.key === 'userData') {
+        checkAuthStatus();
+      }
+    };
+
+    // Verificar quando a página ganha foco
+    const handleFocus = () => {
+      checkAuthStatus();
+    };
+
+    // Adicionar listeners
+    window.addEventListener('localStorageChange', handleLocalStorageChange);
+    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('focus', handleFocus);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('localStorageChange', handleLocalStorageChange);
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, []);
 
   // Atualiza estado de mobile consoante o tamanho do ecrã
   useEffect(() => {
@@ -110,6 +171,16 @@ const Header = () => {
     }, 800);
   };
 
+  // Função para logout
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUser(null);
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userData');
+    
+    window.dispatchEvent(new Event('localStorageChange'));
+  };
+
   return (
     <>
       {/* Cabeçalho principal */}
@@ -159,7 +230,7 @@ const Header = () => {
           <Link to="/">BDRP</Link>
         </div>
 
-        {/* Ícones ou links à direita (pesquisa, favoritos, carrinho) */}
+        {/* Ícones ou links à direita (pesquisa, favoritos, carrinho, login) */}
         <div className="header-right">
           {isMobile ? (
             <>
@@ -186,12 +257,39 @@ const Header = () => {
                 <FiShoppingBag size={20} />
                 {cartItemCount > 0 && <span className="badge">{cartItemCount}</span>}
               </button>
+              {isLoggedIn ? (
+                <button 
+                  className="icon-button"
+                  onClick={handleLogout}
+                  aria-label="Sair"
+                  title={`Logout ${user?.name || 'Utilizador'}`}
+                >
+                  <FiUser size={20} />
+                </button>
+              ) : (
+                <Link 
+                  to="/login"
+                  className="icon-button"
+                  aria-label="Iniciar sessão"
+                >
+                  <FiUser size={20} />
+                </Link>
+              )}
             </>
           ) : (
             <>
               <a href="#" onClick={e => { e.preventDefault(); setSearchOpen(true); }}>PESQUISAR</a>
               <a href="#" onClick={e => { e.preventDefault(); setFavOpen(!favOpen); if (cartOpen) setCartOpen(false); }}>FAVORITOS ({favorites.length})</a>
               <a href="#" onClick={e => { e.preventDefault(); setCartOpen(!cartOpen); if (favOpen) setFavOpen(false); }}>CARRINHO ({cartItemCount})</a>
+              
+              {isLoggedIn ? (
+                <div className="user-menu">
+                  <span className="user-greeting">OLÁ, {user?.name?.toUpperCase() || 'UTILIZADOR'}</span>
+                  <button onClick={handleLogout} className="logout-button">SAIR</button>
+                </div>
+              ) : (
+                <Link to="/login" className="login-link">INICIAR SESSÃO</Link>
+              )}
             </>
           )}
         </div>
@@ -223,6 +321,44 @@ const Header = () => {
                   </svg>
                 </Link>
               ))}
+              
+              {/* Opção de login/logout no menu mobile */}
+              <div className="mobile-auth-section">
+                {isLoggedIn ? (
+                  <>
+                    <div className="mobile-user-info">
+                      Olá, {user?.name || 'Utilizador'}
+                    </div>
+                    <button onClick={handleLogout} className="mobile-logout-button">
+                      SAIR
+                      <svg 
+                        className="category-arrow" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor"
+                      >
+                        <path d="M9 18l6-6-6-6" />
+                      </svg>
+                    </button>
+                  </>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="mobile-login-link"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <span>INICIAR SESSÃO</span>
+                    <svg 
+                      className="category-arrow" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         </div>
