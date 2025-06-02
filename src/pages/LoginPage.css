@@ -1,0 +1,184 @@
+.login-page {
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 20px 60px;
+  box-sizing: border-box;
+}
+
+.auth-container {
+  background: white;
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.auth-header {
+  margin-bottom: 40px;
+}
+
+.auth-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.auth-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #999;
+  background-color: #fff;
+}
+
+.form-input::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+}
+
+.checkbox-label {
+  font-size: 16px;
+  color: #666;
+  font-family: 'Oswald', sans-serif;
+}
+
+.btn {
+  width: 100%;
+  padding: 18px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.auth-link {
+  background: none;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.auth-link:hover {
+  color: #000;
+}
+
+/* Seção para alternar entre login e signup - REMOVIDA */
+
+@media (max-width: 768px) {
+  .login-page {
+    padding: 100px 20px 40px;
+  }
+  
+  .auth-container {
+    padding: 30px 20px;
+    max-width: 400px;
+  }
+  
+  .auth-title {
+    font-size: 20px;
+  }
+  
+  .form-input {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
