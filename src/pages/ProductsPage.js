@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductCard from '../components/products/ProductCard';
-import { ProductContext } from '../contexts/ProductContext';
+
 import './ProductsPage.css';
 
 // Componente principal da página de produtos
@@ -12,7 +12,8 @@ export default function ProductsPage() {
   const { gender, category } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const { products, loading } = useContext(ProductContext); // Produtos disponíveis e estado de carregamento
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true); // Produtos disponíveis e estado de carregamento
 
   // Estados para filtros e paginação
   const [currentProducts, setCurrentProducts] = useState([]);
@@ -37,6 +38,23 @@ export default function ProductsPage() {
 
   // Verifica se a categoria atual é de beleza
   const isBeautyCategory = gender === 'beauty';
+
+  useEffect(() => {
+  const fetchProducts = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`http://localhost:5000/products`);
+      const data = await response.json();
+      setProducts(data);
+    } catch (err) {
+      console.error("Erro ao carregar produtos:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+    fetchProducts();
+  }, []);
 
   // Efeito para atualizar os filtros com base nos parâmetros da URL
   useEffect(() => {
