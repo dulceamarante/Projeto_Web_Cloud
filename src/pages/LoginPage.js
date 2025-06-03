@@ -116,7 +116,7 @@ const LoginPage = () => {
 
       if (response.status === 201) {
         alert('Conta criada com sucesso! Agora pode iniciar sessão.');
-        toggleForm(); // volta para o formulário de login
+        toggleForm(); 
       } else {
         alert(data.message || 'Erro ao criar conta.');
       }
