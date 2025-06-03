@@ -45,36 +45,47 @@ const LoginPage = () => {
   };
 
   // Handle login form
-  const handleLoginSubmit = (e) => {
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validação básica
+
     if (!loginData.email || !loginData.password) {
       alert('Por favor, preencha todos os campos.');
       return;
     }
 
-    // Simular login bem-sucedido
-    const userData = {
-      name: loginData.email.split('@')[0],
-      email: loginData.email
-    };
+    try {
+      const response = await fetch('http://localhost:5000/user/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: loginData.email,
+          password: loginData.password
+        })
+      });
 
-    localStorage.setItem('authToken', 'fake-token-123');
-    localStorage.setItem('userData', JSON.stringify(userData));
-    
-    // Disparar evento customizado para notificar o Header
-    window.dispatchEvent(new Event('localStorageChange'));
-    
-    alert('Login realizado com sucesso!');
-    navigate('/');
+      const data = await response.json();
+
+      if (response.ok && data.token) {
+        localStorage.setItem('authToken', data.token);
+        localStorage.setItem('userData', JSON.stringify({ email: loginData.email }));
+
+        window.dispatchEvent(new Event('localStorageChange'));
+        alert('Login realizado com sucesso!');
+        navigate('/');
+      } else {
+        alert(data.message || 'Erro no login.');
+      }
+    } catch (error) {
+      console.error('Erro na requisição de login:', error);
+      alert('Erro ao conectar com o servidor.');
+    }
   };
 
+
   // Handle signup form
-  const handleSignupSubmit = (e) => {
+  const handleSignupSubmit = async (e) => {
     e.preventDefault();
-    
-    // Validações
+
     if (!signupData.name || !signupData.email || !signupData.password || !signupData.confirmPassword) {
       alert('Por favor, preencha todos os campos.');
       return;
@@ -90,26 +101,31 @@ const LoginPage = () => {
       return;
     }
 
-    if (signupData.password.length < 6) {
-      alert('A palavra-passe deve ter pelo menos 6 caracteres!');
-      return;
+    try {
+      const response = await fetch('http://localhost:5000/user/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: signupData.email,
+          password: signupData.password,
+          role: 'user'
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.status === 201) {
+        alert('Conta criada com sucesso! Agora pode iniciar sessão.');
+        toggleForm(); // volta para o formulário de login
+      } else {
+        alert(data.message || 'Erro ao criar conta.');
+      }
+    } catch (error) {
+      console.error('Erro na requisição de registo:', error);
+      alert('Erro ao conectar com o servidor.');
     }
-
-    // Simular registo bem-sucedido e fazer login automático
-    const userData = {
-      name: signupData.name,
-      email: signupData.email
-    };
-
-    localStorage.setItem('authToken', 'fake-token-123');
-    localStorage.setItem('userData', JSON.stringify(userData));
-    
-    // Disparar evento customizado para notificar o Header
-    window.dispatchEvent(new Event('localStorageChange'));
-    
-    alert('Conta criada com sucesso!');
-    navigate('/');
   };
+
 
   // Handle input changes
   const handleLoginChange = (e) => {
