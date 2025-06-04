@@ -73,9 +73,9 @@ const CartPopOver = ({ onClose }) => {
                           <p>Quantidade: {item.quantity || 1}</p>
                           {item.selectedSize && <p>Tamanho: {item.selectedSize}</p>}
                         </div>
-                        <div className="item-price">
-                          {item.price.toFixed(2)} €
-                        </div>
+                          <div className="item-price">
+                            {typeof item.price === 'number' ? item.price.toFixed(2) : '0.00'} €
+                          </div>
                         {/* Ícones de ação: guardar nos favoritos ou remover */}
                         <div className="item-icons">
                           <button 
