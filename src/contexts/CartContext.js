@@ -10,64 +10,116 @@ import { useNotification } from '../components/ui/NotificationSystem';
 
 export const CartContext = createContext();
 
-  const CartProviderComponent = ({ children }) => {
-    const [cart, setCart] = useState([]);
-    const { showToast, showUndoableToast } = useNotification();
-    const previousStateRef = useRef(null);
+const CartProviderComponent = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { showToast, showUndoableToast } = useNotification();
+  const previousStateRef = useRef(null);
 
-useEffect(() => {
-  const fetchCart = async () => {
-    const token = localStorage.getItem('authToken');
-    if (!token) {
-      console.warn("Token não encontrado.");
-      return;
-    }
-
-    try {
-      const res = await fetch(`http://localhost:5000/products/cart?token=${token}`);
-      const data = await res.json();
-
-      if (res.ok && data.products) {
-        setCart(data.products); // Atualiza o estado do carrinho
-      } else {
-        console.warn("Falha ao carregar carrinho:", data.message);
+  useEffect(() => {
+    const fetchCart = async () => {
+      setIsLoading(true);
+      const token = localStorage.getItem('authToken');
+      
+      if (!token) {
+        console.warn("Token não encontrado.");
+        // Tenta carregar do localStorage como fallback
+        const localCart = localStorage.getItem('cart');
+        if (localCart) {
+          try {
+            const parsedCart = JSON.parse(localCart);
+            setCart(parsedCart);
+          } catch (error) {
+            console.error("Erro ao parsear carrinho local:", error);
+            setCart([]);
+          }
+        }
+        setIsLoading(false);
+        return;
       }
-    } catch (err) {
-      console.error("Erro ao buscar carrinho do servidor:", err);
-    }
-  };
 
-  fetchCart();
-}, []);
+      try {
+        const res = await fetch(`http://localhost:5000/products/cart?token=${token}`);
+        const data = await res.json();
 
+        if (res.ok && data.products) {
+          setCart(data.products);
+          // Sincroniza com localStorage
+          localStorage.setItem('cart', JSON.stringify(data.products));
+        } else {
+          console.warn("Falha ao carregar carrinho:", data.message);
+          // Fallback para localStorage
+          const localCart = localStorage.getItem('cart');
+          if (localCart) {
+            try {
+              const parsedCart = JSON.parse(localCart);
+              setCart(parsedCart);
+            } catch (error) {
+              console.error("Erro ao parsear carrinho local:", error);
+              setCart([]);
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Erro ao buscar carrinho do servidor:", err);
+        // Fallback para localStorage
+        const localCart = localStorage.getItem('cart');
+        if (localCart) {
+          try {
+            const parsedCart = JSON.parse(localCart);
+            setCart(parsedCart);
+          } catch (error) {
+            console.error("Erro ao parsear carrinho local:", error);
+            setCart([]);
+          }
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-    const updateCartAndStorage = useCallback(async (newCart) => {
+    fetchCart();
+  }, []);
+
+  const updateCartAndStorage = useCallback(async (newCart) => {
+    // Atualiza o estado primeiro
     setCart(newCart);
 
     try {
+      // Sempre salva no localStorage
       localStorage.setItem('cart', JSON.stringify(newCart));
 
       const token = localStorage.getItem('authToken');
-      if (!token) return console.warn('Token JWT não encontrado.');
+      if (!token) {
+        console.warn('Token JWT não encontrado. Carrinho salvo apenas localmente.');
+        return;
+      }
 
-      await fetch(`http://127.0.0.1:5000/products/cart?token=${token}`, {
+      // Tenta sincronizar com o backend
+      const response = await fetch(`http://localhost:5000/products/cart?token=${token}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           products: newCart.map(item => ({
-            product_id: item.id, // ou item._id
-            quantity: item.quantity
+            product_id: item.id,
+            quantity: item.quantity,
+            selectedSize: item.selectedSize // Se relevante para o backend
           }))
         })
       });
+
+      if (!response.ok) {
+        console.error('Erro ao sincronizar com backend:', response.status);
+        const errorData = await response.json();
+        console.error('Detalhes do erro:', errorData);
+      }
     } catch (error) {
-      console.error('Erro ao salvar carrinho no backend:', error);
+      console.error('Erro ao salvar carrinho:', error);
+      // O carrinho fica salvo no localStorage mesmo se o backend falhar
     }
   }, []);
-
-
 
   const saveCurrentState = useCallback(() => {
     previousStateRef.current = [...cart];
@@ -195,6 +247,7 @@ useEffect(() => {
 
   const value = React.useMemo(() => ({
     cart,
+    isLoading,
     addToCart,
     removeFromCart,
     updateQuantity,
@@ -205,6 +258,7 @@ useEffect(() => {
     moveToFavorites
   }), [
     cart,
+    isLoading,
     addToCart,
     removeFromCart,
     updateQuantity,
