@@ -1,5 +1,4 @@
-// Importações de dependências React e de contexto
-import React, { useContext, useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import { FavoritesContext } from '../../contexts/FavoritesContext';
@@ -10,33 +9,45 @@ import {
   FaRegHeart,
   FaHeart,
   FaStar,
-  FaStarHalfAlt,
   FaRegStar
 } from 'react-icons/fa';
+
 import './ProductDetails.css';
 
-// Componente principal que mostra os detalhes de um produto
-export default function ProductDetails({ products }) {
-  // Obtém o ID do produto a partir da URL
+
+
+export default function ProductDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Acesso aos contextos de carrinho e favoritos
   const { addToCart } = useContext(CartContext);
   const { isFavorite, toggleFavorite } = useContext(FavoritesContext);
   const { showToast, showError } = useNotification();
 
-  // Estados locais para animação, imagem atual e tamanho selecionado
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [animateHeart, setAnimateHeart] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState('');
   const favBtnRef = useRef(null);
 
-  // Encontra o produto correspondente ao ID
-  const product = products.find(p => String(p.id) === id);
+  useEffect(() => {
+    fetch(`http://localhost:5000/products`)
+      .then(res => {
+        if (!res.ok) throw new Error('Erro ao carregar os produtos');
+        return res.json();
+      })
+      .then(data => {
+        const foundProduct = data.find(p => String(p.id) === id);
+        setProduct(foundProduct);
+      })
+      .catch(err => console.error(err))
+      .finally(() => setLoading(false));
+  }, [id]);
+
+
   const isProductFavorite = isFavorite(product?.id);
 
-  // Determina se o produto requer seleção de tamanho
   const doesNotRequireSize = 
     product?.category === 'beauty' || 
     product?.gender === 'beauty' ||
@@ -44,7 +55,6 @@ export default function ProductDetails({ products }) {
     !product?.variants || 
     product?.variants.length === 0;
 
-  // Alterna o estado de favorito e ativa a animação
   const handleToggleFavorite = e => {
     e.stopPropagation();
     e.preventDefault();
@@ -53,7 +63,6 @@ export default function ProductDetails({ products }) {
     setTimeout(() => setAnimateHeart(false), 1200);
   };
 
-  // Navegação entre imagens do produto
   const prev = () => {
     setCurrentImage(i =>
       i === 0 ? (product.images?.length || 1) - 1 : i - 1
@@ -66,59 +75,43 @@ export default function ProductDetails({ products }) {
     );
   };
 
-  // Atualiza o tamanho selecionado
   const handleSizeChange = (e) => {
     setSelectedSize(e.target.value);
   };
 
-  // Adiciona o produto ao carrinho com validação do tamanho
   const handleAddToCart = () => {
-    if (!doesNotRequireSize) {
-      if (product.variants && product.variants.length > 0 && !selectedSize) {
-        showError("Por favor, selecione um tamanho antes de adicionar ao carrinho.", 3000);
-        return;
-      }
+    if (!doesNotRequireSize && product.variants?.length > 0 && !selectedSize) {
+      showError("Por favor, selecione um tamanho antes de adicionar ao carrinho.", 3000);
+      return;
     }
 
     addToCart(product, 1, selectedSize || null);
 
-    showToast(
-      "PRODUTO ADICIONADO AO CARRINHO",
-      "VER CARRINHO",
-      () => {
-        navigate('/cart');
-      }
-    );
+    showToast("PRODUTO ADICIONADO AO CARRINHO", "VER CARRINHO", () => {
+      navigate('/cart');
+    });
   };
 
-  // Limpa o estado de animação após um tempo
   useEffect(() => {
     if (animateHeart) {
-      const timer = setTimeout(() => {
-        setAnimateHeart(false);
-      }, 1200);
+      const timer = setTimeout(() => setAnimateHeart(false), 1200);
       return () => clearTimeout(timer);
     }
   }, [animateHeart]);
 
-  // Renderiza as estrelas do rating com base na classificação
   function renderStars(rating) {
     const validRating = Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
-
     return (
       <>
-        {[...Array(validRating)].map((_, i) => (
-          <FaStar key={i} color="#ffc107" />
-        ))}
-        {[...Array(5 - validRating)].map((_, i) => (
-          <FaRegStar key={i + validRating} color="#ccc" />
-        ))}
+        {[...Array(validRating)].map((_, i) => <FaStar key={i} color="#ffc107" />)}
+        {[...Array(5 - validRating)].map((_, i) => <FaRegStar key={i + validRating} color="#ccc" />)}
       </>
     );
   }
 
-  // Se o produto não existir, mostra uma mensagem
+  if (loading) return <p>Carregando produto...</p>;
   if (!product) return <p>Produto não encontrado.</p>;
+
 
   return (
     <div className="product-details-page">
